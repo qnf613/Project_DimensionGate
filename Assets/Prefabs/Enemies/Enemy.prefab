@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 60
-  attackDamage: 10
+  attackDamage: 5
+  atkspeed: 0.5
+  lasthit: 0
 --- !u!61 &4413615219787390537
 BoxCollider2D:
   m_ObjectHideFlags: 0

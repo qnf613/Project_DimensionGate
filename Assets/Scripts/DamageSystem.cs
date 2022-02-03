@@ -10,6 +10,9 @@ public class DamageSystem : MonoBehaviour
     public float currentHealth { get; set; }
 
     [SerializeField] private float attackDamage = 10;
+    [SerializeField] private float atkspeed = 0.5f;
+    [SerializeField] private float lasthit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,11 +43,16 @@ public class DamageSystem : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (Time.time > atkspeed + lasthit)
         {
-            other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
-            Debug.Log("hit");
+            lasthit = Time.time;
+            if (other.gameObject.tag == "Player")
+            {
+                other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
+                Debug.Log("hit");
+            }
         }
+        
 
     }
 }
