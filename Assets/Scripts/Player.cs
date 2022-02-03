@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour
+public class Player : MonoBehaviour
 {
     [SerializeField] float _Speed = 1;
-
     [SerializeField] Camera _Camera;
 
     PlayerInput _Input;
 
     Vector2 _Movement;
     Vector2 _MousePos;
-
     Rigidbody2D _Rigidbody;
+
 
 
     private void Awake()

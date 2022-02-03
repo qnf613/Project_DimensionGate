@@ -8,6 +8,8 @@ public class DamageSystem : MonoBehaviour
 {
     public float MaxHealth;
     public float currentHealth { get; set; }
+
+    [SerializeField] private float attackDamage = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,14 +25,26 @@ public class DamageSystem : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        else if (currentHealth <= 0 &&this.tag == "Spawner")
+        else if (currentHealth <= 0 && this.tag == "Spawner")
         {
-            
+
             this.gameObject.layer = 8;
             this.GetComponent<SpriteRenderer>().enabled = false;
             //this.GetComponent<TimedSpawner>().deadspawner = true;
         }
     }
 
-}
+    private void Update()
+    {
 
+    }
+    private void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
+            Debug.Log("hit");
+        }
+
+    }
+}
