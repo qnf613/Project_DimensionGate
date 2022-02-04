@@ -39,7 +39,7 @@ public class MagicArrow : Weapon
             //TODO : Change this to match player Rotation and position
             
             Instantiate(magicArrowProjectilePrefab, transform.position, transform.rotation);
-            magicArrowProjectilePrefab.GetComponent<Projectile>();
+            magicArrowProjectilePrefab.GetComponent<StraightProjectile>();
             
             lastShot = Time.time;
         }

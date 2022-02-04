@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class StraightProjectile : MonoBehaviour
 {
+    //this is script for projectile that shoot straightly
     Rigidbody2D rb;
     public float speed = 10;
     public float lifespan = 3;
