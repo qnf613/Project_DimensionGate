@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
     }
 
     // Update is called once per frame
-    protected void Update()
+    protected virtual void Update()
     {
         switch (we)
         {
