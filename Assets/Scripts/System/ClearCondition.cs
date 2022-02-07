@@ -4,37 +4,51 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum stageCleared {yes, yet, over}
-public enum bossSummoned {yes, no}
-public enum portalStatus {active, inactive, activalbe}
+public enum bossStatus {nSummon, nDead}
 public class ClearCondition : MonoBehaviour
 {
+    //countdown
     public Text[] times;
     public float timeRemain = 600.0f;
+    //boss monster
     [SerializeField] private GameObject[] bossMonsters;
     [SerializeField] private GameObject bossOfStage;
+    //player
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject portal;
-    [SerializeField] protected bossSummoned bs;
+    //portal
+    [SerializeField] private GameObject[] portals;
+    //conditions
+    [SerializeField] protected bossStatus bs;
     [SerializeField] protected stageCleared sc;
-    [SerializeField] protected portalStatus ps;
+    [SerializeField] private bool happened = false;
     // private int repeatStopper;
 
     // Start is called before the first frame update
     private void Start()
     {
+        //find player
         player = GameObject.FindGameObjectWithTag("Player");
+        
+        //declear starting status
         sc = stageCleared.yet;
-        bs = bossSummoned.no;
-        ps = portalStatus.inactive;
+        bs = bossStatus.nSummon;
+        
+        //get all possible boss monsters of stage and put them in the list, and pick one of them for this run
+        //bossMonsters = Resources.LoadAll<GameObject>("Boss").ToList();
         bossOfStage = bossMonsters[Random.Range(0, bossMonsters.Length)];
+
+        //start with Summonable-portal
+        Instantiate(portals[0], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
     }
     // Update is called once per frame
     private void Update()
     {
+        //portal = GameObject.FindGameObjectWithTag("Portal"); //this might cause the lag in later build
         switch (sc) 
         {
             case stageCleared.yes:
-                //TODO: activate the portal & check bonus rewards depending on time remains
+                //activate the portal & check number of bonus rewards depending on time remains (this is conditional calculation)
+                ActivatePortal();
                 break;
 
             case stageCleared.yet:
@@ -45,37 +59,34 @@ public class ClearCondition : MonoBehaviour
                 break;
             
             case stageCleared.over:
-                //TODO: call game over animation + UI
+                //call game over animation + UI
+                Gameover();
                 break;
         }
 
         switch (bs)
         {
-            case bossSummoned.yes:
+            case bossStatus.nSummon:
+                //check portal('s seal) has been destoryed and if so, summon the boss and make portal as non-interactable
+                CheckPortal();
+                break;
+
+            case bossStatus.nDead:
                 //check boss is alive or not
                 CheckBoss();
-            break;
-
-            case bossSummoned.no:
-                //make portal 'inactive' state while boss never summoned yet
-                DeactivatePortal();
-            break;
+                break;
         }
         
-        switch (ps)
+    }
+
+    private void Gameover()
+    {
+        if (!happened)
         {
-            case portalStatus.active:
-                CheckBoss();
-            break;
-
-            case portalStatus.activalbe:
-            break;
-
-            case portalStatus.inactive:
-                CheckBoss();
-            break;
+            //TO DO: cut scene or animation of player death
+            //TO DO: UI pop up
+            happened = true;
         }
-
     }
 
     private void Countdown()
@@ -83,7 +94,9 @@ public class ClearCondition : MonoBehaviour
         if (timeRemain > 0)
         {
             timeRemain -= Time.deltaTime;
-            times[0].text = ((int)timeRemain / 60 % 60).ToString();
+            //minutes
+            times[0].text = ((int)timeRemain / 60).ToString();
+            //seconds
             times[1].text = ((int)timeRemain % 60).ToString();
         }
         else
@@ -96,7 +109,7 @@ public class ClearCondition : MonoBehaviour
 
     private void CheckPlayer()
     {
-        if(!player.activeInHierarchy)
+        if (GameObject.FindWithTag("Player") == null) //can be changed to something like 'player.hp == 0'
         {
             sc = stageCleared.over;
         }
@@ -104,14 +117,56 @@ public class ClearCondition : MonoBehaviour
 
     private void CheckBoss()
     {
-        if(!bossOfStage.activeInHierarchy && sc == stageCleared.yet)
+        if (GameObject.FindWithTag("Boss") == null && sc == stageCleared.yet)
         {
             sc = stageCleared.yes;
         }
     }
 
-    private void DeactivatePortal()
+    private void CheckPortal()
     {
-        ps = portalStatus.inactive;
+        Debug.Log("Portal can summon boss");
+        if (GameObject.FindWithTag("Portal") == null && sc == stageCleared.yet)
+        {
+            Debug.Log("Portal destroyed, now it will be sealed");
+            Instantiate(portals[1], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+            //Instantiate boss monster
+            SummomBoss();
+        }
+    }
+
+    private void SummomBoss()
+    {
+        Debug.Log("Boss summonned");
+        //TO DO: cut scene or summon animation
+        Instantiate(bossOfStage, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+        bossOfStage = GameObject.FindGameObjectWithTag("Boss");
+        bs = bossStatus.nDead;
+    }
+
+    private void ActivatePortal()
+    {
+        if (!happened)
+        {
+            if (timeRemain > 120)
+            {
+                BonusRewards();
+            }
+            Debug.Log("Now seal of portal gone, player can interact with it");
+            Destroy(GameObject.FindGameObjectWithTag("Portal"));
+            Instantiate(portals[2], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+            happened = true;
+        }
+    }
+    private void BonusRewards()
+    {
+        int numOfRewards = 0;
+        timeRemain -= 120;
+        numOfRewards = (int)timeRemain / 60;
+        //TO DO: Generate rewards (chest) as same as the value of 'numOfRewards'
+        //for(int i = 0; i ++; i < numOfRewards)
+        //{
+        //  ~~code for generate rewards
+        //}
     }
 }

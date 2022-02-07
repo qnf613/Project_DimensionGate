@@ -4,8 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Player1
   - Enemy
+  - Boss
+  - Portal
   layers:
   - Default
   - TransparentFX
