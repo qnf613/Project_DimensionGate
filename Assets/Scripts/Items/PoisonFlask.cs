@@ -1,23 +1,24 @@
-    using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PoisonFlask : Weapon
 {
-   
-    [SerializeField]
-    private GameObject poisonFlaskPrefab;
+    [SerializeField] private string name = "Venom Flask";
+    [SerializeField] private string description = "Throw a flask which leaves a pool of poison on the ground.";
+    [SerializeField] private int rage = 20;
+    [SerializeField] private float attackspeed = 1.5f;
+    [SerializeField] private GameObject poisonFlaskPrefab;
     protected Vector3 projectileDirection;
 
 
     void Start()
     {
         // Overriding the basic stats and info about the weapon here
-        this.name = "Venom Flask";
-        this.description = "Throw a flask which leaves a pool of poison on the ground.";
-        this.damage = 10;
-        this.range = 20;
-        this.atkspeed = 0.7f;
+        this.wName = name;
+        this.wDescription = description;
+        this.wRange = rage;
+        this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
     }
 
@@ -34,7 +35,7 @@ public class PoisonFlask : Weapon
     {
 
         //This weapon shoots a projectile forward
-        if (Time.time > atkspeed + lastShot)
+        if (Time.time > wAtkspeed + lastShot)
         {
             projectileDirection = (this.transform.position - targetPosition);
 

@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SwordWeapon : Weapon
 {
+    [SerializeField] private string name = "Giant F-ing Sword";
+    [SerializeField] private string description = "What else do you need to know, read the name...";
+    [SerializeField] private int damage = 60;
+    [SerializeField] private float attackspeed = 2f;
     [SerializeField] private GameObject SwordHitBox;
     protected Vector3 projectileDirection;
     // Start is called before the first frame update
     void Start()
     {
-        this.name = "Giant F-ing Sword";
-        this.description = "What else do you need to know, read the name...";
-        this.damage = 60;
-        this.atkspeed = 2f;
+        this.wName = name;
+        this.wDescription = description;
+        this.wDamage = damage;
+        this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;;
     }
 
@@ -29,7 +33,7 @@ public class SwordWeapon : Weapon
     {
         
         //This weapon shoots a projectile forward
-        if (Time.time > atkspeed + lastShot)
+        if (Time.time > wAtkspeed + lastShot)
         {
             projectileDirection = (this.transform.position - targetPosition);
             

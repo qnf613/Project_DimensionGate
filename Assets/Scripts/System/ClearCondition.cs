@@ -125,10 +125,8 @@ public class ClearCondition : MonoBehaviour
 
     private void CheckPortal()
     {
-        Debug.Log("Portal can summon boss");
         if (GameObject.FindWithTag("Portal") == null && sc == stageCleared.yet)
         {
-            Debug.Log("Portal destroyed, now it will be sealed");
             Instantiate(portals[1], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
             //Instantiate boss monster
             SummomBoss();
@@ -137,7 +135,6 @@ public class ClearCondition : MonoBehaviour
 
     private void SummomBoss()
     {
-        Debug.Log("Boss summonned");
         //TO DO: cut scene or summon animation
         Instantiate(bossOfStage, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
         bossOfStage = GameObject.FindGameObjectWithTag("Boss");
@@ -152,7 +149,6 @@ public class ClearCondition : MonoBehaviour
             {
                 BonusRewards();
             }
-            Debug.Log("Now seal of portal gone, player can interact with it");
             Destroy(GameObject.FindGameObjectWithTag("Portal"));
             Instantiate(portals[2], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
             happened = true;

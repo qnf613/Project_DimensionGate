@@ -4,18 +4,23 @@ using UnityEngine;
 
 public class MagicArrow : Weapon
 {
-    [SerializeField]
-    private GameObject magicArrowProjectilePrefab; 
+    [SerializeField] private string name = "Magic Arrow";
+    [SerializeField] private string description = "Shoot an arrow which pierces through enemies";
+    [SerializeField] private int damage = 10;
+    [SerializeField] private int rage = 20;
+    [SerializeField] private float attackspeed = .7f;
+    [SerializeField] private GameObject magicArrowProjectilePrefab; 
     protected Vector3 projectileDirection;
+
     
     void Start()
     {
         // Overriding the basic stats and info about the weapon here
-        this.name = "Magic Arrow";
-        this.description = "Shoot an arrow which pierces through enemies";
-        this.damage = 10;
-        this.range = 20;
-        this.atkspeed = 0.7f;
+        this.wName = name;
+        this.wDescription = description;
+        this.wDamage = damage;
+        this.wRange = rage;
+        this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
     }
 
@@ -32,7 +37,7 @@ public class MagicArrow : Weapon
     {
         
         //This weapon shoots a projectile forward
-        if (Time.time > atkspeed + lastShot)
+        if (Time.time > wAtkspeed + lastShot)
         {
             projectileDirection = (this.transform.position - targetPosition);
             

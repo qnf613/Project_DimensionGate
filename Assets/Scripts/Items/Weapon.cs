@@ -6,11 +6,11 @@ using UnityEngine;
 public enum WeaponEquipped {yes, no};
 public class Weapon : MonoBehaviour
 {
-    protected string name;
-    protected string description;
-    protected float damage;
-    protected float atkspeed;
-    protected float range;
+    protected string wName;
+    protected string wDescription;
+    protected float wDamage;
+    protected float wAtkspeed;
+    protected float wRange;
     protected WeaponEquipped we;
 
     protected float lastShot = 0f;
@@ -19,11 +19,11 @@ public class Weapon : MonoBehaviour
 
     protected Weapon()
     {
-        name = "";
-        description = "";
-        damage = 0;
-        atkspeed = 0;
-        range = 0;
+        wName = "";
+        wDescription = "";
+        wDamage = 0;
+        wAtkspeed = 0;
+        wRange = 0;
         
         we = WeaponEquipped.no;
         
