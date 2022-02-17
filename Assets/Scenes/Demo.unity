@@ -4826,6 +4826,17 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!114 &999232109 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2858205228278856048, guid: 46d4ce61eaafa2e448e4f060010c71a1, type: 3}
+  m_PrefabInstance: {fileID: 1625084486269209699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1076242555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9645,6 +9656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1625084486204456928, guid: 46d4ce61eaafa2e448e4f060010c71a1, type: 3}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 999232109}
     - target: {fileID: 1707584653731096491, guid: 46d4ce61eaafa2e448e4f060010c71a1, type: 3}
       propertyPath: m_Camera
       value: 
