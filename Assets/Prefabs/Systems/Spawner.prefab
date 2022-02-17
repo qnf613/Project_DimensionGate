@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179084603693386742}
   - component: {fileID: 1179084603693386741}
-  - component: {fileID: 1179084603693386743}
+  - component: {fileID: 8930890113757649478}
   m_Layer: 0
   m_Name: Spawner
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1179084603693386743
+--- !u!114 &8930890113757649478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d28ac974ced73a43a10d7d0f6dda6e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 5612415622755630140, guid: 71c67847d3809a6438e641a8f0a0225a, type: 3}
+  objectToSpawn: {fileID: 0}
   parent: {fileID: 1179084603693386740}
-  numberToSpawn: 1
+  numberToSpawn: 0
   limit: 20
-  rate: 2
+  rate: 0
+  spawnPoints: []

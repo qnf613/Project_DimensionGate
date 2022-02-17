@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private int numberToSpawn;
     [SerializeField] private int limit = 20;
     [SerializeField] private float rate;
+    public Transform[] spawnPoints;
 
     float spawnTimer;
 
