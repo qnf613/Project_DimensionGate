@@ -354,6 +354,10 @@ PrefabInstance:
       value: ClearManager
       objectReference: {fileID: 0}
     - target: {fileID: 8761695302360553126, guid: f63af271fca729646a8016dd7438549b, type: 3}
+      propertyPath: sc
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8761695302360553126, guid: f63af271fca729646a8016dd7438549b, type: 3}
       propertyPath: times.Array.data[0]
       value: 
       objectReference: {fileID: 192816856}

@@ -24,22 +24,28 @@ public class ClearCondition : MonoBehaviour
     // private int repeatStopper;
 
     // Start is called before the first frame update
-    private void Start()
+    private void Start() 
     {
         //find player
         player = GameObject.FindGameObjectWithTag("Player");
-        
-        //declear starting status
-        sc = stageCleared.yet;
-        bs = bossStatus.nSummon;
-        
+        Debug.Log("I found player!");
         //get all possible boss monsters of stage and put them in the list, and pick one of them for this run
         //bossMonsters = Resources.LoadAll<GameObject>("Boss").ToList();
         bossOfStage = bossMonsters[Random.Range(0, bossMonsters.Length)];
-
+        
+        //declear starting status of portal
+        sc = stageCleared.yet;
+        Debug.Log("stage is not clear yet");
         //start with Summonable-portal
         Instantiate(portals[0], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+        Debug.Log("It summons portal");
+        
+        //declear starting status of boss
+        bs = bossStatus.nSummon;
+        Debug.Log("boss has not been summoned");
     }
+
+    
     // Update is called once per frame
     private void Update()
     {

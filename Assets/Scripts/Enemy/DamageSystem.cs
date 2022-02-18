@@ -7,7 +7,7 @@ using UnityEngine;
 public class DamageSystem : MonoBehaviour
 {
     public float MaxHealth;
-    public float currentHealth { get; set; }
+    public float currentHealth; /*{ get; set; }*/
 
     [SerializeField] private float attackDamage = 10;
     [SerializeField] private float atkspeed = 0.5f;
@@ -33,7 +33,6 @@ public class DamageSystem : MonoBehaviour
 
             this.gameObject.layer = 8;
             this.GetComponent<SpriteRenderer>().enabled = false;
-            //this.GetComponent<TimedSpawner>().deadspawner = true;
         }
     }
 
@@ -41,7 +40,7 @@ public class DamageSystem : MonoBehaviour
     {
 
     }
-    private void OnCollisionStay2D(Collision2D other)
+    private void OnTriggerStay2D(Collision2D other)
     {
         if (Time.time > atkspeed + lasthit)
         {
