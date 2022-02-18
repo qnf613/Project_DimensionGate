@@ -11,6 +11,8 @@ public class Weapon : MonoBehaviour
     protected float wDamage;
     protected float wAtkspeed;
     protected float wRange;
+    protected int enhancement;
+    protected int maxEnhance;
     public WeaponEquipped we;
 
     protected float lastShot = 0f;
@@ -25,7 +27,7 @@ public class Weapon : MonoBehaviour
         wDamage = 0;
         wAtkspeed = 0;
         wRange = 0;
-       
+        enhancement = 1;
         we = WeaponEquipped.no;
         
     }
@@ -57,5 +59,19 @@ public class Weapon : MonoBehaviour
     protected virtual void Shoot()
     {
        
+    }
+
+    public void Enhance()
+    {
+        if (enhancement < maxEnhance)
+        {
+            enhancement++;
+        }
+        enhancement ++;
+    }
+
+    protected virtual void IncreaseStats()
+    {
+
     }
 }
