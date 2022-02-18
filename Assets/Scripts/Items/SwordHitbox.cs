@@ -12,6 +12,6 @@ public class SwordHitbox : MonoBehaviour
     void Update()
     {
         //destroy after one half second
-        Destroy(this.gameObject, .1f);
+        Destroy(gameObject, .1f);
     }
 }

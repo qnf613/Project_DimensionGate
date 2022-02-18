@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
 
     protected float lastShot = 0f;
     protected Vector3 targetPosition;
-    protected Camera cam;
+    [SerializeField]protected Camera cam;
 
     protected Weapon()
     {
