@@ -11,7 +11,7 @@ public class MagicArrow : Weapon
     [SerializeField] private float attackspeed = .7f;
     [SerializeField] private GameObject magicArrowProjectilePrefab; 
     protected Vector3 projectileDirection;
-
+    
     
     void Start()
     {
@@ -22,6 +22,7 @@ public class MagicArrow : Weapon
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
+        
     }
 
     

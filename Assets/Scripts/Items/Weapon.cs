@@ -11,24 +11,28 @@ public class Weapon : MonoBehaviour
     protected float wDamage;
     protected float wAtkspeed;
     protected float wRange;
-    protected WeaponEquipped we;
+    public WeaponEquipped we;
 
     protected float lastShot = 0f;
     protected Vector3 targetPosition;
-    public Camera cam;
+    protected Camera cam;
 
     protected Weapon()
     {
+        
         wName = "";
         wDescription = "";
         wDamage = 0;
         wAtkspeed = 0;
         wRange = 0;
-        
+       
         we = WeaponEquipped.no;
         
     }
-
+    protected void Start()
+    {
+        cam = Camera.main;
+    }
     // Update is called once per frame
     protected virtual void Update()
     {

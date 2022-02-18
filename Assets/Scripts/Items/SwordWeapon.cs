@@ -17,7 +17,8 @@ public class SwordWeapon : Weapon
         this.wDescription = description;
         this.wDamage = damage;
         this.wAtkspeed = attackspeed;
-        we = WeaponEquipped.yes;;
+        we = WeaponEquipped.yes;
+        cam = Camera.main;
     }
 
     

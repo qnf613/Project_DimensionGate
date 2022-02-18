@@ -14,7 +14,7 @@ public class LuckyComet : Weapon
         this.wName = name;
         this.wDescription = description;
         this.wDamage = damage;        
-        we = WeaponEquipped.yes;
+        we = WeaponEquipped.no;
     }
 
     // Update is called once per frame
