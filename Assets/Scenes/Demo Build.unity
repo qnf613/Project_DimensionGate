@@ -16496,6 +16496,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 432841743955198413, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: we
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1192529207966834898, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_Camera
       value: 
@@ -16504,9 +16508,17 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1601431311}
+    - target: {fileID: 3079640849244217655, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3974097358585123305, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246863512490637108, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}

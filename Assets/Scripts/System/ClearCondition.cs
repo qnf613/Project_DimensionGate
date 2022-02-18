@@ -16,16 +16,17 @@ public class ClearCondition : MonoBehaviour
     //player
     [SerializeField] private GameObject player;
     //portal
+    [SerializeField] private GameObject portal;
     [SerializeField] private GameObject[] portals;
     //conditions
     [SerializeField] protected bossStatus bs;
     [SerializeField] protected stageCleared sc;
     [SerializeField] private bool happened = false;
+    [SerializeField] private bool gameStart = false;
     // private int repeatStopper;
 
-    // Start is called before the first frame update
-    private void Start() 
-    {
+
+    private void Awake() {
         //find player
         player = GameObject.FindGameObjectWithTag("Player");
         Debug.Log("I found player!");
@@ -33,19 +34,13 @@ public class ClearCondition : MonoBehaviour
         //bossMonsters = Resources.LoadAll<GameObject>("Boss").ToList();
         bossOfStage = bossMonsters[Random.Range(0, bossMonsters.Length)];
         
-        //declear starting status of portal
+        //declear starting status
         sc = stageCleared.yet;
-        Debug.Log("stage is not clear yet");
-        //start with Summonable-portal
-        Instantiate(portals[0], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
-        Debug.Log("It summons portal");
-        
-        //declear starting status of boss
         bs = bossStatus.nSummon;
-        Debug.Log("boss has not been summoned");
+        //start with Summonable-portal
+        portal = GameObject.FindGameObjectWithTag("Portal");
     }
 
-    
     // Update is called once per frame
     private void Update()
     {
@@ -115,7 +110,7 @@ public class ClearCondition : MonoBehaviour
 
     private void CheckPlayer()
     {
-        if (GameObject.FindWithTag("Player") == null) //can be changed to something like 'player.hp == 0'
+        if (GameObject.FindGameObjectWithTag("Player") == null) //can be changed to something like 'player.hp == 0'
         {
             sc = stageCleared.over;
         }
@@ -123,7 +118,7 @@ public class ClearCondition : MonoBehaviour
 
     private void CheckBoss()
     {
-        if (GameObject.FindWithTag("Boss") == null && sc == stageCleared.yet)
+        if (GameObject.FindGameObjectWithTag("Boss") == null && sc == stageCleared.yet)
         {
             sc = stageCleared.yes;
         }
@@ -131,9 +126,10 @@ public class ClearCondition : MonoBehaviour
 
     private void CheckPortal()
     {
-        if (GameObject.FindWithTag("Portal") == null && sc == stageCleared.yet)
+        if (GameObject.FindGameObjectWithTag("Portal") == null && sc == stageCleared.yet)
         {
-            Instantiate(portals[1], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+            portal = portals[0];
+            Instantiate(portal, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
             //Instantiate boss monster
             SummomBoss();
         }
@@ -156,7 +152,8 @@ public class ClearCondition : MonoBehaviour
                 BonusRewards();
             }
             Destroy(GameObject.FindGameObjectWithTag("Portal"));
-            Instantiate(portals[2], new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+            portal = portals[1];
+            Instantiate(portal, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
             happened = true;
         }
     }
