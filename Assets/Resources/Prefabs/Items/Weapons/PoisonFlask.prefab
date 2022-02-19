@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5273215895066064673}
   m_Layer: 3
   m_Name: PoisonFlask
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,5 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844c2031ab6333841b0caef94ddc88b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  we: 1
   cam: {fileID: 0}
+  name: Venom Flask
+  description: Throw a flask which leaves a pool of poison on the ground.
+  rage: 20
+  attackspeed: 1.5
   poisonFlaskPrefab: {fileID: 3139452587625503352, guid: d873fbcc2c61c8c44b6e54f2edaf1e7b, type: 3}

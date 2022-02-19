@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8139579069443953455}
   m_Layer: 0
   m_Name: Lucky Comet Weapon
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,6 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4b6c17603483a4c92f986ead237b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  we: 1
+  cam: {fileID: 0}
+  name: Lucky Comet
+  description: Lucky this comet decided to orbit around you
+  damage: 50
   rotationspeed: 100
 --- !u!212 &8139579069443953455
 SpriteRenderer:

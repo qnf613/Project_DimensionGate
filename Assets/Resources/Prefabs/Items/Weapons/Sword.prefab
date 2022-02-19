@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3925146854484841072}
   m_Layer: 0
   m_Name: Sword
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   we: 1
+  cam: {fileID: 0}
   name: Giant F-ing Sword
   description: What else do you need to know, read the name...
   damage: 60

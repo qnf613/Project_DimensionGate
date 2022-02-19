@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Boss
   - Portal
+  - Weapon
+  - Artifact
   layers:
   - Default
   - TransparentFX

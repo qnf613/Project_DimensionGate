@@ -6,15 +6,21 @@ using TMPro;
 public class RewardUI : MonoBehaviour
 {
     public RewardSystem rs;
+    public RewardButton rb1;
+    public RewardButton rb2;
+    public RewardButton rb3;
     public List<GameObject> rewards;
-    public GameObject pickedItem;
-    public TextMeshPro[] OptionNames;
-    public GameObject playersInventory;
+    public GameObject weaponInventory;
+    public GameObject artifactInventory;
+    public GameObject rewardUI;
 
     // Start is called before the first frame update
     void Start()
     {
         rs = rs.GetComponent<RewardSystem>();
+        rb1 = rb1.GetComponent<RewardButton>();
+        rb2 = rb2.GetComponent<RewardButton>();
+        rb3 = rb3.GetComponent<RewardButton>();
     }
 
     // Update is called once per frame
@@ -23,48 +29,46 @@ public class RewardUI : MonoBehaviour
         GetRewardsList();
     }
 
-    public void DisplayOption()
-    {
-        OptionNames[0].text = rewards[0].ToString();
-        OptionNames[1].text = rewards[1].ToString();
-        OptionNames[2].text = rewards[2].ToString();
-    }
-
-    public void Option1()
-    {
-        pickedItem = rewards[0];
-        PickReward(pickedItem);
-    }
-
-    public void Option2()
-    {
-        pickedItem = rewards[1];
-        PickReward(pickedItem);
-    }
-
-    public void Option3()
-    {
-        pickedItem = rewards[2];
-        PickReward(pickedItem);
-    }
-
     public void PickReward(GameObject item)
     {
         if (item.activeInHierarchy)
         {
-
+            //TODO: enhance the item
         }
         else if(!item.activeInHierarchy)
         {
-            Instantiate(item, playersInventory.transform);
+            if(item.gameObject.tag == "Weapon")
+            {
+            Instantiate(item, weaponInventory.transform);
+            }
+            if(item.gameObject.tag == "Artifact")
+            {
+            Instantiate(item, artifactInventory.transform);
+            }
         }
+        CloseUI();
+    }
 
+    public void OpenUI(){
+        rewardUI.SetActive(true);
+        GetRewardsList();
+    }
+
+    public void CloseUI(){
+        rewardUI.SetActive(false);
         ResetRewardList();
     }
 
     public void GetRewardsList()
     {
         rewards = rs.rewardsList;
+        AssignRewards();
+    }
+
+    public void AssignRewards(){
+        rb1.assignedItem = rewards[0];
+        rb2.assignedItem = rewards[1];
+        rb3.assignedItem = rewards[2];
     }
 
     public void ResetRewardList()

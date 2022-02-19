@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2115046259}
   m_Layer: 0
   m_Name: MagicArrow
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,5 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd75af683598de4591336ee26b1339d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  we: 1
   cam: {fileID: 0}
+  name: Magic Arrow
+  description: Shoot an arrow which pierces through enemies
+  damage: 10
+  rage: 20
+  attackspeed: 0.7
   magicArrowProjectilePrefab: {fileID: 4736143673115787737, guid: 96e71f63523706f45941e20b4c59bf75, type: 3}

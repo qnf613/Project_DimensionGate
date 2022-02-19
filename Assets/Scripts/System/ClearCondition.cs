@@ -29,7 +29,6 @@ public class ClearCondition : MonoBehaviour
     private void Awake() {
         //find player
         player = GameObject.FindGameObjectWithTag("Player");
-        Debug.Log("I found player!");
         //get all possible boss monsters of stage and put them in the list, and pick one of them for this run
         //bossMonsters = Resources.LoadAll<GameObject>("Boss").ToList();
         bossOfStage = bossMonsters[Random.Range(0, bossMonsters.Length)];
