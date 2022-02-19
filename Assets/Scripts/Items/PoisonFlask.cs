@@ -19,7 +19,7 @@ public class PoisonFlask : Weapon
         this.wDescription = description;
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
-        we = WeaponEquipped.no;
+        we = WeaponEquipped.yes;
     }
 
 

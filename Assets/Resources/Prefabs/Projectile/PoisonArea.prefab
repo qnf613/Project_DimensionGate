@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6653914935749489491}
   - component: {fileID: 5885322344971002357}
   - component: {fileID: 6122813412216201331}
-  - component: {fileID: 2245758777600557574}
   - component: {fileID: 64377233079972313}
+  - component: {fileID: -1974482379902493501}
   m_Layer: 0
   m_Name: PoisonArea
   m_TagString: Untagged
@@ -112,19 +112,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2245758777600557574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7626186721086240868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8b03a9f921f4ca4e9c480d1ae086926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 15
 --- !u!50 &64377233079972313
 Rigidbody2D:
   serializedVersion: 4
@@ -146,3 +133,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-1974482379902493501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7626186721086240868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e7c34337133384287b84e0f0962174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkspeed: 0.5
+  lasthit: 0
+  duration: 3
+  attackDamage: 10

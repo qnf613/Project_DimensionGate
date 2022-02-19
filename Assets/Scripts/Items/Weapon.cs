@@ -28,7 +28,7 @@ public class Weapon : MonoBehaviour
         wAtkspeed = 0;
         wRange = 0;
         enhancement = 1;
-        we = WeaponEquipped.no;
+        we = WeaponEquipped.yes;
         
     }
     protected void Start()
@@ -41,6 +41,7 @@ public class Weapon : MonoBehaviour
         switch (we)
         {
             case WeaponEquipped.yes:
+                CheckCamera();
                 Aim();
                 Shoot();
                 break;
@@ -50,7 +51,13 @@ public class Weapon : MonoBehaviour
                 break;
         }
     }
-
+    void CheckCamera()
+    {
+        if (cam == null)
+        {
+            cam = Camera.main;
+        }
+    }
    
     protected virtual void Aim()
     {
