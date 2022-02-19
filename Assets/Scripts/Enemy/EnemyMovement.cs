@@ -18,9 +18,10 @@ public class EnemyMovement : MonoBehaviour
     {
         var dir = _Target.position - transform.position;
 
-        transform.up = Vector3.MoveTowards(transform.up, dir, _RotationSpeed * Time.deltaTime);
+        //transform.up = Vector3.MoveTowards(transform.up, dir, _RotationSpeed* Time.deltaTime);
 
-        transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.up, _Speed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.up, _Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _Target.position, _Speed * Time.deltaTime);
     }
 
 }
