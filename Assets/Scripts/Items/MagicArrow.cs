@@ -6,10 +6,11 @@ public class MagicArrow : Weapon
 {
     [SerializeField] private string name = "Magic Arrow";
     [SerializeField] private string description = "Shoot an arrow which pierces through enemies";
-    [SerializeField] private int damage = 10;
+    [SerializeField] private float damage = 100;
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = .7f;
     [SerializeField] private GameObject magicArrowProjectilePrefab; 
+
     protected Vector3 projectileDirection;
     
     
@@ -43,10 +44,18 @@ public class MagicArrow : Weapon
             projectileDirection = (this.transform.position - targetPosition);
             
             //TODO : Change this to match player Rotation and position
-            
+            /*
+             * Summary
+             * When you instantiate the projectile, Im going into the projectile script to change the damage it does.
+             * 
+             * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
+             * setting it as the final damage value.
+            */
             Instantiate(magicArrowProjectilePrefab, transform.position, transform.rotation);
             magicArrowProjectilePrefab.GetComponent<StraightProjectile>();
-            
+            finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
+            magicArrowProjectilePrefab.GetComponent<DealDamage>().SetDamage(finalDamageNumber);
+            Debug.Log(finalDamageNumber);
             lastShot = Time.time;
         }
 

@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class DealDamage : MonoBehaviour
 {
-    public float damage = 20;
+    [SerializeField]private float damage;
+    public void SetDamage(float dmg) 
+    { 
+    damage = dmg;
+        Debug.Log("Damage changed to "+ dmg);
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<DamageSystem>() == null) { }

@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     protected int enhancement;
     protected int maxEnhance;
     public WeaponEquipped we;
-
+    public float finalDamageNumber;
     protected float lastShot = 0f;
     protected Vector3 targetPosition;
     [SerializeField]protected Camera cam;
