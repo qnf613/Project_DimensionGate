@@ -55,7 +55,6 @@ public class MagicArrow : Weapon
             magicArrowProjectilePrefab.GetComponent<StraightProjectile>();
             finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
             magicArrowProjectilePrefab.GetComponent<DealDamage>().SetDamage(finalDamageNumber);
-            Debug.Log(finalDamageNumber);
             lastShot = Time.time;
         }
 

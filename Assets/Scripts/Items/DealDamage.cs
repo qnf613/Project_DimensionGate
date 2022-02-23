@@ -8,7 +8,6 @@ public class DealDamage : MonoBehaviour
     public void SetDamage(float dmg) 
     { 
     damage = dmg;
-        Debug.Log("Damage changed to "+ dmg);
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
