@@ -18,7 +18,8 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private float lasthit;
     [SerializeField] private TextMeshPro DamageIndicator;
     [SerializeField] private GameObject pfDamagePopup;
-    [SerializeField] private Transform OffSet;
+    [SerializeField] private GameObject OffSet;
+    [SerializeField] private Transform TempPosition;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -61,7 +62,11 @@ public class DamageSystem : MonoBehaviour
 
     private void DamagePopUp(float dmg)
     {
-        Instantiate(pfDamagePopup, OffSet);
+        float randomAngle;
+        float randomOffset;
+        randomOffset = UnityEngine.Random.RandomRange(-1f,1.5f);
+        Vector3 TempOffset = new Vector3(OffSet.transform.position.x + randomOffset, OffSet.transform.position.y,0);
+        Instantiate(pfDamagePopup, TempOffset, Quaternion.identity);
         DamageIndicator.SetText(dmg.ToString());
     }
 
