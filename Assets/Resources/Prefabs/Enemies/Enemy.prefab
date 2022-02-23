@@ -146,7 +146,8 @@ MonoBehaviour:
   lasthit: 0
   DamageIndicator: {fileID: 6880273557122235488, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
   pfDamagePopup: {fileID: 4432683363937425119, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
-  OffSet: {fileID: 5063243283951440052}
+  OffSet: {fileID: 3160911241467978387}
+  TempPosition: {fileID: 0}
 --- !u!1001 &8278773716365822200
 PrefabInstance:
   m_ObjectHideFlags: 0
