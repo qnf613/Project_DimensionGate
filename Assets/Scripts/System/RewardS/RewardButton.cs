@@ -20,6 +20,6 @@ public class RewardButton : MonoBehaviour
     }
 
     public void PickThisOption(){
-         ru.PickReward(assignedItem);
+        ru.PickReward(assignedItem);
     }
 }

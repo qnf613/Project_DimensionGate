@@ -8,6 +8,7 @@ public class RewardSystem : MonoBehaviour
     public List<GameObject> allItemList;
     public List<GameObject> tempList;
     public List<GameObject> rewardsList;
+    public GameObject ChestDemo;
 
     public void Awake()
     {
@@ -24,7 +25,18 @@ public class RewardSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            MakeRewardList();
+            Instantiate(ChestDemo, transform.position, transform.rotation);
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            if (!GameObject.Find("Player"))
+            {
+                Debug.Log("Player is not here");
+            }
+            else
+            {
+                Debug.Log("Player is here");
+            }
         }
     }
 

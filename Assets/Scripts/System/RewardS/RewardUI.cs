@@ -9,6 +9,7 @@ public class RewardUI : MonoBehaviour
     public RewardButton rb1;
     public RewardButton rb2;
     public RewardButton rb3;
+    public TextMeshProUGUI[] texts;
     public List<GameObject> rewards;
     public GameObject weaponInventory;
     public GameObject artifactInventory;
@@ -21,21 +22,27 @@ public class RewardUI : MonoBehaviour
         rb1 = rb1.GetComponent<RewardButton>();
         rb2 = rb2.GetComponent<RewardButton>();
         rb3 = rb3.GetComponent<RewardButton>();
+        for (int i = 0; i < 3; i++)
+        {
+            texts[i] = texts[i].GetComponent<TextMeshProUGUI>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetRewardsList();
     }
 
     public void PickReward(GameObject item)
     {
-        if (item.activeInHierarchy)
+        string itemName = item.name.ToString() + "(Clone)";
+        //Debug.Log("You Picked " + item.name.ToString());
+        if (GameObject.Find(itemName))
         {
             //TODO: enhance the item
+            Debug.Log("Refine!");
         }
-        else if(!item.activeInHierarchy)
+        else if(!GameObject.Find(itemName))
         {
             if(item.gameObject.tag == "Weapon")
             {
@@ -50,13 +57,15 @@ public class RewardUI : MonoBehaviour
     }
 
     public void OpenUI(){
-        rewardUI.SetActive(true);
         GetRewardsList();
+        rewardUI.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void CloseUI(){
-        rewardUI.SetActive(false);
         ResetRewardList();
+        rewardUI.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void GetRewardsList()
@@ -67,8 +76,13 @@ public class RewardUI : MonoBehaviour
 
     public void AssignRewards(){
         rb1.assignedItem = rewards[0];
+        texts[0].text = rb1.assignedItem.name;
+
         rb2.assignedItem = rewards[1];
+        texts[1].text = rb2.assignedItem.name;
+
         rb3.assignedItem = rewards[2];
+        texts[2].text = rb3.assignedItem.name;
     }
 
     public void ResetRewardList()
