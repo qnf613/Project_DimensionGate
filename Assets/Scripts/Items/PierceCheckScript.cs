@@ -11,21 +11,19 @@ public class PierceCheckScript : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<DamageSystem>())
         {
-            Debug.Log("Called");
             PierceCount();
-            DestroyAfterPierce();
         }
        
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //if (collision.gameObject.GetComponent<DamageSystem>())
-        //{
-        //    DestroyAfterPierce();
-        //}
+        if (pierceCount >= maxPierceCount)
+            {
+                DestroyAfterPierce();
+            }
+        
     }
     public void DestroyAfterPierce() {
-        
         
         Destroy(this.gameObject);
         
@@ -37,13 +35,6 @@ public class PierceCheckScript : MonoBehaviour
         {
             pierceCount++;
             Debug.Log(pierceCount);
-        }
-    }
-    private void Update()
-    {
-        if (pierceCount >= maxPierceCount)
-        {
-            DestroyAfterPierce();
         }
     }
 }
