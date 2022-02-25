@@ -9,8 +9,9 @@ public class MagicArrow : Weapon
     [SerializeField] private float damage = 100;
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = .7f;
-    [SerializeField] private GameObject magicArrowProjectilePrefab; 
-
+    [SerializeField] private GameObject magicArrowProjectilePrefab;
+    [SerializeField] private int pierceCount;
+    [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
     
     
@@ -59,5 +60,6 @@ public class MagicArrow : Weapon
         }
 
     }
+    
 
 }
