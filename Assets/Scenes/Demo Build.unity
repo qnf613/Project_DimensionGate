@@ -268,6 +268,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 725012792406085333, guid: 401692e5dbd59a54080d456e6a9059b4, type: 3}
+      propertyPath: rate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 725012792406085333, guid: 401692e5dbd59a54080d456e6a9059b4, type: 3}
+      propertyPath: limit
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 725012792406085333, guid: 401692e5dbd59a54080d456e6a9059b4, type: 3}
       propertyPath: objectsToSpawn.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -36045,6 +36053,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1601431311}
+    - target: {fileID: 432841743955198413, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1192529207966834897, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 0
