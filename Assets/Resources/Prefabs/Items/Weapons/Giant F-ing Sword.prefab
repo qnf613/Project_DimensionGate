@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6014492236649116348
+--- !u!1 &3925146854484841079
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,62 +8,62 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3874334013712906494}
-  - component: {fileID: 5273215895066064673}
-  - component: {fileID: 8457160680624895998}
-  m_Layer: 3
-  m_Name: PoisonFlask
+  - component: {fileID: 3925146854484841073}
+  - component: {fileID: 3925146854484841072}
+  - component: {fileID: -462419850697200365}
+  m_Layer: 0
+  m_Name: Giant F-ing Sword
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3874334013712906494
+--- !u!4 &3925146854484841073
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6014492236649116348}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 3925146854484841079}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.4285713, y: 1.4285713, z: 1.4285713}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5273215895066064673
+--- !u!114 &3925146854484841072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6014492236649116348}
+  m_GameObject: {fileID: 3925146854484841079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 844c2031ab6333841b0caef94ddc88b5, type: 3}
+  m_Script: {fileID: 11500000, guid: 34fdde2a990441346a44a4ac4c4d5ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   we: 1
   finalDamageNumber: 0
   cam: {fileID: 0}
-  name: Venom Flask
-  description: Throw a flask which leaves a pool of poison on the ground.
-  rage: 20
-  attackspeed: 1.5
-  poisonFlaskPrefab: {fileID: 3139452587625503352, guid: d873fbcc2c61c8c44b6e54f2edaf1e7b, type: 3}
---- !u!114 &8457160680624895998
+  name: Giant F-ing Sword
+  description: What else do you need to know, read the name...
+  damage: 60
+  attackspeed: 2
+  SwordHitBox: {fileID: 3506587859466128946, guid: 64c2f62c6b9dc0648868040798d2641e, type: 3}
+--- !u!114 &-462419850697200365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6014492236649116348}
+  m_GameObject: {fileID: 3925146854484841079}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2a3875f60cc14f42b471d7a1fdc7d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   RefineLevel: 0
-  RefineMultiplier: 1.2
+  RefineMultiplier: 1.8
   finalDamage: 0

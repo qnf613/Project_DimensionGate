@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8139579069443953455}
   - component: {fileID: -3756685616695621105}
   m_Layer: 0
-  m_Name: Lucky Comet Weapon
+  m_Name: Lucky Comet
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

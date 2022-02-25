@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2115046259}
   - component: {fileID: 8566718603673603592}
   m_Layer: 0
-  m_Name: MagicArrow
+  m_Name: Magic Arrow
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
