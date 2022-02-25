@@ -150,17 +150,25 @@ PrefabInstance:
       propertyPath: times.Array.data[1]
       value: 
       objectReference: {fileID: 1687747832}
+    - target: {fileID: 8761695302360553126, guid: f63af271fca729646a8016dd7438549b, type: 3}
+      propertyPath: bossMonsters.Array.data[0]
+      value: 
+      objectReference: {fileID: 5874046255734088369, guid: 6c54509bbf27e4b46835e20ac15dbb05, type: 3}
+    - target: {fileID: 8761695302360553126, guid: f63af271fca729646a8016dd7438549b, type: 3}
+      propertyPath: bossMonsters.Array.data[1]
+      value: 
+      objectReference: {fileID: 5874046255734088369, guid: 6c54509bbf27e4b46835e20ac15dbb05, type: 3}
     - target: {fileID: 8761695302360553127, guid: f63af271fca729646a8016dd7438549b, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8761695302360553127, guid: f63af271fca729646a8016dd7438549b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.18
+      value: 45.49
       objectReference: {fileID: 0}
     - target: {fileID: 8761695302360553127, guid: f63af271fca729646a8016dd7438549b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.59
+      value: 2.81
       objectReference: {fileID: 0}
     - target: {fileID: 8761695302360553127, guid: f63af271fca729646a8016dd7438549b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35809,11 +35817,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4801537722164178791, guid: ee560f062a9dfa740839bd273e3b6c24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 45.29
+      value: 45.49
       objectReference: {fileID: 0}
     - target: {fileID: 4801537722164178791, guid: ee560f062a9dfa740839bd273e3b6c24, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51
+      value: 2.81
       objectReference: {fileID: 0}
     - target: {fileID: 4801537722164178791, guid: ee560f062a9dfa740839bd273e3b6c24, type: 3}
       propertyPath: m_LocalPosition.z
