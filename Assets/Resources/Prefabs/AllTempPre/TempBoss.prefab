@@ -99,11 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 600
+  MaxHealth: 3000
   currentHealth: 0
   attackDamage: 5
   atkspeed: 0.5
   lasthit: 0
+  DamageIndicator: {fileID: 0}
+  pfDamagePopup: {fileID: 0}
+  OffSet: {fileID: 0}
+  TempPosition: {fileID: 0}
 --- !u!61 &90628096719006703
 BoxCollider2D:
   m_ObjectHideFlags: 0

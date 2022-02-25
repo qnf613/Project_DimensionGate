@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner2 : MonoBehaviour
 {
-    public GameObject objectToSpawn;
+    public GameObject[] objectsToSpawn;
     //public GameObject parent;
     [Tooltip("How many units to spawn in at once")]
     [SerializeField] private int numberToSpawn;
@@ -55,9 +55,11 @@ public class Spawner2 : MonoBehaviour
                 }
                 else if (spawnCount <= limit)
                 {
+                    int randomEnemy;
+                    randomEnemy = (int)Random.Range(0, objectsToSpawn.Length);
                     int randomIndex = Random.Range(0, spawnPoints.Length);
                     Transform spawnPoint = spawnPoints[randomIndex];
-                    Instantiate(objectToSpawn, spawnPoint.position, spawnPoint.rotation);
+                    Instantiate(objectsToSpawn[randomEnemy], spawnPoint.position, spawnPoint.rotation);
                     spawnCount++;
 
                 }

@@ -1997,7 +1997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  load_scene: Demo
+  load_scene: Demo Build
   button: {fileID: 1826838723}
 --- !u!1 &1839255766
 GameObject:
@@ -2052,7 +2052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  load_scene: Demo
+  load_scene: Demo Build
   button: {fileID: 1839255769}
 --- !u!114 &1839255769
 MonoBehaviour:
