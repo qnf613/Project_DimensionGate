@@ -53,9 +53,9 @@ public class DamageSystem : MonoBehaviour
         DamagePopUp(damage);
         currentHealth -= damage;
         
-        if (currentHealth < 0)
+        if (currentHealth <= 0)
         {
-            Destroy(this.gameObject);
+            Destroy(this.gameObject, 0.25f);
         }
        
     }
