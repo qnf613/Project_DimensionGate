@@ -27,17 +27,7 @@ public class RewardSystem : MonoBehaviour
         {
             Instantiate(ChestDemo, transform.position, transform.rotation);
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (!GameObject.Find("Player"))
-            {
-                Debug.Log("Player is not here");
-            }
-            else
-            {
-                Debug.Log("Player is here");
-            }
-        }
+       
     }
 
     public void MakeRewardList()
@@ -47,7 +37,7 @@ public class RewardSystem : MonoBehaviour
         for (int i = 0; i < 3; i++)
         {
             choosenItemNum = (int)Random.Range(0, tempList.LongCount());
-            Debug.Log("The number is " + choosenItemNum);
+            //Debug.Log("The number is " + choosenItemNum);
             rewardsList.Add(tempList[choosenItemNum]);
             tempList.RemoveAt(choosenItemNum);
         }
