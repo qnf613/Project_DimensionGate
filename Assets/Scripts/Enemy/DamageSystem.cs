@@ -20,7 +20,8 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private GameObject pfDamagePopup;
     [SerializeField] private GameObject OffSet;
     [SerializeField] private Transform TempPosition;
-    // Start is called before the first frame update
+    [SerializeField] private SpriteFlash flashEffect;
+
     private void Awake()
     {
         DamageIndicator = transform.GetComponent<TextMeshPro>();
@@ -39,6 +40,7 @@ public class DamageSystem : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
                 other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
+                
                 Debug.Log("hit");
 
             }
@@ -51,6 +53,7 @@ public class DamageSystem : MonoBehaviour
     {
         ShowDamageUI(damage);
         DamagePopUp(damage);
+        flashEffect.Flash();
         currentHealth -= damage;
         
         if (currentHealth <= 0)
@@ -64,7 +67,7 @@ public class DamageSystem : MonoBehaviour
     {
         float randomAngle;
         float randomOffset;
-        randomOffset = UnityEngine.Random.RandomRange(-1f,1.5f);
+        randomOffset = UnityEngine.Random.Range(-1f,1.5f);
         Vector3 TempOffset = new Vector3(OffSet.transform.position.x + randomOffset, OffSet.transform.position.y,0);
         Instantiate(pfDamagePopup, TempOffset, Quaternion.identity);
         DamageIndicator.SetText(dmg.ToString());

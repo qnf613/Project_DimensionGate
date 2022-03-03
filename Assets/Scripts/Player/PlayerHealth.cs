@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private float maxHealth = 100;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Text healthValue;
+    [SerializeField] private SpriteFlash flashEffect;
 
     void Start()
     {
@@ -25,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
         if(health > maxHealth)
         {
             health = maxHealth;
+            flashEffect.Flash();
         }
         else if(health<=0f)
         {
