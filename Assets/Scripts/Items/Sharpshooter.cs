@@ -23,8 +23,7 @@ public class Sharpshooter : Weapon
         this.wDamage = damage;
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
-        we = WeaponEquipped.no;
-
+        we = WeaponEquipped.yes;
     }
 
     protected override void Aim()
