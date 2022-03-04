@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 5874046255734088393}
   m_Layer: 7
   m_Name: KingSlime
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,7 +106,8 @@ MonoBehaviour:
   DamageIndicator: {fileID: 6880273557122235488, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
   pfDamagePopup: {fileID: 4432683363937425119, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
   OffSet: {fileID: 5874046256116976176}
-  TempPosition: {fileID: 0}
+  TempPosition: {fileID: 5874046255734088398}
+  flashEffect: {fileID: 6697744233758242164}
 --- !u!114 &5874046255734088370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +247,7 @@ GameObject:
   - component: {fileID: 5874046257161658674}
   - component: {fileID: 5874046257161658701}
   - component: {fileID: 9154184151500047256}
+  - component: {fileID: 6697744233758242164}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -364,3 +366,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7654841, y: 0.7138907}
   m_EdgeRadius: 0
+--- !u!114 &6697744233758242164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874046257161658672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b392ee4f2b4ec2c44b7459161cd8575c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 4a881b7e65e2eed4b82ee202f7d42fc5, type: 2}
+  duration: 0.125

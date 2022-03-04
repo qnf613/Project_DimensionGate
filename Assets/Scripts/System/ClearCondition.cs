@@ -23,7 +23,8 @@ public class ClearCondition : MonoBehaviour
     [SerializeField] protected stageCleared sc;
     [SerializeField] private bool happened = false;
     [SerializeField] private bool gameStart = false;
-    // private int repeatStopper;
+    //rewards
+    public ClearBonus cb;
 
 
     private void Awake() {
@@ -38,6 +39,7 @@ public class ClearCondition : MonoBehaviour
         bs = bossStatus.nSummon;
         //start with Summonable-portal
         portal = GameObject.FindGameObjectWithTag("Portal");
+        cb = this.gameObject.GetComponent<ClearBonus>();
     }
 
     // Update is called once per frame
@@ -98,6 +100,10 @@ public class ClearCondition : MonoBehaviour
             times[0].text = ((int)timeRemain / 60).ToString();
             //seconds
             times[1].text = ((int)timeRemain % 60).ToString();
+            if (((int)timeRemain % 60) < 10)
+            {
+                times[1].text = "0"+((int)timeRemain % 60).ToString();
+            }
         }
         else
         {
@@ -148,7 +154,7 @@ public class ClearCondition : MonoBehaviour
         {
             if (timeRemain > 120)
             {
-                BonusRewards();
+                cb.CalculateBonusRewards();
             }
             Destroy(GameObject.FindGameObjectWithTag("Portal"));
             portal = portals[1];
@@ -156,15 +162,5 @@ public class ClearCondition : MonoBehaviour
             happened = true;
         }
     }
-    private void BonusRewards()
-    {
-        int numOfRewards = 0;
-        timeRemain -= 120;
-        numOfRewards = (int)timeRemain / 60;
-        //TO DO: Generate rewards (chest) as same as the value of 'numOfRewards'
-        //for(int i = 0; i ++; i < numOfRewards)
-        //{
-        //  ~~code for generate rewards
-        //}
-    }
+
 }

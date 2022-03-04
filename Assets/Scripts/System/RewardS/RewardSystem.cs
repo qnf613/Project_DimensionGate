@@ -8,7 +8,7 @@ public class RewardSystem : MonoBehaviour
     public List<GameObject> allItemList;
     public List<GameObject> tempList;
     public List<GameObject> rewardsList;
-    public GameObject ChestDemo;
+    public GameObject Chest;
 
     public void Awake()
     {
@@ -25,7 +25,7 @@ public class RewardSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(ChestDemo, transform.position, transform.rotation);
+            Instantiate(Chest, transform.position, transform.rotation);
         }
        
     }
