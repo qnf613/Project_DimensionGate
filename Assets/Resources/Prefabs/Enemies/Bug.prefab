@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 1826742345875329743}
   - component: {fileID: 3607537256737898432}
   - component: {fileID: 7423087703143254324}
+  - component: {fileID: 2667978799053972411}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -189,6 +190,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 4a881b7e65e2eed4b82ee202f7d42fc5, type: 2}
   duration: 0.125
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2667978799053972411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4079153970861439730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b701656523dd49aceb68914c15b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4079153972502358019
 GameObject:
   m_ObjectHideFlags: 0

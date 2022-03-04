@@ -19,6 +19,7 @@ public class SpriteFlash : MonoBehaviour
 
 
     private Coroutine flashRoutine;
+
     void Start()
     {
         originalColor = this.gameObject.GetComponent<SpriteRenderer>().color;
