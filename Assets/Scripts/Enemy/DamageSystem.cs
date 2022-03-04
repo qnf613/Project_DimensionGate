@@ -21,6 +21,7 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private GameObject OffSet;
     [SerializeField] private Transform TempPosition;
     [SerializeField] private SpriteFlash flashEffect;
+    [SerializeField] private SpriteFlashDeath flasheffectDeath;
 
     private void Awake()
     {
@@ -56,7 +57,9 @@ public class DamageSystem : MonoBehaviour
         
         if (currentHealth <= 0)
         {
-            Destroy(this.gameObject, 0.25f);
+            //flasheffectDeath.Fade();
+
+            Destroy(this.gameObject, 0.15f);
         }
        
     }
