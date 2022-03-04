@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &729265229598328043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9212890712930210220}
+  - component: {fileID: 7361014947558011883}
+  - component: {fileID: 459479050291669650}
+  m_Layer: 0
+  m_Name: Sharpshooter
+  m_TagString: Weapon
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9212890712930210220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729265229598328043}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7361014947558011883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729265229598328043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229610132416e4e49ad8f0d77e15d280, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  we: 0
+  finalDamageNumber: 0
+  cam: {fileID: 0}
+  name: Sharpshooter
+  description: Fires high-speed shot that pierces through enemies.
+  damage: 80
+  rage: 40
+  attackspeed: 5
+  sharpshooterPrefab: {fileID: 2930475503634430438, guid: 0ab01f30342db56439e37a5dbd8653ca, type: 3}
+  pierceCount: 0
+  maxPierceCount: 10
+--- !u!114 &459479050291669650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729265229598328043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2a3875f60cc14f42b471d7a1fdc7d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RefineLevel: 0
+  RefineMultiplier: 2
+  finalDamage: 0
