@@ -25,6 +25,9 @@ public class ManageScene : MonoBehaviour
 
     protected IEnumerator LoadScene()
     {
+        if(Time.timeScale != 1f){
+            Time.timeScale = 1f;
+        }
         // sets current scene to whatever the current scene is
         Scene currentScene = SceneManager.GetActiveScene();
         Debug.Log("current scene is " + currentScene);

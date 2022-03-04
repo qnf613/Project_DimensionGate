@@ -35593,6 +35593,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PickThisOption
       objectReference: {fileID: 0}
+    - target: {fileID: 750407479, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 750407481, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: rs
       value: 
@@ -35699,7 +35703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1192529207966834897, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1192529207966834898, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_Camera
@@ -35717,6 +35721,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1601431311}
+    - target: {fileID: 1336131357735750685, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3079640849244217655, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -35779,6 +35787,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1495592814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 725012792947022096, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+  m_PrefabInstance: {fileID: 654739486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1497176761
 GameObject:
   m_ObjectHideFlags: 0
@@ -49496,6 +49509,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 740087950032038876, guid: 00a17169b808ff147a8e103caca4c6b1, type: 3}
+      propertyPath: Spawner
+      value: 
+      objectReference: {fileID: 1495592814}
     - target: {fileID: 740087950032038876, guid: 00a17169b808ff147a8e103caca4c6b1, type: 3}
       propertyPath: times.Array.data[0]
       value: 

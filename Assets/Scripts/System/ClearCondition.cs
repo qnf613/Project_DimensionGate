@@ -24,22 +24,28 @@ public class ClearCondition : MonoBehaviour
     [SerializeField] private bool happened = false;
     [SerializeField] private bool gameStart = false;
     //rewards
-    public ClearBonus cb;
+    [SerializeField] private ClearBonus cb;
+    //game over/stage clear
+    [SerializeField] private GameObject goUI;
+    [SerializeField] private GameObject enemySpawner;
 
 
     private void Awake() {
-        //find player
-        player = GameObject.FindGameObjectWithTag("Player");
+        //find everything need to be start with
+        player = GameObject.FindGameObjectWithTag("Player");                                    //player
+        portal = GameObject.FindGameObjectWithTag("Portal");                                    //Summonable-portal
+        enemySpawner = GameObject.Find("Spawner1");                                             //enemy spawner 
+        cb = this.gameObject.GetComponent<ClearBonus>();                                        //access to clear bonus script
+        goUI = GameObject.Find("UI-FollowCam").transform.Find("GameOver").gameObject;           //game over UI
+
         //get all possible boss monsters of stage and put them in the list, and pick one of them for this run
         //bossMonsters = Resources.LoadAll<GameObject>("Boss").ToList();
         bossOfStage = bossMonsters[Random.Range(0, bossMonsters.Length)];
-        
+
         //declear starting status
         sc = stageCleared.yet;
         bs = bossStatus.nSummon;
-        //start with Summonable-portal
-        portal = GameObject.FindGameObjectWithTag("Portal");
-        cb = this.gameObject.GetComponent<ClearBonus>();
+
     }
 
     // Update is called once per frame
@@ -62,7 +68,7 @@ public class ClearCondition : MonoBehaviour
             
             case stageCleared.over:
                 //call game over animation + UI
-                Gameover();
+                StartCoroutine(Gameover());
                 break;
         }
 
@@ -81,12 +87,14 @@ public class ClearCondition : MonoBehaviour
         
     }
 
-    private void Gameover()
+    IEnumerator Gameover()
     {
         if (!happened)
         {
             //TO DO: cut scene or animation of player death
-            //TO DO: UI pop up
+            yield return new WaitForSecondsRealtime(2.0f);
+            goUI.SetActive(true);
+            Time.timeScale = 0;
             happened = true;
         }
     }
@@ -152,6 +160,7 @@ public class ClearCondition : MonoBehaviour
     {
         if (!happened)
         {
+            StopEnemySpawn();
             if (timeRemain > 120)
             {
                 cb.CalculateBonusRewards();
@@ -160,6 +169,18 @@ public class ClearCondition : MonoBehaviour
             portal = portals[1];
             Instantiate(portal, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
             happened = true;
+        }
+    }
+
+    private void StopEnemySpawn(){
+        enemySpawner.SetActive(false);
+        ClearAllEnemies();
+    }
+
+    private void ClearAllEnemies(){
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Enemy");
+        for(int i = 0; i < monsters.Length; i++){
+            Destroy(monsters[i]);
         }
     }
 

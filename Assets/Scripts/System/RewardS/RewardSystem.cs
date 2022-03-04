@@ -12,7 +12,7 @@ public class RewardSystem : MonoBehaviour
 
     public void Awake()
     {
-        allItemList = Resources.LoadAll<GameObject>("Prefabs/Items").ToList();
+        allItemList = Resources.LoadAll<GameObject>("Prefabs/Items").ToList(); //get all items and add it to list
     }
     // Start is called before the first frame update
     void Start()

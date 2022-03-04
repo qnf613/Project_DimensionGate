@@ -18,6 +18,8 @@ public class RewardUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        weaponInventory = GameObject.Find("Weapons");
+        //artifactInventory = GameObject.Find("Artifacts");
         rs = rs.GetComponent<RewardSystem>();
         rb1 = rb1.GetComponent<RewardButton>();
         rb2 = rb2.GetComponent<RewardButton>();

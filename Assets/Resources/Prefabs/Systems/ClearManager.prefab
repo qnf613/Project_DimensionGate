@@ -61,6 +61,9 @@ MonoBehaviour:
   sc: 1
   happened: 0
   gameStart: 0
+  cb: {fileID: 0}
+  GameOverUI: {fileID: 0}
+  enemySpawner: {fileID: 0}
 --- !u!114 &8279960752219060255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,3 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e6c5132c2f110d478afe07c5e20979d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Chest: {fileID: 0}
+  cc: {fileID: 0}
+  numOfRewards: 0
+  spawnPoints: []
