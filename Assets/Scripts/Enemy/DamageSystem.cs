@@ -36,13 +36,11 @@ public class DamageSystem : MonoBehaviour
     {
         if (Time.time > atkspeed + lasthit)
         {
-            lasthit = Time.time;
+            
             if (other.gameObject.tag == "Player")
             {
                 other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
-                
-                Debug.Log("hit");
-
+                lasthit = Time.time;
             }
         }
     }
