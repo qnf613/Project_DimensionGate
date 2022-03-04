@@ -11,6 +11,7 @@ public class SpriteFlash : MonoBehaviour
     [Tooltip("Duration of flash.")]
     [SerializeField] private float duration;
 
+    [SerializeField] private Color originalColor;
   
     private SpriteRenderer spriteRenderer;
 
@@ -20,6 +21,7 @@ public class SpriteFlash : MonoBehaviour
     private Coroutine flashRoutine;
     void Start()
     {
+        originalColor = this.gameObject.GetComponent<SpriteRenderer>().color;
         // Get sprite renderer
             spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -43,13 +45,14 @@ public class SpriteFlash : MonoBehaviour
     {
         // Swap material to flash
         spriteRenderer.material = flashMaterial;
-
+        spriteRenderer.color = Color.red;
         // Pausing
         yield return new WaitForSeconds(duration);
 
         // Swap back to original
         spriteRenderer.material = originalMaterial;
-        
+        spriteRenderer.color = originalColor;
+
         flashRoutine = null;
     }
 

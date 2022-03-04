@@ -34,7 +34,7 @@ public class PierceCheckScript : MonoBehaviour
         if (pierceCount < maxPierceCount)
         {
             pierceCount++;
-            Debug.Log(pierceCount);
+            //Debug.Log(pierceCount);
         }
     }
 }
