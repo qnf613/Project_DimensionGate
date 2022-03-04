@@ -18,6 +18,8 @@ public class Spawner2 : MonoBehaviour
     [SerializeField] private float rateUp;
     private int spawnCount;
     public Transform[] spawnPoints;
+    public int monsterLimit;
+    public int monsterAmount;
 
     float spawnTimer;
 
@@ -34,13 +36,20 @@ public class Spawner2 : MonoBehaviour
 
             SpawnEnemy();
             spawnTimer -= Time.deltaTime;
+
             
             
         
     }
-
-    void SpawnEnemy()
+     void FixedUpdate()
     {
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Enemy");
+        monsterAmount = monsters.Length;
+    }
+
+    public void SpawnEnemy()
+    {
+        if(monsterAmount < monsterLimit)
       
             if (spawnTimer <= 0f)
             {

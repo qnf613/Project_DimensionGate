@@ -185,11 +185,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae4810be2e7d7d498e2ce7252a32e1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 4879215479555464488, guid: ce7df40661c0c1a42abc7df383f5c2ad, type: 3}
+  objectsToSpawn: []
   numberToSpawn: 1
-  limit: 10
-  rate: 3
-  rateChange: 0
+  limit: 10000
+  rate: 2
+  rateChange: 100
   rateUp: 1
   spawnPoints:
   - {fileID: 725012793581906315}
@@ -198,6 +198,8 @@ MonoBehaviour:
   - {fileID: 725012792606547563}
   - {fileID: 725012793203345619}
   - {fileID: 725012793558063491}
+  monsterLimit: 20
+  monsterAmount: 0
 --- !u!1 &725012792606547562
 GameObject:
   m_ObjectHideFlags: 0
