@@ -21,23 +21,27 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private GameObject OffSet;
     [SerializeField] private Transform TempPosition;
     [SerializeField] private SpriteFlash flashEffect;
-    [SerializeField] private SpriteFlashDeath flasheffectDeath;
+    [SerializeField] private float originalFontSize = 36;
+    // [SerializeField] private SpriteFlashDeath flasheffectDeath;
 
     private void Awake()
     {
         DamageIndicator = transform.GetComponent<TextMeshPro>();
+
     }
 
     void Start()
     {
         currentHealth = MaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
+        DamageIndicator.fontSize = originalFontSize;
+
     }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (Time.time > atkspeed + lasthit)
         {
-            
+
             if (other.gameObject.tag == "Player")
             {
                 other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
@@ -54,34 +58,49 @@ public class DamageSystem : MonoBehaviour
         DamagePopUp(damage);
         flashEffect.Flash();
         currentHealth -= damage;
-        
+
         if (currentHealth <= 0)
         {
             //flasheffectDeath.Fade();
 
             Destroy(this.gameObject, 0.15f);
         }
-       
+
     }
 
     private void DamagePopUp(float dmg)
     {
         float randomAngle;
         float randomOffset;
-        randomOffset = UnityEngine.Random.Range(-1f,1.5f);
-        Vector3 TempOffset = new Vector3(OffSet.transform.position.x + randomOffset, OffSet.transform.position.y,0);
+        randomOffset = UnityEngine.Random.Range(-1f, 1.5f);
+        Vector3 TempOffset = new Vector3(OffSet.transform.position.x + randomOffset, OffSet.transform.position.y, 0);
+        SetFontSize(dmg);
         Instantiate(pfDamagePopup, TempOffset, Quaternion.identity);
         DamageIndicator.SetText(dmg.ToString());
     }
 
-    
+
     private void ShowDamageUI(float dmg)
     {
         DamageIndicator.text = dmg.ToString();
         Invoke("ClearDamageUI", .5f);
+        ResetFontSize();
+
     }
     private void ClearDamageUI()
     {
         DamageIndicator.text = "";
+    }
+
+    //SetFontSize and ResetFontSize will affect the damage number font size. This is going to increase the font size depending on the damage dealt
+    void SetFontSize(float dmg) 
+    {
+        DamageIndicator.fontSize += dmg * .5f;
+        Debug.Log(DamageIndicator.fontSize);
+                            
+    }
+    void ResetFontSize()
+    {
+        DamageIndicator.fontSize = originalFontSize;
     }
 }
