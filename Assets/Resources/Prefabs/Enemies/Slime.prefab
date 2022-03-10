@@ -159,6 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashMaterial: {fileID: 2100000, guid: 4a881b7e65e2eed4b82ee202f7d42fc5, type: 2}
   duration: 0.125
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &5580571326173248728
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,6 +287,8 @@ MonoBehaviour:
   OffSet: {fileID: 5580571326594667609}
   TempPosition: {fileID: 0}
   flashEffect: {fileID: 8996201148667598762}
+  originalFontSize: 36
+  explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
 --- !u!114 &5580571326173248731
 MonoBehaviour:
   m_ObjectHideFlags: 0

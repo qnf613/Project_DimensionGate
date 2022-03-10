@@ -22,11 +22,13 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private Transform TempPosition;
     [SerializeField] private SpriteFlash flashEffect;
     [SerializeField] private float originalFontSize = 36;
-    // [SerializeField] private SpriteFlashDeath flasheffectDeath;
+    [SerializeField] private ParticleSystem explosionParticle;
+ 
 
     private void Awake()
     {
         DamageIndicator = transform.GetComponent<TextMeshPro>();
+        
 
     }
 
@@ -35,7 +37,7 @@ public class DamageSystem : MonoBehaviour
         currentHealth = MaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
-
+        
     }
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -61,8 +63,9 @@ public class DamageSystem : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            //flasheffectDeath.Fade();
-
+            
+            ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
+            explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
             Destroy(this.gameObject, 0.15f);
         }
 

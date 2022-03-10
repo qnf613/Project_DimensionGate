@@ -203,6 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b701656523dd49aceb68914c15b4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeSpeed: 0
 --- !u!1 &4079153972502358019
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +331,8 @@ MonoBehaviour:
   OffSet: {fileID: 4079153970533012062}
   TempPosition: {fileID: 0}
   flashEffect: {fileID: 7423087703143254324}
+  originalFontSize: 36
+  explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
 --- !u!114 &4079153972502358031
 MonoBehaviour:
   m_ObjectHideFlags: 0
