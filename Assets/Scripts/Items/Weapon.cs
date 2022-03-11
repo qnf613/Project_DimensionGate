@@ -70,6 +70,7 @@ public class Weapon : MonoBehaviour
 
     public void Enhance()
     {
+        Debug.Log("Enhanced!");
         if (enhancement < maxEnhance)
         {
             enhancement++;

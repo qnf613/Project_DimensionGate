@@ -16,7 +16,7 @@ public class RewardUI : MonoBehaviour
     public GameObject rewardUI;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         weaponInventory = GameObject.Find("Weapons");
         //artifactInventory = GameObject.Find("Artifacts");
@@ -38,9 +38,13 @@ public class RewardUI : MonoBehaviour
     public void PickReward(GameObject item)
     {
         string itemName = item.name.ToString() + "(Clone)";
-        //Debug.Log("You Picked " + item.name.ToString());
         if (GameObject.Find(itemName))
         {
+            //if (item.GetComponent<Weapon>() != null)
+            //{
+            //    Weapon tempScriptActivation = item.GetComponent<Weapon>();
+            //    tempScriptActivation.Enhance();
+            //}
             //TODO: enhance the item
             Debug.Log("Refine!");
         }

@@ -26,7 +26,7 @@ public class ClearCondition : MonoBehaviour
     //rewards
     [SerializeField] private ClearBonus cb;
     //game over/stage clear
-    [SerializeField] private GameObject goUI;
+    [SerializeField] private GameObject GOUI;
     [SerializeField] private GameObject enemySpawner;
 
 
@@ -36,7 +36,7 @@ public class ClearCondition : MonoBehaviour
         portal = GameObject.FindGameObjectWithTag("Portal");                                    //Summonable-portal
         enemySpawner = GameObject.Find("Spawner1");                                             //enemy spawner 
         cb = this.gameObject.GetComponent<ClearBonus>();                                        //access to clear bonus script
-        goUI = GameObject.Find("UI-FollowCam").transform.Find("GameOver").gameObject;           //game over UI
+        GOUI = GameObject.Find("UI-FollowCam").transform.Find("GameOver").gameObject;           //game over UI
 
         //get all possible boss monsters of stage and put them in the list, and pick one of them for this run
         //bossMonsters = Resources.LoadAll<GameObject>("Boss").ToList();
@@ -93,7 +93,7 @@ public class ClearCondition : MonoBehaviour
         {
             //TO DO: cut scene or animation of player death
             yield return new WaitForSecondsRealtime(2.0f);
-            goUI.SetActive(true);
+            GOUI.SetActive(true);
             Time.timeScale = 0;
             happened = true;
         }

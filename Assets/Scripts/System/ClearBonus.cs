@@ -39,15 +39,5 @@ public class ClearBonus : MonoBehaviour
         Transform spawnPoint = spawnPoints[randomSpawn];
         Instantiate(Chest, spawnPoint.position, spawnPoint.rotation);
         spawnPoints.RemoveAt(randomSpawn);
-
-        //int choosenItemNum;
-        //for (int i = 0; i < 3; i++)
-        //{
-        //    choosenItemNum = (int)Random.Range(0, tempList.LongCount());
-        //    //Debug.Log("The number is " + choosenItemNum);
-        //    rewardsList.Add(tempList[choosenItemNum]);
-        //    tempList.RemoveAt(choosenItemNum);
-        //}
-
     }
 }

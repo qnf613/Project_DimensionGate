@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 7530792241748032482}
   - component: {fileID: 2540833269409469786}
   - component: {fileID: 710685495695220981}
-  - component: {fileID: 7776467474632927810}
+  - component: {fileID: 3537540849258200357}
   m_Layer: 5
   m_Name: Quit2Main(need update)
   m_TagString: Untagged
@@ -256,9 +256,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: RewardButton, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 3537540849258200357}
+        m_TargetAssemblyTypeName: SceneButton, Assembly-CSharp
+        m_MethodName: loadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -268,7 +268,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7776467474632927810
+--- !u!114 &3537540849258200357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,12 +277,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1846223337476848764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41300cb3528e72445aa770d8407c0b27, type: 3}
+  m_Script: {fileID: 11500000, guid: 953cc6e8a3e070444a6566931a5c73c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  load_scene: mainmenu
-  button: {fileID: 710685495695220981}
+  sceneToLoad: MainMenu
 --- !u!1 &3973364725689076012
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,14 +292,13 @@ GameObject:
   - component: {fileID: 3807772990777324518}
   - component: {fileID: 4504478074251090834}
   - component: {fileID: 3244940629210840061}
-  - component: {fileID: 824628725957102004}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3807772990777324518
 RectTransform:
   m_ObjectHideFlags: 0
@@ -361,30 +358,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &824628725957102004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3973364725689076012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c48678f2475dfe48af6ff07e6624533, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rs: {fileID: 0}
-  rb1: {fileID: 0}
-  rb2: {fileID: 0}
-  rb3: {fileID: 0}
-  texts:
-  - {fileID: 3080215461952607693}
-  - {fileID: 0}
-  - {fileID: 0}
-  rewards: []
-  weaponInventory: {fileID: 0}
-  artifactInventory: {fileID: 0}
-  rewardUI: {fileID: 3973364725689076012}
 --- !u!1 &7705522060444884971
 GameObject:
   m_ObjectHideFlags: 0

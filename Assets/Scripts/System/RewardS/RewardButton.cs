@@ -10,7 +10,7 @@ public class RewardButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rs = rs.GetComponent<RewardSystem>();
+        rs = rs.GetComponent<RewardSystem>();/*rs.GetComponent<RewardSystem>();*/
         ru = ru.GetComponent<RewardUI>();
     }
 
