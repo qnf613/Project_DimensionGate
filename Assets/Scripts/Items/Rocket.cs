@@ -51,8 +51,13 @@ public class Rocket : Weapon
              * setting it as the final damage value.
             */
             Instantiate(rocketProjectilePrefab, transform.position, transform.rotation);
+
             rocketProjectilePrefab.GetComponent<StraightProjectile>();
             finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
+
+            //This will make the damage of the explosion scale with refine.
+            //This will also make the damage of the explosion 1/2 of the damage of the collision.
+            rocketProjectilePrefab.GetComponent<Explode>().GetExplosionDamage(damage/2);
             rocketProjectilePrefab.GetComponent<DealDamage>().SetDamage(finalDamageNumber);
             lastShot = Time.time;
         }

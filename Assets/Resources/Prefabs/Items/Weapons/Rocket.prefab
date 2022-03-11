@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2103a7e011dc93e48bd9dd4821551fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  we: 1
+  we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
   name: Rocket
