@@ -23,4 +23,8 @@ public class Explode : MonoBehaviour
 
         }
     }
+    public void GetExplosionDamage(float damage) 
+    {
+        explosionPrefab.GetComponent<DealDamage>().SetDamage(damage);
+    }
 }

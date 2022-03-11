@@ -98,7 +98,7 @@ public class DamageSystem : MonoBehaviour
     //SetFontSize and ResetFontSize will affect the damage number font size. This is going to increase the font size depending on the damage dealt
     void SetFontSize(float dmg) 
     {
-        DamageIndicator.fontSize += dmg * .5f;
+        DamageIndicator.fontSize += dmg * .2f;
         if (DamageIndicator.fontSize > 100)
         {
             DamageIndicator.fontSize = 100;
