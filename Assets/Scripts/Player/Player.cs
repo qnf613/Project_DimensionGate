@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
         _Input = new PlayerInput();
         _Rigidbody = GetComponent<Rigidbody2D>();
     }

@@ -45,7 +45,8 @@ public class ClearCondition : MonoBehaviour
         //declear starting status
         sc = stageCleared.yet;
         bs = bossStatus.nSummon;
-
+        times[0] = GameObject.Find("Mins").GetComponent<Text>();
+        times[1] = GameObject.Find("Secs").GetComponent<Text>();
     }
 
     // Update is called once per frame

@@ -21,6 +21,13 @@ public class DonTDestroy : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        //debugging - scene move
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            SceneManager.LoadScene("Jin2(test Purpose)");
+        }
+
     }
 
 }

@@ -8,6 +8,7 @@ public class Chest : PickUp
     public RewardSystem rs;
     public GameObject rUI;
     public RewardUI ru;
+    public List<GameObject> equippedItemList;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,10 @@ public class Chest : PickUp
         rs = rsManager.GetComponent<RewardSystem>();
         rUI = GameObject.Find("UI-FollowCam").transform.Find("RewardPick").gameObject;
         ru = rUI.GetComponent<RewardUI>();
+        //foreach (GameObject ei in )
+        //{
+
+        //}
     }
 
     // Update is called once per frame
