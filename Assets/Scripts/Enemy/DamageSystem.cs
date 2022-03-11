@@ -99,6 +99,10 @@ public class DamageSystem : MonoBehaviour
     void SetFontSize(float dmg) 
     {
         DamageIndicator.fontSize += dmg * .5f;
+        if (DamageIndicator.fontSize > 100)
+        {
+            DamageIndicator.fontSize = 100;
+        }
         Debug.Log(DamageIndicator.fontSize);
                             
     }
