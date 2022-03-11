@@ -20,6 +20,7 @@ public class LevelSystem : MonoBehaviour
         level = 1;
         exp = 0;
         expToLevelUp = 10;
+        
         rsManager = GameObject.Find("RewardManager");
         rs = rsManager.GetComponent<RewardSystem>();
         rUI = GameObject.Find("UI-FollowCam").transform.Find("RewardPick").gameObject;
