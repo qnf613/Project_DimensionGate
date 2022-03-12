@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExpContainer : MonoBehaviour
 {
     public GameObject lvManager;
-    public LevelSystem lv;
+    public LevelSystem ls;
     [SerializeField] private int exp = 1;
 
     public DamageSystem dmgsys;
@@ -16,7 +16,7 @@ public class ExpContainer : MonoBehaviour
     {
         dmgsys = transform.GetComponent<DamageSystem>();
         lvManager = GameObject.Find("LevelManager");
-        lv = lvManager.GetComponent<LevelSystem>();
+        ls = lvManager.GetComponent<LevelSystem>();
     }
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class ExpContainer : MonoBehaviour
         hpChecker = dmgsys.currentHealth;
         if (hpChecker <= 0 && !sentExp)
         {
-            lv.AddExp(exp);
+            ls.AddExp(exp);
             sentExp = true;
         }
              
