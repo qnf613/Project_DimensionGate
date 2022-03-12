@@ -49283,5 +49283,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: DontDestroyS
       objectReference: {fileID: 0}
+    - target: {fileID: 3675165121291755346, guid: 12b8e97a878401c4aa698f60fefb3b93, type: 3}
+      propertyPath: exp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6072574972355549996, guid: 12b8e97a878401c4aa698f60fefb3b93, type: 3}
+      propertyPath: m_Name
+      value: Magic Arrow(Clone)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12b8e97a878401c4aa698f60fefb3b93, type: 3}

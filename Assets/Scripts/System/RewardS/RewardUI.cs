@@ -37,8 +37,8 @@ public class RewardUI : MonoBehaviour
 
     public void PickReward(GameObject item)
     {
-        string itemName = item.name.ToString() + "(Clone)";
-        if (GameObject.Find(itemName))
+        string itemName = item.name.ToString();
+        if (GameObject.Find(itemName) || GameObject.Find(item.name.ToString() + "(Clone)"))
         {
             //if (item.GetComponent<Weapon>() != null)
             //{

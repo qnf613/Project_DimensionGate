@@ -13,8 +13,6 @@ public class LevelSystem : MonoBehaviour
     public RewardSystem rs;
     public GameObject rUI;
     public RewardUI ru;
-    [SerializeField] private GameObject inventory;
-    [SerializeField] private List<GameObject> equippedItems;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +24,7 @@ public class LevelSystem : MonoBehaviour
         rs = rsManager.GetComponent<RewardSystem>();
         rUI = GameObject.Find("UI-FollowCam").transform.Find("RewardPick").gameObject;
         ru = rUI.GetComponent<RewardUI>();
-        //only working with weapons for now, but should include artifacts later
-        inventory = GameObject.Find("Weapons");
+       
     }
 
     // Update is called once per frame
@@ -37,9 +34,7 @@ public class LevelSystem : MonoBehaviour
         {
             LevelUp();
         }
-        if(Input.GetKeyDown(KeyCode.Tab)){
-            MakeRewards();
-        }
+       
     }
 
     public void LevelUp()
@@ -47,7 +42,7 @@ public class LevelSystem : MonoBehaviour
         level++;
         exp -= expToLevelUp;
         expToLevelUp = level * 10 + 20;
-        rs.MakeRewardList();
+        rs.MakeLevelUpRewardList();
         ru.GetRewardsList();
         ru.OpenUI();
     }
@@ -56,13 +51,6 @@ public class LevelSystem : MonoBehaviour
     {
         exp += amount;
         Debug.Log("Current exp: " + exp);
-    }
-
-    public void MakeRewards()
-    {
-        foreach(Transform items in inventory.transform){
-            equippedItems.Add(items.gameObject);
-        }
     }
 
 }
