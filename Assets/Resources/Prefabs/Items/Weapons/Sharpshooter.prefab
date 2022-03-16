@@ -44,15 +44,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229610132416e4e49ad8f0d77e15d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CritMod: 2
+  CritDamageMod: 2
+  GlobalCritRate: 0
+  damage: 80
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
+  projectile: {fileID: 2930475503634430438, guid: 0ab01f30342db56439e37a5dbd8653ca, type: 3}
   name: Sharpshooter
   description: Fires high-speed shot that pierces through enemies.
-  damage: 80
   rage: 40
   attackspeed: 5
-  sharpshooterPrefab: {fileID: 2930475503634430438, guid: 0ab01f30342db56439e37a5dbd8653ca, type: 3}
   pierceCount: 0
   maxPierceCount: 10
 --- !u!114 &459479050291669650

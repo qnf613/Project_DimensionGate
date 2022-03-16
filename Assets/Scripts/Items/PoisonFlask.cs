@@ -37,12 +37,11 @@ public class PoisonFlask : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > wAtkspeed + lastShot)
         {
+            base.Shoot();
+
             projectileDirection = (this.transform.position - targetPosition);
 
             //TODO : Change this to match player Rotation and position
-
-            Instantiate(poisonFlaskPrefab, transform.position, transform.rotation);
-            poisonFlaskPrefab.GetComponent<StraightProjectile>();
 
             lastShot = Time.time;
 

@@ -254,13 +254,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5580571326173248728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2faeeff10f23034dbcdde5eafe73394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lvManager: {fileID: 0}
-  lv: {fileID: 0}
+  ls: {fileID: 0}
   exp: 1
   dmgsys: {fileID: 0}
   hpChecker: 0
@@ -283,7 +283,9 @@ MonoBehaviour:
   atkspeed: 0.5
   lasthit: 0
   DamageIndicator: {fileID: 6880273557122235488, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
+  CDamageIndicator: {fileID: 6880273557122235488, guid: d6ffe31a6bcc5dc4d934847037c1d5b9, type: 3}
   pfDamagePopup: {fileID: 4432683363937425119, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
+  CritpfDamagePopup: {fileID: 4432683363937425119, guid: d6ffe31a6bcc5dc4d934847037c1d5b9, type: 3}
   OffSet: {fileID: 5580571326594667609}
   TempPosition: {fileID: 0}
   flashEffect: {fileID: 8996201148667598762}

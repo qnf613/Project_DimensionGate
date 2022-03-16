@@ -6,10 +6,8 @@ public class Rocket : Weapon
 {
     [SerializeField] private string name = "Rocket";
     [SerializeField] private string description = "Fire an exploding rocket!";
-    [SerializeField] private float damage = 100;
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = 3f;
-    [SerializeField] private GameObject rocketProjectilePrefab;
     protected Vector3 projectileDirection;
 
 
@@ -18,7 +16,6 @@ public class Rocket : Weapon
         // Overriding the basic stats and info about the weapon here
         this.wName = name;
         this.wDescription = description;
-        this.wDamage = damage;
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
@@ -40,6 +37,7 @@ public class Rocket : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > wAtkspeed + lastShot)
         {
+            CheckIfCrit();
             projectileDirection = (this.transform.position - targetPosition);
 
             //TODO : Change this to match player Rotation and position
@@ -50,15 +48,12 @@ public class Rocket : Weapon
              * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
              * setting it as the final damage value.
             */
-            Instantiate(rocketProjectilePrefab, transform.position, transform.rotation);
 
-            rocketProjectilePrefab.GetComponent<StraightProjectile>();
             finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
 
             //This will make the damage of the explosion scale with refine.
             //This will also make the damage of the explosion 1/2 of the damage of the collision.
-            rocketProjectilePrefab.GetComponent<Explode>().GetExplosionDamage(damage/2);
-            rocketProjectilePrefab.GetComponent<DealDamage>().SetDamage(finalDamageNumber);
+            projectile.GetComponent<Explode>().GetExplosionDamage(damage/2);
             lastShot = Time.time;
         }
 

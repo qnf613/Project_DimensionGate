@@ -16,8 +16,10 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private float attackDamage = 10;
     [SerializeField] private float atkspeed = 0.5f;
     [SerializeField] private float lasthit;
+
     [SerializeField] private TextMeshPro DamageIndicator;
     [SerializeField] private GameObject pfDamagePopup;
+    
     [SerializeField] private GameObject OffSet;
     [SerializeField] private Transform TempPosition;
     [SerializeField] private SpriteFlash flashEffect;
@@ -37,7 +39,10 @@ public class DamageSystem : MonoBehaviour
         currentHealth = MaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
-        
+
+       
+
+
     }
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -54,11 +59,11 @@ public class DamageSystem : MonoBehaviour
 
 
 
-    public virtual void TakeDamage(float damage)
+    public virtual void TakeDamage(float damage, bool crit)
     {
-        ShowDamageUI(damage);
-        DamagePopUp(damage);
         flashEffect.Flash();
+        DamagePopUp(damage, crit);
+
         currentHealth -= damage;
 
         if (currentHealth <= 0)
@@ -69,46 +74,51 @@ public class DamageSystem : MonoBehaviour
             Destroy(explosion, 5f);
             Destroy(this.gameObject, 0.15f);
         }
-
+         
     }
-
-    private void DamagePopUp(float dmg)
+    public void DamagePopUp(float dmg, bool crit)
     {
         float randomAngle;
         float randomOffset;
         randomOffset = UnityEngine.Random.Range(-1f, 1.5f);
         Vector3 TempOffset = new Vector3(OffSet.transform.position.x + randomOffset, OffSet.transform.position.y, 0);
-        SetFontSize(dmg);
+        SetFont(dmg);
+        ShowDamageUI(dmg, crit);
         Instantiate(pfDamagePopup, TempOffset, Quaternion.identity);
-        DamageIndicator.SetText(dmg.ToString());
-    }
-
-
-    private void ShowDamageUI(float dmg)
-    {
-        DamageIndicator.text = dmg.ToString();
-        Invoke("ClearDamageUI", .5f);
         ResetFontSize();
 
+    }
+    void SetFont(float dmg)
+    {
+        DamageIndicator.fontSize += dmg * .5f;
+        if (DamageIndicator.fontSize > 100)
+        {
+            DamageIndicator.fontSize = 100;
+        }
+        Debug.Log(DamageIndicator.fontSize);
+    }
+    
+    private void ShowDamageUI(float dmg, bool crit)
+    {
+        if (crit == true)
+        {
+            DamageIndicator.color = Color.yellow;
+        }
+        else if (crit == false)
+        {
+            DamageIndicator.color = Color.red;
+        }
+        DamageIndicator.text = dmg.ToString();
+        Invoke("ClearDamageUI", .5f);
+
+    }
+    void ResetFontSize()
+    {
+        DamageIndicator.fontSize = originalFontSize;
     }
     private void ClearDamageUI()
     {
         DamageIndicator.text = "";
     }
 
-    //SetFontSize and ResetFontSize will affect the damage number font size. This is going to increase the font size depending on the damage dealt
-    void SetFontSize(float dmg) 
-    {
-        DamageIndicator.fontSize += dmg * .2f;
-        if (DamageIndicator.fontSize > 100)
-        {
-            DamageIndicator.fontSize = 100;
-        }
-        Debug.Log(DamageIndicator.fontSize);
-                            
-    }
-    void ResetFontSize()
-    {
-        DamageIndicator.fontSize = originalFontSize;
-    }
 }

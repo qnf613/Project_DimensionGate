@@ -6,9 +6,12 @@ using UnityEngine;
 public enum WeaponEquipped {yes, no};
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] protected float CritMod;
+    [SerializeField] protected float CritDamageMod = 2;
+    [SerializeField] protected float GlobalCritRate;
     protected string wName;
     protected string wDescription;
-    protected float wDamage;
+    [SerializeField]protected float damage;
     protected float wAtkspeed;
     protected float wRange;
     protected int enhancement;
@@ -18,22 +21,29 @@ public class Weapon : MonoBehaviour
     protected float lastShot = 0f;
     protected Vector3 targetPosition;
     [SerializeField]protected Camera cam;
+    [SerializeField]protected GameObject projectile;
 
+    protected bool crit;
     protected Weapon()
     {
         
         wName = "";
         wDescription = "";
-        wDamage = 0;
         wAtkspeed = 0;
         wRange = 0;
         enhancement = 1;
         we = WeaponEquipped.yes;
+        CritMod = 2;
         
     }
     protected void Start()
     {
+        SetGlobalCritRate();
         cam = Camera.main;
+    }
+    void SetGlobalCritRate()
+    {
+        this.GlobalCritRate = 50;
     }
     // Update is called once per frame
     protected virtual void Update()
@@ -65,7 +75,10 @@ public class Weapon : MonoBehaviour
     }
     protected virtual void Shoot()
     {
-       
+        CheckIfCrit();
+        Instantiate(projectile, transform.position, transform.rotation);
+        projectile.GetComponent<StraightProjectile>();
+        projectile.GetComponent<DealDamage>().SetDamage(CalcFinalDamage(), crit, CritDamageMod);
     }
 
     public void Enhance()
@@ -81,5 +94,21 @@ public class Weapon : MonoBehaviour
     protected virtual void IncreaseStats()
     {
 
+    }
+    protected virtual void CheckIfCrit()
+    {
+        crit = this.gameObject.GetComponent<CheckForCrits>().CheckCrits(GlobalCritRate, CritMod);
+    }
+    protected float CalcFinalDamage()
+    {
+        if (crit == true)
+        {
+            finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage) * CritDamageMod; 
+        }
+        else if (crit == false)
+        {
+            finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
+        }
+        return finalDamageNumber;
     }
 }

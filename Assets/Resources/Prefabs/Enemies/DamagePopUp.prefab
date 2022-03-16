@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 5}
+  m_SizeDelta: {x: 35.1877, y: 12.2744}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &6384223986038173482
 MeshRenderer:
@@ -184,3 +184,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60b976dae95ef0641b9b78b142e52477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.3

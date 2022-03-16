@@ -44,15 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd75af683598de4591336ee26b1339d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  we: 1
+  CritMod: 2
+  GlobalCritRate: 0
+  we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
+  projectile: {fileID: 4736143673115787737, guid: 96e71f63523706f45941e20b4c59bf75, type: 3}
   name: Magic Arrow
   description: Shoot an arrow which pierces through enemies
   damage: 20
   rage: 20
   attackspeed: 0.7
-  magicArrowProjectilePrefab: {fileID: 4736143673115787737, guid: 96e71f63523706f45941e20b4c59bf75, type: 3}
+  pierceCount: 0
+  maxPierceCount: 0
 --- !u!114 &8566718603673603592
 MonoBehaviour:
   m_ObjectHideFlags: 0

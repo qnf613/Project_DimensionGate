@@ -6,10 +6,9 @@ public class Sharpshooter : Weapon
 {
     [SerializeField] private string name = "Sharpshooter";
     [SerializeField] private string description = "Fires high-speed shot that pierces through enemies.";
-    [SerializeField] private float damage = 100;
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = .09f;
-    [SerializeField] private GameObject sharpshooterPrefab;
+    
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
@@ -20,7 +19,6 @@ public class Sharpshooter : Weapon
         // Overriding the basic stats and info about the weapon here
         this.wName = name;
         this.wDescription = description;
-        this.wDamage = damage;
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
@@ -41,6 +39,8 @@ public class Sharpshooter : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > wAtkspeed + lastShot)
         {
+            base.Shoot();
+
             projectileDirection = (this.transform.position - targetPosition);
 
             //TODO : Change this to match player Rotation and position
@@ -51,10 +51,10 @@ public class Sharpshooter : Weapon
              * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
              * setting it as the final damage value.
             */
-            Instantiate(sharpshooterPrefab, transform.position, transform.rotation);
-            sharpshooterPrefab.GetComponent<StraightProjectile>();
+           
+           
             finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
-            sharpshooterPrefab.GetComponent<DealDamage>().SetDamage(finalDamageNumber);
+            
             lastShot = Time.time;
         }
 

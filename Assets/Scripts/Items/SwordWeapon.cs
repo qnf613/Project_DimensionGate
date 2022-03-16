@@ -6,7 +6,6 @@ public class SwordWeapon : Weapon
 {
     [SerializeField] private string name = "Giant F-ing Sword";
     [SerializeField] private string description = "What else do you need to know, read the name...";
-    [SerializeField] private int damage = 60;
     [SerializeField] private float attackspeed = 2f;
     [SerializeField] private GameObject SwordHitBox;
     protected Vector3 projectileDirection;
@@ -15,7 +14,6 @@ public class SwordWeapon : Weapon
     {
         this.wName = name;
         this.wDescription = description;
-        this.wDamage = damage;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
         cam = Camera.main;
@@ -36,6 +34,7 @@ public class SwordWeapon : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > wAtkspeed + lastShot)
         {
+            CheckIfCrit();
             projectileDirection = (this.transform.position - targetPosition);
             
             //TODO : Change this to match player Rotation and position

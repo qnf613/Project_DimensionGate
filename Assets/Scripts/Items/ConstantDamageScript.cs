@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConstantDamageScript : MonoBehaviour
+public class ConstantDamageScript : Weapon
 {
     [SerializeField] private float atkspeed = 0.5f;
     [SerializeField] private float lasthit;
@@ -15,15 +15,13 @@ public class ConstantDamageScript : MonoBehaviour
         {
             if (Time.time > atkspeed + lasthit)
             {
+                other.gameObject.GetComponent<DamageSystem>().TakeDamage(attackDamage, false);
                 lasthit = Time.time;
-
-                other.gameObject.GetComponent<DamageSystem>().TakeDamage(attackDamage);
-                Debug.Log("On pool HIT");
-
             }
 
         }
     }
+    
     private void Start()
     {
         //The pool should only last a few seconds

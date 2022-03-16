@@ -6,10 +6,9 @@ public class MagicArrow : Weapon
 {
     [SerializeField] private string name = "Magic Arrow";
     [SerializeField] private string description = "Shoot an arrow which pierces through enemies";
-    [SerializeField] private float damage = 100;
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = .7f;
-    [SerializeField] private GameObject magicArrowProjectilePrefab;
+    
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
@@ -20,7 +19,6 @@ public class MagicArrow : Weapon
         // Overriding the basic stats and info about the weapon here
         this.wName = name;
         this.wDescription = description;
-        this.wDamage = damage;
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
@@ -42,6 +40,7 @@ public class MagicArrow : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > wAtkspeed + lastShot)
         {
+            base.Shoot();
             projectileDirection = (this.transform.position - targetPosition);
             
             //TODO : Change this to match player Rotation and position
@@ -52,14 +51,12 @@ public class MagicArrow : Weapon
              * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
              * setting it as the final damage value.
             */
-            Instantiate(magicArrowProjectilePrefab, transform.position, transform.rotation);
-            magicArrowProjectilePrefab.GetComponent<StraightProjectile>();
-            finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
-            magicArrowProjectilePrefab.GetComponent<DealDamage>().SetDamage(finalDamageNumber);
+            
             lastShot = Time.time;
         }
 
     }
+    
     
 
 }
