@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3874334013712906494}
   - component: {fileID: 5273215895066064673}
   - component: {fileID: 8457160680624895998}
+  - component: {fileID: -6109132478005664435}
   m_Layer: 3
   m_Name: Venom Flask
   m_TagString: Weapon
@@ -72,3 +73,17 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 1.2
   finalDamage: 0
+--- !u!114 &-6109132478005664435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6014492236649116348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534adf78cb0426e46a06b198a770ea6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomNumber: 0
+  crit: 0

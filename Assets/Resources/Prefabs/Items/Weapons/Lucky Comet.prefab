@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8139579069443953454}
   - component: {fileID: 8139579069443953455}
   - component: {fileID: -3756685616695621105}
+  - component: {fileID: -96759373043939845}
   m_Layer: 0
   m_Name: Lucky Comet
   m_TagString: Weapon
@@ -46,12 +47,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4b6c17603483a4c92f986ead237b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  we: 1
+  CritMod: 2
+  CritDamageMod: 2
+  GlobalCritRate: 50
+  damage: 10
+  we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
+  projectile: {fileID: 8139579069908885081}
   name: Lucky Comet
   description: Lucky this comet decided to orbit around you
-  damage: 50
   rotationspeed: 100
 --- !u!212 &8139579069443953455
 SpriteRenderer:
@@ -120,6 +125,20 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 1.2
   finalDamage: 0
+--- !u!114 &-96759373043939845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139579069443953452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534adf78cb0426e46a06b198a770ea6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomNumber: 0
+  crit: 0
 --- !u!1 &8139579069908885081
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,8 +149,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8139579069908885082}
   - component: {fileID: 8139579069908885083}
-  - component: {fileID: 8139579069908885092}
   - component: {fileID: 1486750430863450443}
+  - component: {fileID: 8597789021575798927}
+  - component: {fileID: 8087587201360818324}
   m_Layer: 0
   m_Name: Comet
   m_TagString: Untagged
@@ -205,19 +225,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8139579069908885092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8139579069908885081}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8b03a9f921f4ca4e9c480d1ae086926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 60
 --- !u!58 &1486750430863450443
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -234,3 +241,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &8597789021575798927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139579069908885081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534adf78cb0426e46a06b198a770ea6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomNumber: 0
+  crit: 0
+--- !u!114 &8087587201360818324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139579069908885081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ca537766dc61a4694049d31e463b78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CritMod: 2
+  CritDamageMod: 2
+  GlobalCritRate: 30
+  damage: 10
+  we: 0
+  finalDamageNumber: 0
+  cam: {fileID: 0}
+  projectile: {fileID: 0}
+  name: Lucky Comet
+  description: Lucky this comet decided to orbit around you
+  rotationspeed: 30
+  CRIT: 0

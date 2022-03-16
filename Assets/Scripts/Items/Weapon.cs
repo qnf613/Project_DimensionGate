@@ -38,13 +38,9 @@ public class Weapon : MonoBehaviour
     }
     protected void Start()
     {
-        SetGlobalCritRate();
         cam = Camera.main;
     }
-    void SetGlobalCritRate()
-    {
-        this.GlobalCritRate = 50;
-    }
+    
     // Update is called once per frame
     protected virtual void Update()
     {
@@ -99,7 +95,7 @@ public class Weapon : MonoBehaviour
     {
         crit = this.gameObject.GetComponent<CheckForCrits>().CheckCrits(GlobalCritRate, CritMod);
     }
-    protected float CalcFinalDamage()
+    protected virtual float CalcFinalDamage()
     {
         if (crit == true)
         {

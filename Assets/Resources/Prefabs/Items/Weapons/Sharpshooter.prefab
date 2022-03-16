@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9212890712930210220}
   - component: {fileID: 7361014947558011883}
   - component: {fileID: 459479050291669650}
+  - component: {fileID: -5847518761369739641}
   m_Layer: 0
   m_Name: Sharpshooter
   m_TagString: Weapon
@@ -73,3 +74,17 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 2
   finalDamage: 0
+--- !u!114 &-5847518761369739641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729265229598328043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534adf78cb0426e46a06b198a770ea6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomNumber: 0
+  crit: 0

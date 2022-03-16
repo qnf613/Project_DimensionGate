@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7683010903140038305}
   - component: {fileID: 2115046259}
   - component: {fileID: 8566718603673603592}
+  - component: {fileID: -11843721709177824}
   m_Layer: 0
   m_Name: Magic Arrow
   m_TagString: Weapon
@@ -45,14 +46,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CritMod: 2
+  CritDamageMod: 2
   GlobalCritRate: 0
+  damage: 20
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
   projectile: {fileID: 4736143673115787737, guid: 96e71f63523706f45941e20b4c59bf75, type: 3}
   name: Magic Arrow
   description: Shoot an arrow which pierces through enemies
-  damage: 20
   rage: 20
   attackspeed: 0.7
   pierceCount: 0
@@ -72,3 +74,17 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 1.5
   finalDamage: 0
+--- !u!114 &-11843721709177824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103237356337397130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 534adf78cb0426e46a06b198a770ea6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  randomNumber: 0
+  crit: 0
