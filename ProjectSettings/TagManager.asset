@@ -18,8 +18,8 @@ TagManager:
   - UI
   - Background
   - Enemy
-  - 
-  - 
+  - Obstacle
+  - Foreground
   - 
   - 
   - 
@@ -43,17 +43,26 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 4165405031
     locked: 0
   - name: Monsters
     uniqueID: 1554989227
     locked: 0
+  - name: Obstacles
+    uniqueID: 1380945721
+    locked: 0
+  - name: Shadows
+    uniqueID: 4069031167
+    locked: 0
   - name: Player&Interacts
     uniqueID: 3490966825
+    locked: 0
+  - name: Foreground
+    uniqueID: 918123679
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: UI
     uniqueID: 4220910025
