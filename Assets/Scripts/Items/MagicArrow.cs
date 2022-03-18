@@ -38,7 +38,7 @@ public class MagicArrow : Weapon
     {
         
         //This weapon shoots a projectile forward
-        if (Time.time > wAtkspeed + lastShot)
+        if (Time.time > attackspeed + lastShot)
         {
             base.Shoot();
             projectileDirection = (this.transform.position - targetPosition);

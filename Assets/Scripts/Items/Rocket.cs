@@ -37,7 +37,7 @@ public class Rocket : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > wAtkspeed + lastShot)
         {
-            CheckIfCrit();
+            base.Shoot();
             projectileDirection = (this.transform.position - targetPosition);
 
             //TODO : Change this to match player Rotation and position

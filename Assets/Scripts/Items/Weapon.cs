@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]protected Camera cam;
     [SerializeField]protected GameObject projectile;
 
-    protected bool crit;
+    [SerializeField]protected bool crit;
     protected Weapon()
     {
         
