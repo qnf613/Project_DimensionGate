@@ -13,7 +13,6 @@ public class RewardUI : MonoBehaviour
     public List<GameObject> rewards;
     public GameObject weaponInventory;
     public GameObject artifactInventory;
-    public GameObject rewardUI;
 
     // Start is called before the first frame update
     public void Start()
@@ -64,13 +63,13 @@ public class RewardUI : MonoBehaviour
 
     public void OpenUI(){
         GetRewardsList();
-        rewardUI.SetActive(true);
+        this.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void CloseUI(){
         ResetRewardList();
-        rewardUI.SetActive(false);
+        this.gameObject.SetActive(false);
         Time.timeScale = 1;
     }
 

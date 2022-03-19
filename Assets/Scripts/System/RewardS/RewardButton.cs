@@ -7,6 +7,7 @@ public class RewardButton : MonoBehaviour
     public RewardSystem rs;
     public RewardUI ru;
     public GameObject assignedItem;
+    public InventoryUI iu;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,5 +22,6 @@ public class RewardButton : MonoBehaviour
 
     public void PickThisOption(){
         ru.PickReward(assignedItem);
+        iu.GetAllWeapons();
     }
 }

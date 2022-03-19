@@ -11,6 +11,8 @@ public class RewardSystem : MonoBehaviour
     public List<GameObject> rewardsList;
     public GameObject Chest; /*debugging purpose*/
     public GameObject inventory;
+    public int weaponCount;
+    public int artifactCount;
 
     public void Awake()
     {
@@ -20,7 +22,7 @@ public class RewardSystem : MonoBehaviour
     void Start()
     {
         //only working with weapons for now, but should include artifacts later
-        inventory = GameObject.Find("Weapons");
+        inventory = GameObject.Find("Inventory");
     }
 
     // Update is called once per frame
@@ -38,10 +40,22 @@ public class RewardSystem : MonoBehaviour
     {
         //Make options depending on what player already has
         equippedList.Clear();
-        foreach (Transform items in inventory.transform)
+        foreach (Transform TypeOfItems in inventory.transform)
         {
-            items.name = items.name.Replace("(Clone)", "");
-            equippedList.Add(items.gameObject);
+            foreach (Transform items in TypeOfItems.transform)
+            {
+                if (items.tag == "Weapon")
+                {
+                    weaponCount++;
+                }
+                else if (items.tag == "Artifact")
+                {
+                    artifactCount++;
+                }
+
+                items.name = items.name.Replace("(Clone)", "");
+                equippedList.Add(items.gameObject);
+            }
         }
 
         tempList = new List<GameObject>(equippedList);
