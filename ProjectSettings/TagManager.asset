@@ -9,6 +9,7 @@ TagManager:
   - Portal
   - Weapon
   - Artifact
+  - Slot
   layers:
   - Default
   - TransparentFX
@@ -46,14 +47,14 @@ TagManager:
   - name: Background
     uniqueID: 4165405031
     locked: 0
-  - name: Monsters
-    uniqueID: 1554989227
-    locked: 0
   - name: Obstacles
     uniqueID: 1380945721
     locked: 0
   - name: Shadows
     uniqueID: 4069031167
+    locked: 0
+  - name: Monsters
+    uniqueID: 1554989227
     locked: 0
   - name: Player&Interacts
     uniqueID: 3490966825

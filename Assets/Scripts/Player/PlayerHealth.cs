@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (mod <0)
         {
-            //This will do the falsh indicator if the number which comes in is a negative number
+            //This will do the flash indicator if the number which comes in is a negative number
             //This is here so only damaging numbers will cause a flash.
             flashEffect.Flash();
             
@@ -49,8 +49,8 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnGUI()
     {
-        
-        float t = Time.deltaTime / 1f;
+        // Changing the time here will change how fast the the slider moves down when hit.
+        float t = Time.deltaTime / .1f;
         healthSlider.value = Mathf.Lerp(healthSlider.value, health, t);
         
     }
