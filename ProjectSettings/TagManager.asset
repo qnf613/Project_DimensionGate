@@ -21,7 +21,7 @@ TagManager:
   - Enemy
   - Obstacle
   - Foreground
-  - 
+  - DecorationObstacle
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 4165405031
+    locked: 0
+  - name: Between
+    uniqueID: 3616285003
     locked: 0
   - name: Obstacles
     uniqueID: 1380945721
