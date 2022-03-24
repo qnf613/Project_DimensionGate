@@ -36,7 +36,7 @@ public class LuckyCometDealDamage : LuckyComet
         else
         {
             CheckIfCrit();
-            SetDamage(CalcFinalDamage(), crit, CritDamageMod);
+            SetDamage(CalcCritDamage(), crit, CritDamageMod);
             collision.gameObject.GetComponent<DamageSystem>().TakeDamage(_dmg, CRIT);
         }
         }

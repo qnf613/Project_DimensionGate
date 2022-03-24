@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -804000471
-  m_SortingLayer: 4
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.6745098, g: 0, b: 1, a: 1}
@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 2618375794477632312}
   - component: {fileID: -4492815915984702232}
   - component: {fileID: 5001990942009356225}
+  - component: {fileID: -6754206496976967979}
   m_Layer: 0
   m_Name: PFP
   m_TagString: Untagged
@@ -194,6 +195,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poisonFieldPrefab: {fileID: 7626186721086240868, guid: 19d0750a9b454204fa62f9f7ce64ba58, type: 3}
   poisonFlaskProjectile: {fileID: 3139452587625503352}
+--- !u!114 &-6754206496976967979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139452587625503352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8b03a9f921f4ca4e9c480d1ae086926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CRIT: 0
+  damage: 0
 --- !u!1 &7987284260199395660
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,7 +279,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -804000471
-  m_SortingLayer: 4
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.671299, g: 0, b: 1, a: 1}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explode : Rocket
+public class Explode : MonoBehaviour
 {
     [SerializeField] private GameObject explosionPrefab;
     [SerializeField] private GameObject rocketPrefab;
@@ -23,8 +23,8 @@ public class Explode : Rocket
 
         }
     }
-    public void GetExplosionDamage(float damage) 
+    public void GetExplosionDamage(float damage, bool crit, float critDamageMod) 
     {
-        explosionPrefab.GetComponent<DealDamage>().SetDamage(damage, crit, CritDamageMod);
+        explosionPrefab.GetComponent<DealDamage>().SetDamage(damage, crit, critDamageMod);
     }
 }

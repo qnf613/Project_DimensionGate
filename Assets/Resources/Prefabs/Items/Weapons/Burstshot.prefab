@@ -55,6 +55,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 2282818841274197990, guid: 278f11273e7f93a45a4ab103f2dd3e74, type: 3}
   crit: 0
+  refineTypes: 000000
+  RefineCritChance: 1
+  RefineCritDamage: 0
+  refineDamage: 0
   name: Burstshot
   description: Fires a three bullet burst!
   rage: 20
@@ -76,6 +80,7 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 0.5
   finalDamage: 0
+  RefineList: 
 --- !u!114 &1227778816098027104
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ public class LuckyComet : Weapon
     protected override void Shoot()
     {
     }
-    protected override float CalcFinalDamage()
+    protected override float CalcCritDamage()
     {
         if (crit == true)
         {

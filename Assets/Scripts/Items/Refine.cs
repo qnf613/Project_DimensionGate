@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,59 @@ using UnityEngine;
 public class Refine : MonoBehaviour
 {
     public int RefineLevel;
-    public float RefineMultiplier;
+    private float RefineDamageMultiplier = 2;
+    private float RefineCritChanceMultiplier = 5f;
+    private float RefineCritDamageMultiplier = .1f;
     public float finalDamage;
+
+
+    public void findRefineType(bool _dmg, bool _critChance, bool _critDamage, float damage)
+    {
+        if (_dmg == true)
+        {
+            ChangeDamageBasedOnRefine(damage);
+        }
+        if (_critChance == true)
+        {
+            ChangeCritChanceBasedOnRefine();
+        }
+        if (_critDamage == true)
+        {
+            ChangeCritDamageBasedOnRefine();
+        }
+        
+    }
+
+    private void ChangeCritChanceBasedOnRefine()
+    {
+
+        if (RefineLevel == 0)
+        {
+            this.gameObject.GetComponent<Weapon>().CritMod = RefineCritChanceMultiplier;
+        }
+        else if (RefineLevel > 0)
+        {
+            this.gameObject.GetComponent<Weapon>().CritMod = (RefineLevel+1) * RefineCritChanceMultiplier;
+        }
+    }
+
+    private void ChangeCritDamageBasedOnRefine()
+    {
+        //the number 2 is used since the base damage for a crit should be double the normal amount of damage
+        if (RefineLevel == 0)
+        {
+            this.gameObject.GetComponent<Weapon>().CritDamageMod = 2;
+        }
+        else if (RefineLevel > 0)
+        {
+            this.gameObject.GetComponent<Weapon>().CritDamageMod = 2 + ((RefineLevel+1) * RefineCritDamageMultiplier);
+        }
+    }
+
+    public void SetRefine(int _refine)
+    {
+        RefineLevel = _refine;
+    }
     // Start is called before the first frame update
     public float ChangeDamageBasedOnRefine(float dmg) 
     {
@@ -15,9 +67,18 @@ public class Refine : MonoBehaviour
         // Refine Multiplier is how much each refine increases the dmg
         // Refine Level is how many times you have refined
         // final damage is used in the weapon script to deal damage
-        finalDamage = dmg + (RefineLevel * RefineMultiplier);
+        
 
+        if (RefineLevel == 0)
+        {
+            finalDamage = dmg;
+
+        }
+        else if (RefineLevel > 0)
+        {
+            finalDamage = dmg + (RefineLevel * RefineDamageMultiplier);
+        }
         return finalDamage;
     }    
-    
+   
 }

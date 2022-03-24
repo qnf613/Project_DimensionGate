@@ -24,7 +24,7 @@ public class CheckForCrits : MonoBehaviour
         if (_randomNumber <= _gcr + critMod)
         {
             crit = true;
-            Debug.Log("crit");
+           // Debug.Log("crit");
         }
         else
         {

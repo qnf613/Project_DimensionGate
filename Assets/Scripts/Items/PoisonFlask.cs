@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class PoisonFlask : Weapon
 {
+    public float dotDamage;
     [SerializeField] private string name = "Venom Flask";
     [SerializeField] private string description = "Throw a flask which leaves a pool of poison on the ground.";
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = .7f;
     [SerializeField] private GameObject poisonFlaskPrefab;
+    
     protected Vector3 projectileDirection;
 
 

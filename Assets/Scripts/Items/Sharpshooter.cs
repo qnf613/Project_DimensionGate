@@ -53,7 +53,7 @@ public class Sharpshooter : Weapon
             */
            
            
-            finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
+            
             
             lastShot = Time.time;
         }

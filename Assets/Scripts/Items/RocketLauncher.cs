@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rocket : Weapon
+public class RocketLauncher : Weapon
 {
-    [SerializeField] private string name = "Rocket";
+    [SerializeField] private string name = "Rocket Launcher";
     [SerializeField] private string description = "Fire an exploding rocket!";
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = 3f;
+    public float ExplosionDamage;
     protected Vector3 projectileDirection;
 
 
@@ -37,7 +38,12 @@ public class Rocket : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > wAtkspeed + lastShot)
         {
-            base.Shoot();
+            
+            ApplyEnhancement();
+            CheckIfCrit();
+            Instantiate(projectile, transform.position, transform.rotation);
+            projectile.GetComponent<StraightProjectile>();
+
             projectileDirection = (this.transform.position - targetPosition);
 
             //TODO : Change this to match player Rotation and position
@@ -49,13 +55,25 @@ public class Rocket : Weapon
              * setting it as the final damage value.
             */
 
-            finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
+
 
             //This will make the damage of the explosion scale with refine.
             //This will also make the damage of the explosion 1/2 of the damage of the collision.
-            projectile.GetComponent<Explode>().GetExplosionDamage(damage/2);
+            projectile.GetComponent<Explode>().GetExplosionDamage(CalcCritDamage(), crit, CritDamageMod);
             lastShot = Time.time;
         }
-
     }
+    protected override float CalcCritDamage()
+    {
+        if (crit == true)
+        {
+            finalDamageNumber = ExplosionDamage * CritDamageMod;
+        }
+        else if (crit == false)
+        {
+            finalDamageNumber = ExplosionDamage;
+        }
+        return finalDamageNumber;
+    }
+
 }

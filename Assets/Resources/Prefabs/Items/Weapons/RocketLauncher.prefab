@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 6695963654667929324}
   - component: {fileID: -8287679528857296581}
   m_Layer: 3
-  m_Name: Rocket
+  m_Name: RocketLauncher
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,6 +138,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 3244463395250619524, guid: d7386c23a1521a041b957dea612dfd8c, type: 3}
   crit: 0
+  refineTypes: 000000
+  RefineCritChance: 0
+  RefineCritDamage: 1
+  refineDamage: 0
   name: Rocket
   description: Fire an exploding rocket!
   rage: 20
@@ -155,7 +159,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RefineLevel: 0
-  RefineMultiplier: 1.5
   finalDamage: 0
 --- !u!114 &-8287679528857296581
 MonoBehaviour:

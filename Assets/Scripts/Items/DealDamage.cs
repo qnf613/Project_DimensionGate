@@ -9,15 +9,7 @@ public class DealDamage : MonoBehaviour
     public virtual void SetDamage(float dmg, bool crit, float critDamage) 
     {
         CRIT = crit;
-        if (crit == true)
-        {
-            damage = dmg;
-        }
-        else
-        {
-            damage = dmg;
-        }
-    
+        damage = dmg;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

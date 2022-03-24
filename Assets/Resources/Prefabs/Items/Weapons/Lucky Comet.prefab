@@ -56,6 +56,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 8139579069908885081}
   crit: 0
+  refineTypes: 000000
+  RefineCritChance: 0
+  RefineCritDamage: 0
+  refineDamage: 1
   name: Lucky Comet
   description: Lucky this comet decided to orbit around you
   rotationspeed: 100
@@ -74,6 +78,7 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 1.2
   finalDamage: 0
+  RefineList: 
 --- !u!114 &-96759373043939845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +230,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 0}
   crit: 0
+  refineTypes: 000000
+  RefineCritChance: 0
+  RefineCritDamage: 0
+  refineDamage: 0
   name: Lucky Comet
   description: Lucky this comet decided to orbit around you
   rotationspeed: 30

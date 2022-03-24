@@ -138,6 +138,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 147187134449682037, guid: 72bc0242950739a40bd45a2e497594a9, type: 3}
   crit: 0
+  refineTypes: 000000
+  RefineCritChance: 1
+  RefineCritDamage: 0
+  refineDamage: 0
   name: Gatling
   description: Extreme rapid-fire!
   rage: 20
@@ -159,6 +163,7 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 0
   finalDamage: 0
+  RefineList: 
 --- !u!114 &4356027326256537879
 MonoBehaviour:
   m_ObjectHideFlags: 0

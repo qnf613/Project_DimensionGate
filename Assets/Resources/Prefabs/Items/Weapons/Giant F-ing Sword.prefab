@@ -55,6 +55,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 0}
   crit: 0
+  refineTypes: 000000
+  RefineCritChance: 0
+  RefineCritDamage: 0
+  refineDamage: 1
   name: Giant F-ing Sword
   description: What else do you need to know, read the name...
   attackspeed: 2
@@ -74,6 +78,7 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 1.8
   finalDamage: 0
+  RefineList: 
 --- !u!114 &-712127902263066832
 MonoBehaviour:
   m_ObjectHideFlags: 0

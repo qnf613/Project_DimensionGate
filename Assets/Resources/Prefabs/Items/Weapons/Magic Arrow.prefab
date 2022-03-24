@@ -138,6 +138,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 4736143673115787737, guid: 96e71f63523706f45941e20b4c59bf75, type: 3}
   crit: 0
+  refineTypes: 000000
+  RefineCritChance: 0
+  RefineCritDamage: 0
+  refineDamage: 1
   name: Magic Arrow
   description: Shoot an arrow which pierces through enemies
   rage: 20
@@ -159,6 +163,7 @@ MonoBehaviour:
   RefineLevel: 0
   RefineMultiplier: 1.5
   finalDamage: 0
+  RefineList: 
 --- !u!114 &-11843721709177824
 MonoBehaviour:
   m_ObjectHideFlags: 0

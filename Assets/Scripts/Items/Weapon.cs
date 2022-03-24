@@ -6,8 +6,8 @@ using UnityEngine;
 public enum WeaponEquipped {yes, no};
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] protected float CritMod;
-    [SerializeField] protected float CritDamageMod = 2;
+    public float CritMod;
+    public float CritDamageMod = 2;
     [SerializeField] protected float GlobalCritRate;
     protected string wName;
     protected string wDescription;
@@ -15,18 +15,24 @@ public class Weapon : MonoBehaviour
     protected float wAtkspeed;
     protected float wRange;
     protected int enhancement;
-    protected int maxEnhance;
+    protected int maxEnhance = 10;
     public WeaponEquipped we;
     public float finalDamageNumber;
     protected float lastShot = 0f;
     protected Vector3 targetPosition;
     [SerializeField]protected Camera cam;
     [SerializeField]protected GameObject projectile;
-
     [SerializeField]protected bool crit;
+
+    
+    public List<bool> refineTypes; //list of refineTypes the weapons could have
+    public bool RefineCritChance, RefineCritDamage, refineDamage; //these bools will be in the list above to identify which refinement type they will follow
+
+   
+
     protected Weapon()
     {
-        
+        refineTypes = new List<bool>();
         wName = "";
         wDescription = "";
         wAtkspeed = 0;
@@ -34,13 +40,23 @@ public class Weapon : MonoBehaviour
         enhancement = 1;
         we = WeaponEquipped.yes;
         CritMod = 2;
+
+        //add the refinement types to the list.
+        refineTypes.Add(refineDamage);
+        refineTypes.Add(RefineCritChance);
+        refineTypes.Add(RefineCritDamage);
         
     }
     protected void Start()
     {
         cam = Camera.main;
+        
     }
-    
+    private void Awake()
+    {
+        GlobalCritRate = 10;
+    }
+
     // Update is called once per frame
     protected virtual void Update()
     {
@@ -71,20 +87,27 @@ public class Weapon : MonoBehaviour
     }
     protected virtual void Shoot()
     {
+        ApplyEnhancement();
         CheckIfCrit();
         Instantiate(projectile, transform.position, transform.rotation);
         projectile.GetComponent<StraightProjectile>();
-        projectile.GetComponent<DealDamage>().SetDamage(CalcFinalDamage(), crit, CritDamageMod);
+        projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
     }
 
-    public void Enhance()
+    protected void Enhance()
     {
-        Debug.Log("Enhanced!");
+       
         if (enhancement < maxEnhance)
         {
+            Debug.Log("Enhanced!");
             enhancement++;
+            this.gameObject.GetComponent<Refine>().SetRefine(enhancement);
         }
-        enhancement ++;
+        
+    }
+    protected void ApplyEnhancement()
+    {
+        this.gameObject.GetComponent<Refine>().findRefineType(refineDamage, RefineCritChance, RefineCritDamage, damage);
     }
 
     protected virtual void IncreaseStats()
@@ -95,15 +118,15 @@ public class Weapon : MonoBehaviour
     {
         crit = this.gameObject.GetComponent<CheckForCrits>().CheckCrits(GlobalCritRate, CritMod);
     }
-    protected virtual float CalcFinalDamage()
+    protected virtual float CalcCritDamage()
     {
         if (crit == true)
         {
-            finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage) * CritDamageMod; 
+            finalDamageNumber = damage * CritDamageMod; 
         }
         else if (crit == false)
         {
-            finalDamageNumber = this.gameObject.GetComponent<Refine>().ChangeDamageBasedOnRefine(damage);
+            finalDamageNumber = damage;
         }
         return finalDamageNumber;
     }

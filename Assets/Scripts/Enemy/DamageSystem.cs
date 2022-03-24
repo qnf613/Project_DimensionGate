@@ -95,21 +95,25 @@ public class DamageSystem : MonoBehaviour
         {
             DamageIndicator.fontSize = 100;
         }
-        Debug.Log(DamageIndicator.fontSize);
+        //Debug.Log(DamageIndicator.fontSize);
     }
     
     private void ShowDamageUI(float dmg, bool crit)
     {
-        if (crit == true)
+        if (dmg == 0) { }
+        else
         {
-            DamageIndicator.color = Color.yellow;
+            if (crit == true)
+            {
+                DamageIndicator.color = Color.yellow;
+            }
+            else if (crit == false)
+            {
+                DamageIndicator.color = Color.red;
+            }
+            DamageIndicator.text = dmg.ToString();
+            Invoke("ClearDamageUI", .5f);
         }
-        else if (crit == false)
-        {
-            DamageIndicator.color = Color.red;
-        }
-        DamageIndicator.text = dmg.ToString();
-        Invoke("ClearDamageUI", .5f);
 
     }
     void ResetFontSize()

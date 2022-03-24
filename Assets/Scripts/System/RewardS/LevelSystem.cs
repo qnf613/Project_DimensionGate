@@ -59,7 +59,7 @@ public class LevelSystem : MonoBehaviour
     public void AddExp(int amount)
     {
         exp += amount;
-        Debug.Log("Current exp: " + exp);
+        //Debug.Log("Current exp: " + exp);
     }
 
     private void OnGUI()
