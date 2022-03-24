@@ -25,14 +25,14 @@ public class Weapon : MonoBehaviour
     [SerializeField]protected bool crit;
 
     
-    public List<bool> refineTypes; //list of refineTypes the weapons could have
+    
     public bool RefineCritChance, RefineCritDamage, refineDamage; //these bools will be in the list above to identify which refinement type they will follow
 
    
 
     protected Weapon()
     {
-        refineTypes = new List<bool>();
+       
         wName = "";
         wDescription = "";
         wAtkspeed = 0;
@@ -42,9 +42,7 @@ public class Weapon : MonoBehaviour
         CritMod = 2;
 
         //add the refinement types to the list.
-        refineTypes.Add(refineDamage);
-        refineTypes.Add(RefineCritChance);
-        refineTypes.Add(RefineCritDamage);
+        
         
     }
     protected void Start()
