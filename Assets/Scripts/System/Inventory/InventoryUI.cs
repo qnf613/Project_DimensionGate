@@ -67,7 +67,6 @@ public class InventoryUI : MonoBehaviour
             for (int i = 0; i < teampItemList.Count; i++)
             {
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().sprite = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
-                Slots[i].transform.Find("ItemImage").GetComponent<Image>().color = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().color;
             }
         }
     }
@@ -90,7 +89,6 @@ public class InventoryUI : MonoBehaviour
             for (int i = 0; i < teampItemList.Count; i++)
             {
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().sprite = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
-                Slots[i].transform.Find("ItemImage").GetComponent<Image>().color = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().color;
             }
         }
     }
