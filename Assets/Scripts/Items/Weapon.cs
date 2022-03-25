@@ -39,7 +39,7 @@ public class Weapon : MonoBehaviour
         wDescription = "";
         wAtkspeed = 0;
         wRange = 0;
-        enhancement = 1;
+        enhancement = 0;
         we = WeaponEquipped.yes;
         CritMod = 2;
 
@@ -95,7 +95,7 @@ public class Weapon : MonoBehaviour
         projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
     }
 
-    protected void Enhance()
+    public void Enhance()
     {
        
         if (enhancement < maxEnhance)
