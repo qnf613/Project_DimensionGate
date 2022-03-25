@@ -35,9 +35,11 @@ public class LuckyCometDealDamage : LuckyComet
         if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
         else
         {
+
             CheckIfCrit();
             SetDamage(CalcCritDamage(), crit, CritDamageMod);
             collision.gameObject.GetComponent<DamageSystem>().TakeDamage(_dmg, CRIT);
+            AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
         }
         }
 }

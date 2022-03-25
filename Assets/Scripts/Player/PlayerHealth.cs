@@ -12,6 +12,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Text healthValue;
     [SerializeField] private SpriteFlash flashEffect;
+    [SerializeField] private AudioClip playerdamageSFX;
+    [SerializeField] private float playerdamagevolume = 0.50f;
 
     void Start()
     {
@@ -26,12 +28,13 @@ public class PlayerHealth : MonoBehaviour
             //This will do the flash indicator if the number which comes in is a negative number
             //This is here so only damaging numbers will cause a flash.
             flashEffect.Flash();
-            
         }
         if (mod > 0)
         {
             //Healing effect here
         }
+
+        AudioSource.PlayClipAtPoint(playerdamageSFX, transform.position, playerdamagevolume);
         health += mod;
 
         if(health > maxHealth)

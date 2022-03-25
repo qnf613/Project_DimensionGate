@@ -6,7 +6,7 @@ public class CheckForCrits : MonoBehaviour
 {
     public float randomNumber;
     public bool crit;
-
+    private AudioClip sfx;
     public bool CheckCrits(float _gcr, float critMod) //_gcr = global crit rate
     {
         CritCheck(GetRandomNumber(), _gcr, critMod);

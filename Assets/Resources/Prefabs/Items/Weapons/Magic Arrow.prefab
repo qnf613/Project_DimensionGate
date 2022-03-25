@@ -138,7 +138,8 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 4736143673115787737, guid: 96e71f63523706f45941e20b4c59bf75, type: 3}
   crit: 0
-  refineTypes: 000000
+  weaponSound: {fileID: 8300000, guid: daf52502ec125bc4eb771e666d185edb, type: 3}
+  volume: 0.5
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1
@@ -161,9 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RefineLevel: 0
-  RefineMultiplier: 1.5
   finalDamage: 0
-  RefineList: 
 --- !u!114 &-11843721709177824
 MonoBehaviour:
   m_ObjectHideFlags: 0

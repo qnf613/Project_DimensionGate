@@ -41,6 +41,7 @@ public class RocketLauncher : Weapon
             
             ApplyEnhancement();
             CheckIfCrit();
+            AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
             Instantiate(projectile, transform.position, transform.rotation);
             projectile.GetComponent<StraightProjectile>();
 

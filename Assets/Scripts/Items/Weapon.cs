@@ -23,9 +23,11 @@ public class Weapon : MonoBehaviour
     [SerializeField]protected Camera cam;
     [SerializeField]protected GameObject projectile;
     [SerializeField]protected bool crit;
+    [SerializeField]protected AudioClip weaponSound;
+    [SerializeField]protected float volume = 0.50f;
 
-    
-    
+
+
     public bool RefineCritChance, RefineCritDamage, refineDamage; //these bools will be in the list above to identify which refinement type they will follow
 
    
@@ -87,6 +89,7 @@ public class Weapon : MonoBehaviour
     {
         ApplyEnhancement();
         CheckIfCrit();
+        AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
         Instantiate(projectile, transform.position, transform.rotation);
         projectile.GetComponent<StraightProjectile>();
         projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);

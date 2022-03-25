@@ -36,9 +36,9 @@ public class SwordWeapon : Weapon
         {
             CheckIfCrit();
             projectileDirection = (this.transform.position - targetPosition);
-            
+
             //TODO : Change this to match player Rotation and position
-            
+            AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
             Instantiate(SwordHitBox, transform.position + targetPosition.normalized, transform.rotation);
             SwordHitBox.GetComponent<StraightProjectile>();
             

@@ -7,10 +7,13 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float _Speed = 3;
     [SerializeField] private float _RotationSpeed = 1.5f;
     private Transform _Target;
+  
+   
 
     private void Awake()
     {
         _Target = FindObjectOfType<Player>().transform;
+       
 
     }
 
@@ -23,5 +26,7 @@ public class EnemyMovement : MonoBehaviour
         //transform.position = Vector3.MoveTowards(transform.position, transform.position + transform.up, _Speed * Time.deltaTime);
         transform.position = Vector3.MoveTowards(transform.position, _Target.position, _Speed * Time.deltaTime);
     }
+
+
 
 }

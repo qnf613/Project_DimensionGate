@@ -17,6 +17,8 @@ public class LevelSystem : MonoBehaviour
     // EXP UI BAR
     [SerializeField] private Slider expSlider;
     [SerializeField] private Text expValue;
+    [SerializeField] private AudioClip levelupSFX;
+    [SerializeField] private float volume = 0.50f;
 
 
     void Start()
@@ -52,6 +54,7 @@ public class LevelSystem : MonoBehaviour
 
     public void LevelUp()
     {
+        AudioSource.PlayClipAtPoint(levelupSFX, transform.position, volume);
         level++;
         exp -= expToLevelUp;
         expToLevelUp = level * 10 + 20;

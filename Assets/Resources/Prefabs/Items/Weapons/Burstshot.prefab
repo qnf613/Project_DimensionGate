@@ -55,13 +55,14 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 2282818841274197990, guid: 278f11273e7f93a45a4ab103f2dd3e74, type: 3}
   crit: 0
-  refineTypes: 000000
+  weaponSound: {fileID: 8300000, guid: 6e8d1b7e177370f4fb9b1dcaae355f99, type: 3}
+  volume: 0.42
   RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 0
   name: Burstshot
   description: Fires a three bullet burst!
-  rage: 20
+  rage: 5
   attackspeed: 0.8
   pierceCount: 0
   maxPierceCount: 0
@@ -78,9 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RefineLevel: 0
-  RefineMultiplier: 0.5
   finalDamage: 0
-  RefineList: 
 --- !u!114 &1227778816098027104
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,8 +9,7 @@ public class ConstantDamageScript : MonoBehaviour
     [SerializeField] private float duration;
     private float attackDamage;
     private GameObject VenomFlask;
-    
-
+    private float volume = 0.6f;
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.GetComponent<DamageSystem>() == null) { }

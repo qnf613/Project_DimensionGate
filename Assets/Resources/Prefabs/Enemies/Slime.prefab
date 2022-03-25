@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1554989227
-  m_SortingLayer: -5
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dd3860ff92347fa40abcf550eca6481d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 5580571326173248730}
   - component: {fileID: 5580571326173248729}
   - component: {fileID: 5580571326173248672}
+  - component: {fileID: 2018952321}
   m_Layer: 7
   m_Name: Slime
   m_TagString: Enemy
@@ -289,6 +290,8 @@ MonoBehaviour:
   flashEffect: {fileID: 8996201148667598762}
   originalFontSize: 36
   explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
+  enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
+  enemyvolume: 0.5
 --- !u!114 &5580571326173248731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +389,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 5580571326173248730}
+--- !u!114 &2018952321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580571326173248728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250df9a322f9ee1418a72b18f89a1f4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ambientSFX: {fileID: 8300000, guid: 183d47efac15b844b8cc46184e611b52, type: 3}
+  movementSound: {fileID: 0}
+  volume: 0.8
 --- !u!1 &5580571326594667609
 GameObject:
   m_ObjectHideFlags: 0

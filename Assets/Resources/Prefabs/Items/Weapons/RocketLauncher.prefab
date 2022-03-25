@@ -138,7 +138,8 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 3244463395250619524, guid: d7386c23a1521a041b957dea612dfd8c, type: 3}
   crit: 0
-  refineTypes: 000000
+  weaponSound: {fileID: 8300000, guid: 9dae386966da8c04ba5a63f217caf947, type: 3}
+  volume: 0.6
   RefineCritChance: 0
   RefineCritDamage: 1
   refineDamage: 0
@@ -146,6 +147,7 @@ MonoBehaviour:
   description: Fire an exploding rocket!
   rage: 20
   attackspeed: 4
+  ExplosionDamage: 0
 --- !u!114 &6695963654667929324
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -73,10 +73,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -804000471
-  m_SortingLayer: 4
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6745098, g: 0, b: 1, a: 1}
+  m_Color: {r: 0.6745098, g: 0, b: 1, a: 0.65882355}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -145,15 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e7c34337133384287b84e0f0962174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 2
-  CritDamageMod: 2
-  GlobalCritRate: 0
-  damage: 0
-  we: 0
-  finalDamageNumber: 0
-  cam: {fileID: 0}
-  projectile: {fileID: 0}
   atkspeed: 0.5
   lasthit: 0
   duration: 3
-  attackDamage: 10

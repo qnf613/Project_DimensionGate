@@ -25,7 +25,9 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private SpriteFlash flashEffect;
     [SerializeField] private float originalFontSize = 36;
     [SerializeField] private ParticleSystem explosionParticle;
- 
+    [SerializeField] private AudioClip enemydamageSFX;
+    [SerializeField] private float enemyvolume = 0.50f;
+  
 
     private void Awake()
     {
@@ -51,6 +53,7 @@ public class DamageSystem : MonoBehaviour
 
             if (other.gameObject.tag == "Player")
             {
+ 
                 other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
                 lasthit = Time.time;
             }
@@ -61,11 +64,12 @@ public class DamageSystem : MonoBehaviour
 
     public virtual void TakeDamage(float damage, bool crit)
     {
+        
         flashEffect.Flash();
         DamagePopUp(damage, crit);
 
         currentHealth -= damage;
-
+       
         if (currentHealth <= 0)
         {
             
@@ -74,7 +78,7 @@ public class DamageSystem : MonoBehaviour
             Destroy(explosion, 5f);
             Destroy(this.gameObject, 0.15f);
         }
-         
+        AudioSource.PlayClipAtPoint(enemydamageSFX, transform.position, enemyvolume);
     }
     public void DamagePopUp(float dmg, bool crit)
     {
