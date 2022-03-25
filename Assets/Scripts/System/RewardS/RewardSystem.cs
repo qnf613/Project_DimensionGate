@@ -5,28 +5,31 @@ using UnityEngine;
 
 public class RewardSystem : MonoBehaviour
 {
-    public List<GameObject> allItemList;
-    public List<GameObject> tempList;
-    public List<GameObject> equippedList;
+    [SerializeField] private List<GameObject> allItemList;
+    [SerializeField] private List<GameObject> tempList;
+    [SerializeField] private List<GameObject> equippedList;
     public List<GameObject> rewardsList;
     public GameObject Chest; /*debugging purpose*/
-    public GameObject inventory;
-    public int weaponCount;
-    public int artifactCount;
+    public GameObject equippedItems;
+    public int weaponCount = 0;
+    private int artifactCount = 0;
+    public bool weaponFull = false;
+    public bool artifactFull = false;
 
+    public GameObject SwapWeaponUI;
+    public GameObject SwapArtifactUI;
     public void Awake()
     {
         allItemList = Resources.LoadAll<GameObject>("Prefabs/Items").ToList(); //get all items and add it to list
     }
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        //only working with weapons for now, but should include artifacts later
-        inventory = GameObject.Find("Inventory");
+        equippedItems = GameObject.Find("Inventory");
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         //debugging - get chset pick up
         if (Input.GetKeyDown(KeyCode.Space))
@@ -38,26 +41,9 @@ public class RewardSystem : MonoBehaviour
 
     public void MakeRewardList()
     {
+        CheckEquipments();
+        
         //Make options depending on what player already has
-        equippedList.Clear();
-        foreach (Transform TypeOfItems in inventory.transform)
-        {
-            foreach (Transform items in TypeOfItems.transform)
-            {
-                if (items.tag == "Weapon")
-                {
-                    weaponCount++;
-                }
-                else if (items.tag == "Artifact")
-                {
-                    artifactCount++;
-                }
-
-                items.name = items.name.Replace("(Clone)", "");
-                equippedList.Add(items.gameObject);
-            }
-        }
-
         tempList = new List<GameObject>(equippedList);
 
         int choosenItemNum;
@@ -98,7 +84,8 @@ public class RewardSystem : MonoBehaviour
     }
 
     public void MakeLevelUpRewardList()
-    {
+    {        
+        CheckEquipments();
         //Make options from all items
         tempList = new List<GameObject>(allItemList);
         int choosenItemNum;
@@ -110,5 +97,60 @@ public class RewardSystem : MonoBehaviour
         }
     }
 
+    public void CheckEquipments()
+    {
+        equippedList.Clear();
+        weaponCount = 0;
+        artifactCount = 0;
+        foreach (Transform TypeOfItems in equippedItems.transform)
+        {
+            foreach (Transform items in TypeOfItems.transform)
+            {
+                if (items.tag == "Weapon")
+                {
+                    weaponCount++;
+                    if (weaponCount >= 3)
+                    {
+                        weaponFull = true;
+                    }
+                    else
+                    {
+                        weaponFull = false;
+                    }
+                }
+                else if (items.tag == "Artifact")
+                {
+                    artifactCount++;
+                    if (artifactCount >= 5)
+                    {
+                        artifactFull = true;
+                    }
+                    else
+                    {
+                        artifactFull = false;
+                    }
+                }
+
+                items.name = items.name.Replace("(Clone)", "");
+                equippedList.Add(items.gameObject);
+            }
+        }
+    }
+
+    public void OpenSwapWeaponUI(GameObject newItem)
+    {
+        Time.timeScale = 0;
+        SwapWeaponUI.GetComponent<ItemSwapUI>().GetNewItem(newItem);
+        SwapWeaponUI.GetComponent<ItemSwapUI>().GetListOfOption();
+        SwapWeaponUI.SetActive(true);
+    }
+
+    public void OpenSwapArtifactUI(GameObject newItem)
+    {
+        Time.timeScale = 0;
+        SwapArtifactUI.GetComponent<ItemSwapUI>().GetNewItem(newItem);
+        SwapArtifactUI.GetComponent<ItemSwapUI>().GetListOfOption();
+        SwapArtifactUI.SetActive(true);
+    }
 
 }

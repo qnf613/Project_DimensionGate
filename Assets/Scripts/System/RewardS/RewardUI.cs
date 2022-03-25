@@ -11,27 +11,23 @@ public class RewardUI : MonoBehaviour
     public RewardButton rb3;
     public TextMeshProUGUI[] texts;
     public List<GameObject> rewards;
-    public GameObject weaponInventory;
-    public GameObject artifactInventory;
+    [SerializeField] private GameObject weaponInventory;
+    [SerializeField] private GameObject artifactInventory;
 
     // Start is called before the first frame update
     public void Start()
     {
         weaponInventory = GameObject.Find("Weapons");
-        //artifactInventory = GameObject.Find("Artifacts");
+        artifactInventory = GameObject.Find("Artifacts");
         rs = rs.GetComponent<RewardSystem>();
         rb1 = rb1.GetComponent<RewardButton>();
         rb2 = rb2.GetComponent<RewardButton>();
         rb3 = rb3.GetComponent<RewardButton>();
+
         for (int i = 0; i < 3; i++)
         {
             texts[i] = texts[i].GetComponent<TextMeshProUGUI>();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 
     public void PickReward(GameObject item)
@@ -51,23 +47,25 @@ public class RewardUI : MonoBehaviour
         {
             if(item.gameObject.tag == "Weapon")
             {
-            Instantiate(item, weaponInventory.transform);
+                Instantiate(item, weaponInventory.transform);
             }
             if(item.gameObject.tag == "Artifact")
             {
-            Instantiate(item, artifactInventory.transform);
+                Instantiate(item, artifactInventory.transform);
             }
         }
         CloseUI();
     }
 
-    public void OpenUI(){
+    public void OpenUI()
+    {
         GetRewardsList();
         this.gameObject.SetActive(true);
         Time.timeScale = 0;
     }
 
-    public void CloseUI(){
+    public void CloseUI()
+    {
         ResetRewardList();
         this.gameObject.SetActive(false);
         Time.timeScale = 1;
@@ -79,7 +77,8 @@ public class RewardUI : MonoBehaviour
         AssignRewards();
     }
 
-    public void AssignRewards(){
+    public void AssignRewards()
+    {
         rb1.assignedItem = rewards[0];
         texts[0].text = rb1.assignedItem.name;
 
@@ -94,4 +93,7 @@ public class RewardUI : MonoBehaviour
     {
         rewards.Clear();
     }
+
+
+
 }

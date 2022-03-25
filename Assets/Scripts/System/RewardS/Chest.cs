@@ -17,12 +17,6 @@ public class Chest : PickUp
         ru = rUI.GetComponent<RewardUI>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     protected override void PickedUp()
     {
         rs.MakeRewardList();

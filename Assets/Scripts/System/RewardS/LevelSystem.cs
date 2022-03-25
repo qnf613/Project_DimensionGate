@@ -21,7 +21,6 @@ public class LevelSystem : MonoBehaviour
 
     void Start()
     {
-
         level = 1;
         exp = 0;
         expToLevelUp = 10;
@@ -42,7 +41,13 @@ public class LevelSystem : MonoBehaviour
         {
             LevelUp();
         }
-       
+
+        //debug
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LevelUp();
+        }
+
     }
 
     public void LevelUp()
