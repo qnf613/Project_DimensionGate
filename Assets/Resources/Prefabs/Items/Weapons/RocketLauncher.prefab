@@ -147,7 +147,7 @@ MonoBehaviour:
   description: Fire an exploding rocket!
   rage: 20
   attackspeed: 4
-  ExplosionDamage: 0
+  ExplosionDamage: 20
 --- !u!114 &6695963654667929324
 MonoBehaviour:
   m_ObjectHideFlags: 0

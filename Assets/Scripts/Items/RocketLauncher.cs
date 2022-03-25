@@ -8,7 +8,7 @@ public class RocketLauncher : Weapon
     [SerializeField] private string description = "Fire an exploding rocket!";
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = 3f;
-    public float ExplosionDamage;
+    public float ExplosionDamage = 20;
     protected Vector3 projectileDirection;
 
 

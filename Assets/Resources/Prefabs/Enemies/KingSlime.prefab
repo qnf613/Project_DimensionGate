@@ -110,7 +110,7 @@ MonoBehaviour:
   TempPosition: {fileID: 5874046255734088398}
   flashEffect: {fileID: 6697744233758242164}
   originalFontSize: 36
-  explosionParticle: {fileID: 0}
+  explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
   enemyvolume: 0.5
 --- !u!114 &5874046255734088370
@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 5874046257161658672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.5, y: 4.5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 5874046255734088398}
   m_RootOrder: 0

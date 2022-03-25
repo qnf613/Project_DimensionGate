@@ -60,7 +60,7 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1
-  dotDamage: 2
+  dotDamage: 5
   name: Venom Flask
   description: Throw a flask which leaves a pool of poison on the ground.
   rage: 20

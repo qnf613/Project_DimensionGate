@@ -24,7 +24,7 @@ public class ConstantDamageScript : MonoBehaviour
     }
     private void Start()
     {
-        VenomFlask = GameObject.Find("Venom Flask");
+        VenomFlask = GameObject.Find("Venom Flask" + "(Clone)");
         attackDamage = VenomFlask.GetComponent<PoisonFlask>().dotDamage;
         //The pool should only last a few seconds
         Destroy(this.gameObject, duration);
