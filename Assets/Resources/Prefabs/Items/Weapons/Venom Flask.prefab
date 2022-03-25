@@ -55,10 +55,10 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 3139452587625503352, guid: d873fbcc2c61c8c44b6e54f2edaf1e7b, type: 3}
   crit: 0
-  refineTypes: 000000
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1
+  dotDamage: 0
   name: Venom Flask
   description: Throw a flask which leaves a pool of poison on the ground.
   rage: 20
@@ -164,8 +164,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.9888339, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0643941d7e9b5224a929c40ae0a8272b, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

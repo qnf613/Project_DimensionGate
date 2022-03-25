@@ -7,6 +7,7 @@ public class ItemSwapUI : MonoBehaviour
 {
     public ItemSwapButton[] Buttons;
     public TextMeshProUGUI[] texts;
+    public Image[] sprites;
     public bool isForWeapon;
     public GameObject newItemToAdd;
     [SerializeField] private List<GameObject> tempList;
@@ -40,6 +41,7 @@ public class ItemSwapUI : MonoBehaviour
             {
                 Buttons[i].assignedOption = tempList[i];
                 texts[i].text = tempList[i].name.ToString();
+                sprites[i].sprite = tempList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
             }
 
         }
@@ -56,6 +58,7 @@ public class ItemSwapUI : MonoBehaviour
             {
                 Buttons[i].assignedOption = tempList[i];
                 texts[i].text = tempList[i].name.ToString();
+                sprites[i].sprite = tempList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
             }
         }
     }
