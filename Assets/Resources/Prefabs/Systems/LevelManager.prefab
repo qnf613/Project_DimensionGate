@@ -50,3 +50,7 @@ MonoBehaviour:
   rs: {fileID: 0}
   rUI: {fileID: 0}
   ru: {fileID: 0}
+  expSlider: {fileID: 0}
+  expValue: {fileID: 0}
+  levelupSFX: {fileID: 8300000, guid: 64fc1db59c864004daa8fb0dec6c4846, type: 3}
+  volume: 0.5

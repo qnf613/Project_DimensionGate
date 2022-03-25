@@ -78,7 +78,11 @@ public class DamageSystem : MonoBehaviour
             Destroy(explosion, 5f);
             Destroy(this.gameObject, 0.15f);
         }
-        AudioSource.PlayClipAtPoint(enemydamageSFX, transform.position, enemyvolume);
+        if(enemydamageSFX != null)
+        {
+            AudioSource.PlayClipAtPoint(enemydamageSFX, transform.position, enemyvolume);
+        }
+        
     }
     public void DamagePopUp(float dmg, bool crit)
     {

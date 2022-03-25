@@ -34,7 +34,10 @@ public class PlayerHealth : MonoBehaviour
             //Healing effect here
         }
 
-        AudioSource.PlayClipAtPoint(playerdamageSFX, transform.position, playerdamagevolume);
+        if(playerdamageSFX != null){
+            AudioSource.PlayClipAtPoint(playerdamageSFX, transform.position, playerdamagevolume);
+        }
+
         health += mod;
 
         if(health > maxHealth)

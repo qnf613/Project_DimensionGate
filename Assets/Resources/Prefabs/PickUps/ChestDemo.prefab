@@ -196,3 +196,5 @@ MonoBehaviour:
   rs: {fileID: 0}
   rUI: {fileID: 0}
   ru: {fileID: 0}
+  chestSFX: {fileID: 8300000, guid: 0cb9dd259d6aaad4cb38e19629ba5cf0, type: 3}
+  volume: 0.5

@@ -103,6 +103,15 @@ MonoBehaviour:
   attackDamage: 0
   atkspeed: 0
   lasthit: 0
+  DamageIndicator: {fileID: 0}
+  pfDamagePopup: {fileID: 0}
+  OffSet: {fileID: 0}
+  TempPosition: {fileID: 0}
+  flashEffect: {fileID: 0}
+  originalFontSize: 36
+  explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
+  enemydamageSFX: {fileID: 0}
+  enemyvolume: 0.5
 --- !u!61 &4006467716628276339
 BoxCollider2D:
   m_ObjectHideFlags: 0
