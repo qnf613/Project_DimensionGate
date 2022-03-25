@@ -49,16 +49,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CritMod: 2
   CritDamageMod: 2
-  GlobalCritRate: 50
+  GlobalCritRate: 10
   damage: 10
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
   projectile: {fileID: 8139579069908885081}
   crit: 0
-  refineTypes: 000000
-  RefineCritChance: 0
-  RefineCritDamage: 0
+  RefineCritChance: 1
+  RefineCritDamage: 1
   refineDamage: 1
   name: Lucky Comet
   description: Lucky this comet decided to orbit around you
@@ -76,9 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RefineLevel: 0
-  RefineMultiplier: 1.2
   finalDamage: 0
-  RefineList: 
 --- !u!114 &-96759373043939845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +227,6 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 0}
   crit: 0
-  refineTypes: 000000
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 0
