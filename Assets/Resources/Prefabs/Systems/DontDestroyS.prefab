@@ -423,7 +423,7 @@ MonoBehaviour:
   - {fileID: 5520431064113126226}
   - {fileID: 2099577760150584303}
   teampItemList: []
-  rUI: {fileID: 0}
+  rUI: {fileID: 4898799542633412027}
   isWeaponSlots: 1
   isArtifactSlots: 0
 --- !u!1 &3518464950491278110
@@ -591,6 +591,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -110
       objectReference: {fileID: 0}
+    - target: {fileID: 1821872587172728675, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
+      propertyPath: rUI
+      value: 
+      objectReference: {fileID: 4898799542633412027}
     - target: {fileID: 2013658628657224401, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 181
@@ -603,6 +607,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3938266490411428114, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
+      propertyPath: rUI
+      value: 
+      objectReference: {fileID: 4898799542633412027}
     - target: {fileID: 4567912387444960021, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -773,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 3951304486119280588}
     - target: {fileID: 6100136692072045103, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7770563
+      value: 1.7783803
       objectReference: {fileID: 0}
     - target: {fileID: 6120185219902270542, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_AnchorMax.y
