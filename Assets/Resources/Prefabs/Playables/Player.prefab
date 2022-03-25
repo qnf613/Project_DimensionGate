@@ -160,6 +160,8 @@ MonoBehaviour:
   healthSlider: {fileID: 3974097357566584248}
   healthValue: {fileID: 4968154195794559238}
   flashEffect: {fileID: 105289111}
+  playerdamageSFX: {fileID: 0}
+  playerdamagevolume: 0.5
 --- !u!114 &-5432353396966752553
 MonoBehaviour:
   m_ObjectHideFlags: 0

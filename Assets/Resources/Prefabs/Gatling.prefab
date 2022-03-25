@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1740263397916361334
 Transform:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   refineDamage: 0
   name: Gatling
   description: Extreme rapid-fire!
-  rage: 20
+  range: 20
   attackspeed: 0.2
   pierceCount: 0
   maxPierceCount: 0

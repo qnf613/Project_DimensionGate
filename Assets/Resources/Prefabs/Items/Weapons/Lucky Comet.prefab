@@ -60,7 +60,7 @@ MonoBehaviour:
   volume: 0.6
   RefineCritChance: 1
   RefineCritDamage: 1
-  refineDamage: 1
+  refineDamage: 0
   name: Lucky Comet
   description: Lucky this comet decided to orbit around you
   rotationspeed: 100

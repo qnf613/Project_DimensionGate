@@ -59,10 +59,10 @@ MonoBehaviour:
   volume: 0.42
   RefineCritChance: 1
   RefineCritDamage: 0
-  refineDamage: 0
+  refineDamage: 1
   name: Burstshot
   description: Fires a three bullet burst!
-  rage: 5
+  range: 20
   attackspeed: 0.8
   pierceCount: 0
   maxPierceCount: 0

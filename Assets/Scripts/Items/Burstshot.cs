@@ -6,7 +6,7 @@ public class Burstshot : Weapon
 {
     [SerializeField] private string name = "Burstshot";
     [SerializeField] private string description = "Fires a three bullet burst!";
-    [SerializeField] private int rage = 20;
+    [SerializeField] private int range = 20;
     [SerializeField] private float attackspeed = .7f;
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
@@ -16,7 +16,7 @@ public class Burstshot : Weapon
         // Overriding the basic stats and info about the weapon here
         this.wName = name;
         this.wDescription = description;
-        this.wRange = rage;
+        this.wRange = range;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
     }

@@ -140,7 +140,7 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: daf52502ec125bc4eb771e666d185edb, type: 3}
   volume: 0.5
-  RefineCritChance: 0
+  RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1
   name: Magic Arrow

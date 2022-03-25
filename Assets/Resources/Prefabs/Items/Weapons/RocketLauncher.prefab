@@ -142,7 +142,7 @@ MonoBehaviour:
   volume: 0.6
   RefineCritChance: 0
   RefineCritDamage: 1
-  refineDamage: 0
+  refineDamage: 1
   name: Rocket
   description: Fire an exploding rocket!
   rage: 20

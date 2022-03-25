@@ -58,7 +58,7 @@ MonoBehaviour:
   weaponSound: {fileID: 8300000, guid: d0ecd0210433eed4e85eac2859898aa9, type: 3}
   volume: 0.5
   RefineCritChance: 0
-  RefineCritDamage: 0
+  RefineCritDamage: 1
   refineDamage: 1
   name: Giant F-ing Sword
   description: What else do you need to know, read the name...

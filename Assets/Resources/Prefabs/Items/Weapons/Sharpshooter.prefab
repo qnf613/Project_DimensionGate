@@ -58,7 +58,7 @@ MonoBehaviour:
   weaponSound: {fileID: 8300000, guid: ad7d703674ab8524da607df7cccb8c64, type: 3}
   volume: 0.6
   RefineCritChance: 1
-  RefineCritDamage: 0
+  RefineCritDamage: 1
   refineDamage: 0
   name: Sharpshooter
   description: Fires high-speed shot that pierces through enemies.
