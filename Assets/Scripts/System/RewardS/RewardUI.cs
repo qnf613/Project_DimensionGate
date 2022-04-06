@@ -10,6 +10,7 @@ public class RewardUI : MonoBehaviour
     public RewardButton rb2;
     public RewardButton rb3;
     public TextMeshProUGUI[] texts;
+    public Image[] sprites;
     public List<GameObject> rewards;
     [SerializeField] private GameObject weaponInventory;
     [SerializeField] private GameObject artifactInventory;
@@ -82,12 +83,15 @@ public class RewardUI : MonoBehaviour
     {
         rb1.assignedItem = rewards[0];
         texts[0].text = rb1.assignedItem.name;
+        sprites[0].sprite = rewards[0].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
 
         rb2.assignedItem = rewards[1];
         texts[1].text = rb2.assignedItem.name;
+        sprites[1].sprite = rewards[1].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
 
         rb3.assignedItem = rewards[2];
         texts[2].text = rb3.assignedItem.name;
+        sprites[2].sprite = rewards[2].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
     }
 
     public void ResetRewardList()
