@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum stageCleared {yes, yet, over}
+public enum stageCleared {yes, yet, over, notStarted}
 public enum bossStatus {nSummon, nDead}
 public class ClearCondition : MonoBehaviour
 {
@@ -30,7 +30,8 @@ public class ClearCondition : MonoBehaviour
     [SerializeField] private GameObject enemySpawner;
 
 
-    private void Awake() {
+    private void Awake() 
+    {
         //find everything need to be start with
         player = GameObject.FindGameObjectWithTag("Player");                                    //player
         portal = GameObject.FindGameObjectWithTag("Portal");                                    //Summonable-portal
@@ -42,11 +43,15 @@ public class ClearCondition : MonoBehaviour
         //bossMonsters = Resources.LoadAll<GameObject>("Boss").ToList();
         bossOfStage = bossMonsters[Random.Range(0, bossMonsters.Length)];
 
-        //declear starting status
-        sc = stageCleared.yet;
-        bs = bossStatus.nSummon;
+        //assign timer text
         times[0] = GameObject.Find("Mins").GetComponent<Text>();
         times[1] = GameObject.Find("Secs").GetComponent<Text>();
+
+        //declear starting status
+        bs = bossStatus.nSummon;
+        
+        //start countdown when first monster spawn
+        StartCoroutine(CountStart());
     }
 
     // Update is called once per frame
@@ -98,6 +103,12 @@ public class ClearCondition : MonoBehaviour
             Time.timeScale = 0;
             happened = true;
         }
+    }
+
+    IEnumerator CountStart()
+    {
+        yield return new WaitForSecondsRealtime(3.0f);
+        sc = stageCleared.yet;
     }
 
     private void Countdown()

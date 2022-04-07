@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 563751358}
   - component: {fileID: 563751357}
   m_Layer: 5
-  m_Name: Value
+  m_Name: XpValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -781,7 +781,7 @@ PrefabInstance:
       objectReference: {fileID: 3951304486119280588}
     - target: {fileID: 6100136692072045103, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7783803
+      value: 1.7770563
       objectReference: {fileID: 0}
     - target: {fileID: 6120185219902270542, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -943,6 +943,10 @@ PrefabInstance:
       propertyPath: rs
       value: 
       objectReference: {fileID: 879248970585157466}
+    - target: {fileID: 8364918218461411446, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
+      propertyPath: m_Text
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8385737178639068403, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_Name
       value: WeaponSlots
@@ -1130,7 +1134,7 @@ PrefabInstance:
       objectReference: {fileID: 1571297305021502808, guid: a6b099f617b139a48bfa52d7302af656, type: 3}
     - target: {fileID: 4388653920054128227, guid: e052e2168f2dd344b996eac797a0559f, type: 3}
       propertyPath: weaponFull
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4388653920054128227, guid: e052e2168f2dd344b996eac797a0559f, type: 3}
       propertyPath: SwapWeaponUI
@@ -1140,6 +1144,10 @@ PrefabInstance:
       propertyPath: equippedItems
       value: 
       objectReference: {fileID: 8034284566440660667}
+    - target: {fileID: 4388653920054128227, guid: e052e2168f2dd344b996eac797a0559f, type: 3}
+      propertyPath: SwapArtifactUI
+      value: 
+      objectReference: {fileID: 5134018326945737424, guid: a46bd3a7c3942814bb3dd7fb8c583c17, type: 3}
     - target: {fileID: 4388653920054128236, guid: e052e2168f2dd344b996eac797a0559f, type: 3}
       propertyPath: m_Name
       value: RewardManager
@@ -1186,6 +1194,14 @@ PrefabInstance:
       propertyPath: rUI
       value: 
       objectReference: {fileID: 4898799542633412027}
+    - target: {fileID: 276080841178540810, guid: f3fe2af17ae55e742896f28a5565ba32, type: 3}
+      propertyPath: volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 276080841178540810, guid: f3fe2af17ae55e742896f28a5565ba32, type: 3}
+      propertyPath: expValue
+      value: 
+      objectReference: {fileID: 563751357}
     - target: {fileID: 276080841178540810, guid: f3fe2af17ae55e742896f28a5565ba32, type: 3}
       propertyPath: expSlider
       value: 
@@ -1423,6 +1439,10 @@ PrefabInstance:
     - target: {fileID: 1336131357735750685, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992800274610519153, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: m_Name
+      value: HpValue
       objectReference: {fileID: 0}
     - target: {fileID: 3079640849244217655, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_IsActive
