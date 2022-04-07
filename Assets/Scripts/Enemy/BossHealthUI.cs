@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class BossHealthUI : MonoBehaviour
 {
-    public Text BossName;
+    public TextMeshProUGUI BossName;
     public Slider slider;
 
 
     private void Awake()
     {
         slider = GetComponentInChildren<Slider>();
-        BossName = GetComponentInChildren<Text>();
+        BossName = GetComponentInChildren<TextMeshProUGUI>();
     }
 
     private void Start()
