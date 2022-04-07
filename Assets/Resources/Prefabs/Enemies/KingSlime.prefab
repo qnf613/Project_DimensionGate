@@ -11,12 +11,13 @@ GameObject:
   - component: {fileID: 5874046255734088398}
   - component: {fileID: 5874046255734088399}
   - component: {fileID: 5874046255734088396}
-  - component: {fileID: 5874046255734088397}
   - component: {fileID: 5874046255734088370}
   - component: {fileID: 5874046255734088371}
   - component: {fileID: 5874046255734088368}
   - component: {fileID: 5874046255734088393}
   - component: {fileID: 1882871477}
+  - component: {fileID: 821009671}
+  - component: {fileID: 7108316683183888228}
   m_Layer: 7
   m_Name: KingSlime
   m_TagString: Boss
@@ -87,32 +88,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &5874046255734088397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5874046255734088369}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 2500
-  currentHealth: 0
-  attackDamage: 10
-  atkspeed: 0.5
-  lasthit: 0
-  DamageIndicator: {fileID: 6880273557122235488, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
-  pfDamagePopup: {fileID: 4432683363937425119, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
-  OffSet: {fileID: 5874046256116976176}
-  TempPosition: {fileID: 5874046255734088398}
-  flashEffect: {fileID: 6697744233758242164}
-  originalFontSize: 36
-  explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
-  enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
-  enemyvolume: 0.5
 --- !u!114 &5874046255734088370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +200,46 @@ MonoBehaviour:
   ambientSFX: {fileID: 8300000, guid: 71acbda3de5276044aa981488903c817, type: 3}
   movementSound: {fileID: 0}
   volume: 0.7
+--- !u!114 &821009671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874046255734088369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 2500
+  currentHealth: 0
+  attackDamage: 10
+  atkspeed: 0.5
+  lasthit: 0
+  DamageIndicator: {fileID: 6880273557122235488, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
+  pfDamagePopup: {fileID: 4432683363937425119, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
+  OffSet: {fileID: 5874046256116976176}
+  TempPosition: {fileID: 5874046255734088398}
+  flashEffect: {fileID: 6697744233758242164}
+  originalFontSize: 36
+  explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
+  enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
+  enemyvolume: 0.5
+  isBoss: 1
+--- !u!114 &7108316683183888228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874046255734088369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375a8a90fc0445742b6f785142f3e36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossName: KingSlime
 --- !u!1 &5874046256116976176
 GameObject:
   m_ObjectHideFlags: 0

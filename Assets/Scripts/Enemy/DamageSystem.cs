@@ -19,7 +19,7 @@ public class DamageSystem : MonoBehaviour
 
     [SerializeField] private TextMeshPro DamageIndicator;
     [SerializeField] private GameObject pfDamagePopup;
-    
+
     [SerializeField] private GameObject OffSet;
     [SerializeField] private Transform TempPosition;
     [SerializeField] private SpriteFlash flashEffect;
@@ -27,22 +27,27 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private ParticleSystem explosionParticle;
     [SerializeField] private AudioClip enemydamageSFX;
     [SerializeField] private float enemyvolume = 0.50f;
-  
+
+    BossUIManager BossManager;
+    public bool isBoss;
 
     private void Awake()
     {
         DamageIndicator = transform.GetComponent<TextMeshPro>();
-        
+        currentHealth = MaxHealth;
+        BossManager = GetComponent<BossUIManager>();
 
     }
 
     void Start()
     {
-        currentHealth = MaxHealth;
+        //if (!isBoss)
+        //{
+
+        //}
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
 
-       
 
 
     }
@@ -53,7 +58,7 @@ public class DamageSystem : MonoBehaviour
 
             if (other.gameObject.tag == "Player")
             {
- 
+
                 other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
                 lasthit = Time.time;
             }
@@ -64,25 +69,32 @@ public class DamageSystem : MonoBehaviour
 
     public virtual void TakeDamage(float damage, bool crit)
     {
-        
+
         flashEffect.Flash();
         DamagePopUp(damage, crit);
+        if (!isBoss)
+        {
+            currentHealth -= damage;
+        }
+        else if (isBoss && BossManager !=null)
+        {
+            currentHealth -= damage;
+            BossManager.UpdateBossHealth(currentHealth);
+        }
 
-        currentHealth -= damage;
-       
         if (currentHealth <= 0)
         {
-            
+
             ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
             Destroy(explosion, 5f);
             Destroy(this.gameObject, 0.15f);
         }
-        if(enemydamageSFX != null)
+        if (enemydamageSFX != null)
         {
             AudioSource.PlayClipAtPoint(enemydamageSFX, transform.position, enemyvolume);
         }
-        
+
     }
     public void DamagePopUp(float dmg, bool crit)
     {
@@ -105,7 +117,7 @@ public class DamageSystem : MonoBehaviour
         }
         //Debug.Log(DamageIndicator.fontSize);
     }
-    
+
     private void ShowDamageUI(float dmg, bool crit)
     {
         if (dmg == 0) { }
@@ -132,5 +144,6 @@ public class DamageSystem : MonoBehaviour
     {
         DamageIndicator.text = "";
     }
-
 }
+
+   
