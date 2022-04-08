@@ -38,9 +38,9 @@ public class DamagePOPUPS : MonoBehaviour
         }
         if (crit == true)
         {
-            DamageIndicator.color = Color.yellow;
+            DamageIndicator.color = Color.red;
         }
-        DamageIndicator.color = Color.red;
+        DamageIndicator.color = Color.white;
 
     }
     void ResetFontSize()

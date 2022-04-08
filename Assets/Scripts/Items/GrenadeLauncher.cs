@@ -64,7 +64,7 @@ public class GrenadeLauncher : Weapon
             lastShot = Time.time;
         }
     }
-    protected override float CalcCritDamage()
+    public override float CalcCritDamage()
     {
         if (crit == true)
         {

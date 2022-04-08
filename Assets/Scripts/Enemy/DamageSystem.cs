@@ -134,13 +134,14 @@ public class DamageSystem : MonoBehaviour
         {
             if (crit == true)
             {
-                DamageIndicator.color = Color.yellow;
+                DamageIndicator.color = Color.red;
             }
             else if (crit == false)
             {
-                DamageIndicator.color = Color.red;
+                DamageIndicator.color = Color.white;
             }
-            DamageIndicator.text = dmg.ToString();
+            
+            DamageIndicator.text = ((int)dmg).ToString();
             Invoke("ClearDamageUI", .5f);
         }
 

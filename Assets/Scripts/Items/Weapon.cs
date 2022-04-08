@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
 {
     public float CritMod;
     public float CritDamageMod = 2;
-    [SerializeField] protected float GlobalCritRate;
+    public float GlobalCritRate;
     protected string wName;
     protected string wDescription;
     public float damage;
@@ -107,7 +107,7 @@ public class Weapon : MonoBehaviour
         }
         
     }
-    protected void ApplyEnhancement()
+    protected virtual void ApplyEnhancement()
     {
         this.gameObject.GetComponent<Refine>().findRefineType(refineDamage, RefineCritChance, RefineCritDamage, damage);
     }
@@ -116,11 +116,11 @@ public class Weapon : MonoBehaviour
     {
 
     }
-    protected virtual void CheckIfCrit()
+    public virtual void CheckIfCrit()
     {
         crit = this.gameObject.GetComponent<CheckForCrits>().CheckCrits(GlobalCritRate, CritMod);
     }
-    protected virtual float CalcCritDamage()
+    public virtual float CalcCritDamage()
     {
         if (crit == true)
         {
