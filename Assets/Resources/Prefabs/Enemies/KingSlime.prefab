@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5874046255734088398}
-  - component: {fileID: 5874046255734088399}
   - component: {fileID: 5874046255734088396}
   - component: {fileID: 5874046255734088370}
   - component: {fileID: 5874046255734088371}
@@ -18,6 +17,7 @@ GameObject:
   - component: {fileID: 1882871477}
   - component: {fileID: 821009671}
   - component: {fileID: 7108316683183888228}
+  - component: {fileID: 8862356434098122350}
   m_Layer: 7
   m_Name: KingSlime
   m_TagString: Boss
@@ -33,7 +33,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5874046255734088369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3623452, y: 0.02892792, z: 0}
+  m_LocalPosition: {x: 3.328, y: -0.053, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5874046257161658675}
@@ -41,32 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5874046255734088399
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5874046255734088369}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.10066676, y: -0.40613365}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 3.6733031, y: 3.2293806}
-  m_EdgeRadius: 0
 --- !u!50 &5874046255734088396
 Rigidbody2D:
   serializedVersion: 4
@@ -212,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 2500
+  MaxHealth: 2000
   currentHealth: 0
   attackDamage: 10
   atkspeed: 0.5
@@ -240,6 +214,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossName: KingSlime
+--- !u!70 &8862356434098122350
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874046255734088369}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.041063428, y: -0.26691163}
+  m_Size: {x: 2.224661, y: 2.224661}
+  m_Direction: 0
 --- !u!1 &5874046256116976176
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,7 +271,6 @@ GameObject:
   - component: {fileID: 5874046257161658675}
   - component: {fileID: 5874046257161658674}
   - component: {fileID: 5874046257161658701}
-  - component: {fileID: 9154184151500047256}
   - component: {fileID: 6697744233758242164}
   m_Layer: 7
   m_Name: Sprite
@@ -375,32 +364,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &9154184151500047256
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5874046257161658672}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0023451447, y: -0.08911598}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7654841, y: 0.7138907}
-  m_EdgeRadius: 0
 --- !u!114 &6697744233758242164
 MonoBehaviour:
   m_ObjectHideFlags: 0

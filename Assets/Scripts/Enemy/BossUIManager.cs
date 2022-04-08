@@ -29,5 +29,10 @@ public class BossUIManager : MonoBehaviour
         bossHealthBar.SetBossCurrentHealth(currentHealth);
     }
 
+    public void HealthBarInactive()
+    {
+        bossHealthBar.SetHealthBarToInactive();
+    }
+
 
 }
