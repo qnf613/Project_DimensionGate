@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected float GlobalCritRate;
     protected string wName;
     protected string wDescription;
-    [SerializeField]protected float damage;
+    public float damage;
     protected float wAtkspeed;
     protected float wRange;
     protected int enhancement;
@@ -87,7 +87,7 @@ public class Weapon : MonoBehaviour
     }
     protected virtual void Shoot()
     {
-        ApplyEnhancement();
+        
         CheckIfCrit();
         AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
         Instantiate(projectile, transform.position, transform.rotation);
@@ -103,6 +103,7 @@ public class Weapon : MonoBehaviour
             Debug.Log("Enhanced!");
             enhancement++;
             this.gameObject.GetComponent<Refine>().SetRefine(enhancement);
+            ApplyEnhancement();
         }
         
     }
