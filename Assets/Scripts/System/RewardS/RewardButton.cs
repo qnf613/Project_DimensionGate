@@ -13,7 +13,10 @@ public class RewardButton : MonoBehaviour
     void Start()
     {
         checking = false;
-        rs = rs.GetComponent<RewardSystem>();/*rs.GetComponent<RewardSystem>();*/
+        if (rs != null)
+        {
+            rs = rs.GetComponent<RewardSystem>();/*rs.GetComponent<RewardSystem>();*/
+        }
         ru = ru.GetComponent<RewardUI>();
     }
 

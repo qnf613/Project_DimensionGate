@@ -63,7 +63,11 @@ public class RewardUI : MonoBehaviour
     {
         GetRewardsList();
         this.gameObject.SetActive(true);
-        Time.timeScale = 0;
+        
+        if(Time.timeScale != 0)
+        {
+            Time.timeScale = 0;
+        }
     }
 
     public void CloseUI()

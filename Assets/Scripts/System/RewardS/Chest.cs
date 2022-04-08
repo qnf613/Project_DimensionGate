@@ -9,7 +9,7 @@ public class Chest : PickUp
     public GameObject rUI;
     public RewardUI ru;
     [SerializeField] private AudioClip chestSFX;
-    [SerializeField] private float volume = 0.50f;
+    [SerializeField] private float volume;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,17 @@ public class Chest : PickUp
         AudioSource.PlayClipAtPoint(chestSFX, transform.position, volume);
         rs.MakeRewardList();
         ru.GetRewardsList();
-        ru.OpenUI();
+        
+        Time.timeScale = 0;
+
+        StartCoroutine(delayForAnimation());
         //base.PickedUp();
+    }
+
+    IEnumerator delayForAnimation()
+    {
+        yield return new WaitForSecondsRealtime(1.5f);
+        ru.OpenUI();
+        Destroy(this.gameObject);
     }
 }

@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,9 +21,8 @@ public class PickUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("Player is here");
+            animator.SetBool("PlayerContact", true);
             PickedUp();
-            Destroy(this.gameObject);
         }
     }
 
