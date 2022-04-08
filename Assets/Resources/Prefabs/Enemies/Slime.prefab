@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5580571325549936474}
   - component: {fileID: 5580571325549936475}
   - component: {fileID: 5580571325549936420}
-  - component: {fileID: 1313261016331268570}
   - component: {fileID: 8614303851465954097}
   - component: {fileID: 8996201148667598762}
   m_Layer: 7
@@ -106,32 +105,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1313261016331268570
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5580571325549936473}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.092998564}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7457253, y: 0.6915742}
-  m_EdgeRadius: 0
 --- !u!114 &8614303851465954097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +142,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5580571326173248679}
-  - component: {fileID: 5580571326173248678}
   - component: {fileID: 5580571326173248677}
   - component: {fileID: 5113882351900493378}
   - component: {fileID: 5580571326173248676}
@@ -178,6 +150,7 @@ GameObject:
   - component: {fileID: 5580571326173248729}
   - component: {fileID: 5580571326173248672}
   - component: {fileID: 2018952321}
+  - component: {fileID: 3127783219624572596}
   m_Layer: 7
   m_Name: Slime
   m_TagString: Enemy
@@ -201,32 +174,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &5580571326173248678
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5580571326173248728}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00785017, y: -0.13719976}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.2104349, y: 1.1062195}
-  m_EdgeRadius: 0
 --- !u!50 &5580571326173248677
 Rigidbody2D:
   serializedVersion: 4
@@ -292,6 +239,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
   enemyvolume: 0.5
+  isBoss: 0
 --- !u!114 &5580571326173248731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +352,22 @@ MonoBehaviour:
   ambientSFX: {fileID: 8300000, guid: 183d47efac15b844b8cc46184e611b52, type: 3}
   movementSound: {fileID: 0}
   volume: 0.8
+--- !u!70 &3127783219624572596
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580571326173248728}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.008908927, y: -0.1442061}
+  m_Size: {x: 1.1726269, y: 1.1726269}
+  m_Direction: 0
 --- !u!1 &5580571326594667609
 GameObject:
   m_ObjectHideFlags: 0
