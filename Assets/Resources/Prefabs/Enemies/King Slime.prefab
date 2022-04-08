@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 7108316683183888228}
   - component: {fileID: 8862356434098122350}
   m_Layer: 7
-  m_Name: KingSlime
+  m_Name: King Slime
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
