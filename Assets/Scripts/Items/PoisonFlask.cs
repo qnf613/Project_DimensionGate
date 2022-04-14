@@ -10,7 +10,8 @@ public class PoisonFlask : Weapon
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = .7f;
     [SerializeField] private GameObject poisonFlaskPrefab;
-    
+    public float dotDamageScale = 1.1f;
+
     protected Vector3 projectileDirection;
 
 
@@ -39,7 +40,9 @@ public class PoisonFlask : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > wAtkspeed + lastShot)
         {
-            base.Shoot();
+            AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+            Instantiate(projectile, transform.position, transform.rotation);
+            projectile.GetComponent<StraightProjectile>();     
 
             projectileDirection = (this.transform.position - targetPosition);
 
@@ -50,5 +53,10 @@ public class PoisonFlask : Weapon
 
         }
 
+    }
+    protected override void ApplyEnhancement()
+    {
+        base.ApplyEnhancement();
+        dotDamage = damage;
     }
 }

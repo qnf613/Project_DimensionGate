@@ -26,11 +26,13 @@ public class BossHealthUI : MonoBehaviour
 
     public void SetUIHealthBarToActive()
     {
+        BossName.gameObject.SetActive(true);
         slider.gameObject.SetActive(true);
     }
 
     public void SetHealthBarToInactive()
     {
+        BossName.gameObject.SetActive(false);
         slider.gameObject.SetActive(false);
     }
 

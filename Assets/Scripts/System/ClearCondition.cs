@@ -18,6 +18,8 @@ public class ClearCondition : MonoBehaviour
     //portal
     [SerializeField] private GameObject portal;
     [SerializeField] private GameObject[] portals;
+    //portal navigator
+    [SerializeField] private GameObject portalNavi;
     //conditions
     [SerializeField] protected bossStatus bs;
     [SerializeField] protected stageCleared sc;
@@ -46,12 +48,13 @@ public class ClearCondition : MonoBehaviour
         //assign timer text
         times[0] = GameObject.Find("Mins").GetComponent<Text>();
         times[1] = GameObject.Find("Secs").GetComponent<Text>();
-
+        times[2] = GameObject.Find(":").GetComponent<Text>();
         //declear starting status
         bs = bossStatus.nSummon;
         
         //start countdown when first monster spawn
         StartCoroutine(CountStart());
+        portalNavi.SetActive(false);
     }
 
     // Update is called once per frame
@@ -124,6 +127,20 @@ public class ClearCondition : MonoBehaviour
             {
                 times[1].text = "0"+((int)timeRemain % 60).ToString();
             }
+            if (timeRemain < 301 && timeRemain > 121)
+            {
+                times[0].color = Color.yellow;
+                times[1].color = Color.yellow;
+                times[2].color = Color.yellow;
+            }
+            else if (timeRemain < 121)
+            {
+                times[0].color = Color.red;
+                times[1].color = Color.red;
+                times[2].color = Color.red;
+            }
+
+
         }
         else
         {
@@ -180,6 +197,7 @@ public class ClearCondition : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("Portal"));
             portal = portals[1];
             Instantiate(portal, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
+            portalNavi.SetActive(true);
             happened = true;
         }
     }

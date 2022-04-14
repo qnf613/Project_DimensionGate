@@ -9,12 +9,15 @@ public class LeavePool : MonoBehaviour
     [SerializeField] private GameObject poisonFlaskProjectile;
     [SerializeField] protected AudioClip sfx;
     [SerializeField] protected float volume = 0.50f;
-
+    bool crit;
     private void Start()
     {
         
     }
-
+    public void WasItCrit(bool _crit)
+    {
+        _crit = crit;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
@@ -28,6 +31,7 @@ public class LeavePool : MonoBehaviour
             //spawns poison field at the location the projectile vanished 
             AudioSource.PlayClipAtPoint(sfx, transform.position, volume);
             Instantiate(poisonFieldPrefab, currentlocation, currentrotation);
+            
             //destroys projectile
             Destroy(this.gameObject);
         }

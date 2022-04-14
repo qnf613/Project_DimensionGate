@@ -82,7 +82,7 @@ public class DamageSystem : MonoBehaviour
             BossManager.UpdateBossHealth(currentHealth);
         }
 
-        if (currentHealth <= 0)
+        if (!isBoss && currentHealth <= 0)
         {
 
             ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
@@ -90,6 +90,15 @@ public class DamageSystem : MonoBehaviour
             Destroy(explosion, 5f);
             Destroy(this.gameObject, 0.15f);
         }
+        else if(isBoss && currentHealth <= 0 && BossManager !=null)
+        {
+            ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
+            explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
+            BossManager.HealthBarInactive();
+            Destroy(explosion, 5f);
+            Destroy(this.gameObject, 0.15f);
+        }
+
         if (enemydamageSFX != null)
         {
             AudioSource.PlayClipAtPoint(enemydamageSFX, transform.position, enemyvolume);
@@ -125,13 +134,14 @@ public class DamageSystem : MonoBehaviour
         {
             if (crit == true)
             {
-                DamageIndicator.color = Color.yellow;
+                DamageIndicator.color = Color.red;
             }
             else if (crit == false)
             {
-                DamageIndicator.color = Color.red;
+                DamageIndicator.color = Color.white;
             }
-            DamageIndicator.text = dmg.ToString();
+            
+            DamageIndicator.text = ((int)dmg).ToString();
             Invoke("ClearDamageUI", .5f);
         }
 
