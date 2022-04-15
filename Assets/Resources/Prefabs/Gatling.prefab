@@ -101,7 +101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1740263397916361334
 Transform:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
-  projectile: {fileID: 147187134449682037, guid: 72bc0242950739a40bd45a2e497594a9, type: 3}
+  projectile: {fileID: 5285968918826037839, guid: ff1176f7c96adab48b55b874829ffc94, type: 3}
   crit: 0
   weaponSound: {fileID: 8300000, guid: fd51743afed742f4bbf130293e06934f, type: 3}
   volume: 0.6
@@ -149,6 +149,7 @@ MonoBehaviour:
   attackspeed: 0.2
   pierceCount: 0
   maxPierceCount: 0
+  rounds: 0
 --- !u!114 &5856326893698505444
 MonoBehaviour:
   m_ObjectHideFlags: 0

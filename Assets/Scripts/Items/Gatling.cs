@@ -13,6 +13,7 @@ public class Gatling : Weapon
     [SerializeField] private float attackspeed = .3f;
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
+    [SerializeField] private float rounds;
     protected Vector3 projectileDirection;
     void Start()
     {
@@ -37,15 +38,9 @@ public class Gatling : Weapon
         {
             base.Shoot();
             projectileDirection = (this.transform.position - targetPosition);
-            //TODO : Change this to match player Rotation and position
-            /*
-             * Summary
-             * When you instantiate the projectile, Im going into the projectile script to change the damage it does.
-             * 
-             * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
-             * setting it as the final damage value.
-            */
+          
             lastShot = Time.time;
         }
     }
+
 }
