@@ -19,6 +19,9 @@ public class PortalNavigator : MonoBehaviour
         if (portal == null)
         {
             portal = GameObject.FindGameObjectWithTag("Portal");
+        }
+        if(portal != null)
+        {
             portalDirection = portal.transform.position;
             pointingDirection = portalDirection - transform.position;
             float rotz = Mathf.Atan2(pointingDirection.y, pointingDirection.x) * Mathf.Rad2Deg - 90f;

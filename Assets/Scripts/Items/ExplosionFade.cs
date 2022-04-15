@@ -9,10 +9,15 @@ public class ExplosionFade : MonoBehaviour
     [SerializeField] private AudioClip explosion;
     private void Start()
     {
-        AudioSource.PlayClipAtPoint(explosion, transform.position);
-
-        //todo: change to make opacity go to zero and then destroy to make it look smoother
-        Destroy(this.gameObject, delay);
-        Debug.Log("destroying explosion");
+        StartCoroutine(Explosion());
     }
+
+    private IEnumerator Explosion(){
+
+        AudioSource.PlayClipAtPoint(explosion, transform.position);
+        yield return new WaitForSecondsRealtime(delay);
+        Destroy(this.gameObject);
+
+    }
+
 }

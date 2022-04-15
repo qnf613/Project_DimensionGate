@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0.5
-  explosion: {fileID: 8300000, guid: 42026fb5e7d24194c8503a29b86aa6d8, type: 3}
+  explosion: {fileID: 8300000, guid: dd5e4702bba231b4f83568e6d9e23087, type: 3}
 --- !u!95 &7336506573302284840
 Animator:
   serializedVersion: 3
