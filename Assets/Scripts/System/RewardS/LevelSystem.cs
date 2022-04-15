@@ -47,17 +47,20 @@ public class LevelSystem : MonoBehaviour
         //debug
         if (Input.GetKeyDown(KeyCode.L))
         {
-            LevelUp();
+            exp = expToLevelUp;
         }
 
     }
 
     public void LevelUp()
     {
-        AudioSource.PlayClipAtPoint(levelupSFX, transform.position, volume);
+        if (levelupSFX != null)
+        {
+            AudioSource.PlayClipAtPoint(levelupSFX, transform.position, volume);
+        }
         level++;
         exp -= expToLevelUp;
-        expToLevelUp = level * 10 + 20;
+        expToLevelUp = level * 10;
         rs.MakeLevelUpRewardList();
         ru.GetRewardsList();
         ru.OpenUI();
@@ -73,7 +76,7 @@ public class LevelSystem : MonoBehaviour
     private void OnGUI()
     {
         // Changing the time here will change how fast the the slider moves
-        float t = Time.deltaTime / .2f;
+        float t = Time.deltaTime / .5f;
         expSlider.value = Mathf.Lerp(expSlider.value, exp, t);
     }
 

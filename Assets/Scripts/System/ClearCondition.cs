@@ -32,7 +32,7 @@ public class ClearCondition : MonoBehaviour
     [SerializeField] private GameObject enemySpawner;
 
 
-    private void Awake() 
+    private void Start() 
     {
         //find everything need to be start with
         player = GameObject.FindGameObjectWithTag("Player");                                    //player
@@ -54,6 +54,10 @@ public class ClearCondition : MonoBehaviour
         
         //start countdown when first monster spawn
         StartCoroutine(CountStart());
+        if (portalNavi == null)
+        {
+            portalNavi = GameObject.Find("PortalPointer");
+        }
         portalNavi.SetActive(false);
     }
 

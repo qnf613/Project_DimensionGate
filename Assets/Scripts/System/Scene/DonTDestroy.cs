@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class DonTDestroy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+
     }
 
     // Update is called once per frame
@@ -17,15 +16,15 @@ public class DonTDestroy : MonoBehaviour
         //Destroy it when it is in main menu
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
+        
         if (sceneName == "MainMenu")
         {
             Destroy(this.gameObject);
         }
 
-        //debugging - scene move
-        if (Input.GetKeyDown(KeyCode.C))
+        else if (sceneName != "MainMenu")
         {
-            SceneManager.LoadScene("Jin2(test Purpose)");
+            DontDestroyOnLoad(this.gameObject);
         }
 
     }

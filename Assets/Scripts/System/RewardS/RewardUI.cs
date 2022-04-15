@@ -14,6 +14,8 @@ public class RewardUI : MonoBehaviour
     public List<GameObject> rewards;
     [SerializeField] private GameObject weaponInventory;
     [SerializeField] private GameObject artifactInventory;
+    List<GameObject> gs = new List<GameObject>();
+    
 
     // Start is called before the first frame update
     public void Start()
@@ -24,15 +26,15 @@ public class RewardUI : MonoBehaviour
         rb1 = rb1.GetComponent<RewardButton>();
         rb2 = rb2.GetComponent<RewardButton>();
         rb3 = rb3.GetComponent<RewardButton>();
-
         for (int i = 0; i < 3; i++)
         {
             texts[i] = texts[i].GetComponent<TextMeshProUGUI>();
         }
     }
-
+    
     public void PickReward(GameObject item)
     {
+        GameObject newItem;
         string itemName = item.name.ToString();
         if (GameObject.Find(itemName) || GameObject.Find(item.name.ToString() + "(Clone)"))
         {
@@ -42,20 +44,25 @@ public class RewardUI : MonoBehaviour
             //    tempScriptActivation.Enhance();
             //}
             //TODO: enhance the item
-            item.GetComponent<Weapon>().Enhance();
+            GameObject.Find(item.name.ToString()).GetComponent<Weapon>().Enhance();
+           // item.GetComponent<Weapon>().Enhance();
            // Debug.Log("Refine!");
         }
         else if(!GameObject.Find(itemName))
         {
             if(item.gameObject.tag == "Weapon")
             {
-                Instantiate(item, weaponInventory.transform);
+                newItem = Instantiate(item, weaponInventory.transform);
+                newItem.name = newItem.name.Replace("(Clone)", "");
             }
-            if(item.gameObject.tag == "Artifact")
+            if (item.gameObject.tag == "Artifact")
             {
-                Instantiate(item, artifactInventory.transform);
+                newItem = Instantiate(item, artifactInventory.transform);
+                newItem.name = newItem.name.Replace("(Clone)", "");
             }
         }
+        
+        
         CloseUI();
     }
 

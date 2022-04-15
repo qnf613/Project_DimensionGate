@@ -16,8 +16,7 @@ public class Refine : MonoBehaviour
     {
         if (_dmg == true)
         {
-
-            this.gameObject.GetComponent<Weapon>().damage = ChangeDamageBasedOnRefine(damage);
+            UpgradeDamageBasedOnRefine(damage); 
         }
         if (_critChance == true)
         {
@@ -28,6 +27,10 @@ public class Refine : MonoBehaviour
             ChangeCritDamageBasedOnRefine();
         }
         
+    }
+    private void UpgradeDamageBasedOnRefine(float damage) 
+    {
+        this.gameObject.GetComponent<Weapon>().damage = ChangeDamageBasedOnRefine(damage);
     }
 
     private void ChangeCritChanceBasedOnRefine()
