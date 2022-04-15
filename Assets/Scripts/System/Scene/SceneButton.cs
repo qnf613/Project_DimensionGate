@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneButton : MonoBehaviour
 {
-    [SerializeField] protected string sceneToLoad;
+    [SerializeField] private string sceneToLoad;
     // Start is called before the first frame update
     void Start()
     {

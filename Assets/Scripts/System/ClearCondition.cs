@@ -30,9 +30,11 @@ public class ClearCondition : MonoBehaviour
     //game over/stage clear
     [SerializeField] private GameObject GOUI;
     [SerializeField] private GameObject enemySpawner;
+    //next loading number
+    public string nextLoadingScreen;
 
 
-    private void Start() 
+    private void Awake()
     {
         //find everything need to be start with
         player = GameObject.FindGameObjectWithTag("Player");                                    //player
@@ -46,19 +48,31 @@ public class ClearCondition : MonoBehaviour
         bossOfStage = bossMonsters[Random.Range(0, bossMonsters.Length)];
 
         //assign timer text
-        times[0] = GameObject.Find("Mins").GetComponent<Text>();
-        times[1] = GameObject.Find("Secs").GetComponent<Text>();
-        times[2] = GameObject.Find(":").GetComponent<Text>();
+        if (times[0] == null)
+        {
+            times[0] = GameObject.Find("Mins").GetComponent<Text>();
+        }
+        if (times[1] == null)
+        {
+            times[1] = GameObject.Find("Secs").GetComponent<Text>();
+        }
+        if (times[2] == null)
+        {
+            times[2] = GameObject.Find(":").GetComponent<Text>();
+        }
         //declear starting status
         bs = bossStatus.nSummon;
-        
+
         //start countdown when first monster spawn
         StartCoroutine(CountStart());
         if (portalNavi == null)
         {
             portalNavi = GameObject.Find("PortalPointer");
         }
-        portalNavi.SetActive(false);
+    }
+    private void Start() 
+    {
+        
     }
 
     // Update is called once per frame

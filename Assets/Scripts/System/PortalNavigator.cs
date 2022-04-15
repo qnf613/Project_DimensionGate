@@ -10,7 +10,7 @@ public class PortalNavigator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //portal = GameObject.FindGameObjectWithTag("Portal");
+        this.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,10 +19,10 @@ public class PortalNavigator : MonoBehaviour
         if (portal == null)
         {
             portal = GameObject.FindGameObjectWithTag("Portal");
+            portalDirection = portal.transform.position;
+            pointingDirection = portalDirection - transform.position;
+            float rotz = Mathf.Atan2(pointingDirection.y, pointingDirection.x) * Mathf.Rad2Deg - 90f;
+            transform.rotation = Quaternion.Euler(0f, 0f, rotz);
         }
-        portalDirection = portal.transform.position;
-        pointingDirection = portalDirection - transform.position;
-        float rotz = Mathf.Atan2(pointingDirection.y, pointingDirection.x) * Mathf.Rad2Deg - 90f;
-        transform.rotation = Quaternion.Euler(0f, 0f, rotz);
     }
 }
