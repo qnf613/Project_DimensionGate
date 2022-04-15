@@ -5,7 +5,7 @@ using UnityEngine;
 public class ExplosionFade : MonoBehaviour
 {
 
-    [SerializeField] private float delay;
+    [SerializeField] private float delay = 1;
     [SerializeField] private AudioClip explosion;
     private void Start()
     {
