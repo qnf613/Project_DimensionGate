@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ActivatePortal : MonoBehaviour
 {
+
     [SerializeField] private Collider2D cd;
     [SerializeField] private GameObject keyButtonIcon;
     [SerializeField] private string sceneToLoad;

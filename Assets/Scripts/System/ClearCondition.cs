@@ -23,7 +23,7 @@ public class ClearCondition : MonoBehaviour
     [SerializeField] private GameObject portalNavi;
     //conditions
     [SerializeField] protected bossStatus bs;
-    [SerializeField] protected stageCleared sc;
+    public stageCleared sc;
     [SerializeField] private bool happened = false;
     [SerializeField] private bool gameStart = false;
     //rewards
