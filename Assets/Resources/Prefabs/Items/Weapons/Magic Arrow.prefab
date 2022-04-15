@@ -129,10 +129,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd75af683598de4591336ee26b1339d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 2
+  CritMod: 30
   CritDamageMod: 2
   GlobalCritRate: 0
-  damage: 20
+  damage: 5
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RefineLevel: 0
-  finalDamage: 0
+  finalDamage: 15
 --- !u!114 &-11843721709177824
 MonoBehaviour:
   m_ObjectHideFlags: 0

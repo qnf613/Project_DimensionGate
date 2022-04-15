@@ -42,7 +42,8 @@ public class RewardUI : MonoBehaviour
             //    tempScriptActivation.Enhance();
             //}
             //TODO: enhance the item
-            item.GetComponent<Weapon>().Enhance();
+            GameObject.Find(item.name.ToString()).GetComponent<Weapon>().Enhance();
+           // item.GetComponent<Weapon>().Enhance();
            // Debug.Log("Refine!");
         }
         else if(!GameObject.Find(itemName))
