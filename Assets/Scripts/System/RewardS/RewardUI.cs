@@ -31,15 +31,7 @@ public class RewardUI : MonoBehaviour
             texts[i] = texts[i].GetComponent<TextMeshProUGUI>();
         }
     }
-    private void Update()
-    {
-        foreach (GameObject t in gs)
-        {
-            t.name = t.name.Replace("(Clone)", "");
-        }
-        
-
-    }
+    
     public void PickReward(GameObject item)
     {
         GameObject newItem;
@@ -70,7 +62,7 @@ public class RewardUI : MonoBehaviour
             }
         }
         
-        //gs.Add(newItem);
+        
         CloseUI();
     }
 
