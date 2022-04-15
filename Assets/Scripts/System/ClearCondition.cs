@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public enum stageCleared {yes, yet, over, notStarted}
+public enum LoadState {Loading, NotLoading, LoadNextScene }
 public enum bossStatus {nSummon, nDead}
 public class ClearCondition : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class ClearCondition : MonoBehaviour
     //next loading number
     public string nextLoadingScreen;
 
+    Loading _loading = new Loading();
 
     private void Awake()
     {
@@ -84,6 +86,8 @@ public class ClearCondition : MonoBehaviour
             case stageCleared.yes:
                 //activate the portal & check number of bonus rewards depending on time remains (this is conditional calculation)
                 ActivatePortal();
+                _loading.SetUp();
+
                 break;
 
             case stageCleared.yet:

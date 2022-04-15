@@ -38,6 +38,7 @@ public class ActivatePortal : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
+            Loading.ls = LoadState.Loading;
             Debug.Log("Space Pressing");
             loadOnce = true;
         }
