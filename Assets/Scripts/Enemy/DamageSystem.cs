@@ -95,7 +95,7 @@ public class DamageSystem : MonoBehaviour
             ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
             BossManager.HealthBarInactive();
-            Destroy(explosion, 52f);
+            Destroy(explosion, 2f);
             Destroy(this.gameObject, 0.15f);
         }
 
