@@ -33,7 +33,7 @@ public class Caltrops : Weapon
     {
         targetPosition = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotz = Mathf.Atan2(targetPosition.y, targetPosition.x) * Mathf.Rad2Deg - 90f;
-        // change this for spread
+        // change this for weapon spread
         float spread = Random.Range(-50, 50);
         transform.rotation = Quaternion.Euler(0f, 0f, rotz + spread);
 
