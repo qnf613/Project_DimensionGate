@@ -41,7 +41,7 @@ public class Weapon : MonoBehaviour
         wRange = 0;
         enhancement = 0;
         we = WeaponEquipped.yes;
-        CritMod = 2;
+        GlobalCritRate = 10;
 
         //add the refinement types to the list.
         

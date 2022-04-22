@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5234336949642844392}
   - component: {fileID: 4364021016975612301}
   m_Layer: 0
-  m_Name: Burstshot(shotgun)
+  m_Name: BurstshotProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33,10 +33,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.0353224, z: 0}
   m_LocalScale: {x: 0.19164845, y: 0.26700687, z: 1}
   m_Children:
-  - {fileID: 4710702769200810338}
   - {fileID: 490004837378502504}
   - {fileID: 4852226438851890267}
   - {fileID: 8472386224317782602}
+  - {fileID: 4710702769200810338}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -118,8 +118,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbf3c19e78ce26429ddc1a4a1c55d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  lifespan: 0.15
+  speed: 20
+  lifespan: 0.5
 --- !u!114 &3851681625058515256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6850419457824562197}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15}
 --- !u!212 &1551183919566379974
 SpriteRenderer:
@@ -286,8 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbf3c19e78ce26429ddc1a4a1c55d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  lifespan: 0.15
+  speed: 20
+  lifespan: 0.5
 --- !u!114 &1256410302598833927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,7 +387,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6850419457824562197}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7}
 --- !u!212 &2645041381019630958
 SpriteRenderer:
@@ -467,8 +467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbf3c19e78ce26429ddc1a4a1c55d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  lifespan: 0.15
+  speed: 20
+  lifespan: 0.5
 --- !u!114 &7041886628555489007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6850419457824562197}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -15}
 --- !u!212 &2233320940654819463
 SpriteRenderer:
@@ -648,8 +648,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbf3c19e78ce26429ddc1a4a1c55d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  lifespan: 0.15
+  speed: 20
+  lifespan: 0.5
 --- !u!114 &4121753003901933975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,7 +749,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6850419457824562197}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -7}
 --- !u!212 &6241506555202984839
 SpriteRenderer:
@@ -829,8 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbf3c19e78ce26429ddc1a4a1c55d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
-  lifespan: 0.15
+  speed: 20
+  lifespan: 0.5
 --- !u!114 &1768012300196316002
 MonoBehaviour:
   m_ObjectHideFlags: 0

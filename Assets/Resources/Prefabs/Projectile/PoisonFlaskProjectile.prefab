@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4697007682152890030}
   - component: {fileID: 2618375794477632312}
-  - component: {fileID: -4492815915984702232}
   - component: {fileID: 5001990942009356225}
+  - component: {fileID: 2982774085439086030}
   m_Layer: 0
-  m_Name: PFP
+  m_Name: PoisonFlaskProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,20 +55,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4492815915984702232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3139452587625503352}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cbf3c19e78ce26429ddc1a4a1c55d0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
-  lifespan: 3
 --- !u!114 &5001990942009356225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,6 +71,21 @@ MonoBehaviour:
   poisonFlaskProjectile: {fileID: 3139452587625503352}
   sfx: {fileID: 8300000, guid: f1c3410565876a042a8377b8799d6437, type: 3}
   volume: 0.5
+--- !u!114 &2982774085439086030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3139452587625503352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b2dc5ac6c7583444a3e797fb103d17c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  lifespan: 1.5
+  poisonFieldPrefab: {fileID: 7626186721086240868, guid: 19d0750a9b454204fa62f9f7ce64ba58, type: 3}
 --- !u!1 &4403104014390016098
 GameObject:
   m_ObjectHideFlags: 0

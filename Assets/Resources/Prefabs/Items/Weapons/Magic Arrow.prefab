@@ -129,9 +129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbd75af683598de4591336ee26b1339d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 30
+  CritMod: 10
   CritDamageMod: 2
-  GlobalCritRate: 0
+  GlobalCritRate: 10
   damage: 5
   we: 0
   finalDamageNumber: 0

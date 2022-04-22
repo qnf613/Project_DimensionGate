@@ -207,7 +207,6 @@ GameObject:
   - component: {fileID: 4079153972502358029}
   - component: {fileID: 4079153972502358018}
   - component: {fileID: 981111794}
-  - component: {fileID: -3727757868396024561}
   - component: {fileID: 208998293080828854}
   m_Layer: 7
   m_Name: Bug
@@ -283,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 10
+  MaxHealth: 15
   currentHealth: 0
   attackDamage: 10
   atkspeed: 0.5
@@ -409,19 +408,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientSFX: {fileID: 8300000, guid: dcd8047855980a244b0c3eee74b32041, type: 3}
   volume: 0.7
---- !u!114 &-3727757868396024561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4079153972502358019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74f3ba78cc57de547b03bcc153eb7c8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
 --- !u!70 &208998293080828854
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

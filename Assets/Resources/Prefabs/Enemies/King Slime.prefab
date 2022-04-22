@@ -172,7 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ambientSFX: {fileID: 8300000, guid: 71acbda3de5276044aa981488903c817, type: 3}
-  movementSound: {fileID: 0}
   volume: 0.7
 --- !u!114 &821009671
 MonoBehaviour:
@@ -186,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 2000
+  MaxHealth: 4000
   currentHealth: 0
   attackDamage: 10
   atkspeed: 0.5
