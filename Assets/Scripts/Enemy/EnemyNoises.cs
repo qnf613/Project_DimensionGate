@@ -5,7 +5,6 @@ using UnityEngine;
 public class EnemyNoises : MonoBehaviour
 {
     [SerializeField] private AudioClip ambientSFX;
-    [SerializeField] private AudioClip movementSound;
     [SerializeField] private float volume = 0.50f;
     private float min = 5f;
     private float max = 10f;

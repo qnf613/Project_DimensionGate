@@ -31,11 +31,7 @@ public class RewardSystem : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        ////debugging - get chset pick up
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Instantiate(Chest, transform.position, transform.rotation);
-        //}
+
        
     }
 

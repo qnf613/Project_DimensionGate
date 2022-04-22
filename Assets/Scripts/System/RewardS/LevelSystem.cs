@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class LevelSystem : MonoBehaviour
 {
     //level related
-    public int level;
-    public int exp;
+    public int level = 1;
+    public int exp = 0;
     public int expToLevelUp = 10;
     //rewarding related
     public GameObject rsManager;
@@ -16,16 +16,12 @@ public class LevelSystem : MonoBehaviour
     public RewardUI ru;
     // EXP UI BAR
     [SerializeField] private Slider expSlider;
-    [SerializeField] private Text expValue;
     [SerializeField] private AudioClip levelupSFX;
     [SerializeField] private float volume = 0.50f;
 
 
     void Start()
     {
-        level = 1;
-        exp = 0;
-        expToLevelUp = 10;
         // Exp sliders max value is the amount of expToLevelUp
         expSlider.maxValue = expToLevelUp;
 
@@ -37,18 +33,23 @@ public class LevelSystem : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        if (exp >= expToLevelUp)
+        expSlider.maxValue = expToLevelUp;
+        if (DonTDestroy.inStage)
         {
-            LevelUp();
-        }
+            if (exp >= expToLevelUp)
+            {
+                LevelUp();
+            }
 
-        //debug
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            exp = expToLevelUp;
+            //debug
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                exp = expToLevelUp;
+            }
         }
+       
 
     }
 
@@ -64,13 +65,11 @@ public class LevelSystem : MonoBehaviour
         rs.MakeLevelUpRewardList();
         ru.GetRewardsList();
         ru.OpenUI();
-        expSlider.maxValue = expToLevelUp;
     }
 
     public void AddExp(int amount)
     {
         exp += amount;
-        //Debug.Log("Current exp: " + exp);
     }
 
     private void OnGUI()

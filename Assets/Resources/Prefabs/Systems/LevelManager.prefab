@@ -43,14 +43,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f6d26aa4a0e5146bae6bb3706c6cfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 1
   exp: 0
-  expToLevelUp: 0
+  expToLevelUp: 10
   rsManager: {fileID: 0}
   rs: {fileID: 0}
   rUI: {fileID: 0}
   ru: {fileID: 0}
   expSlider: {fileID: 0}
-  expValue: {fileID: 0}
   levelupSFX: {fileID: 8300000, guid: 64fc1db59c864004daa8fb0dec6c4846, type: 3}
   volume: 0.5

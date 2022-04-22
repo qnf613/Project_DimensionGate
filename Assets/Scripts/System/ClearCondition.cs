@@ -95,6 +95,10 @@ public class ClearCondition : MonoBehaviour
                 Countdown();
                 //check player is alive or not
                 CheckPlayer();
+                if (!DonTDestroy.inStage)
+                {
+                    DonTDestroy.inStage = true;
+                }
                 break;
             
             case stageCleared.over:

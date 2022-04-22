@@ -26,6 +26,7 @@ public class ActivatePortal : MonoBehaviour
         if (loadOnce)
         {
             SceneManager.LoadScene(sceneToLoad);
+            DonTDestroy.inStage = false;
             loadOnce = false;
         }
     }
@@ -40,7 +41,6 @@ public class ActivatePortal : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             Loading.ls = LoadState.Loading;
-            Debug.Log("Space Pressing");
             loadOnce = true;
         }
     }

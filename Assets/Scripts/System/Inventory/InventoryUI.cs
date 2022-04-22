@@ -14,13 +14,16 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetAllWeapons();
-        GetAllArtifacts();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (DonTDestroy.inStage)
+        {
+            GetAllWeapons();
+            GetAllArtifacts();
+        }
         //debug
         if (Input.GetKeyDown(KeyCode.I))
         {

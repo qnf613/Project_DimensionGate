@@ -22,12 +22,13 @@ public class SpriteFlash : MonoBehaviour
 
     void Start()
     {
-        originalColor = this.gameObject.GetComponent<SpriteRenderer>().color;
         // Get sprite renderer
-            spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = this.gameObject.GetComponentInChildren<SpriteRenderer>();
 
         //get material for sprite renderer
         originalMaterial = spriteRenderer.material;
+        //get color for sprite renderer
+        originalColor = spriteRenderer.color;
     }
 
     public void Flash()
