@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Gatling : Weapon
 {
-    ///has a weird thing where the projectile gets stuck on the player sometimes, gonna fix that
-  
-
     [SerializeField] private string name = "Gatling";
     [SerializeField] private string description = "Extreme rapid-fire!";
     [SerializeField] private int range = 20;
     [SerializeField] private float attackspeed = .3f;
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
-    [SerializeField] private float rounds;
+    [SerializeField] private float ammo;
+    [SerializeField] private float maxammo;
+    [SerializeField] private float reloadTime = 3f;
     protected Vector3 projectileDirection;
     void Start()
     {
@@ -34,13 +33,22 @@ public class Gatling : Weapon
     }
     protected override void Shoot()
     {
-        if (Time.time > wAtkspeed + lastShot)
+        if (Time.time > wAtkspeed + lastShot && ammo > 0)
         {
             base.Shoot();
             projectileDirection = (this.transform.position - targetPosition);
-          
+            ammo--;
             lastShot = Time.time;
+            Debug.Log("ammo is: " + ammo);
+        }
+        else if (ammo == 0)
+        {
+            Invoke("Reload", reloadTime);
         }
     }
-
+    private void Reload()
+    {      
+          Debug.Log("reloaded!");
+           ammo = maxammo;
+    }    
 }

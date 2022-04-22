@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 2
+  damage: 4
 --- !u!114 &8888781486041201614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 1256410302598833927}
   - component: {fileID: 8196257391003248517}
   - component: {fileID: 773689469351386998}
+  - component: {fileID: 3294364458663351867}
   m_Layer: 0
   m_Name: bshot (3)
   m_TagString: Untagged
@@ -272,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 5
+  damage: 0
 --- !u!114 &7200159962087993222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +339,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3294364458663351867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601687370707025197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7880867b081c6245ab414d0c4f3f759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 3818784659255911999, guid: 8bf50fb1915b9444f9b348f793e8375d, type: 3}
 --- !u!1 &2714025985033652869
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,6 +367,7 @@ GameObject:
   - component: {fileID: 7041886628555489007}
   - component: {fileID: 7149292650355183659}
   - component: {fileID: 6654628817657239748}
+  - component: {fileID: 2442264015140047176}
   m_Layer: 0
   m_Name: bshot (1)
   m_TagString: Untagged
@@ -439,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 5
+  damage: 0
 --- !u!114 &1614221368533293863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,6 +520,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2442264015140047176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2714025985033652869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7880867b081c6245ab414d0c4f3f759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 3818784659255911999, guid: 8bf50fb1915b9444f9b348f793e8375d, type: 3}
 --- !u!1 &2719026375428382760
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +548,7 @@ GameObject:
   - component: {fileID: 4121753003901933975}
   - component: {fileID: 2505479844823840941}
   - component: {fileID: 5509339085592545101}
+  - component: {fileID: 7353626932139383908}
   m_Layer: 0
   m_Name: bshot (4)
   m_TagString: Untagged
@@ -606,7 +635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 5
+  damage: 0
 --- !u!114 &407798856592516372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,6 +701,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7353626932139383908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2719026375428382760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7880867b081c6245ab414d0c4f3f759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 3818784659255911999, guid: 8bf50fb1915b9444f9b348f793e8375d, type: 3}
 --- !u!1 &4357380762533344027
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +729,7 @@ GameObject:
   - component: {fileID: 1768012300196316002}
   - component: {fileID: 2393807753624030674}
   - component: {fileID: 6836708724310897905}
+  - component: {fileID: 89816731636052988}
   m_Layer: 0
   m_Name: bshot (2)
   m_TagString: Untagged
@@ -773,7 +816,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 5
+  damage: 0
 --- !u!114 &3286340750053663447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -839,3 +882,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &89816731636052988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4357380762533344027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7880867b081c6245ab414d0c4f3f759, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 3818784659255911999, guid: 8bf50fb1915b9444f9b348f793e8375d, type: 3}
