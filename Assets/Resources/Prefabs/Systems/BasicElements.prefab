@@ -277,6 +277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cameras
       objectReference: {fileID: 0}
+    - target: {fileID: 3053419415391207357, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3518464950318261167, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -399,7 +403,7 @@ PrefabInstance:
       objectReference: {fileID: 3951304486119280588}
     - target: {fileID: 6100136692072045103, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7770563
+      value: 1.7780994
       objectReference: {fileID: 0}
     - target: {fileID: 6120185219902270542, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -424,6 +428,10 @@ PrefabInstance:
     - target: {fileID: 6120185219902270542, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6439681821221101232, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.9899998
       objectReference: {fileID: 0}
     - target: {fileID: 6554955530680633064, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_AnchorMax.y
