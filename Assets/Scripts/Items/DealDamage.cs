@@ -14,7 +14,11 @@ public class DealDamage : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
-        else
-        collision.gameObject.GetComponent<DamageSystem>().TakeDamage(damage, CRIT);
+        else if (collision.gameObject.GetComponent<DamageSystem>() != null)
+        {
+            collision.gameObject.GetComponent<DamageSystem>().TakeDamage(damage, CRIT);
+            Debug.Log("Hit");
+        }
+        
     }
 }
