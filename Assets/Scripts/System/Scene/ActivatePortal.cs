@@ -40,7 +40,7 @@ public class ActivatePortal : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space))
         {
-            Loading.ls = LoadState.Loading;
+            //Loading.ls = LoadState.Loading;
             loadOnce = true;
         }
     }

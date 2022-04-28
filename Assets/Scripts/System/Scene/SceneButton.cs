@@ -24,11 +24,26 @@ public class SceneButton : MonoBehaviour
         {
             Time.timeScale = 1f;
         }
-        SceneManager.LoadScene(sceneToLoad);
+        StartCoroutine(LoadAsyncScene());
     }
 
     public void Quit()
     {
         Application.Quit();
+    }
+
+    IEnumerator LoadAsyncScene()
+    {
+        yield return null;
+        AsyncOperation asyncScene = SceneManager.LoadSceneAsync(sceneToLoad);
+        asyncScene.allowSceneActivation = false;
+        while (!asyncScene.isDone)
+        {
+            if (asyncScene.progress >= .9f)
+            {
+                asyncScene.allowSceneActivation = true;
+            }
+            yield return null;
+        }
     }
 }
