@@ -33,6 +33,9 @@ public class Burstshot : Weapon
         if (Time.time > wAtkspeed + lastShot)
         {
             base.Shoot();
+            projectile.GetComponentInChildren<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+            
+
             projectileDirection = (this.transform.position - targetPosition);
             //TODO : Change this to match player Rotation and position
             /*

@@ -47,14 +47,14 @@ TagManager:
   - name: Background
     uniqueID: 4165405031
     locked: 0
+  - name: Shadows
+    uniqueID: 4069031167
+    locked: 0
   - name: Between
     uniqueID: 3616285003
     locked: 0
   - name: Obstacles
     uniqueID: 1380945721
-    locked: 0
-  - name: Shadows
-    uniqueID: 4069031167
     locked: 0
   - name: Monsters
     uniqueID: 1554989227

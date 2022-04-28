@@ -25,7 +25,6 @@ public class DonTDestroy : MonoBehaviour
 
         if (cc.sc == stageCleared.yes && !dontDestroyAdded)
         {
-            Debug.Log("Stage clear detected - DontDestroy");
             if (inventory == null)
             {
                 inventory = GameObject.Find("Inventory");
@@ -46,29 +45,37 @@ public class DonTDestroy : MonoBehaviour
             dontDestroyAdded = true;
         }
 
-        else if (cc.sc == stageCleared.yet && dontDestroyAdded)
+
+
+        else if (cc.sc == stageCleared.yet)
         {
             if (inventory == null)
             {
                 inventory = GameObject.Find("Inventory");
             }
-            if (levelSystem == null)
+
+            if(dontDestroyAdded)
             {
-                levelSystem = GameObject.Find("LevelManager").GetComponent<LevelSystem>();
-            }
+                if (levelSystem == null)
+                {
+                    levelSystem = GameObject.Find("LevelManager").GetComponent<LevelSystem>();
+                }
 
-            inventory.transform.parent = GameObject.Find("Player").transform;
-            inventory.transform.position = GameObject.Find("Player").transform.position;
-            inventory.SetActive(true);
+                inventory.transform.parent = GameObject.Find("Player").transform;
+                inventory.transform.position = GameObject.Find("Player").transform.position;
+                inventory.SetActive(true);
 
-            levelSystem.GetComponent<LevelSystem>().level = levelData;
-            levelSystem.GetComponent<LevelSystem>().exp = currentXPData;
-            levelSystem.GetComponent<LevelSystem>().expToLevelUp = maxXPData;
+                levelSystem.GetComponent<LevelSystem>().level = levelData;
+                levelSystem.GetComponent<LevelSystem>().exp = currentXPData;
+                levelSystem.GetComponent<LevelSystem>().expToLevelUp = maxXPData;
             
-            dontDestroyAdded = false;
+                dontDestroyAdded = false;
+            }
+            
+            
         }
 
-        if (!inStage)
+        if (!inStage && cc.sc == stageCleared.yes)
         {
             inventory.SetActive(false);
         }

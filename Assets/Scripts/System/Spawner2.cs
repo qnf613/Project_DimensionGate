@@ -6,16 +6,18 @@ public class Spawner2 : MonoBehaviour
 {
     public GameObject[] objectsToSpawn;
     //public GameObject parent;
-    [Tooltip("How many units to spawn in at once")]
+    [Tooltip("How many units to spawn in at once.")]
     [SerializeField] private int numberToSpawn;
-    [Tooltip("How many units will come out in total")]
+    [Tooltip("How many units will come out in total.")]
     [SerializeField] private int limit;
-    [Tooltip("How fast units come out")]
+    [Tooltip("How fast units come out.")]
     [SerializeField] private float rate;
     [Tooltip("How many units until rate change.")]
     [SerializeField] private int rateChange;
-    [Tooltip("What the rate you want it to be when you hit rate change")]
+    [Tooltip("What the rate you want it to be when you hit rate change.")]
     [SerializeField] private float rateUp;
+    [Tooltip("This number is the amount of enemies spawned before rate is increased.")]
+    private int rateUpMeter;
     private int spawnCount;
     public Transform[] spawnPoints;
     public int monsterLimit;
@@ -55,14 +57,8 @@ public class Spawner2 : MonoBehaviour
             {
             for (int i = 0; i < numberToSpawn; i++)
                 {
-                if (spawnCount == rateChange)
-                {
-                    rate = rateUp;
-                    spawnCount++;
-                    
-
-                }
-                else if (spawnCount <= limit)
+               
+                 if (spawnCount <= limit)
                 {
                     int randomEnemy;
                     randomEnemy = (int)Random.Range(0, objectsToSpawn.Length);
@@ -70,14 +66,18 @@ public class Spawner2 : MonoBehaviour
                     Transform spawnPoint = spawnPoints[randomIndex];
                     Instantiate(objectsToSpawn[randomEnemy], spawnPoint.position, spawnPoint.rotation);
                     spawnCount++;
-
+                    rateUpMeter++;
                 }
             }
             
             spawnTimer = rate;
             }
 
-        
+        if (rateUpMeter == rateChange)
+        {
+            rateUpMeter = 0;
+            rate *= rateUp;
+        }
 
     }
     
