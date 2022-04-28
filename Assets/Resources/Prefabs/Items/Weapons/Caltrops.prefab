@@ -64,7 +64,7 @@ MonoBehaviour:
   description: Lay down traps for you enemies!
   range: 27
   attackspeed: 0.2
-  cooldown: 5
+  cooldown: 3
   attacktime: 0
   attacktimelimit: 5
 --- !u!114 &2000691795

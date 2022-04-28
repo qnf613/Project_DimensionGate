@@ -79,7 +79,7 @@ public class Caltrops : Weapon
 
             }
             // Attacks how ever much was put as attacktime then put on cooldown.
-            if(attacktime == cooldown)
+            if(attacktime == attacktimelimit)
             {
                 attacktime = 0;
                 timer = cooldown;
