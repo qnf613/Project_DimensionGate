@@ -25,21 +25,22 @@ public class RewardSystem : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        equippedItems = GameObject.Find("Inventory");
+        
     }
 
     // Update is called once per frame
     public void Update()
     {
+        
 
-       
     }
 
     public void MakeRewardList()
     {
         CheckEquipments();
-        
+
         //Make options depending on what player already has
+        tempList.Clear();
         tempList = new List<GameObject>(equippedList);
 
         int choosenItemNum;
@@ -95,7 +96,7 @@ public class RewardSystem : MonoBehaviour
 
     public void CheckEquipments()
     {
-        equippedList.Clear();
+        equippedItems = GameObject.Find("Inventory");
         weaponCount = 0;
         artifactCount = 0;
         foreach (Transform TypeOfItems in equippedItems.transform)

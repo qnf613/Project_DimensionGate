@@ -40,17 +40,11 @@ public class ItemSwapUI : MonoBehaviour
 
             for (int i = 0; i < Buttons.Length; i++)
             {
-                
-                if (texts[i].text !=null )
-                {
-                    Buttons[i].assignedOption = tempList[i];
-                    texts[i].text = tempList[i].name.ToString();
-                }
 
-                if (sprites[i].sprite != null)
-                {
-                    sprites[i].sprite = tempList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
-                }
+                Buttons[i].assignedOption = tempList[i];
+                texts[i].text = tempList[i].name.ToString();
+                sprites[i].sprite = tempList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
+                
                 
             }
 
@@ -78,20 +72,18 @@ public class ItemSwapUI : MonoBehaviour
         removeThisOne = GameObject.Find(removeThisOne.name.ToString());
         if (removeThisOne.name == removeThisOne.name.ToString() || removeThisOne.name == removeThisOne.name.ToString() + "(Clone)")
         {
-            removeThisOne.SetActive(false);
+            //removeThisOne.SetActive(false);
             Destroy(removeThisOne);
 
             if (isForWeapon)
             {
                 newItemToAdd = Instantiate(newItemToAdd, weaponList.transform);
                 newItemToAdd.name = newItemToAdd.name.Replace("(Clone)", "");
-                //Instantiate(newItemToAdd, weaponList.transform);
             }
             else
             {
                 newItemToAdd = Instantiate(newItemToAdd, weaponList.transform);
                 newItemToAdd.name = newItemToAdd.name.Replace("(Clone)", "");
-                //Instantiate(newItemToAdd, artifactList.transform);
             }
         }
         CloseUI();
