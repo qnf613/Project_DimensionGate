@@ -7,6 +7,7 @@ public class SyncDamage : MonoBehaviour
     [SerializeField] private GameObject weapon;
     private float damage;
     private float trueDamage;
+
     private void Awake()
     {
         trueDamage = weapon.GetComponent<DealDamage>().damage;
@@ -22,6 +23,12 @@ public class SyncDamage : MonoBehaviour
     {
         Debug.Log("Damage synced");
         this.gameObject.GetComponent<DealDamage>().damage = trueDamage;
+
+        if(weapon.GetComponent<DealDamage>().CRIT == true)
+        {
+          this.gameObject.GetComponent<DealDamage>().CRIT = true;
+        }
+
         Debug.Log("current damage is:" + damage);
     }
 }
