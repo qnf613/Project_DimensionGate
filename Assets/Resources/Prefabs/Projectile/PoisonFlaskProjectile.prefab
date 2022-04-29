@@ -85,7 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   lifespan: 1.5
-  poisonFieldPrefab: {fileID: 7626186721086240868, guid: 19d0750a9b454204fa62f9f7ce64ba58, type: 3}
+  PosionPool: {fileID: 7626186721086240868, guid: 19d0750a9b454204fa62f9f7ce64ba58, type: 3}
 --- !u!1 &4403104014390016098
 GameObject:
   m_ObjectHideFlags: 0

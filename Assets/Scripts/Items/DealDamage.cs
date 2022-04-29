@@ -17,7 +17,7 @@ public class DealDamage : MonoBehaviour
         else if (collision.gameObject.GetComponent<DamageSystem>() != null)
         {
             collision.gameObject.GetComponent<DamageSystem>().TakeDamage(damage, CRIT);
-            Debug.Log("Hit");
+           
         }
         
     }

@@ -84,6 +84,7 @@ public class RewardUI : MonoBehaviour
         Time.timeScale = 1;
     }
 
+
     public void GetRewardsList()
     {
         rewards = rs.rewardsList;
