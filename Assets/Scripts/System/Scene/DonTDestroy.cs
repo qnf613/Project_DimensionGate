@@ -84,6 +84,11 @@ public class DonTDestroy : MonoBehaviour
         {
             gameObject.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
         }
+
+        if (cc.sc == stageCleared.over)
+        {
+            Destroy(this);
+        }
     }
 
 }
