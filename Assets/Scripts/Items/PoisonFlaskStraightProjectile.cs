@@ -19,8 +19,8 @@ public class PoisonFlaskStraightProjectile : MonoBehaviour
     }
     void LifeSpan()
     {
-        Vector2 currentlocation = PosionPool.GetComponent<Rigidbody2D>().transform.position;
-        Quaternion currentrotation = PosionPool.GetComponent<Rigidbody2D>().transform.rotation;
+        Vector2 currentlocation = this.GetComponent<Rigidbody2D>().transform.position;
+        Quaternion currentrotation = this.GetComponent<Rigidbody2D>().transform.rotation;
         Instantiate(PosionPool, currentlocation, currentrotation);
         Destroy(this.gameObject);
     }
