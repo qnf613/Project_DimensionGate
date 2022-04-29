@@ -143,7 +143,6 @@ GameObject:
   - component: {fileID: 6137507304426116431}
   - component: {fileID: 362157280909729386}
   - component: {fileID: -1685783555634085988}
-  - component: {fileID: 2148099046674958216}
   m_Layer: 0
   m_Name: MAP
   m_TagString: Untagged
@@ -229,19 +228,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pierceCount: 0
   maxPierceCount: 2
---- !u!114 &2148099046674958216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4736143673115787737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e199278ed8a1d542b4af0022956d7c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageIndicator: {fileID: 6880273557122235488, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
-  pfDamagePopup: {fileID: 4432683363937425119, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}
-  TempPosition: {fileID: 0}
-  originalFontSize: 36

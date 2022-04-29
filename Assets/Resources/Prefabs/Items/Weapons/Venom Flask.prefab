@@ -49,7 +49,7 @@ MonoBehaviour:
   CritMod: 2
   CritDamageMod: 2
   GlobalCritRate: 0
-  damage: 5
+  damage: 2
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -60,12 +60,13 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1
-  dotDamage: 5
+  dotDamage: 2
   name: Venom Flask
   description: Throw a flask which leaves a pool of poison on the ground.
   rage: 20
   attackspeed: 1.5
   poisonFlaskPrefab: {fileID: 3139452587625503352, guid: d873fbcc2c61c8c44b6e54f2edaf1e7b, type: 3}
+  dotDamageScale: 1.2
 --- !u!114 &8457160680624895998
 MonoBehaviour:
   m_ObjectHideFlags: 0

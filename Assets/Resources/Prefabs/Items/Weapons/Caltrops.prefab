@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CritMod: 2
   CritDamageMod: 2
-  GlobalCritRate: 0
+  GlobalCritRate: 10
   damage: 4
   we: 0
   finalDamageNumber: 0

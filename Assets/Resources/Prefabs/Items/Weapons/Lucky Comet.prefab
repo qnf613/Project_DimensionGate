@@ -357,7 +357,7 @@ MonoBehaviour:
   CritMod: 2
   CritDamageMod: 2
   GlobalCritRate: 10
-  damage: 10
+  damage: 30
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -533,7 +533,7 @@ MonoBehaviour:
   CritMod: 2
   CritDamageMod: 2
   GlobalCritRate: 30
-  damage: 10
+  damage: 30
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}

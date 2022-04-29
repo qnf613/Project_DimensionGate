@@ -55,12 +55,13 @@ public class Caltrops : Weapon
             if (Time.time > wAtkspeed + lastShot)
             {
                 //This weapon shoots a projectile forward
-                ApplyEnhancement();
-                CheckIfCrit();
-                AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
-                Instantiate(projectile, transform.position, transform.rotation);
-                projectile.GetComponent<StraightProjectile>();
+                //ApplyEnhancement();
+                //CheckIfCrit();
+                //AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+                //Instantiate(projectile, transform.position, transform.rotation);
+                //projectile.GetComponent<StraightProjectile>();
 
+                base.Shoot();
                 projectileDirection = (this.transform.position - targetPosition);
 
                 //TODO : Change this to match player Rotation and position

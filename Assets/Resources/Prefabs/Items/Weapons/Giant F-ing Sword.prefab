@@ -49,7 +49,7 @@ MonoBehaviour:
   CritMod: 2
   CritDamageMod: 2
   GlobalCritRate: 0
-  damage: 60
+  damage: 20
   we: 1
   finalDamageNumber: 0
   cam: {fileID: 0}
