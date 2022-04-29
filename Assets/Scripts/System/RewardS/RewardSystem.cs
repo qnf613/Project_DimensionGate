@@ -31,8 +31,7 @@ public class RewardSystem : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        
-
+        equippedItems = GameObject.Find("Inventory");
     }
 
     public void MakeRewardList()
@@ -96,7 +95,6 @@ public class RewardSystem : MonoBehaviour
 
     public void CheckEquipments()
     {
-        equippedItems = GameObject.Find("Inventory");
         weaponCount = 0;
         artifactCount = 0;
         foreach (Transform TypeOfItems in equippedItems.transform)
