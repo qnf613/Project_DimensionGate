@@ -294,7 +294,7 @@ MonoBehaviour:
   flashEffect: {fileID: 4148772299426204636}
   originalFontSize: 36
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
-  enemydamageSFX: {fileID: 8300000, guid: c303d2537e24f9f468bc071c70457f48, type: 3}
+  enemydamageSFX: {fileID: 8300000, guid: 1cd46e92a5d3c6a46b8803ad4f6ae809, type: 3}
   enemyvolume: 0.5
   isBoss: 0
 --- !u!114 &7353090044636916455
@@ -394,6 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 7353090044636916452}
+  defaultIsLeft: 0
 --- !u!114 &6816053463958524186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250df9a322f9ee1418a72b18f89a1f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientSFX: {fileID: 8300000, guid: dcd8047855980a244b0c3eee74b32041, type: 3}
+  ambientSFX: {fileID: 8300000, guid: 4006d95f0ff7bb2449b98347889d3850, type: 3}
   volume: 0.7
 --- !u!70 &6661384960900196702
 CapsuleCollider2D:

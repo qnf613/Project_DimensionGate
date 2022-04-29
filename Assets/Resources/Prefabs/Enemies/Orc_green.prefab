@@ -104,7 +104,7 @@ MonoBehaviour:
   flashEffect: {fileID: 6780390284677013794}
   originalFontSize: 36
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
-  enemydamageSFX: {fileID: 8300000, guid: c303d2537e24f9f468bc071c70457f48, type: 3}
+  enemydamageSFX: {fileID: 8300000, guid: 299a15af40b8ad34c951d50d20155bd0, type: 3}
   enemyvolume: 0.5
   isBoss: 0
 --- !u!114 &108300834980364313
@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 108300834980364314}
+  defaultIsLeft: 0
 --- !u!114 &4115397143713872868
 MonoBehaviour:
   m_ObjectHideFlags: 0

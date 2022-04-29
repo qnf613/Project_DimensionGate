@@ -159,6 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 5874046255734088371}
+  defaultIsLeft: 1
 --- !u!114 &1882871477
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,7 +10,10 @@ public class EnemyNoises : MonoBehaviour
     private float max = 10f;
     private void Awake()
     {
-        Invoke("AmbientNoises", 0.2f);
+        if (ambientSFX != null)
+        {
+            Invoke("AmbientNoises", 0.2f);
+        }
     }
 
     void AmbientNoises()
