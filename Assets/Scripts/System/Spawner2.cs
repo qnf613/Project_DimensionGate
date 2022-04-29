@@ -11,8 +11,6 @@ public class Spawner2 : MonoBehaviour
     //public GameObject parent;
     [Tooltip("How many units to spawn in at once.")]
     [SerializeField] private int numberToSpawn;
-    [Tooltip("How many units will come out in total.")]
-    [SerializeField] private int limit;
     [Tooltip("How fast units come out.")]
     [SerializeField] private float rate;
     [Tooltip("How many units until rate change.")]
@@ -23,7 +21,6 @@ public class Spawner2 : MonoBehaviour
     private int rateUpMeter;
     private int spawnCount;
     public Transform[] spawnPoints;
-    public int monsterLimit;
     public int monsterAmount;
 
     float spawnTimer;
@@ -60,40 +57,37 @@ public class Spawner2 : MonoBehaviour
             for (int i = 0; i < numberToSpawn; i++)
             {
 
-                if (spawnCount <= limit)
+                if (gameplaytime <= 150)
                 {
-                    if (gameplaytime <= 180)
-                    {
-                        int randomEnemy;
-                        randomEnemy = (int)Random.Range(0, earlyPhaseMobs.Length);
-                        int randomIndex = Random.Range(0, spawnPoints.Length);
-                        Transform spawnPoint = spawnPoints[randomIndex];
-                        Instantiate(earlyPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
-                        spawnCount++;
-                        rateUpMeter++;
-                    }
+                    int randomEnemy;
+                    randomEnemy = (int)Random.Range(0, earlyPhaseMobs.Length);
+                    int randomIndex = Random.Range(0, spawnPoints.Length);
+                    Transform spawnPoint = spawnPoints[randomIndex];
+                    Instantiate(earlyPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
+                    spawnCount++;
+                    rateUpMeter++;
+                }
 
-                    else if (gameplaytime > 180 && gameplaytime <= 360)
-                    {
-                        int randomEnemy;
-                        randomEnemy = (int)Random.Range(0, midPhaseMobs.Length);
-                        int randomIndex = Random.Range(0, spawnPoints.Length);
-                        Transform spawnPoint = spawnPoints[randomIndex];
-                        Instantiate(midPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
-                        spawnCount++;
-                        rateUpMeter++;
-                    }
+                else if (gameplaytime > 150 && gameplaytime <= 360)
+                {
+                    int randomEnemy;
+                    randomEnemy = (int)Random.Range(0, midPhaseMobs.Length);
+                    int randomIndex = Random.Range(0, spawnPoints.Length);
+                    Transform spawnPoint = spawnPoints[randomIndex];
+                    Instantiate(midPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
+                    spawnCount++;
+                    rateUpMeter++;
+                }
 
-                    else if (gameplaytime > 360)
-                    {
-                        int randomEnemy;
-                        randomEnemy = (int)Random.Range(0, latePhaseMobs.Length);
-                        int randomIndex = Random.Range(0, spawnPoints.Length);
-                        Transform spawnPoint = spawnPoints[randomIndex];
-                        Instantiate(latePhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
-                        spawnCount++;
-                        rateUpMeter++;
-                    }
+                else if (gameplaytime > 360)
+                {
+                    int randomEnemy;
+                    randomEnemy = (int)Random.Range(0, latePhaseMobs.Length);
+                    int randomIndex = Random.Range(0, spawnPoints.Length);
+                    Transform spawnPoint = spawnPoints[randomIndex];
+                    Instantiate(latePhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
+                    spawnCount++;
+                    rateUpMeter++;
                 }
             }
 
