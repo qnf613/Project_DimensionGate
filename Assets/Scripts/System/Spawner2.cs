@@ -55,52 +55,50 @@ public class Spawner2 : MonoBehaviour
 
     public void SpawnEnemy()
     {
-        if(monsterAmount < monsterLimit)
-      
-            if (spawnTimer <= 0f)
-            {
+        if (spawnTimer <= 0f)
+        {
             for (int i = 0; i < numberToSpawn; i++)
-                {
-               
-                 if (spawnCount <= limit)
-                {
-                    if(gameplaytime <= 180)
-                    {
-                            int randomEnemy;
-                            randomEnemy = (int)Random.Range(0, earlyPhaseMobs.Length);
-                            int randomIndex = Random.Range(0, spawnPoints.Length);
-                            Transform spawnPoint = spawnPoints[randomIndex];
-                            Instantiate(earlyPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
-                            spawnCount++;
-                            rateUpMeter++;
-                     }
+            {
 
-                    else if(gameplaytime > 180 && gameplaytime <= 360)
+                if (spawnCount <= limit)
+                {
+                    if (gameplaytime <= 180)
                     {
-                            int randomEnemy;
-                            randomEnemy = (int)Random.Range(0, midPhaseMobs.Length);
-                            int randomIndex = Random.Range(0, spawnPoints.Length);
-                            Transform spawnPoint = spawnPoints[randomIndex];
-                            Instantiate(midPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
-                            spawnCount++;
-                            rateUpMeter++;
-                     }
+                        int randomEnemy;
+                        randomEnemy = (int)Random.Range(0, earlyPhaseMobs.Length);
+                        int randomIndex = Random.Range(0, spawnPoints.Length);
+                        Transform spawnPoint = spawnPoints[randomIndex];
+                        Instantiate(earlyPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
+                        spawnCount++;
+                        rateUpMeter++;
+                    }
 
-                     else if(gameplaytime > 360)
-                     {
-                            int randomEnemy;
-                            randomEnemy = (int)Random.Range(0, latePhaseMobs.Length);
-                            int randomIndex = Random.Range(0, spawnPoints.Length);
-                            Transform spawnPoint = spawnPoints[randomIndex];
-                            Instantiate(latePhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
-                            spawnCount++;
-                            rateUpMeter++;
-                      }
+                    else if (gameplaytime > 180 && gameplaytime <= 360)
+                    {
+                        int randomEnemy;
+                        randomEnemy = (int)Random.Range(0, midPhaseMobs.Length);
+                        int randomIndex = Random.Range(0, spawnPoints.Length);
+                        Transform spawnPoint = spawnPoints[randomIndex];
+                        Instantiate(midPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
+                        spawnCount++;
+                        rateUpMeter++;
+                    }
+
+                    else if (gameplaytime > 360)
+                    {
+                        int randomEnemy;
+                        randomEnemy = (int)Random.Range(0, latePhaseMobs.Length);
+                        int randomIndex = Random.Range(0, spawnPoints.Length);
+                        Transform spawnPoint = spawnPoints[randomIndex];
+                        Instantiate(latePhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
+                        spawnCount++;
+                        rateUpMeter++;
+                    }
                 }
             }
-            
+
             spawnTimer = rate;
-            }
+        }
 
         if (rateUpMeter == rateChange)
         {
