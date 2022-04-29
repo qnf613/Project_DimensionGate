@@ -351,7 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7880867b081c6245ab414d0c4f3f759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 3818784659255911999, guid: 8bf50fb1915b9444f9b348f793e8375d, type: 3}
+  weapon: {fileID: 35367555128390032}
 --- !u!1 &2714025985033652869
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7880867b081c6245ab414d0c4f3f759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 3818784659255911999, guid: 8bf50fb1915b9444f9b348f793e8375d, type: 3}
+  weapon: {fileID: 35367555128390032}
 --- !u!1 &2719026375428382760
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +713,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7880867b081c6245ab414d0c4f3f759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 3818784659255911999, guid: 8bf50fb1915b9444f9b348f793e8375d, type: 3}
+  weapon: {fileID: 35367555128390032}
 --- !u!1 &4357380762533344027
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,4 +894,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7880867b081c6245ab414d0c4f3f759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 3818784659255911999, guid: 8bf50fb1915b9444f9b348f793e8375d, type: 3}
+  weapon: {fileID: 35367555128390032}
