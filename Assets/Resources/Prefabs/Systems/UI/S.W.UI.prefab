@@ -33,7 +33,7 @@ RectTransform:
   - {fileID: 7706783884252053943}
   - {fileID: 1786468387579969415}
   m_Father: {fileID: 7406960604036895967}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -122,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 642876194885179230}
         m_TargetAssemblyTypeName: RewardButton, Assembly-CSharp
-        m_MethodName: PickThisOption
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -510,7 +510,7 @@ RectTransform:
   - {fileID: 5198578312699476950}
   - {fileID: 8015828123383853524}
   m_Father: {fileID: 7406960604036895967}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -599,9 +599,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3254770361940376759}
         m_TargetAssemblyTypeName: RewardButton, Assembly-CSharp
-        m_MethodName: PickThisOption
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -621,7 +621,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1518517421457249373}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Description
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +641,7 @@ RectTransform:
   - {fileID: 5952598771684638764}
   - {fileID: 3850444877143969405}
   m_Father: {fileID: 7406960604036895967}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -831,7 +831,7 @@ RectTransform:
   - {fileID: 7406960604195752412}
   - {fileID: 4333433295423161921}
   m_Father: {fileID: 7406960604036895967}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -961,10 +961,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.7999023, y: 0.7999023, z: 0.99974287}
   m_Children:
-  - {fileID: 1518517421457249373}
   - {fileID: 7406960602401546574}
   - {fileID: 3750759611313759602}
   - {fileID: 1509570662623892833}
+  - {fileID: 1518517421457249373}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
