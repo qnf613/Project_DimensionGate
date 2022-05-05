@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
     public float damage;
     protected float wAtkspeed;
     protected float wRange;
-    protected int enhancement;
+    public int enhancement;
     protected int maxEnhance = 10;
     public WeaponEquipped we;
     public float finalDamageNumber;

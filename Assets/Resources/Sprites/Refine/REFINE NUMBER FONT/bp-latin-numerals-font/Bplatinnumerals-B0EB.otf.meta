@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 21cf3485aa245d24ea1cd55b828c012f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 36
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - BPlatinNumerals
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 97211db20dcb67f439a36eef9cbd5029, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -11,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     public GameObject rUI;
     public bool isWeaponSlots;
     public bool isArtifactSlots;
+    public string RefineLevel;
     // Start is called before the first frame update
     void Start()
     {
@@ -94,7 +95,17 @@ public class InventoryUI : MonoBehaviour
             {
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().sprite = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().color = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().color;
+
+                //Finds the slot's TextCoponent in the Text Gameobject. And sets it to the outcome of GetAllWeaponEnhancementLevels(); Read the other coment below to understand more
+                Slots[i].transform.Find("Text").GetComponent<Text>().text = GetAllWeaponEnhancementLevels(Slots[i].GetComponent<Weapon>());
             }
         }
+
+    }
+    public string GetAllWeaponEnhancementLevels(Weapon wep) // This takes in the Refine level from the weapon and sets it translates to string so we can display item level
+    {
+        RefineLevel = "+" + wep.enhancement.ToString();
+        return RefineLevel;
     }
 }
+ 

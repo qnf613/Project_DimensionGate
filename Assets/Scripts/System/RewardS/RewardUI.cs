@@ -15,7 +15,8 @@ public class RewardUI : MonoBehaviour
     [SerializeField] private GameObject weaponInventory;
     [SerializeField] private GameObject artifactInventory;
     List<GameObject> gs = new List<GameObject>();
-    
+
+    public GameObject HammerSlot1, HammerSlot2, HammerSlot3;
 
     // Start is called before the first frame update
     public void Start()
@@ -37,16 +38,8 @@ public class RewardUI : MonoBehaviour
         GameObject newItem;
         string itemName = item.name.ToString();
         if (GameObject.Find(itemName) || GameObject.Find(item.name.ToString() + "(Clone)"))
-        {
-            //if (item.GetComponent<Weapon>() != null)
-            //{
-            //    Weapon tempScriptActivation = item.GetComponent<Weapon>();
-            //    tempScriptActivation.Enhance();
-            //}
-            //TODO: enhance the item
+        {     
             GameObject.Find(item.name.ToString()).GetComponent<Weapon>().Enhance();
-           // item.GetComponent<Weapon>().Enhance();
-           // Debug.Log("Refine!");
         }
         else if(!GameObject.Find(itemName))
         {
@@ -61,11 +54,16 @@ public class RewardUI : MonoBehaviour
                 newItem.name = newItem.name.Replace("(Clone)", "");
             }
         }
-        
-        
+
+        DisableHammers(); // This disables the upgrade hammer icons
         CloseUI();
     }
-
+    void DisableHammers()
+    {
+        HammerSlot1.SetActive(false);
+        HammerSlot2.SetActive(false);
+        HammerSlot3.SetActive(false);
+    }
     public void OpenUI()
     {
         GetRewardsList();
@@ -104,8 +102,27 @@ public class RewardUI : MonoBehaviour
         rb3.assignedItem = rewards[2];
         texts[2].text = rb3.assignedItem.name;
         sprites[2].sprite = rewards[2].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
-    }
 
+        CheckForDuplicate(rb1, rb2, rb3);
+    }
+    void CheckForDuplicate(RewardButton _rb1, RewardButton _rb2, RewardButton _rb3)
+    {
+
+        //This checks for duplicates and enables the upgrade hammer icon    
+        if (GameObject.Find(_rb1.assignedItem.name.ToString()))
+        {
+            HammerSlot1.SetActive(true);
+        }
+        if (GameObject.Find(_rb2.assignedItem.name.ToString()))
+        {
+            HammerSlot2.SetActive(true);
+        }
+        if (GameObject.Find(_rb3.assignedItem.name.ToString()))
+        {
+            HammerSlot3.SetActive(true);
+        }
+
+    }
     public void ResetRewardList()
     {
         rewards.Clear();
