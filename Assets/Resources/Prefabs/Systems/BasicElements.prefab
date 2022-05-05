@@ -947,6 +947,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3518464950491278108}
     m_Modifications:
+    - target: {fileID: 432841743010652969, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3593931
+      objectReference: {fileID: 0}
+    - target: {fileID: 432841743010652969, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.07587266
+      objectReference: {fileID: 0}
     - target: {fileID: 432841743010653140, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -990,6 +998,10 @@ PrefabInstance:
     - target: {fileID: 432841743010653140, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 432841743010653142, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
+      propertyPath: _Speed
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 432841743010653142, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: _Camera
