@@ -23,13 +23,27 @@ public class ClearBonus : MonoBehaviour
 
     public void CalculateBonusRewards()
     {
-        if (cc.timeRemain > 120)
+        if (cc.timeRemain <= 180)
         {
-            numOfRewards = ((int)cc.timeRemain - 120) / 60 + 1;
-            for (int i = 0; i < numOfRewards; i++)
-            {
-                BonusRewards();
-            }
+            numOfRewards = 1;
+            
+        }
+
+        else if (cc.timeRemain > 180 && cc.timeRemain < 360)
+        {
+            numOfRewards = 2;
+
+        }
+
+        else if (cc.timeRemain <= 360)
+        {
+            numOfRewards = 3;
+
+        }
+
+        for (int i = 0; i < numOfRewards; i++)
+        {
+            BonusRewards();
         }
     }
 

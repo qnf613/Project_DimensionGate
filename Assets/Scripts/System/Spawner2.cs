@@ -57,7 +57,7 @@ public class Spawner2 : MonoBehaviour
             for (int i = 0; i < numberToSpawn; i++)
             {
 
-                if (gameplaytime <= 150)
+                if (gameplaytime <= 180)
                 {
                     int randomEnemy;
                     randomEnemy = (int)Random.Range(0, earlyPhaseMobs.Length);
@@ -68,7 +68,7 @@ public class Spawner2 : MonoBehaviour
                     rateUpMeter++;
                 }
 
-                else if (gameplaytime > 150 && gameplaytime <= 360)
+                else if (gameplaytime > 180 && gameplaytime <= 360)
                 {
                     int randomEnemy;
                     randomEnemy = (int)Random.Range(0, midPhaseMobs.Length);
