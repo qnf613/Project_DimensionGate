@@ -143,7 +143,7 @@ MonoBehaviour:
   volume: 0.6
   RefineCritChance: 1
   RefineCritDamage: 0
-  refineDamage: 0
+  refineDamage: 1
   name: Gatling
   description: Extreme rapid-fire!
   range: 20

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6423956227372327673}
   - component: {fileID: 7042058391626537225}
   - component: {fileID: 7159852718254793037}
+  - component: {fileID: -2924316016122640769}
   m_Layer: 7
   m_Name: Troll_Yellow
   m_TagString: Boss
@@ -216,6 +217,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.013735294}
   m_Size: {x: 2.7202678, y: 3.5438852}
   m_Direction: 0
+--- !u!114 &-2924316016122640769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423956227372327672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106c4b405d796e848922d76213f2f85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
+  dropOdds: 5
 --- !u!1 &6423956227615709349
 GameObject:
   m_ObjectHideFlags: 0

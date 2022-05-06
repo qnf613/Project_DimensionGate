@@ -145,6 +145,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8e7c34337133384287b84e0f0962174, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkspeed: 0.5
-  lasthit: 0
+  attackDelay: 0.5
+  nextDamageEvent: 0
   duration: 6

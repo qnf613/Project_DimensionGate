@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6834235585159540381}
   - component: {fileID: 4358856973429744894}
   - component: {fileID: 2604627832822554100}
+  - component: {fileID: -1733827134234197750}
   m_Layer: 7
   m_Name: Vampire
   m_TagString: Boss
@@ -230,6 +231,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.010772705, y: -0.25893676}
   m_Size: {x: 1.3713589, y: 2.3044088}
   m_Direction: 0
+--- !u!114 &-1733827134234197750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106998187670196523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106c4b405d796e848922d76213f2f85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
+  dropOdds: 5
 --- !u!1 &1106998188327041450
 GameObject:
   m_ObjectHideFlags: 0

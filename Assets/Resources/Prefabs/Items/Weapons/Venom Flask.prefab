@@ -67,7 +67,7 @@ MonoBehaviour:
   rage: 20
   attackspeed: 1.5
   poisonFlaskPrefab: {fileID: 3139452587625503352, guid: d873fbcc2c61c8c44b6e54f2edaf1e7b, type: 3}
-  dotDamageScale: 1.2
+  dotDamageScale: 1.05
 --- !u!114 &8457160680624895998
 MonoBehaviour:
   m_ObjectHideFlags: 0

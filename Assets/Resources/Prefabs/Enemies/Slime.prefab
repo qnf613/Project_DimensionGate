@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 5580571326173248672}
   - component: {fileID: 2018952321}
   - component: {fileID: 3127783219624572596}
+  - component: {fileID: -8853791858856927792}
   m_Layer: 7
   m_Name: Slime
   m_TagString: Enemy
@@ -385,6 +386,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.15075517}
   m_Size: {x: 1.1512486, y: 1.1512489}
   m_Direction: 0
+--- !u!114 &-8853791858856927792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580571326173248728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106c4b405d796e848922d76213f2f85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
+  dropOdds: 5
 --- !u!1 &5580571326594667609
 GameObject:
   m_ObjectHideFlags: 0
