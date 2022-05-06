@@ -6,7 +6,7 @@ using UnityEngine;
 public class Refine : MonoBehaviour
 {
     public int RefineLevel;
-    private float RefineDamageMultiplier = 2;
+    private float RefineDamageMultiplier = 1.2f;
     private float RefineCritChanceMultiplier = 5f;
     private float RefineCritDamageMultiplier = .1f;
     public float finalDamage;

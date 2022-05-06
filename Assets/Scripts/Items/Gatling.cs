@@ -14,6 +14,7 @@ public class Gatling : Weapon
     [SerializeField] private float maxammo;
     [SerializeField] private float reloadTime = 3f;
     protected Vector3 projectileDirection;
+    int count;
     void Start()
     {
         // Overriding the basic stats and info about the weapon here
@@ -33,12 +34,19 @@ public class Gatling : Weapon
     }
     protected override void Shoot()
     {
-        if (Time.time > wAtkspeed + lastShot && ammo > 0)
+        if (Time.time > wAtkspeed + lastShot)
         {
-            base.Shoot();
-            projectileDirection = (this.transform.position - targetPosition);
-            ammo--;
-            lastShot = Time.time;
+            if (ammo > 0)
+            {
+                count++;   
+                ammo--;
+                Debug.Log(count);
+                base.Shoot();
+                projectileDirection = (this.transform.position - targetPosition);
+                
+                lastShot = Time.time;
+            }
+            
             //Debug.Log("ammo is: " + ammo);
         }
         else if (ammo == 0)

@@ -132,6 +132,7 @@ MonoBehaviour:
   CritDamageMod: 2
   GlobalCritRate: 30
   damage: 10
+  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -284,6 +285,7 @@ MonoBehaviour:
   CritDamageMod: 2
   GlobalCritRate: 30
   damage: 10
+  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -354,10 +356,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4b6c17603483a4c92f986ead237b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 2
+  CritMod: 0
   CritDamageMod: 2
-  GlobalCritRate: 10
+  GlobalCritRate: 0
   damage: 30
+  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -534,6 +537,7 @@ MonoBehaviour:
   CritDamageMod: 2
   GlobalCritRate: 30
   damage: 30
+  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -686,6 +690,7 @@ MonoBehaviour:
   CritDamageMod: 2
   GlobalCritRate: 30
   damage: 10
+  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}

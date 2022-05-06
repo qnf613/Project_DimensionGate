@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 5856326893698505444}
   - component: {fileID: 4356027326256537879}
   m_Layer: 0
-  m_Name: Gatling
+  m_Name: Tommy Gun
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,10 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7431db8213743a540a62b8584a9ca72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 2
+  CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
-  damage: 3
+  damage: 2
+  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -146,8 +147,8 @@ MonoBehaviour:
   name: Gatling
   description: Extreme rapid-fire!
   range: 20
-  attackspeed: 0.3
-  pierceCount: 0
+  attackspeed: 0.1
+  pierceCount: 2
   maxPierceCount: 0
   ammo: 16
   maxammo: 16
