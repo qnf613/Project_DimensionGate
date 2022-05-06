@@ -63,6 +63,7 @@ public class RewardSystem : MonoBehaviour
                     tempList.RemoveAt(choosenItemNum);
                 }
             }
+            tempList.Clear();
         }
 
         //Player has more than 3 items
@@ -74,6 +75,7 @@ public class RewardSystem : MonoBehaviour
                 rewardsList.Add(tempList[choosenItemNum]);
                 tempList.RemoveAt(choosenItemNum);
             }
+            tempList.Clear();
         }
     }
 
@@ -93,6 +95,7 @@ public class RewardSystem : MonoBehaviour
 
     public void CheckEquipments()
     {
+        equippedList.Clear();
         weaponCount = 0;
         artifactCount = 0;
         foreach (Transform TypeOfItems in equippedItems.transform)
