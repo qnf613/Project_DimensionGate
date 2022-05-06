@@ -5,17 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class SceneButton : MonoBehaviour
 {
+
     [SerializeField] private string sceneToLoad;
+    public GameObject creditUI;
+    private bool creditUIOpen;
+    public GameObject portalAnimation;
     // Start is called before the first frame update
     void Start()
     {
-        
+        creditUIOpen = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(creditUIOpen)
+        {
+            if(Input.GetKeyDown(KeyCode.Escape))
+            {
+                creditUI.SetActive(false);
+                portalAnimation.SetActive(true);
+                creditUIOpen = false;
+            }
+        }
     }
 
     public void loadScene()
@@ -25,6 +37,14 @@ public class SceneButton : MonoBehaviour
             Time.timeScale = 1f;
         }
         StartCoroutine(LoadAsyncScene());
+    }
+
+    public void popCreditUI()
+    {
+        creditUI.SetActive(true);
+        creditUIOpen = true;
+        portalAnimation.SetActive(false);
+        
     }
 
     public void Quit()

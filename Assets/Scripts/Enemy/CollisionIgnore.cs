@@ -9,7 +9,10 @@ public class CollisionIgnore : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-        Physics2D.IgnoreCollision(Player.GetComponent<CapsuleCollider2D>(), this.GetComponent<BoxCollider2D>());
+       
+        Physics2D.IgnoreCollision(Player.GetComponent<CapsuleCollider2D>(), this.GetComponent<Collider2D>());
+
+       
     }
 
     // Update is called once per frame
