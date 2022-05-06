@@ -1103,7 +1103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 565f19a3c842ebc42a3a4331cd5bd84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rs: {fileID: 0}
+  rs: {fileID: 4388653920054128227, guid: e052e2168f2dd344b996eac797a0559f, type: 3}
   ru: {fileID: 3059713805429292426}
   assignedItem: {fileID: 0}
   iu: {fileID: 0}
@@ -1673,7 +1673,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 565f19a3c842ebc42a3a4331cd5bd84f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rs: {fileID: 0}
+  rs: {fileID: 4388653920054128227, guid: e052e2168f2dd344b996eac797a0559f, type: 3}
   ru: {fileID: 3059713805429292426}
   assignedItem: {fileID: 0}
   iu: {fileID: 0}

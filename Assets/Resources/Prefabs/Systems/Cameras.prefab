@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6100136690521216929}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.29, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7685282209065767110}
@@ -375,7 +375,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7780994, y: 1}
+    m_SensorSize: {x: 1.7783153, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -391,6 +391,94 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7685282209065767110}
     m_Modifications:
+    - target: {fileID: 293016039748055380, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293016039748055380, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293016039748055380, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293016039748055380, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293016039748055380, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 293016039748055380, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 370977987365655789, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: Slots.Array.data[1]
+      value: 
+      objectReference: {fileID: 763955282695880852}
+    - target: {fileID: 370977987365655789, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: Slots.Array.data[2]
+      value: 
+      objectReference: {fileID: 3115576713684546691}
+    - target: {fileID: 1866466140727471214, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717884177999906115, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717884177999906115, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717884177999906115, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717884177999906115, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717884177999906115, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2717884177999906115, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3518464951833591452, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567912386929980966, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567912386929980966, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567912386929980966, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567912386929980966, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567912386929980966, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4567912386929980966, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7180048419156759462, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -483,6 +571,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI-FollowCam
       objectReference: {fileID: 0}
+    - target: {fileID: 7469796224618814821, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8297901013053996108, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
       propertyPath: XPBar
       value: 
@@ -492,6 +584,16 @@ PrefabInstance:
 --- !u!224 &7180048417499090581 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7180048419156759462, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+  m_PrefabInstance: {fileID: 1725046067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &763955282695880852 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 763955283336437159, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+  m_PrefabInstance: {fileID: 1725046067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3115576713684546691 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3115576715392805296, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
   m_PrefabInstance: {fileID: 1725046067}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3518464951278449882 stripped

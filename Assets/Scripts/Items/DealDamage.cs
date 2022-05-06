@@ -5,7 +5,7 @@ using UnityEngine;
 public class DealDamage : MonoBehaviour
 {
     public bool CRIT;
-    [SerializeField]public float damage;
+    public float damage;
     public virtual void SetDamage(float dmg, bool crit, float critDamage) 
     {
         CRIT = crit;

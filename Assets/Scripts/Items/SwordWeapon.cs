@@ -41,7 +41,8 @@ public class SwordWeapon : Weapon
             AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
             Instantiate(SwordHitBox, transform.position + targetPosition.normalized, transform.rotation, this.transform.parent);
             SwordHitBox.GetComponent<StraightProjectile>();
-            
+            SwordHitBox.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+
             lastShot = Time.time;
         }
     }
