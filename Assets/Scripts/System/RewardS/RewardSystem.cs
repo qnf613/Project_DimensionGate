@@ -9,13 +9,11 @@ public class RewardSystem : MonoBehaviour
     [SerializeField] private List<GameObject> tempList;
     [SerializeField] private List<GameObject> equippedList;
     public List<GameObject> rewardsList;
-    public GameObject Chest; /*debugging purpose*/
     public GameObject equippedItems;
     public int weaponCount = 0;
     private int artifactCount = 0;
     public bool weaponFull = false;
     public bool artifactFull = false;
-
     public GameObject SwapWeaponUI;
     public GameObject SwapArtifactUI;
     public void Awake()

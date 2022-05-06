@@ -14,6 +14,7 @@ public class LevelSystem : MonoBehaviour
     public RewardSystem rs;
     public GameObject rUI;
     public RewardUI ru;
+    public bool lvUp;
     // EXP UI BAR
     [SerializeField] private Slider expSlider;
     [SerializeField] private AudioClip levelupSFX;
@@ -29,13 +30,16 @@ public class LevelSystem : MonoBehaviour
         rs = rsManager.GetComponent<RewardSystem>();
         rUI = GameObject.Find("UI-FollowCam").transform.Find("RewardPick").gameObject;
         ru = rUI.GetComponent<RewardUI>();
-       
+        lvUp = false;
     }
+
+
 
     // Update is called once per frame
     void LateUpdate()
     {
         expSlider.maxValue = expToLevelUp;
+        
         if (DonTDestroy.inStage)
         {
             if (exp >= expToLevelUp)
@@ -49,12 +53,11 @@ public class LevelSystem : MonoBehaviour
                 exp = expToLevelUp;
             }
         }
-       
-
     }
 
     public void LevelUp()
     {
+        lvUp = true;
         if (levelupSFX != null)
         {
             AudioSource.PlayClipAtPoint(levelupSFX, transform.position, volume);

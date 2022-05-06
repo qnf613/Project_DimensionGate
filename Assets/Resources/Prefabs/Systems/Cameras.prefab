@@ -483,10 +483,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI-FollowCam
       objectReference: {fileID: 0}
+    - target: {fileID: 8297901013053996108, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: XPBar
+      value: 
+      objectReference: {fileID: 3518464951278449882}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
 --- !u!224 &7180048417499090581 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7180048419156759462, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+  m_PrefabInstance: {fileID: 1725046067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3518464951278449882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3518464950635801065, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
   m_PrefabInstance: {fileID: 1725046067}
   m_PrefabAsset: {fileID: 0}

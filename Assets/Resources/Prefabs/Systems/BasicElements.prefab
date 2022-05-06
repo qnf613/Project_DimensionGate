@@ -486,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 3951304486119280588}
     - target: {fileID: 6100136692072045103, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_Lens.m_SensorSize.x
-      value: 1.7780994
+      value: 1.7777778
       objectReference: {fileID: 0}
     - target: {fileID: 6116831264701708475, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -620,6 +620,14 @@ PrefabInstance:
       propertyPath: rs
       value: 
       objectReference: {fileID: 879248970585157466}
+    - target: {fileID: 8297901012622893425, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8297901012622893439, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
+      propertyPath: ls
+      value: 
+      objectReference: {fileID: 3675165121291755346}
     - target: {fileID: 8297901012622893439, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: rs
       value: 
@@ -940,6 +948,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 276080841178540811, guid: f3fe2af17ae55e742896f28a5565ba32, type: 3}
   m_PrefabInstance: {fileID: 3518464951322473560}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3675165121291755346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 276080841178540810, guid: f3fe2af17ae55e742896f28a5565ba32, type: 3}
+  m_PrefabInstance: {fileID: 3518464951322473560}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f6d26aa4a0e5146bae6bb3706c6cfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3518464951797705752
 PrefabInstance:
   m_ObjectHideFlags: 0

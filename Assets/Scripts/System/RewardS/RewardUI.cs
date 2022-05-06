@@ -16,8 +16,13 @@ public class RewardUI : MonoBehaviour
     [SerializeField] private GameObject artifactInventory;
     List<GameObject> gs = new List<GameObject>();
 
+    public TextMeshProUGUI rewardMessage;
+
     public GameObject HammerSlot1, HammerSlot2, HammerSlot3;
 
+    public GameObject XPBar;
+    public LevelSystem ls;
+    public bool isChestPickUp;
     // Start is called before the first frame update
     public void Start()
     {
@@ -31,6 +36,9 @@ public class RewardUI : MonoBehaviour
         {
             texts[i] = texts[i].GetComponent<TextMeshProUGUI>();
         }
+        ls = ls.GetComponent<LevelSystem>();
+        isChestPickUp = false;
+        rewardMessage.GetComponent<TextMeshProUGUI>();
     }
     
     public void PickReward(GameObject item)
@@ -68,8 +76,18 @@ public class RewardUI : MonoBehaviour
     {
         GetRewardsList();
         this.gameObject.SetActive(true);
-        
-        if(Time.timeScale != 0)
+        hideXPBar();
+        if (ls.lvUp)
+        {
+            rewardMessage.text = "LEVEL UP!";
+            rewardMessage.fontSize = 100;
+        }
+        if (isChestPickUp)
+        {
+            rewardMessage.text = "What are you going to pick from the chest?";
+            rewardMessage.fontSize = 40;
+        }
+        if (Time.timeScale != 0)
         {
             Time.timeScale = 0;
         }
@@ -79,7 +97,30 @@ public class RewardUI : MonoBehaviour
     {
         ResetRewardList();
         this.gameObject.SetActive(false);
-        Time.timeScale = 1;
+        displayXPBar();
+        if (ls.lvUp)
+        {
+            ls.lvUp = false;
+            rewardMessage.text = "";
+        }
+        if (isChestPickUp)
+        {
+            isChestPickUp = false;
+            rewardMessage.text = "";
+        }
+        if (Time.timeScale != 1) 
+        {
+            Time.timeScale = 1;
+        }
+    }
+
+    public void displayXPBar()
+    {
+        XPBar.SetActive(true);
+    }
+    public void hideXPBar()
+    {
+        XPBar.SetActive(false);
     }
 
 

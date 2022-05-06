@@ -34,6 +34,7 @@ public class Chest : PickUp
     IEnumerator delayForAnimation()
     {
         yield return new WaitForSecondsRealtime(1.5f);
+        ru.isChestPickUp = true;
         ru.OpenUI();
         Destroy(this.gameObject);
     }
