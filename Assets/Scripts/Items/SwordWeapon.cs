@@ -39,7 +39,7 @@ public class SwordWeapon : Weapon
 
             //TODO : Change this to match player Rotation and position
             AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
-            Instantiate(SwordHitBox, transform.position + targetPosition.normalized, transform.rotation);
+            Instantiate(SwordHitBox, transform.position + targetPosition.normalized, transform.rotation, this.transform.parent);
             SwordHitBox.GetComponent<StraightProjectile>();
             
             lastShot = Time.time;

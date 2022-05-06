@@ -12,6 +12,7 @@ public class SwordHitbox : MonoBehaviour
     void Update()
     {
         //destroy after one half second
-        Destroy(gameObject, .1f);
+        //this.transform.position = this.transform.parent.position;
+        Destroy(gameObject, .175f);
     }
 }
