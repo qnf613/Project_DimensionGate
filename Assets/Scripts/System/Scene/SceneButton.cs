@@ -9,7 +9,7 @@ public class SceneButton : MonoBehaviour
     [SerializeField] private string sceneToLoad;
     public GameObject creditUI;
     private bool creditUIOpen;
-    public GameObject portalAnimation;
+    public GameObject animations;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +24,7 @@ public class SceneButton : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Escape))
             {
                 creditUI.SetActive(false);
-                portalAnimation.SetActive(true);
+                animations.SetActive(true);
                 creditUIOpen = false;
             }
         }
@@ -43,7 +43,7 @@ public class SceneButton : MonoBehaviour
     {
         creditUI.SetActive(true);
         creditUIOpen = true;
-        portalAnimation.SetActive(false);
+        animations.SetActive(false);
         
     }
 
