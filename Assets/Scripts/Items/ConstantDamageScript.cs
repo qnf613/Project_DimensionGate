@@ -16,8 +16,8 @@ public class ConstantDamageScript : MonoBehaviour
 
     List<DamageSystem> enemies;
 
-    private void Start()
-    {
+    void Start()
+    {  
         enemies = new List<DamageSystem>();
         VenomFlask = GameObject.Find("Venom Flask");
         var venomscript = VenomFlask.GetComponent<PoisonFlask>();
@@ -56,6 +56,10 @@ public class ConstantDamageScript : MonoBehaviour
     }
     private void Update()
     {
+        if (VenomFlask == null)
+        {
+            Destroy(this.gameObject);
+        }
         for (var i = enemies.Count - 1; i > -1; i--)
         {
             if (enemies[i] == null)
@@ -78,7 +82,7 @@ public class ConstantDamageScript : MonoBehaviour
         Destroy(this.gameObject, duration);
 
     }
-void DamageScale()
+    void DamageScale()
     {
         FinalDamage *= VenomFlask.GetComponent<PoisonFlask>().dotDamageScale;
         

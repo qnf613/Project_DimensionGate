@@ -63,7 +63,7 @@ public class RewardUI : MonoBehaviour
             }
         }
 
-        DisableHammers(); // This disables the upgrade hammer icons
+         // This disables the upgrade hammer icons
         CloseUI();
     }
     void DisableHammers()
@@ -95,6 +95,7 @@ public class RewardUI : MonoBehaviour
 
     public void CloseUI()
     {
+        DisableHammers();
         ResetRewardList();
         this.gameObject.SetActive(false);
         displayXPBar();
