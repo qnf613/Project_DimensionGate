@@ -14,6 +14,7 @@ public class ItemSwapUI : MonoBehaviour
     private GameObject weaponList;
     private GameObject artifactList;
 
+    public RewardSystem rs;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +26,7 @@ public class ItemSwapUI : MonoBehaviour
         {
             texts[i] = texts[i].GetComponent<TextMeshProUGUI>();
         }
+        rs = rs.GetComponent<RewardSystem>();
     }
 
     public void GetListOfOption()
@@ -96,6 +98,7 @@ public class ItemSwapUI : MonoBehaviour
 
     public void CloseUI()
     {
+        rs.CheckEquipments();
         this.gameObject.SetActive(false);
         Time.timeScale = 1;
     }

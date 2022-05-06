@@ -623,6 +623,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1912892931720323868, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
+      propertyPath: rs
+      value: 
+      objectReference: {fileID: 879248970585157466}
     - target: {fileID: 2199232355321098829, guid: 4118e168ac1d7f540a29fc12437b8adb, type: 3}
       propertyPath: m_LocalScale.z
       value: 0
