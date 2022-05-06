@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
 public class InventoryUI : MonoBehaviour
 {
     [SerializeField] private GameObject[] Slots;
@@ -97,14 +96,33 @@ public class InventoryUI : MonoBehaviour
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().color = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().color;
 
                 //Finds the slot's TextCoponent in the Text Gameobject. And sets it to the outcome of GetAllWeaponEnhancementLevels(); Read the other coment below to understand more
-                Slots[i].transform.Find("Text").GetComponent<Text>().text = GetAllWeaponEnhancementLevels(Slots[i].GetComponent<Weapon>());
+                if (teampItemList[i].GetComponent<Weapon>() != null)
+                {
+                    //Debug.Log(Slots[i].GetComponentInChildren<TextMeshProUGUI>().text);  
+                    Slots[i].transform.Find("Text").GetComponent<TextMeshProUGUI>().text = GetAllWeaponEnhancementLevels(teampItemList[i].GetComponent<Weapon>());
+                    
+                }
             }
         }
 
     }
     public string GetAllWeaponEnhancementLevels(Weapon wep) // This takes in the Refine level from the weapon and sets it translates to string so we can display item level
     {
-        RefineLevel = "+" + wep.enhancement.ToString();
+        if (wep.enhancement == 0)
+        {
+            RefineLevel = "";
+        }
+        else if (wep.enhancement == 10)
+        {
+            RefineLevel = "+X";
+        }
+        else
+        {
+            RefineLevel = "+" + wep.enhancement + "";
+        }
+            
+        
+        
         return RefineLevel;
     }
 }

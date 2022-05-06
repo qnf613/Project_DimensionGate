@@ -39,7 +39,7 @@ public class Gatling : Weapon
             projectileDirection = (this.transform.position - targetPosition);
             ammo--;
             lastShot = Time.time;
-            Debug.Log("ammo is: " + ammo);
+            //Debug.Log("ammo is: " + ammo);
         }
         else if (ammo == 0)
         {
@@ -48,7 +48,7 @@ public class Gatling : Weapon
     }
     private void Reload()
     {      
-          Debug.Log("reloaded!");
+          //Debug.Log("reloaded!");
            ammo = maxammo;
     }    
 }
