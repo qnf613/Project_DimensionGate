@@ -132,7 +132,7 @@ MonoBehaviour:
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
-  damage: 0
+  damage: 20
   enhancement: 0
   we: 0
   finalDamageNumber: 0
@@ -147,8 +147,7 @@ MonoBehaviour:
   name: Rocket
   description: Fire an exploding rocket!
   rage: 20
-  attackspeed: 4
-  ExplosionDamage: 20
+  attackspeed: 2
 --- !u!114 &6695963654667929324
 MonoBehaviour:
   m_ObjectHideFlags: 0

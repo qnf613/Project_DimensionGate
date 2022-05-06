@@ -8,7 +8,6 @@ public class GrenadeLauncher : Weapon
     [SerializeField] private string description = "Fire an exploding grenade!";
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = 3f;
-    public float ExplosionDamage = 20;
     protected Vector3 projectileDirection;
 
 
@@ -39,7 +38,6 @@ public class GrenadeLauncher : Weapon
         if (Time.time > wAtkspeed + lastShot)
         {
             
-            ApplyEnhancement();
             CheckIfCrit();
             AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
             Instantiate(projectile, transform.position, transform.rotation);
@@ -68,11 +66,11 @@ public class GrenadeLauncher : Weapon
     {
         if (crit == true)
         {
-            finalDamageNumber = ExplosionDamage * CritDamageMod;
+            finalDamageNumber = damage * CritDamageMod;
         }
         else if (crit == false)
         {
-            finalDamageNumber = ExplosionDamage;
+            finalDamageNumber = damage;
         }
         return finalDamageNumber;
     }

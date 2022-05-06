@@ -59,11 +59,11 @@ TagManager:
   - name: Monsters
     uniqueID: 1554989227
     locked: 0
-  - name: Player&Interacts
-    uniqueID: 3490966825
-    locked: 0
   - name: Foreground
     uniqueID: 918123679
+    locked: 0
+  - name: Player&Interacts
+    uniqueID: 3490966825
     locked: 0
   - name: Default
     uniqueID: 0

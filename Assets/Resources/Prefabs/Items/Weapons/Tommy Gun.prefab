@@ -150,8 +150,8 @@ MonoBehaviour:
   attackspeed: 0.1
   pierceCount: 2
   maxPierceCount: 0
-  ammo: 16
-  maxammo: 16
+  ammo: 50
+  maxammo: 50
   reloadTime: 5
 --- !u!114 &5856326893698505444
 MonoBehaviour:
