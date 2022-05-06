@@ -42,8 +42,8 @@ GameObject:
   - component: {fileID: 7353090043067168791}
   - component: {fileID: 7353090043067168788}
   - component: {fileID: 4148772299426204636}
-  - component: {fileID: 6305764771858908410}
   - component: {fileID: 1580836196683050180}
+  - component: {fileID: 3707005002327601976}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -151,32 +151,6 @@ MonoBehaviour:
   flashMaterial: {fileID: 2100000, guid: 4a881b7e65e2eed4b82ee202f7d42fc5, type: 2}
   duration: 0.125
   originalColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!61 &6305764771858908410
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7353090043067168794}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.046450555, y: -0.029559433}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.1604646, y: 1.9205621}
-  m_EdgeRadius: 0
 --- !u!114 &1580836196683050180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +164,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!70 &3707005002327601976
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7353090043067168794}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.044203162}
+  m_Size: {x: 0.80829406, y: 1.7553718}
+  m_Direction: 0
 --- !u!1 &7353090044636916459
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,6 +412,6 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.035816252, y: -0.029020011}
-  m_Size: {x: 0.9297596, y: 1.922387}
+  m_Offset: {x: 0, y: -0.04554963}
+  m_Size: {x: 1, y: 1.7418857}
   m_Direction: 0

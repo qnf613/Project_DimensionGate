@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5580571325549936475}
   - component: {fileID: 5580571325549936420}
   - component: {fileID: 8996201148667598762}
-  - component: {fileID: 4025777522672235868}
   - component: {fileID: 4874266269492239534}
+  - component: {fileID: 3037230117119551693}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -121,32 +121,6 @@ MonoBehaviour:
   flashMaterial: {fileID: 2100000, guid: 4a881b7e65e2eed4b82ee202f7d42fc5, type: 2}
   duration: 0.125
   originalColor: {r: 0, g: 0, b: 0, a: 0}
---- !u!61 &4025777522672235868
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5580571325549936473}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0019688606, y: -0.08466186}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.7873609, y: 0.7479832}
-  m_EdgeRadius: 0
 --- !u!114 &4874266269492239534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +134,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
+--- !u!58 &3037230117119551693
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580571325549936473}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.15096705}
+  serializedVersion: 2
+  m_Radius: 0.39657077
 --- !u!1 &5580571326173248728
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,8 +382,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01376766, y: -0.10922347}
-  m_Size: {x: 1.1512486, y: 1.1881747}
+  m_Offset: {x: 0, y: -0.15075517}
+  m_Size: {x: 1.1512486, y: 1.1512489}
   m_Direction: 0
 --- !u!1 &5580571326594667609
 GameObject:
