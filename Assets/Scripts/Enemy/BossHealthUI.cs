@@ -15,6 +15,18 @@ public class BossHealthUI : MonoBehaviour
         BossName = GetComponentInChildren<TextMeshProUGUI>();
     }
 
+    private void Update()
+    {
+        if (Time.timeScale == 0)
+        {
+            BossName.enabled = false;
+        }
+        else if (Time.timeScale == 1)
+        {
+            BossName.enabled = true;
+        }
+    }
+
     private void Start()
     {
         SetHealthBarToInactive();
