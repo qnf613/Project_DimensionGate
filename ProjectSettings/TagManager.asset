@@ -56,14 +56,20 @@ TagManager:
   - name: Obstacles
     uniqueID: 1380945721
     locked: 0
-  - name: Monsters
-    uniqueID: 1554989227
-    locked: 0
   - name: Foreground
     uniqueID: 918123679
     locked: 0
+  - name: Monsters
+    uniqueID: 1554989227
+    locked: 0
   - name: Player&Interacts
     uniqueID: 3490966825
+    locked: 0
+  - name: Projectile
+    uniqueID: 459261759
+    locked: 0
+  - name: Foreground2
+    uniqueID: 3930041975
     locked: 0
   - name: Default
     uniqueID: 0

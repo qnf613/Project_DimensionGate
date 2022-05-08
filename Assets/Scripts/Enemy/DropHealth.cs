@@ -13,7 +13,7 @@ public class DropHealth : MonoBehaviour
     private void dropHealth()
     {
         float random = Random.Range(1, 100);
-        Debug.Log("Rolled a " + random);
+       // Debug.Log("Rolled a " + random);
         if (dropOdds >= random)
         {
             Vector2 currentlocation = this.GetComponent<Rigidbody2D>().transform.position;
