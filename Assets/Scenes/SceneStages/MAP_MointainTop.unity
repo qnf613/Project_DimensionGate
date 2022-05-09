@@ -8581,6 +8581,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3951304486119280433, guid: 12b8e97a878401c4aa698f60fefb3b93, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3387057
+      objectReference: {fileID: 0}
+    - target: {fileID: 3951304486119280433, guid: 12b8e97a878401c4aa698f60fefb3b93, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.21300572
+      objectReference: {fileID: 0}
     - target: {fileID: 4241223649986510663, guid: 12b8e97a878401c4aa698f60fefb3b93, type: 3}
       propertyPath: earlyPhaseMobs.Array.size
       value: 2
