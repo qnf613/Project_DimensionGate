@@ -59,9 +59,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Bplatinnumerals-B0EB SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: 2051964314
   material: {fileID: 1807913617364929830}
-  materialHashCode: 0
+  materialHashCode: -1543217670
   m_Version: 1.1.0
   m_SourceFontFileGUID: 21cf3485aa245d24ea1cd55b828c012f
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 21cf3485aa245d24ea1cd55b828c012f, type: 3}
@@ -75,7 +75,7 @@ MonoBehaviour:
     m_Scale: 1
     m_LineHeight: 112.023994
     m_AscentLine: 107.159996
-    m_CapLine: 0
+    m_CapLine: 106.40625
     m_MeanLine: 0
     m_Baseline: 0
     m_DescentLine: -0.76
@@ -85,7 +85,7 @@ MonoBehaviour:
     m_SubscriptSize: 0.5
     m_UnderlineOffset: -15.2
     m_UnderlineThickness: 7.6
-    m_StrikethroughOffset: 0
+    m_StrikethroughOffset: 42.5625
     m_StrikethroughThickness: 7.6
     m_TabWidth: 30
   m_GlyphTable:
@@ -617,9 +617,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0

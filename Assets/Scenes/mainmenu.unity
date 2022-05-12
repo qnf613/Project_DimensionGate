@@ -1539,7 +1539,7 @@ MonoBehaviour:
     Ha\"\nLevel Design, Enemy AI, Scripting\n\n\"Cristian Daniel Salazar Morales\"\nSound
     Design, Music Composition \n\n\"Samantha Pham\"\nCharacter Art, Interactable
     Object Art, Animation\n\n\"Cindy Chau Tran\"\nCharacter Art, UI Art, Illustration,
-    Interactable Object Art, Animtion\n\n\"Cameron Bates\"\nWeapon Design, Scripting"
+    Interactable Object Art, Animation\n\n\"Cameron Bates\"\nWeapon Design, Scripting"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e86fa1f1d9e3f2043a6e2e2f7f8c67cc, type: 2}
   m_sharedMaterial: {fileID: 1807913617364929830, guid: e86fa1f1d9e3f2043a6e2e2f7f8c67cc, type: 2}

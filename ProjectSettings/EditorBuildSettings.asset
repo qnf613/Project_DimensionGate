@@ -23,12 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demo Build2.unity
     guid: f1c7fbb916cde6e4da3205af607ce021
-  - enabled: 0
-    path: Assets/Scenes/Jin.unity
-    guid: eadbe9cf0bfbae14d906bdab8869e85f
-  - enabled: 0
-    path: Assets/Scenes/Jin2Test.unity
-    guid: cba6107241b8fae488b634a25c93b294
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 8355f35743e00a94ba5ec4e9a69c37eb
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
