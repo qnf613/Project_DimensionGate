@@ -22,7 +22,7 @@ public class ClearCondition : MonoBehaviour
     //portal navigator
     [SerializeField] private GameObject portalNavi;
     //conditions
-    [SerializeField] protected bossStatus bs;
+    public bossStatus bs;
     public stageCleared sc;
     [SerializeField] private bool happened = false;
     [SerializeField] private bool gameStart = false;
@@ -35,6 +35,12 @@ public class ClearCondition : MonoBehaviour
     public string nextLoadingScreen;
 
     Loading _loading = new Loading();
+
+    //SFX
+    [SerializeField] private AudioSource audiosource;
+    [SerializeField] private AudioClip bossEntrySFX;
+    [SerializeField] private float volume = 1f;
+    [SerializeField] private bool entrySFXPlayOnce;
 
     private void Awake()
     {
@@ -71,6 +77,9 @@ public class ClearCondition : MonoBehaviour
         {
             portalNavi = GameObject.Find("PortalPointer");
         }
+
+        audiosource.GetComponent<AudioSource>();
+        entrySFXPlayOnce = false;
     }
     private void Start() 
     {
@@ -117,6 +126,7 @@ public class ClearCondition : MonoBehaviour
             case bossStatus.nDead:
                 //check boss is alive or not
                 CheckBoss();
+                StartCoroutine(PlayEntrySFX());
                 break;
         }
         
@@ -209,6 +219,22 @@ public class ClearCondition : MonoBehaviour
         Instantiate(bossOfStage, new Vector3(this.transform.position.x, this.transform.position.y), Quaternion.identity);
         bossOfStage = GameObject.FindGameObjectWithTag("Boss");
         bs = bossStatus.nDead;
+    }
+
+    IEnumerator PlayEntrySFX()
+    {
+        if (!entrySFXPlayOnce)
+        {
+            entrySFXPlayOnce = true;
+            audiosource.volume = 0f;
+            if (bossEntrySFX != null)
+            {
+                AudioSource.PlayClipAtPoint(bossEntrySFX, transform.position, volume);
+            }
+            yield return new WaitForSeconds(bossEntrySFX.length);
+            audiosource.volume = 0.1f;
+        }
+       
     }
 
     private void ActivatePortal()

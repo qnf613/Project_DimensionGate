@@ -17,6 +17,7 @@ public class LevelSystem : MonoBehaviour
     public bool lvUp;
     // EXP UI BAR
     [SerializeField] private Slider expSlider;
+    //SFX
     [SerializeField] private AudioClip levelupSFX;
     [SerializeField] private float volume = 0.50f;
 

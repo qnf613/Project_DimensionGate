@@ -43,7 +43,6 @@ GameObject:
   - component: {fileID: 1928566051366669850}
   - component: {fileID: 4997780180877180370}
   - component: {fileID: 7581962605828446922}
-  - component: {fileID: 964454402162323554}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -104,7 +103,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1554989227
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bffa09c59c6198b4ca7b1c7bc50f4955, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -164,22 +163,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
---- !u!70 &964454402162323554
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1928566051366669844}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.41239977, y: 0.04158652}
-  m_Size: {x: 2.5652647, y: 3.4732373}
-  m_Direction: 0
 --- !u!1 &1928566053016116453
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,10 +180,11 @@ GameObject:
   - component: {fileID: 1928566053016116452}
   - component: {fileID: 2476896746269959956}
   - component: {fileID: 2357975943168499536}
-  - component: {fileID: -2554200581317781991}
+  - component: {fileID: 6435502953418058914}
+  - component: {fileID: 9140670121248626944}
   m_Layer: 7
   m_Name: Troll_Blue 2
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 500
+  MaxHealth: 30000
   currentHealth: 0
   attackDamage: 30
   atkspeed: 1
@@ -313,7 +297,7 @@ MonoBehaviour:
   radius: 0.5
   height: 2
   canMove: 1
-  maxSpeed: 2.5
+  maxSpeed: 4
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -397,7 +381,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.013735294}
   m_Size: {x: 2.7202678, y: 3.5438852}
   m_Direction: 0
---- !u!114 &-2554200581317781991
+--- !u!114 &6435502953418058914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,3 +395,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &9140670121248626944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928566053016116453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375a8a90fc0445742b6f785142f3e36d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossName: Troll
