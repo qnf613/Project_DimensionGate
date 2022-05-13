@@ -95,6 +95,7 @@ public class ClearCondition : MonoBehaviour
             case stageCleared.yes:
                 //activate the portal & check number of bonus rewards depending on time remains (this is conditional calculation)
                 ActivatePortal();
+                StopEnemySpawn();
                 _loading.SetUp();
 
                 break;
@@ -241,7 +242,6 @@ public class ClearCondition : MonoBehaviour
     {
         if (!happened)
         {
-            StopEnemySpawn();
             if (timeRemain > 120)
             {
                 cb.CalculateBonusRewards();
