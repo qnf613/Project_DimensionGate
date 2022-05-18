@@ -22,7 +22,7 @@ public class Weapon : MonoBehaviour
     protected Vector3 targetPosition;
     [SerializeField]protected Camera cam;
     [SerializeField]protected GameObject projectile;
-    [SerializeField]protected bool crit;
+    [SerializeField]public bool crit;
     [SerializeField]protected AudioClip weaponSound;
     [SerializeField]protected float volume = 0.50f;
 
@@ -60,6 +60,10 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     protected virtual void Update()
     {
+        if (Input.GetKey(KeyCode.U) == true)
+        {
+            this.Enhance();
+        }
         switch (we)
         {
             case WeaponEquipped.yes:

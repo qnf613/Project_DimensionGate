@@ -41,9 +41,11 @@ public class LuckyComet : Weapon
     }
     protected override void Shoot()
     {
+
     }
     public override float CalcCritDamage()
     {
+        CheckIfCrit();
         if (crit == true)
         {
             finalDamageNumber = this.gameObject.GetComponentInParent<Refine>().ChangeDamageBasedOnRefine(damage) * CritDamageMod;
@@ -54,4 +56,5 @@ public class LuckyComet : Weapon
         }
         return finalDamageNumber;
     }
+   
 }

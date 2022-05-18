@@ -128,31 +128,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ca537766dc61a4694049d31e463b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 2
-  CritDamageMod: 2
-  GlobalCritRate: 30
-  damage: 30
-  enhancement: 0
-  we: 0
-  finalDamageNumber: 0
-  cam: {fileID: 0}
-  projectile: {fileID: 0}
-  crit: 0
-  weaponSound: {fileID: 8300000, guid: d668de49af1f24f409efb5b8e5b4bcea, type: 3}
-  volume: 0.6
-  RefineCritChance: 0
-  RefineCritDamage: 0
-  refineDamage: 0
-  name: Lucky Comet
-  description: Lucky this comet decided to orbit around you
-  rotationspeed: 30
-  secondComet: {fileID: 0}
-  thirdComet: {fileID: 0}
-  forthComet: {fileID: 0}
   CRIT: 0
-  critMod: 0
-  critDamageMod: 2
-  globalCritRate: 0
+  Wep: {fileID: 0}
+  LC: {fileID: 0}
+  attackDelay: 5
+  nextDamageEvent: 0
 --- !u!1 &5415926426146170160
 GameObject:
   m_ObjectHideFlags: 0
@@ -281,31 +261,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ca537766dc61a4694049d31e463b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 2
-  CritDamageMod: 2
-  GlobalCritRate: 30
-  damage: 30
-  enhancement: 0
-  we: 0
-  finalDamageNumber: 0
-  cam: {fileID: 0}
-  projectile: {fileID: 0}
-  crit: 0
-  weaponSound: {fileID: 8300000, guid: d668de49af1f24f409efb5b8e5b4bcea, type: 3}
-  volume: 0.6
-  RefineCritChance: 0
-  RefineCritDamage: 0
-  refineDamage: 0
-  name: Lucky Comet
-  description: Lucky this comet decided to orbit around you
-  rotationspeed: 30
-  secondComet: {fileID: 0}
-  thirdComet: {fileID: 0}
-  forthComet: {fileID: 0}
   CRIT: 0
-  critMod: 0
-  critDamageMod: 2
-  globalCritRate: 0
+  Wep: {fileID: 0}
+  LC: {fileID: 0}
+  attackDelay: 5
+  nextDamageEvent: 0
 --- !u!1 &8139579069443953452
 GameObject:
   m_ObjectHideFlags: 0
@@ -359,7 +319,7 @@ MonoBehaviour:
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
-  damage: 30
+  damage: 10
   enhancement: 0
   we: 0
   finalDamageNumber: 0
@@ -533,31 +493,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ca537766dc61a4694049d31e463b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 2
-  CritDamageMod: 2
-  GlobalCritRate: 30
-  damage: 30
-  enhancement: 0
-  we: 0
-  finalDamageNumber: 0
-  cam: {fileID: 0}
-  projectile: {fileID: 0}
-  crit: 0
-  weaponSound: {fileID: 8300000, guid: d668de49af1f24f409efb5b8e5b4bcea, type: 3}
-  volume: 0.6
-  RefineCritChance: 0
-  RefineCritDamage: 0
-  refineDamage: 0
-  name: Lucky Comet
-  description: Lucky this comet decided to orbit around you
-  rotationspeed: 30
-  secondComet: {fileID: 0}
-  thirdComet: {fileID: 0}
-  forthComet: {fileID: 0}
   CRIT: 0
-  critMod: 0
-  critDamageMod: 2
-  globalCritRate: 0
+  Wep: {fileID: 0}
+  LC: {fileID: 0}
+  attackDelay: 0.5
+  nextDamageEvent: 0
 --- !u!1 &8730856902390463011
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,31 +626,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0ca537766dc61a4694049d31e463b78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CritMod: 2
-  CritDamageMod: 2
-  GlobalCritRate: 30
-  damage: 30
-  enhancement: 0
-  we: 0
-  finalDamageNumber: 0
-  cam: {fileID: 0}
-  projectile: {fileID: 0}
-  crit: 0
-  weaponSound: {fileID: 8300000, guid: d668de49af1f24f409efb5b8e5b4bcea, type: 3}
-  volume: 0.6
-  RefineCritChance: 0
-  RefineCritDamage: 0
-  refineDamage: 0
-  name: Lucky Comet
-  description: Lucky this comet decided to orbit around you
-  rotationspeed: 30
-  secondComet: {fileID: 0}
-  thirdComet: {fileID: 0}
-  forthComet: {fileID: 0}
   CRIT: 0
-  critMod: 0
-  critDamageMod: 2
-  globalCritRate: 0
+  Wep: {fileID: 0}
+  LC: {fileID: 0}
+  attackDelay: 5
+  nextDamageEvent: 0
 --- !u!1 &8807311598196696426
 GameObject:
   m_ObjectHideFlags: 0
