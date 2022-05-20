@@ -107,7 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvManager: {fileID: 0}
   ls: {fileID: 0}
-  exp: 2
+  exp: 10
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0

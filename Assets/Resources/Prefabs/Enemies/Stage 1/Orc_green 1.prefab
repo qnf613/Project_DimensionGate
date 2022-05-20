@@ -77,7 +77,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvManager: {fileID: 0}
   ls: {fileID: 0}
-  exp: 5
+  exp: 10
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -354,7 +354,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1554989227
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7d37d0e6187b88c42ad2154a3638572b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

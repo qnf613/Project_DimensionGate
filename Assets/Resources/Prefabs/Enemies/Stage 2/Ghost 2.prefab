@@ -240,7 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvManager: {fileID: 0}
   ls: {fileID: 0}
-  exp: 4
+  exp: 20
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -256,9 +256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 250
+  MaxHealth: 200
   currentHealth: 0
-  attackDamage: 10
+  attackDamage: 8
   atkspeed: 0.5
   lasthit: 0
   DamageIndicator: {fileID: 6880273557122235488, guid: 4a54a3f21e9cc2f42a96c0d9a8608097, type: 3}

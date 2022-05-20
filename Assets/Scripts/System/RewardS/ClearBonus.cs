@@ -35,7 +35,7 @@ public class ClearBonus : MonoBehaviour
 
         }
 
-        else if (cc.timeRemain <= 360)
+        else if (cc.timeRemain >= 360)
         {
             numOfRewards = 3;
 
