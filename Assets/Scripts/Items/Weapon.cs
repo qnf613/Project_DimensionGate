@@ -30,7 +30,7 @@ public class Weapon : MonoBehaviour
 
     public bool RefineCritChance, RefineCritDamage, refineDamage; //these bools will be in the list above to identify which refinement type they will follow
 
-   
+    public float SynergyA, SynergyB;
 
     protected Weapon()
     {
