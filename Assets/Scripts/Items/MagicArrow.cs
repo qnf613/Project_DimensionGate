@@ -22,7 +22,7 @@ public class MagicArrow : Weapon
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
-        
+        this.descrptionTest = description;
     }
 
     

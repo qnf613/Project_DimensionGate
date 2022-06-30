@@ -120,9 +120,11 @@ MonoBehaviour:
   - {fileID: 7981711566046463386}
   - {fileID: 2932987687138442865}
   - {fileID: 6836263801606867120}
-  itemsInUI: []
+  teampItemList: []
+  rUI: {fileID: 0}
   isWeaponSlots: 1
   isArtifactSlots: 0
+  RefineLevel: 
 --- !u!1001 &553508469259336779
 PrefabInstance:
   m_ObjectHideFlags: 0

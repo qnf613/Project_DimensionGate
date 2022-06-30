@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     // Start is called before the first frame update
+    public GameObject DetailUI;
     void Start()
     {
         
@@ -19,11 +20,12 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Mouse enter");
+        DetailUI.SetActive(true);
+        DetailUI.transform.parent.transform.parent.GetComponent<RectTransform>().SetAsLastSibling();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("Mouse exit");
+        DetailUI.SetActive(false);
     }
 }

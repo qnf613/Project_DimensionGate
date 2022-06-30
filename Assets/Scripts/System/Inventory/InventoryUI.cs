@@ -8,6 +8,7 @@ public class InventoryUI : MonoBehaviour
     [SerializeField] private GameObject[] Slots;
     [SerializeField] private List<GameObject> teampItemList;
     public GameObject rUI;
+    public GameObject HpBar;
     public bool isWeaponSlots;
     public bool isArtifactSlots;
     public string RefineLevel;
@@ -41,11 +42,13 @@ public class InventoryUI : MonoBehaviour
         this.gameObject.SetActive(true);
         GetAllWeapons();
         GetAllArtifacts();
+        HpBar.SetActive(false);
     }
 
     public void CloseUI()
     {
         this.gameObject.SetActive(false);
+        HpBar.SetActive(true);
         if (!rUI.activeInHierarchy)
         {
             Time.timeScale = 1;
@@ -69,6 +72,7 @@ public class InventoryUI : MonoBehaviour
             //assign each item's icon into each assigned slot of inventory UI
             for (int i = 0; i < teampItemList.Count; i++)
             {
+               
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().sprite = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().color = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().color;
             }
@@ -95,12 +99,14 @@ public class InventoryUI : MonoBehaviour
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().sprite = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().color = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().color;
 
-                //Finds the slot's TextCoponent in the Text Gameobject. And sets it to the outcome of GetAllWeaponEnhancementLevels(); Read the other coment below to understand more
+                //Finds the slot's TextCoponent in the Text Gameobject. It should read/display 2 different things.
+                //1. sets it to the outcome of GetAllWeaponEnhancementLevels();
+                //Read the other coment below to understand more
                 if (teampItemList[i].GetComponent<Weapon>() != null)
                 {
                     //Debug.Log(Slots[i].GetComponentInChildren<TextMeshProUGUI>().text);  
                     Slots[i].transform.Find("Text").GetComponent<TextMeshProUGUI>().text = GetAllWeaponEnhancementLevels(teampItemList[i].GetComponent<Weapon>());
-                    
+                    //Slots[i].transform.Find("DescriptionUI").transform.Find("Description").GetComponent<TextMeshProUGUI>().text = teampItemList[i].GetComponent<Weapon>().descrptionTest;
                 }
             }
         }
