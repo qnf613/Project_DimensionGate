@@ -10,8 +10,8 @@ public class Weapon : MonoBehaviour
     public float CritDamageMod = 2;
     public float GlobalCritRate;
     protected string wName;
-    protected string wDescription;
-    public string descrptionTest;
+    public string wDescription;
+    public string descrptionTest = "";
     public float damage;
     protected float wAtkspeed;
     protected float wRange;
@@ -43,7 +43,6 @@ public class Weapon : MonoBehaviour
         enhancement = 0;
         we = WeaponEquipped.yes;
         GlobalCritRate = 10;
-        descrptionTest = "";
         //add the refinement types to the list.
 
 

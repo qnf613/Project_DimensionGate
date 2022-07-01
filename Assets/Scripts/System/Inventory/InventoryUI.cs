@@ -11,6 +11,7 @@ public class InventoryUI : MonoBehaviour
     public GameObject HpBar;
     public bool isWeaponSlots;
     public bool isArtifactSlots;
+    public bool isBigUI;
     public string RefineLevel;
     // Start is called before the first frame update
     void Start()
@@ -106,7 +107,11 @@ public class InventoryUI : MonoBehaviour
                 {
                     //Debug.Log(Slots[i].GetComponentInChildren<TextMeshProUGUI>().text);  
                     Slots[i].transform.Find("Text").GetComponent<TextMeshProUGUI>().text = GetAllWeaponEnhancementLevels(teampItemList[i].GetComponent<Weapon>());
-                    //Slots[i].transform.Find("DescriptionUI").transform.Find("Description").GetComponent<TextMeshProUGUI>().text = teampItemList[i].GetComponent<Weapon>().descrptionTest;
+                    if (isBigUI)
+                    {
+                        Slots[i].transform.Find("DescriptionUI").transform.Find("Description").GetComponent<TextMeshProUGUI>().text = teampItemList[i].GetComponent<Weapon>().wDescription;
+                    }
+                    
                 }
             }
         }

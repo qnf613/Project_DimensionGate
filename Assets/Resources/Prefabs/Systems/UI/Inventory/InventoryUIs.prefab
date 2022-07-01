@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1522172012904413283, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
+      propertyPath: isWeaponSlots
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1623624167027705669, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -422,6 +426,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5203910260273167999, guid: 47c17796abafb9b4e831ef8b9718a364, type: 3}
+      propertyPath: isBigUI
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5913945108715061119, guid: 47c17796abafb9b4e831ef8b9718a364, type: 3}
       propertyPath: m_Name
       value: BigUI
@@ -509,6 +517,10 @@ PrefabInstance:
     - target: {fileID: 6976676780500244087, guid: 47c17796abafb9b4e831ef8b9718a364, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7482483638209632270, guid: 47c17796abafb9b4e831ef8b9718a364, type: 3}
+      propertyPath: isBigUI
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7782326692175790280, guid: 47c17796abafb9b4e831ef8b9718a364, type: 3}
       propertyPath: m_AnchorMax.y
