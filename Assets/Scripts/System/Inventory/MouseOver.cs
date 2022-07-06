@@ -5,11 +5,12 @@ using UnityEngine.EventSystems;
 
 public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public bool itemEquiped;
     // Start is called before the first frame update
     public GameObject DetailUI;
     void Start()
     {
-        
+        itemEquiped = false;
     }
 
     // Update is called once per frame
@@ -20,8 +21,11 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        DetailUI.SetActive(true);
-        DetailUI.transform.parent.transform.parent.GetComponent<RectTransform>().SetAsLastSibling();
+        if (itemEquiped)
+        {
+            DetailUI.SetActive(true);
+            DetailUI.transform.parent.transform.parent.GetComponent<RectTransform>().SetAsLastSibling();
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)

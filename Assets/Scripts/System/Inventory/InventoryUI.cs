@@ -76,6 +76,19 @@ public class InventoryUI : MonoBehaviour
                
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().sprite = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().color = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().color;
+                //** TODO **
+                //Finds the slot's TextCoponent in the Text Gameobject. It should read/display 2 different things.
+                //1. Get items' enhancement level and display it with GetAllArtifactEnhancementLevels().
+                //2. Get items' description.
+                //Read the other coment below to understand more
+                //if (teampItemList[i].GetComponent<Artifact>() != null)
+                //{
+                //    Slots[i].transform.Find("Text").GetComponent<TextMeshProUGUI>().text = GetAllArtifactEnhancementLevels(teampItemList[i].GetComponent<Artifact>());
+                //    if (isBigUI)
+                //    {
+                //        Slots[i].transform.Find("DescriptionUI").transform.Find("Description").GetComponent<TextMeshProUGUI>().text = teampItemList[i].GetComponent<Weapon>().wDescription;
+                //    }
+                //}
             }
         }
     }
@@ -86,7 +99,7 @@ public class InventoryUI : MonoBehaviour
         {
             //reset the List that store 'previous' item list
             teampItemList = new List<GameObject>();
-            //find all of items that tagged with "Artifact" and add each of them into this itemList
+            //find all of items that tagged with "Weapon" and add each of them into this itemList
             foreach (Transform item in GameObject.Find("Weapons").GetComponentsInChildren<Transform>())
             {
                 if (item.tag == "Weapon")
@@ -99,19 +112,18 @@ public class InventoryUI : MonoBehaviour
             {
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().sprite = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
                 Slots[i].transform.Find("ItemImage").GetComponent<Image>().color = teampItemList[i].transform.Find("IconStore").GetComponent<SpriteRenderer>().color;
-
                 //Finds the slot's TextCoponent in the Text Gameobject. It should read/display 2 different things.
-                //1. sets it to the outcome of GetAllWeaponEnhancementLevels();
+                //1. Get items' enhancement level and display it with GetAllWeaponEnhancementLevels().
+                //2. Get items' description.
                 //Read the other coment below to understand more
                 if (teampItemList[i].GetComponent<Weapon>() != null)
                 {
-                    //Debug.Log(Slots[i].GetComponentInChildren<TextMeshProUGUI>().text);  
                     Slots[i].transform.Find("Text").GetComponent<TextMeshProUGUI>().text = GetAllWeaponEnhancementLevels(teampItemList[i].GetComponent<Weapon>());
                     if (isBigUI)
                     {
+                        Slots[i].GetComponent<MouseOver>().itemEquiped = true;
                         Slots[i].transform.Find("DescriptionUI").transform.Find("Description").GetComponent<TextMeshProUGUI>().text = teampItemList[i].GetComponent<Weapon>().wDescription;
                     }
-                    
                 }
             }
         }
