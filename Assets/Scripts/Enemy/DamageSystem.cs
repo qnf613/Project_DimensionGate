@@ -11,7 +11,7 @@ public class DamageSystem : MonoBehaviour
 {
     public float MaxHealth;
     public float currentHealth; /*{ get; set; }*/
-
+    public float healthModifier = 1;
 
     [SerializeField] private float attackDamage = 10;
     [SerializeField] private float atkspeed = 0.5f;
@@ -34,7 +34,7 @@ public class DamageSystem : MonoBehaviour
     private void Awake()
     {
         DamageIndicator = transform.GetComponent<TextMeshPro>();
-        currentHealth = MaxHealth;
+        currentHealth = MaxHealth*healthModifier;
         BossManager = GetComponent<BossUIManager>();
 
     }
@@ -87,7 +87,7 @@ public class DamageSystem : MonoBehaviour
 
             ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
-            Destroy(explosion, 2f);
+            Destroy(explosion.gameObject, 2f);
             Destroy(this.gameObject, 0.15f);
         }
         else if(isBoss && currentHealth <= 0 && BossManager !=null)
@@ -95,7 +95,7 @@ public class DamageSystem : MonoBehaviour
             ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
             BossManager.HealthBarInactive();
-            Destroy(explosion, 2f);
+            Destroy(explosion.gameObject, 2f);
             Destroy(this.gameObject, 0.15f);
         }
 

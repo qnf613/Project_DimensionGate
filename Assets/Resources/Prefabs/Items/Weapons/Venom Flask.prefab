@@ -49,6 +49,8 @@ MonoBehaviour:
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
+  wDescription: 
+  descrptionTest: 
   damage: 2
   enhancement: 0
   we: 0
@@ -61,6 +63,8 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1
+  SynergyA: 0
+  SynergyB: 0
   dotDamage: 2
   name: Venom Flask
   description: Throw a flask which leaves a pool of poison on the ground.

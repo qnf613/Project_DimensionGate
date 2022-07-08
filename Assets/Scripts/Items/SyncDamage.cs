@@ -21,7 +21,7 @@ public class SyncDamage : MonoBehaviour
     }
     private void DamageSync()
     {
-        Debug.Log("Damage synced");
+        //Debug.Log("Damage synced");
         this.gameObject.GetComponent<DealDamage>().damage = trueDamage;
 
         if(weapon.GetComponent<DealDamage>().CRIT == true)

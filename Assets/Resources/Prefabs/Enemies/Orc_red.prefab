@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 6733400950791755917}
   - component: {fileID: -6618839840240761577}
   m_Layer: 7
-  m_Name: Orc_red
+  m_Name: Orc_Red
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
