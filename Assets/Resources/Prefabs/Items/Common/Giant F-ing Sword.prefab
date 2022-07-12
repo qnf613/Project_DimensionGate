@@ -49,6 +49,8 @@ MonoBehaviour:
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
+  wDescription: 
+  descrptionTest: 
   damage: 30
   enhancement: 0
   we: 1
@@ -61,6 +63,8 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 1
   refineDamage: 1
+  SynergyA: 0
+  SynergyB: 0
   name: Giant F-ing Sword
   description: What else do you need to know, read the name...
   attackspeed: 2

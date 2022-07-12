@@ -48,12 +48,13 @@ public class LevelSystem : MonoBehaviour
                 LevelUp();
             }
 
-            ////debug
-            //if (Input.GetKeyDown(KeyCode.L))
-            //{
-            //    exp = expToLevelUp;
-            //}
+            //debug
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                exp = expToLevelUp;
+            }
         }
+
     }
 
     public void LevelUp()

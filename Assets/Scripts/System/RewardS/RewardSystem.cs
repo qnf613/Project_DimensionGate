@@ -38,6 +38,8 @@ public class RewardSystem : MonoBehaviour
     public void Update()
     {
         equippedItems = GameObject.Find("Inventory");
+
+
     }
 
     public void MakeRewardList()
