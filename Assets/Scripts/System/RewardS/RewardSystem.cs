@@ -6,6 +6,10 @@ using UnityEngine;
 public class RewardSystem : MonoBehaviour
 {
     [SerializeField] private List<GameObject> allItemList;
+    [SerializeField] private List<GameObject> commonItemList;
+    [SerializeField] private List<GameObject> rareItemList;
+    [SerializeField] private List<GameObject> epicItemList;
+    [SerializeField] private List<GameObject> legendaryItemList;
     [SerializeField] private List<GameObject> tempList;
     [SerializeField] private List<GameObject> equippedList;
     public List<GameObject> rewardsList;
@@ -19,6 +23,10 @@ public class RewardSystem : MonoBehaviour
     public void Awake()
     {
         allItemList = Resources.LoadAll<GameObject>("Prefabs/Items").ToList(); //get all items and add it to list
+        commonItemList = Resources.LoadAll<GameObject>("Prefabs/Items/Common").ToList();
+        rareItemList = Resources.LoadAll<GameObject>("Prefabs/Items/Rare").ToList();
+        epicItemList = Resources.LoadAll<GameObject>("Prefabs/Items.Epic").ToList();
+        legendaryItemList = Resources.LoadAll<GameObject>("Prefabs/Items/Legendary").ToList();
     }
     // Start is called before the first frame update
     public void Start()
