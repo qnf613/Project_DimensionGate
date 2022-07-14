@@ -25,9 +25,7 @@ public class RewardSystem : MonoBehaviour
     public GameObject SwapWeaponUI;
     public GameObject SwapArtifactUI;
 
-    private int choosenItemNum;
-
-
+    int longCountRandomtest;
     public void Awake()
     {
         commonItemList = Resources.LoadAll<GameObject>("Prefabs/Items/Common").ToList();
@@ -45,6 +43,14 @@ public class RewardSystem : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    Debug.Log(commonItemList.LongCount());
+        //    longCountRandomtest = (int) Random.Range(0, commonItemList.LongCount());
+        //    Debug.Log(longCountRandomtest);
+        //    commonItemList.RemoveAt(longCountRandomtest);
+        //    Debug.Log(commonItemList.LongCount());
+        //}
         equippedItems = GameObject.Find("Inventory");
     }
 
@@ -98,43 +104,53 @@ public class RewardSystem : MonoBehaviour
     public void MakeLevelUpRewardList()
     {        
         CheckEquipments();
+
+        //Make Temparary List for each Rarities 
         tempLegendaryList = new List<GameObject>(legendaryItemList);
         tempEpicList = new List<GameObject>(epicItemList);
         tempRareList = new List<GameObject>(rareItemList);
         tempCommonList = new List<GameObject>(commonItemList);
-        //Make options from all items
+
+        int rarityRoll;
+        int choosenItemNum;
+        //Make 3 options from each rarity list + each rarity items have different possibility to get 
         for (int i = 0; i < 3; i++)
         {
-            int rarityRoll = (int)Random.Range(0, 100);
-            Debug.Log(rarityRoll);
-            if (rarityRoll >= 0 && rarityRoll < 5)
+            rarityRoll = (int)Random.Range(1, 101);
+
+            if (rarityRoll < 6)
             {
-                choosenItemNum = (int)Random.Range(0, legendaryItemList.LongCount());
+                Debug.Log("Legendary!!");
+                choosenItemNum = (int)Random.Range(0, tempLegendaryList.LongCount());
                 rewardsList.Add(tempLegendaryList[choosenItemNum]);
                 tempLegendaryList.RemoveAt(choosenItemNum);
             }
 
-            else if (rarityRoll >= 5 && rarityRoll < 15)
+            else if (rarityRoll >= 6 && rarityRoll < 16)
             {
-                choosenItemNum = (int)Random.Range(0, epicItemList.LongCount());
+                Debug.Log("Epic!");
+                choosenItemNum = (int)Random.Range(0, tempEpicList.LongCount());
                 rewardsList.Add(tempEpicList[choosenItemNum]);
                 tempEpicList.RemoveAt(choosenItemNum);
             }
 
-            else if (rarityRoll >= 15 && rarityRoll < 40)
+            else if (rarityRoll >= 16 && rarityRoll < 41)
             {
-                choosenItemNum = (int)Random.Range(0, rareItemList.LongCount());
+                Debug.Log("Rare");
+                choosenItemNum = (int)Random.Range(0, tempRareList.LongCount());
                 rewardsList.Add(tempRareList[choosenItemNum]);
                 tempRareList.RemoveAt(choosenItemNum);
             }
 
-            else if (rarityRoll >= 40 && rarityRoll <= 100)
+            else if (rarityRoll >= 41)
             {
-                choosenItemNum = (int)Random.Range(0, commonItemList.LongCount());
+                Debug.Log("Common..");
+                choosenItemNum = (int)Random.Range(0, tempCommonList.LongCount());
                 rewardsList.Add(tempCommonList[choosenItemNum]);
                 tempCommonList.RemoveAt(choosenItemNum);
             }
-}
+
+        }
     }
 
     public void CheckEquipments()
