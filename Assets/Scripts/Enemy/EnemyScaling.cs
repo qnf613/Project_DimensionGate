@@ -4,41 +4,37 @@ using UnityEngine;
 
 public class EnemyScaling : MonoBehaviour
 {
+    public FloatHpVariable defaultHP;
 
     public float maxHealth;
-    public float newMaxHealth;
-    public float modify;
-    public float modifyBack;
+    private float modify;
     //Choosing the HP multiplier
-    public float hpMultiplier;
+    [SerializeField] public float hpMultiplier;
     public DamageSystem enemyMaxHealth;
+
+
     void Start()
     {
-        //maxHealth = enemyMaxHealth.MaxHealth;
-        modify = enemyMaxHealth.healthModifier;
+        enemyMaxHealth.newMaxHealth = defaultHP.defaultHP;
+        enemyMaxHealth.MaxHealth = defaultHP.defaultHP;
+        maxHealth = enemyMaxHealth.MaxHealth;
         InvokeRepeating("healthScale", 60f, 60f);
     }
 
 
     public void healthScale()
     {
-        // hp modifier is base 1 then multiply by what we want
-        modifyBack = modify * hpMultiplier;
-        // change the health modifier in the damage script.
-        enemyMaxHealth.healthModifier = modifyBack;
-        // change the base to the new multiplier
-        modify = enemyMaxHealth.healthModifier;
+        // Get max HP again from damage system script
+        maxHealth = enemyMaxHealth.newMaxHealth;
+        // change max HP with with multiplier
+        modify = maxHealth * hpMultiplier;
+        // change new maxHealth from damage system script
+        enemyMaxHealth.newMaxHealth = modify;
+
         Debug.Log("Change health");
-
-        //newMaxHealth = maxHealth * 1.05f;
-        //enemyMaxHealth.MaxHealth = newMaxHealth;
-        //healthReset();
     }
 
-    public void healthReset()
-    {
-        maxHealth = newMaxHealth;
-    }
+
 
 
 }

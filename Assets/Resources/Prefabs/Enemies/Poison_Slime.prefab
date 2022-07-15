@@ -125,6 +125,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 25
   currentHealth: 0
+  healthModifier: 1
+  newMaxHealth: 25
   attackDamage: 5
   atkspeed: 0.75
   lasthit: 0
@@ -354,7 +356,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1554989227
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: eddc111280335ac48903861e1ba929ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

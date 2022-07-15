@@ -4,14 +4,16 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
+
 //using Assets.Scripts;
 
 
 public class DamageSystem : MonoBehaviour
 {
-    public float MaxHealth;
-    public float currentHealth; /*{ get; set; }*/
-    public float healthModifier = 1;
+    
+    [SerializeField] public float MaxHealth;
+    [SerializeField] public float currentHealth; /*{ get; set; }*/
+    [SerializeField] public float newMaxHealth;
 
     [SerializeField] private float attackDamage = 10;
     [SerializeField] private float atkspeed = 0.5f;
@@ -31,12 +33,13 @@ public class DamageSystem : MonoBehaviour
     BossUIManager BossManager;
     public bool isBoss;
 
+
+
+    
     private void Awake()
     {
         DamageIndicator = transform.GetComponent<TextMeshPro>();
-        currentHealth = MaxHealth*healthModifier;
         BossManager = GetComponent<BossUIManager>();
-
     }
 
     void Start()
@@ -45,12 +48,15 @@ public class DamageSystem : MonoBehaviour
         //{
 
         //}
+        
+        currentHealth = newMaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
-
+        
 
 
     }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (Time.time > atkspeed + lasthit)
@@ -76,7 +82,7 @@ public class DamageSystem : MonoBehaviour
         {
             currentHealth -= damage;
         }
-        else if (isBoss && BossManager !=null)
+        else if (isBoss && BossManager != null)
         {
             currentHealth -= damage;
             BossManager.UpdateBossHealth(currentHealth);
@@ -90,7 +96,7 @@ public class DamageSystem : MonoBehaviour
             Destroy(explosion.gameObject, 2f);
             Destroy(this.gameObject, 0.15f);
         }
-        else if(isBoss && currentHealth <= 0 && BossManager !=null)
+        else if (isBoss && currentHealth <= 0 && BossManager != null)
         {
             ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
@@ -140,7 +146,7 @@ public class DamageSystem : MonoBehaviour
             {
                 DamageIndicator.color = Color.white;
             }
-            
+
             DamageIndicator.text = ((int)dmg).ToString();
             Invoke("ClearDamageUI", .5f);
         }
@@ -154,6 +160,8 @@ public class DamageSystem : MonoBehaviour
     {
         DamageIndicator.text = "";
     }
+
+    
 }
 
    

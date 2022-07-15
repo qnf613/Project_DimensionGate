@@ -7,7 +7,7 @@ public class Spawner2 : MonoBehaviour
     public GameObject[] earlyPhaseMobs;
     public GameObject[] midPhaseMobs;
     public GameObject[] latePhaseMobs;
-    
+
     //public GameObject parent;
     [Tooltip("How many units to spawn in at once.")]
     [SerializeField] private int numberToSpawn;
@@ -26,25 +26,22 @@ public class Spawner2 : MonoBehaviour
     float spawnTimer;
     [SerializeField] private float gameplaytime;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
-        spawnTimer = rate;
+        spawnTimer = rate;   
     }
 
     // Update is called once per frame
     void Update()
     {
-            gameplaytime += Time.deltaTime;
-
-            SpawnEnemy();
-            spawnTimer -= Time.deltaTime;
-
-            
-            
-        
+        gameplaytime += Time.deltaTime;
+        SpawnEnemy();
+        spawnTimer -= Time.deltaTime;
     }
-     void FixedUpdate()
+    void FixedUpdate()
     {
         GameObject[] monsters = GameObject.FindGameObjectsWithTag("Enemy");
         monsterAmount = monsters.Length;
@@ -66,6 +63,7 @@ public class Spawner2 : MonoBehaviour
                     Instantiate(earlyPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
                     spawnCount++;
                     rateUpMeter++;
+                    
                 }
 
                 else if (gameplaytime > 180 && gameplaytime <= 360)
@@ -77,6 +75,7 @@ public class Spawner2 : MonoBehaviour
                     Instantiate(midPhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
                     spawnCount++;
                     rateUpMeter++;
+                    
                 }
 
                 else if (gameplaytime > 360)
@@ -88,6 +87,7 @@ public class Spawner2 : MonoBehaviour
                     Instantiate(latePhaseMobs[randomEnemy], spawnPoint.position, spawnPoint.rotation);
                     spawnCount++;
                     rateUpMeter++;
+                    
                 }
             }
 
@@ -101,5 +101,9 @@ public class Spawner2 : MonoBehaviour
         }
 
     }
-    
+
+
+
 }
+
+
