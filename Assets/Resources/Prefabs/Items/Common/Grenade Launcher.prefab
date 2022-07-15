@@ -132,6 +132,8 @@ MonoBehaviour:
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
+  wDescription: 
+  descrptionTest: 
   damage: 20
   enhancement: 0
   we: 0
@@ -144,8 +146,10 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 1
   refineDamage: 1
+  SynergyA: 0
+  SynergyB: 0
   name: Rocket
-  description: Fire an exploding rocket!
+  description: Fire an exploding grenade!
   rage: 20
   attackspeed: 2
 --- !u!114 &6695963654667929324

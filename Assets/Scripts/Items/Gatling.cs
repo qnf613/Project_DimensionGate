@@ -40,7 +40,7 @@ public class Gatling : Weapon
             {
                 count++;   
                 ammo--;
-                Debug.Log(count);
+               // Debug.Log(count);
                 base.Shoot();
                 projectileDirection = (this.transform.position - targetPosition);
                 
