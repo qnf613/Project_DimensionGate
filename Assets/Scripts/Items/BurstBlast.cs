@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BurstBlast : Weapon
 {
-    [SerializeField] private string name = "Burstshot";
-    [SerializeField] private string description = "Fires a three bullet burst!";
+    [SerializeField] private string name = "BurstBlast";
+    [SerializeField] private string description = "Fires a three grenade burst!";
     [SerializeField] private int range = 20;
     [SerializeField] private float attackspeed = .7f;
     [SerializeField] private int pierceCount;

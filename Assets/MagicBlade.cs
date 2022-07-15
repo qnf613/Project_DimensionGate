@@ -40,11 +40,11 @@ public class MagicBlade : Weapon
 
             //TODO : Change this to match player Rotation and position
             AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
-            Instantiate(SwordHitBox, transform.position + targetPosition.normalized, transform.rotation, this.transform.parent);
+            Instantiate(SwordHitBox, transform.position + targetPosition.normalized, transform.rotation);
             //SwordHitBox.GetComponent<StraightProjectile>();
             SwordHitBox.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
 
-            Instantiate(projectile, transform.position + targetPosition.normalized, transform.rotation, this.transform.parent);
+            Instantiate(projectile, transform.position + targetPosition.normalized, transform.rotation);
             projectile.GetComponent<StraightProjectile>();
             projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
 

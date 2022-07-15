@@ -94,7 +94,7 @@ MonoBehaviour:
   SynergyA: 0
   SynergyB: 0
   name: BurstBlast
-  description: Fires a three rocket bursts!
+  description: Fires a three grenade bursts!
   range: 20
   attackspeed: 0.7
   pierceCount: 0
