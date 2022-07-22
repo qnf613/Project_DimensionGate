@@ -98,9 +98,10 @@ MonoBehaviour:
   description: Throw a flask which leaves a pool of poison and caltrops on the ground.
   rage: 20
   attackspeed: 0.5
-  poisonFlaskPrefab: {fileID: 0}
+  poisonFlaskPrefab: {fileID: 3139452587625503352, guid: 48b21029173a8ea4fac8fc6ef3cf3c7f, type: 3}
   dotDamageScale: 1.15
   sharpDamage: 25
+  Spikes: {fileID: 7161195545086195297, guid: a15e7f7cc8dec7c4f8c7a13ea3227f31, type: 3}
 --- !u!1 &7822003648448579930
 GameObject:
   m_ObjectHideFlags: 0
