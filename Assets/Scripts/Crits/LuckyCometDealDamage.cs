@@ -13,6 +13,14 @@ public class LuckyCometDealDamage : MonoBehaviour
 
     List<DamageSystem> enemies;
 
+    private float timer = 1f;
+    [SerializeField] public float attacktime = 2f;
+    [SerializeField] public float attacktimelimit = 5;
+    [SerializeField] public float cooldown = 10f;
+    private float lastShot;
+    public bool luckiercometCheck;
+
+    public GameObject projectile;
     private void Start()
     {
         enemies = new List<DamageSystem>();
@@ -32,8 +40,10 @@ public class LuckyCometDealDamage : MonoBehaviour
     }
     private void Update()
     {
-        Wep = GameObject.Find("Lucky Comet");
-        LC = Wep.GetComponent<LuckyComet>();
+        if (luckiercometCheck == true)
+        {
+            dropCaltrops();
+        }
 
         for (var i = enemies.Count - 1; i > -1; i--)
         {
@@ -75,20 +85,43 @@ public class LuckyCometDealDamage : MonoBehaviour
             }
         }
     }
+    void dropCaltrops() 
+    {
+        if (timer > 0)
+        {
+            timer -= Time.deltaTime;
+
+        }
+        if (timer <= 0)
+        {
+            if (Time.time > LC.wAtkspeed + lastShot)
+            {
+                float xOffSet = Random.Range(-1.5f, 1.5f);
+                float yOffSet = Random.Range(-1.5f, 1.5f);
+                Vector3 randomPos = new Vector3(transform.position.x + xOffSet, transform.position.y + yOffSet);
+
+                LC.CheckIfCrit();
+                AudioSource.PlayClipAtPoint(LC.weaponSound, transform.position, LC.volume);
+                Instantiate(projectile, randomPos, transform.rotation);
+                
+                projectile.GetComponent<DealDamage>().SetDamage(LC.CalcCritDamage(), LC.crit, LC.CritDamageMod);
+
+                lastShot = Time.time;
+
+                attacktime++;
+            }
+            // Attacks how ever much was put as attacktime then put on cooldown.
+            if (attacktime == attacktimelimit)
+            {
+                attacktime = 0;
+                timer = cooldown;
+            }
+        }
+
+
+    }
     void CalcOnHit()
     {
         SetDamage(LC.CalcCritDamage(), LC.crit, LC.CritDamageMod);
-    }
-        //private void OnTriggerEnter2D(Collider2D collision)
-        //{
-        //    if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
-        //    else
-        //    {
-
-        //        CheckIfCrit();
-        //        SetDamage(CalcCritDamage(), crit, CritDamageMod);
-        //        collision.gameObject.GetComponent<DamageSystem>().TakeDamage(_dmg, CRIT);
-        //        AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
-        //    }
-        //}
-    }
+    }    
+}

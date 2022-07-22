@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PoisonFlask : Weapon
 {
-    public float dotDamage;
-    [SerializeField] private string name = "Venom Flask";
-    [SerializeField] private string description = "Throw a flask which leaves a pool of poison on the ground.";
-    [SerializeField] private int rage = 20;
-    [SerializeField] private float attackspeed = .7f;
-    [SerializeField] private GameObject poisonFlaskPrefab;
+    
+    [SerializeField] protected string name = "Venom Flask";
+    [SerializeField] protected string description = "Throw a flask which leaves a pool of poison on the ground.";
+    [SerializeField] protected int rage = 20;
+    [SerializeField] protected float attackspeed = .7f;
+    [SerializeField] protected GameObject poisonFlaskPrefab;
     public float dotDamageScale = 1.1f;
 
     protected Vector3 projectileDirection;
@@ -57,6 +57,6 @@ public class PoisonFlask : Weapon
     protected override void ApplyEnhancement()
     {
         base.ApplyEnhancement();
-        dotDamage = damage;
+     
     }
 }

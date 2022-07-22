@@ -21,7 +21,7 @@ public class ConstantDamageScript : MonoBehaviour
         enemies = new List<DamageSystem>();
         VenomFlask = GameObject.Find("Venom Flask");
         var venomscript = VenomFlask.GetComponent<PoisonFlask>();
-        attackDamage = venomscript.dotDamage;
+        attackDamage = venomscript.damage;
         SetDamage();
 
         Invoke("SetDamage", duration);

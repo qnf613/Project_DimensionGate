@@ -13,7 +13,7 @@ public class Weapon : MonoBehaviour
     public string wDescription;
     public string descrptionTest = "";
     public float damage;
-    protected float wAtkspeed;
+    public float wAtkspeed;
     protected float wRange;
     public int enhancement;
     protected int maxEnhance = 10;
@@ -22,10 +22,10 @@ public class Weapon : MonoBehaviour
     protected float lastShot = 0f;
     protected Vector3 targetPosition;
     [SerializeField]protected Camera cam;
-    [SerializeField]protected GameObject projectile;
+    public GameObject projectile;
     [SerializeField]public bool crit;
-    [SerializeField]protected AudioClip weaponSound;
-    [SerializeField]protected float volume = 0.50f;
+    public AudioClip weaponSound;
+    public float volume = 0.50f;
 
 
 
@@ -94,7 +94,10 @@ public class Weapon : MonoBehaviour
         
         CheckIfCrit();
         AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
-        Instantiate(projectile, transform.position, transform.rotation);
+        if (projectile != null)
+        {
+            Instantiate(projectile, transform.position, transform.rotation);
+        }  
         projectile.GetComponent<StraightProjectile>();
         projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
     }

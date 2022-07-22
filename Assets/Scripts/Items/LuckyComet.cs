@@ -11,7 +11,7 @@ public class LuckyComet : Weapon
     public GameObject secondComet;
     public GameObject thirdComet;
     public GameObject forthComet;
-    
+    private float timer = 1f;
     // Start is called before the first frame update
     void Start()
     {

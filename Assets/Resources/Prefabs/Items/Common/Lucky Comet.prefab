@@ -130,9 +130,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CRIT: 0
   Wep: {fileID: 0}
-  LC: {fileID: 0}
+  LC: {fileID: 8139579069443953454}
   attackDelay: 5
   nextDamageEvent: 0
+  attacktime: 2
+  attacktimelimit: 5
+  cooldown: 10
+  projectile: {fileID: 0}
 --- !u!1 &5415926426146170160
 GameObject:
   m_ObjectHideFlags: 0
@@ -263,9 +267,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CRIT: 0
   Wep: {fileID: 0}
-  LC: {fileID: 0}
+  LC: {fileID: 8139579069443953454}
   attackDelay: 5
   nextDamageEvent: 0
+  attacktime: 2
+  attacktimelimit: 5
+  cooldown: 10
+  projectile: {fileID: 0}
 --- !u!1 &8139579069443953452
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +327,10 @@ MonoBehaviour:
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
+  wDescription: 
+  descrptionTest: 
   damage: 10
+  wAtkspeed: 0
   enhancement: 0
   we: 0
   finalDamageNumber: 0
@@ -331,6 +342,8 @@ MonoBehaviour:
   RefineCritChance: 1
   RefineCritDamage: 1
   refineDamage: 0
+  SynergyA: 0
+  SynergyB: 0
   name: Lucky Comet
   description: Lucky this comet decided to orbit around you
   rotationspeed: 100
@@ -495,9 +508,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CRIT: 0
   Wep: {fileID: 0}
-  LC: {fileID: 0}
+  LC: {fileID: 8139579069443953454}
   attackDelay: 0.5
   nextDamageEvent: 0
+  attacktime: 2
+  attacktimelimit: 5
+  cooldown: 10
+  projectile: {fileID: 0}
 --- !u!1 &8730856902390463011
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,9 +645,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CRIT: 0
   Wep: {fileID: 0}
-  LC: {fileID: 0}
+  LC: {fileID: 8139579069443953454}
   attackDelay: 5
   nextDamageEvent: 0
+  attacktime: 2
+  attacktimelimit: 5
+  cooldown: 10
+  projectile: {fileID: 0}
 --- !u!1 &8807311598196696426
 GameObject:
   m_ObjectHideFlags: 0
