@@ -131,7 +131,7 @@ MonoBehaviour:
   CRIT: 0
   Wep: {fileID: 8139579069443953452}
   LC: {fileID: 3186748903208872613}
-  attackDelay: 5
+  attackDelay: 0.5
   nextDamageEvent: 0
   attacktime: 2
   attacktimelimit: 7
@@ -269,7 +269,7 @@ MonoBehaviour:
   CRIT: 0
   Wep: {fileID: 8139579069443953452}
   LC: {fileID: 3186748903208872613}
-  attackDelay: 5
+  attackDelay: 0.5
   nextDamageEvent: 0
   attacktime: 2
   attacktimelimit: 7
@@ -649,7 +649,7 @@ MonoBehaviour:
   CRIT: 0
   Wep: {fileID: 8139579069443953452}
   LC: {fileID: 3186748903208872613}
-  attackDelay: 5
+  attackDelay: 0.5
   nextDamageEvent: 0
   attacktime: 2
   attacktimelimit: 7
