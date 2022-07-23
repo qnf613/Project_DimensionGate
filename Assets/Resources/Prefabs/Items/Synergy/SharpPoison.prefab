@@ -97,7 +97,7 @@ MonoBehaviour:
   name: Sharp Flask
   description: Throw a flask which leaves a pool of poison and caltrops on the ground.
   rage: 20
-  attackspeed: 0.5
+  attackspeed: 1
   poisonFlaskPrefab: {fileID: 3139452587625503352, guid: 48b21029173a8ea4fac8fc6ef3cf3c7f, type: 3}
   dotDamageScale: 1.15
   sharpDamage: 25
