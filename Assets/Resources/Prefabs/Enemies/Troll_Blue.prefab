@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 2357975943168499536}
   - component: {fileID: -4753179772348911210}
   m_Layer: 7
-  m_Name: Troll_Blue
+  m_Name: Troll_blue
   m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

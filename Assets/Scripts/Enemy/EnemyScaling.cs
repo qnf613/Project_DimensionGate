@@ -13,11 +13,18 @@ public class EnemyScaling : MonoBehaviour
     public DamageSystem enemyMaxHealth;
 
 
-    void Start()
+    private void Awake()
     {
+        // Reset health with defaultHP variable
         enemyMaxHealth.newMaxHealth = defaultHP.defaultHP;
         enemyMaxHealth.MaxHealth = defaultHP.defaultHP;
+    }
+    void Start()
+    {
+
+        //Get MaxHealth from prefab
         maxHealth = enemyMaxHealth.MaxHealth;
+        // call healthscale every 60(change to whatever) seconds.
         InvokeRepeating("healthScale", 60f, 60f);
     }
 

@@ -189,7 +189,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 8000
   currentHealth: 0
-  healthModifier: 1
   newMaxHealth: 8000
   attackDamage: 20
   atkspeed: 0.5
