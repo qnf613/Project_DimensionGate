@@ -13,9 +13,15 @@ public class InventoryUI : MonoBehaviour
     public bool isArtifactSlots;
     public bool isBigUI;
     public string RefineLevel;
+    public GameObject fb;
+    public FuseButton fbScript;
     // Start is called before the first frame update
     void Start()
     {
+        if (fb != null) 
+        {
+            fbScript = fb.GetComponent<FuseButton>();
+        }
     }
 
     // Update is called once per frame
@@ -123,7 +129,7 @@ public class InventoryUI : MonoBehaviour
                     {
                         Slots[i].GetComponent<MouseOver>().itemEquiped = true;
                         Slots[i].transform.Find("DescriptionUI").transform.Find("Description").GetComponent<TextMeshProUGUI>().text = tempItemList[i].GetComponent<Weapon>().wDescription;
-                        Debug.Log(tempItemList[i].GetComponent<Weapon>().SynergyA);
+                        //Debug.Log(tempItemList[i].GetComponent<Weapon>().SynergyA);
                     }
                 }
             }
@@ -144,9 +150,7 @@ public class InventoryUI : MonoBehaviour
         {
             RefineLevel = "+" + wep.enhancement + "";
         }
-            
-        
-        
+           
         return RefineLevel;
     }
 }

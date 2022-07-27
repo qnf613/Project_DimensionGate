@@ -136,6 +136,7 @@ MonoBehaviour:
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
+  luckiercometCheck: 0
   projectile: {fileID: 0}
 --- !u!1 &5415926426146170160
 GameObject:
@@ -273,6 +274,7 @@ MonoBehaviour:
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
+  luckiercometCheck: 0
   projectile: {fileID: 0}
 --- !u!1 &8139579069443953452
 GameObject:
@@ -324,6 +326,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4b6c17603483a4c92f986ead237b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 0
+  SynergyB: 0
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
@@ -342,8 +346,6 @@ MonoBehaviour:
   RefineCritChance: 1
   RefineCritDamage: 1
   refineDamage: 0
-  SynergyA: 0
-  SynergyB: 0
   name: Lucky Comet
   description: Lucky this comet decided to orbit around you
   rotationspeed: 100
@@ -514,6 +516,7 @@ MonoBehaviour:
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
+  luckiercometCheck: 0
   projectile: {fileID: 0}
 --- !u!1 &8730856902390463011
 GameObject:
@@ -651,6 +654,7 @@ MonoBehaviour:
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
+  luckiercometCheck: 0
   projectile: {fileID: 0}
 --- !u!1 &8807311598196696426
 GameObject:

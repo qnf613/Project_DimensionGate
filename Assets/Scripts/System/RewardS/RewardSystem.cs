@@ -9,7 +9,6 @@ public class RewardSystem : MonoBehaviour
     [SerializeField] private List<GameObject> rareItemList;
     [SerializeField] private List<GameObject> epicItemList;
     [SerializeField] private List<GameObject> legendaryItemList;
-    [SerializeField] private List<GameObject> synergyItemList;
     [SerializeField] private List<GameObject> tempList;
     [SerializeField] private List<GameObject> tempCommonList;
     [SerializeField] private List<GameObject> tempRareList;
@@ -32,7 +31,6 @@ public class RewardSystem : MonoBehaviour
         rareItemList = Resources.LoadAll<GameObject>("Prefabs/Items/Rare").ToList();
         epicItemList = Resources.LoadAll<GameObject>("Prefabs/Items.Epic").ToList();
         legendaryItemList = Resources.LoadAll<GameObject>("Prefabs/Items/Legendary").ToList();
-        //synergyItemList = Resources.LoadAll<GameObject>("Prefabs/Items/Synergy").ToList();
     }
     // Start is called before the first frame update
     public void Start()
@@ -43,14 +41,6 @@ public class RewardSystem : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Debug.Log(commonItemList.LongCount());
-        //    longCountRandomtest = (int) Random.Range(0, commonItemList.LongCount());
-        //    Debug.Log(longCountRandomtest);
-        //    commonItemList.RemoveAt(longCountRandomtest);
-        //    Debug.Log(commonItemList.LongCount());
-        //}
         equippedItems = GameObject.Find("Inventory");
     }
 

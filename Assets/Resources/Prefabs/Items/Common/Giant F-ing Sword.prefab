@@ -46,12 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fdde2a990441346a44a4ac4c4d5ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 1
+  SynergyB: 0
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
   wDescription: 
   descrptionTest: 
   damage: 30
+  wAtkspeed: 0
   enhancement: 0
   we: 1
   finalDamageNumber: 0
@@ -63,8 +66,6 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 1
   refineDamage: 1
-  SynergyA: 0
-  SynergyB: 0
   name: Giant F-ing Sword
   description: What else do you need to know, read the name...
   attackspeed: 2

@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public bool itemEquiped;
-    // Start is called before the first frame update
     public GameObject DetailUI;
+    // Start is called before the first frame update
     void Start()
     {
         itemEquiped = false;
+       
     }
 
     // Update is called once per frame
@@ -32,4 +33,10 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         DetailUI.SetActive(false);
     }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        
+    }
+
 }

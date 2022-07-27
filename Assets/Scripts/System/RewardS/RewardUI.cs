@@ -62,16 +62,17 @@ public class RewardUI : MonoBehaviour
                 newItem.name = newItem.name.Replace("(Clone)", "");
             }
         }
-
-         // This disables the upgrade hammer icons
         CloseUI();
     }
+    
     void DisableHammers()
     {
+        // This disables the upgrade hammer icons
         HammerSlot1.SetActive(false);
         HammerSlot2.SetActive(false);
         HammerSlot3.SetActive(false);
     }
+
     public void OpenUI()
     {
         GetRewardsList();
