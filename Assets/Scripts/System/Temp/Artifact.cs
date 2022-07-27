@@ -2,19 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Artifact : MonoBehaviour
+public class Artifact : Items
 {
 
-    public float SynergyA, SynergyB;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
