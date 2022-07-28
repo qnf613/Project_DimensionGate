@@ -30,6 +30,9 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private AudioClip enemydamageSFX;
     [SerializeField] private float enemyvolume = 0.50f;
 
+    bool slowed = false;
+
+    float originalspeed;
     BossUIManager BossManager;
     public bool isBoss;
 
@@ -40,15 +43,20 @@ public class DamageSystem : MonoBehaviour
     {
         DamageIndicator = transform.GetComponent<TextMeshPro>();
         BossManager = GetComponent<BossUIManager>();
+        if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null)
+        {
+            originalspeed = this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed;
+        }
     }
 
     void Start()
     {
+        
         //if (!isBoss)
         //{
 
         //}
-        
+
         currentHealth = newMaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
@@ -71,7 +79,33 @@ public class DamageSystem : MonoBehaviour
         }
     }
 
+    public virtual void ApplyStatusEffect(float status, float slowStrength, float duration)
+    {
+        if (slowStrength >80)
+        {
+            slowStrength = 80;
+        }
+        if (status == 1 && slowed == false)
+        {
+            if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null || this.gameObject.GetComponentInChildren<Pathfinding.AIPath>() != null)
+            {
+                slowed = true;
+                slowStrength = 1 - slowStrength / 100;
+                this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= slowStrength;
+                //this.gameObject.GetComponent<Pathfinding.AIPath>().speed *= slowStrength;
 
+                Invoke("RemoveStatusEffectSlow", duration);
+            }
+        }   
+    }
+    private void RemoveStatusEffectSlow()
+    {
+       
+        this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed = originalspeed;
+       // this.gameObject.GetComponent<Pathfinding.AIPath>().speed = originalspeed;
+        
+        slowed = false;
+    }
 
     public virtual void TakeDamage(float damage, bool crit)
     {

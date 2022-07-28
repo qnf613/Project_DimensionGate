@@ -29,6 +29,6 @@ public class SyncDamage : MonoBehaviour
           this.gameObject.GetComponent<DealDamage>().CRIT = true;
         }
 
-        Debug.Log("current damage is:" + damage);
+        //Debug.Log("current damage is:" + damage);
     }
 }

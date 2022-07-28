@@ -5,7 +5,7 @@ using UnityEngine;
 public class Explode : MonoBehaviour
 {
     [SerializeField] private GameObject explosionPrefab;
-    [SerializeField] private GameObject rocketPrefab;
+    [SerializeField] private GameObject projectilePrefab;
   
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,14 +13,12 @@ public class Explode : MonoBehaviour
         else
         {
             // grabs the location at which the projectile hit an enemy
-            Vector2 currentlocation = rocketPrefab.GetComponent<Rigidbody2D>().transform.position;
-            Quaternion currentrotation = rocketPrefab.GetComponent<Rigidbody2D>().transform.rotation;
+            Vector2 currentlocation = projectilePrefab.GetComponent<Rigidbody2D>().transform.position;
+            Quaternion currentrotation = projectilePrefab.GetComponent<Rigidbody2D>().transform.rotation;
             //spawns poison field at the location the projectile vanished 
             Instantiate(explosionPrefab, currentlocation, currentrotation);
             //destroys projectile
             Destroy(this.gameObject);
-
-
         }
     }
     public void GetExplosionDamage(float damage, bool crit, float critDamageMod) 
