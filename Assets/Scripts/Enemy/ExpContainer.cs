@@ -6,7 +6,9 @@ public class ExpContainer : MonoBehaviour
 {
     public GameObject lvManager;
     public LevelSystem ls;
-    [SerializeField] private int exp = 1;
+    [SerializeField] public int exp = 1;
+    // Change newExp to default exp.
+    public int newExp;
 
     public DamageSystem dmgsys;
     [SerializeField] private float hpChecker;
@@ -25,7 +27,7 @@ public class ExpContainer : MonoBehaviour
         hpChecker = dmgsys.currentHealth;
         if (hpChecker <= 0 && !sentExp)
         {
-            ls.AddExp(exp);
+            ls.AddExp(newExp);
             sentExp = true;
         }
              

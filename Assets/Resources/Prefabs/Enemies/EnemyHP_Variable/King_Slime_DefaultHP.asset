@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28cd01aeb4b6644383fd5de20c79cc4, type: 3}
   m_Name: King_Slime_DefaultHP
   m_EditorClassIdentifier: 
-  defaultHP: 0
+  defaultHP: 4000

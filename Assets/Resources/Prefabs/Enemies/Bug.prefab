@@ -258,6 +258,7 @@ MonoBehaviour:
   lvManager: {fileID: 0}
   ls: {fileID: 0}
   exp: 1
+  newExp: 1
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -275,7 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 15
   currentHealth: 0
-  newMaxHealth: 0
+  newMaxHealth: 15
   attackDamage: 2
   atkspeed: 0.5
   lasthit: 0
