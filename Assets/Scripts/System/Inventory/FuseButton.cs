@@ -1,19 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
-using TMPro;
-public class FuseButton : MonoBehaviour/*, IPointerDownHandler*/
+public class FuseButton : MonoBehaviour
 {
+    public FusionSystem fs;
     public GameObject fuseUI;
-    public Image[] sprites;
+    public GameObject assignedItem;
+    public InventoryUI bigInvetoryUI;
+    public bool checking;
     // Start is called before the first frame update
     void Start()
     {
+        checking = false;
         if (fuseUI == null)
         {
             fuseUI = GameObject.Find("FuseUI");
+        }
+        if (fs == null)
+        {
+            fs = GameObject.Find("SynergyManager").GetComponent<FusionSystem>();
+        }
+        if (bigInvetoryUI == null)
+        {
+            bigInvetoryUI = GameObject.Find("BigUI").GetComponent<InventoryUI>();
         }
     }
 
@@ -26,7 +35,11 @@ public class FuseButton : MonoBehaviour/*, IPointerDownHandler*/
     public void Fuse()
     {
         Debug.Log("This button (" + this.gameObject.name + ") has been clicked");
+        //TODO: add synergyweapon
+
+
         CloseFuseUI();
+        bigInvetoryUI.CloseUI();
     }
 
     public void CloseFuseUI()

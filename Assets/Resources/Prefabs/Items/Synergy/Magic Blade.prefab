@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -462419850697200365}
   - component: {fileID: -712127902263066832}
   - component: {fileID: 4880928962257386706}
+  - component: {fileID: -8262159319205844933}
   m_Layer: 0
   m_Name: Magic Blade
   m_TagString: Weapon
@@ -74,12 +75,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 380f7051c2e34484ab5818bafdc43593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 0
+  SynergyB: 0
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 10
   wDescription: 
   descrptionTest: 
   damage: 65
+  wAtkspeed: 0
   enhancement: 0
   we: 0
   finalDamageNumber: 0
@@ -91,12 +95,23 @@ MonoBehaviour:
   RefineCritChance: 1
   RefineCritDamage: 1
   refineDamage: 1
-  SynergyA: 0
-  SynergyB: 0
   name: Giant F-ing MAGIC sword
   description: That last sword got nothing on this one xD.
   attackspeed: 1.2
   SwordHitBox: {fileID: 3506587859466128946, guid: 64c2f62c6b9dc0648868040798d2641e, type: 3}
+--- !u!114 &-8262159319205844933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3925146854484841079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c204f6ddebb164ab7ba83d20cc3b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SynergyID: 1
 --- !u!1 &6797023722521653507
 GameObject:
   m_ObjectHideFlags: 0

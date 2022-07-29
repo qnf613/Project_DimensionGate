@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6417565153948901774}
   - component: {fileID: 5856326893698505444}
   - component: {fileID: 4356027326256537879}
+  - component: {fileID: 3878407088117807560}
   m_Layer: 0
   m_Name: Gatling Gun
   m_TagString: Weapon
@@ -129,6 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7431db8213743a540a62b8584a9ca72c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 0
+  SynergyB: 0
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
@@ -147,8 +150,6 @@ MonoBehaviour:
   RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1
-  SynergyA: 0
-  SynergyB: 0
   name: Gatling Gun
   description: Extreme rapid-fire in a cone shape!
   range: 80
@@ -186,3 +187,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
+--- !u!114 &3878407088117807560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3526098959412851047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c204f6ddebb164ab7ba83d20cc3b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SynergyID: 0

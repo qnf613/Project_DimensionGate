@@ -48,7 +48,13 @@ public class FusionSystem : MonoBehaviour
                 {
                     if (equippedList[i].gameObject.GetComponent<Items>().SynergyA != 0)
                     {
-                        Debug.Log("Synergy Number A Matched!");
+                        foreach (GameObject synergyItem in synergyList)
+                        {
+                            if (equippedList[i].gameObject.GetComponent<Items>().SynergyA == synergyItem.GetComponent<Synergy>().SynergyID)
+                            {
+                                Debug.Log("Add Syngergy item - " + synergyItem.name);
+                            }
+                        }
                     }
                     
                 }
@@ -57,7 +63,13 @@ public class FusionSystem : MonoBehaviour
                 {
                     if (equippedList[i].gameObject.GetComponent<Items>().SynergyB != 0)
                     {
-                        Debug.Log("Synergy Number B Matched!");
+                        foreach (GameObject synergyItem in synergyList)
+                        {
+                            if (equippedList[i].gameObject.GetComponent<Items>().SynergyB == synergyItem.GetComponent<Synergy>().SynergyID)
+                            {
+                                Debug.Log("Add Syngergy item - " + synergyItem.name);
+                            }
+                        }
                     }
                 }
             }

@@ -30,6 +30,7 @@ public class RewardButton : MonoBehaviour
             //if item is exist already, get again to upgrade that item
             ru.PickReward(assignedItem); // PickRewrd() will take care of above description
             iu.GetAllWeapons();
+            iu.GetAllArtifacts();
         }
 
         else if(!GameObject.Find(teampNewItemName) || !GameObject.Find(teampNewItemName + "(Clone)"))
@@ -63,7 +64,7 @@ public class RewardButton : MonoBehaviour
                     else
                     {
                         ru.PickReward(assignedItem);
-                        iu.GetAllWeapons();
+                        iu.GetAllArtifacts();
                     }
                 }
             }
