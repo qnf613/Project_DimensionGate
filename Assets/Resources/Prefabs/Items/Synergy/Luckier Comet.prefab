@@ -288,6 +288,7 @@ GameObject:
   - component: {fileID: -3756685616695621105}
   - component: {fileID: -96759373043939845}
   - component: {fileID: 3186748903208872613}
+  - component: {fileID: -8897310373127914573}
   m_Layer: 0
   m_Name: Luckier Comet
   m_TagString: Weapon
@@ -354,6 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4b6c17603483a4c92f986ead237b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 0
+  SynergyB: 0
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 10
@@ -372,14 +375,25 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 0
-  SynergyA: 0
-  SynergyB: 0
   name: Luckier Comet
   description: Lucky this comet decided to orbit around you
   rotationspeed: 100
   secondComet: {fileID: 4987815983138484007}
   thirdComet: {fileID: 5415926426146170160}
   forthComet: {fileID: 8730856902390463011}
+--- !u!114 &-8897310373127914573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8139579069443953452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c204f6ddebb164ab7ba83d20cc3b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SynergyID: 2
 --- !u!1 &8139579069908885081
 GameObject:
   m_ObjectHideFlags: 0

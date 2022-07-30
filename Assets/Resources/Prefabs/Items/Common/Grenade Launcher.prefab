@@ -129,12 +129,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2103a7e011dc93e48bd9dd4821551fff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 2
+  SynergyB: 0
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
   wDescription: 
   descrptionTest: 
   damage: 20
+  wAtkspeed: 0
   enhancement: 0
   we: 0
   finalDamageNumber: 0
@@ -146,8 +149,6 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 1
   refineDamage: 1
-  SynergyA: 0
-  SynergyB: 0
   name: Rocket
   description: Fire an exploding grenade!
   rage: 20

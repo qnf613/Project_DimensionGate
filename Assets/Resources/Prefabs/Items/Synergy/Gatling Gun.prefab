@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SynergyA: 0
-  SynergyB: 0
+  SynergyB: 20
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0

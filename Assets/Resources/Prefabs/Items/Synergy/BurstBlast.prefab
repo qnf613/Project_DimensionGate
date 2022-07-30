@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2bc4eaa73e3114d8624afc89bc3c96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SynergyA: 0
-  SynergyB: 0
+  SynergyA: 100
+  SynergyB: 200
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 10
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c204f6ddebb164ab7ba83d20cc3b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SynergyID: 0
+  SynergyID: 2
 --- !u!1 &6895296061689044197
 GameObject:
   m_ObjectHideFlags: 0
