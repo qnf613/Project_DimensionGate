@@ -43,6 +43,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabb5cc0d168b8348afa68190e219c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allItemList: []
+  commonItemList: []
+  rareItemList: []
+  epicItemList: []
+  legendaryItemList: []
   tempList: []
+  tempCommonList: []
+  tempRareList: []
+  tempEpicList: []
+  tempLegendaryList: []
+  equippedList: []
   rewardsList: []
+  equippedItems: {fileID: 0}
+  weaponCount: 0
+  maxWeaponNums: 3
+  artifactCount: 0
+  maxArtifactNums: 5
+  weaponFull: 0
+  artifactFull: 0
+  SwapWeaponUI: {fileID: 0}
+  SwapArtifactUI: {fileID: 0}

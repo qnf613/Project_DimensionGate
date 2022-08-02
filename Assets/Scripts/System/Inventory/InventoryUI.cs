@@ -13,15 +13,10 @@ public class InventoryUI : MonoBehaviour
     public bool isArtifactSlots;
     public bool isBigUI;
     public string RefineLevel;
-    public GameObject fb;
-    public FuseButton fbScript;
     // Start is called before the first frame update
     void Start()
     {
-        if (fb != null) 
-        {
-            fbScript = fb.GetComponent<FuseButton>();
-        }
+        TrackRewardUIGO();
     }
 
     // Update is called once per frame
@@ -43,6 +38,14 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
+    public void TrackRewardUIGO()
+    {
+        if (rUI == null)
+        {
+            rUI = GameObject.Find("RewardPick");
+        }
+    }
+
     public void OpenUI()
     {
         Time.timeScale = 0;
@@ -56,10 +59,12 @@ public class InventoryUI : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         HpBar.SetActive(true);
-        if (!rUI.activeInHierarchy)
+        TrackRewardUIGO();
+        if (rUI.activeInHierarchy == false)
         {
             Time.timeScale = 1;
         }
+        
     }
 
     public void GetAllArtifacts()

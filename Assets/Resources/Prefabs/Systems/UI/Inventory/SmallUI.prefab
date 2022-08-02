@@ -193,13 +193,16 @@ MonoBehaviour:
   - {fileID: 202935817848166611}
   - {fileID: 1730323793891339190}
   - {fileID: 4153873123524403105}
-  teampItemList: []
+  tempItemList: []
   rUI: {fileID: 0}
   HpBar: {fileID: 0}
   isWeaponSlots: 0
   isArtifactSlots: 0
   isBigUI: 0
+  isSlotParts: 1
   RefineLevel: 
+  fb: {fileID: 0}
+  fbScript: {fileID: 0}
 --- !u!1001 &4278705617718015131
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -338,6 +341,10 @@ PrefabInstance:
     - target: {fileID: 3037079794530553091, guid: ff9afbbdb4ae2624e9312826a9c63a17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307229113576975393, guid: ff9afbbdb4ae2624e9312826a9c63a17, type: 3}
+      propertyPath: isSlotParts
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3308247441419138014, guid: ff9afbbdb4ae2624e9312826a9c63a17, type: 3}
       propertyPath: m_AnchorMax.y

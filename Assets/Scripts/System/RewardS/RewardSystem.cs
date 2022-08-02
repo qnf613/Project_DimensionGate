@@ -18,7 +18,9 @@ public class RewardSystem : MonoBehaviour
     public List<GameObject> rewardsList;
     public GameObject equippedItems;
     public int weaponCount = 0;
-    private int artifactCount = 0;
+    public int maxWeaponNums = 0;
+    public int artifactCount = 0;
+    public int maxArtifactNums = 0;
     public bool weaponFull = false;
     public bool artifactFull = false;
     public GameObject SwapWeaponUI;
@@ -155,7 +157,7 @@ public class RewardSystem : MonoBehaviour
                 if (items.tag == "Weapon")
                 {
                     weaponCount++;
-                    if (weaponCount >= 3)
+                    if (weaponCount >= maxWeaponNums)
                     {
                         weaponFull = true;
                     }
@@ -167,7 +169,7 @@ public class RewardSystem : MonoBehaviour
                 else if (items.tag == "Artifact")
                 {
                     artifactCount++;
-                    if (artifactCount >= 5)
+                    if (artifactCount >= maxArtifactNums)
                     {
                         artifactFull = true;
                     }

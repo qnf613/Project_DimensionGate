@@ -7,11 +7,11 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
     public bool itemEquiped;
     public GameObject DetailUI;
+    public bool isPartOfBigUI;
     // Start is called before the first frame update
     void Start()
     {
         itemEquiped = false;
-       
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (itemEquiped)
+        if (itemEquiped && isPartOfBigUI)
         {
             DetailUI.SetActive(true);
             DetailUI.transform.parent.transform.parent.GetComponent<RectTransform>().SetAsLastSibling();
@@ -31,7 +31,10 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        DetailUI.SetActive(false);
+        if (itemEquiped && isPartOfBigUI)
+        {
+            DetailUI.SetActive(false);
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)

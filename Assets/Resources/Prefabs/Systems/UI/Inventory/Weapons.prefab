@@ -120,11 +120,15 @@ MonoBehaviour:
   - {fileID: 7981711566046463386}
   - {fileID: 2932987687138442865}
   - {fileID: 6836263801606867120}
-  teampItemList: []
+  tempItemList: []
   rUI: {fileID: 0}
+  HpBar: {fileID: 0}
   isWeaponSlots: 1
   isArtifactSlots: 0
+  isBigUI: 0
   RefineLevel: 
+  fb: {fileID: 0}
+  fbScript: {fileID: 0}
 --- !u!1001 &553508469259336779
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139,6 +143,10 @@ PrefabInstance:
     - target: {fileID: 2213743059940774092, guid: 349a54017d0292643aad5fa4e91797f6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210351141153496146, guid: 349a54017d0292643aad5fa4e91797f6, type: 3}
+      propertyPath: isPartOfBigUI
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5789537807060042237, guid: 349a54017d0292643aad5fa4e91797f6, type: 3}
       propertyPath: m_SizeDelta.x
@@ -283,6 +291,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -64
       objectReference: {fileID: 0}
+    - target: {fileID: 3210351141153496146, guid: 349a54017d0292643aad5fa4e91797f6, type: 3}
+      propertyPath: isPartOfBigUI
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5789537807060042237, guid: 349a54017d0292643aad5fa4e91797f6, type: 3}
       propertyPath: m_SizeDelta.x
       value: 150
@@ -417,6 +429,10 @@ PrefabInstance:
     - target: {fileID: 2213743059940774092, guid: 349a54017d0292643aad5fa4e91797f6, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -64
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210351141153496146, guid: 349a54017d0292643aad5fa4e91797f6, type: 3}
+      propertyPath: isPartOfBigUI
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5789537807060042237, guid: 349a54017d0292643aad5fa4e91797f6, type: 3}
       propertyPath: m_SizeDelta.x

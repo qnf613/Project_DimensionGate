@@ -1,30 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &370977987365655789
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1312681053792010898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0fc961ed9a48f342bba62055e4bc632, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Slots:
-  - {fileID: 2131627576324315851}
-  - {fileID: 0}
-  - {fileID: 0}
-  tempItemList: []
-  rUI: {fileID: 0}
-  HpBar: {fileID: 0}
-  isWeaponSlots: 1
-  isArtifactSlots: 0
-  isBigUI: 0
-  RefineLevel: 
-  fb: {fileID: 0}
-  fbScript: {fileID: 0}
 --- !u!1 &5169403576406371039
 GameObject:
   m_ObjectHideFlags: 0
@@ -70,14 +45,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5089069501291851286}
     m_Modifications:
-    - target: {fileID: 592241637773190535, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 592241637773190535, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4810602554490344642, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -108,11 +75,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4810602554490344642, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 400
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 4810602554490344642, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 650
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4810602554490344642, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -144,7 +111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4810602554490344642, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 725
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4810602554490344642, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -162,10 +129,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5046313552535078668, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: -550
-      objectReference: {fileID: 0}
     - target: {fileID: 5782655777382073519, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
       propertyPath: m_Name
       value: FuseUI
@@ -173,22 +136,6 @@ PrefabInstance:
     - target: {fileID: 5782655777382073519, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768793709405403091, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768793709405403091, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768793709405403091, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 190
-      objectReference: {fileID: 0}
-    - target: {fileID: 6768793709405403091, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4745e394f3c39bd478fe31996ed4529d, type: 3}
@@ -239,7 +186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1522172012904413283, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
       propertyPath: isWeaponSlots
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1623624167027705669, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -443,23 +390,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164980803111756248, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
       propertyPath: m_PresetInfoIsWorld
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
 --- !u!224 &5524046763343316602 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6047399383099393122, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
-  m_PrefabInstance: {fileID: 2253478706590237208}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1312681053792010898 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 968945202295160970, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
-  m_PrefabInstance: {fileID: 2253478706590237208}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2131627576324315851 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 202935817848166611, guid: 8b4ea10a990c82e4185d9f5f7cdf644c, type: 3}
   m_PrefabInstance: {fileID: 2253478706590237208}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8305547720114830935

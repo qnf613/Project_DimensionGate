@@ -8,11 +8,13 @@ public class FusionSystem : MonoBehaviour
     //[SerializeField] private List<GameObject> tempList;
     [SerializeField] private List<GameObject> equippedList;
     [SerializeField] private List<GameObject> synergyList;
-    public GameObject equippedItems;
+    public GameObject inventoryGO;
+    public List<GameObject> possibleSynergies;
+
     // Start is called before the first frame update
     void Start()
     {
-        equippedItems = GameObject.Find("Inventory");
+        inventoryGO = GameObject.Find("Inventory");
         synergyList = Resources.LoadAll<GameObject>("Prefabs/Items/Synergy").ToList();
     }
 
@@ -27,7 +29,7 @@ public class FusionSystem : MonoBehaviour
     public void CheckEquiped()
     {
         equippedList.Clear();
-        foreach (Transform TypeOfItems in equippedItems.transform)
+        foreach (Transform TypeOfItems in inventoryGO.transform)
         {
             foreach (Transform items in TypeOfItems.transform)
             {
@@ -53,10 +55,27 @@ public class FusionSystem : MonoBehaviour
                             if (equippedList[i].gameObject.GetComponent<Items>().SynergyA == synergyItem.GetComponent<Synergy>().SynergyID)
                             {
                                 Debug.Log("Add Syngergy item - " + synergyItem.name);
+                                possibleSynergies.Add(synergyItem);
                             }
                         }
                     }
                     
+                }
+
+                else if (equippedList[i].gameObject.GetComponent<Items>().SynergyA == equippedList[j].gameObject.GetComponent<Items>().SynergyB)
+                {
+                    if (equippedList[i].gameObject.GetComponent<Items>().SynergyA != 0)
+                    {
+                        foreach (GameObject synergyItem in synergyList)
+                        {
+                            if (equippedList[i].gameObject.GetComponent<Items>().SynergyA == synergyItem.GetComponent<Synergy>().SynergyID)
+                            {
+                                Debug.Log("Add Syngergy item - " + synergyItem.name);
+                                possibleSynergies.Add(synergyItem);
+                            }
+                        }
+                    }
+
                 }
 
                 else if (equippedList[i].gameObject.GetComponent<Items>().SynergyB == equippedList[j].gameObject.GetComponent<Items>().SynergyB)
@@ -68,6 +87,22 @@ public class FusionSystem : MonoBehaviour
                             if (equippedList[i].gameObject.GetComponent<Items>().SynergyB == synergyItem.GetComponent<Synergy>().SynergyID)
                             {
                                 Debug.Log("Add Syngergy item - " + synergyItem.name);
+                                possibleSynergies.Add(synergyItem);
+                            }
+                        }
+                    }
+                }
+
+                else if (equippedList[i].gameObject.GetComponent<Items>().SynergyB == equippedList[j].gameObject.GetComponent<Items>().SynergyA)
+                {
+                    if (equippedList[i].gameObject.GetComponent<Items>().SynergyB != 0)
+                    {
+                        foreach (GameObject synergyItem in synergyList)
+                        {
+                            if (equippedList[i].gameObject.GetComponent<Items>().SynergyB == synergyItem.GetComponent<Synergy>().SynergyID)
+                            {
+                                Debug.Log("Add Syngergy item - " + synergyItem.name);
+                                possibleSynergies.Add(synergyItem);
                             }
                         }
                     }
