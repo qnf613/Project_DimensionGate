@@ -14,7 +14,6 @@ public class RewardUI : MonoBehaviour
     public List<GameObject> rewards;
     [SerializeField] private GameObject weaponInventory;
     [SerializeField] private GameObject artifactInventory;
-    List<GameObject> gs = new List<GameObject>();
 
     public TextMeshProUGUI rewardMessage;
 

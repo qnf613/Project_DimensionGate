@@ -154,6 +154,7 @@ public class RewardSystem : MonoBehaviour
         {
             foreach (Transform items in TypeOfItems.transform)
             {
+                //all synergy items are stored in (unlimited) syngergy inventory, so they are not included in these counting process
                 if (items.tag == "Weapon")
                 {
                     weaponCount++;

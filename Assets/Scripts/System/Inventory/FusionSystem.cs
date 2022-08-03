@@ -21,17 +21,15 @@ public class FusionSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //tempList.Clear();
-        //tempList = new List<GameObject>(equippedList);
     }
 
 
     public void CheckEquiped()
     {
         equippedList.Clear();
-        foreach (Transform TypeOfItems in inventoryGO.transform)
+        foreach (Transform AllItems in inventoryGO.transform)
         {
-            foreach (Transform items in TypeOfItems.transform)
+            foreach (Transform items in AllItems.transform)
             {
                 items.name = items.name.Replace("(Clone)", "");
                 equippedList.Add(items.gameObject);

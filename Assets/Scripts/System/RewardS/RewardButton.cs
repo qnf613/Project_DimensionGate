@@ -49,6 +49,7 @@ public class RewardButton : MonoBehaviour
                     }
                     else
                     {
+                        checking = false;
                         ru.PickReward(assignedItem);
                         iu.GetAllWeapons();
                     }
@@ -63,6 +64,7 @@ public class RewardButton : MonoBehaviour
                     }
                     else
                     {
+                        checking = false;
                         ru.PickReward(assignedItem);
                         iu.GetAllArtifacts();
                     }

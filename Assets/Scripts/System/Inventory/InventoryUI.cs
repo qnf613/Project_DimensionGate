@@ -141,6 +141,13 @@ public class InventoryUI : MonoBehaviour
         }
 
     }
+
+    public void GetAllSynergies()
+    {
+        //TODO: same thing as getalliweapons/artifacts
+    }
+
+
     public string GetAllWeaponEnhancementLevels(Weapon wep) // This takes in the Refine level from the weapon and sets it translates to string so we can display item level
     {
         if (wep.enhancement == 0)
