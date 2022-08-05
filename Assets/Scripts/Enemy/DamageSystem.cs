@@ -32,12 +32,13 @@ public class DamageSystem : MonoBehaviour
 
     bool slowed = false;
 
+    bool burning = false;
+    float burntickSpeed = 1, lastTick;
+    public float burnstr;
+
     float originalspeed;
     BossUIManager BossManager;
     public bool isBoss;
-
-
-
     
     private void Awake()
     {
@@ -51,18 +52,10 @@ public class DamageSystem : MonoBehaviour
 
     void Start()
     {
-        
-        //if (!isBoss)
-        //{
-
-        //}
 
         currentHealth = newMaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
-        
-
-
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -79,25 +72,48 @@ public class DamageSystem : MonoBehaviour
         }
     }
 
-    public virtual void ApplyStatusEffect(float status, float slowStrength, float duration)
+    public virtual void ApplyStatusEffect(float status, float Strength, float duration)
     {
-        if (slowStrength >80)
+        if (Strength >80)
         {
-            slowStrength = 80;
+            Strength = 80;
         }
         if (status == 1 && slowed == false)
         {
             if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null || this.gameObject.GetComponentInChildren<Pathfinding.AIPath>() != null)
             {
                 slowed = true;
-                slowStrength = 1 - slowStrength / 100;
-                this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= slowStrength;
+                Strength = 1 - Strength / 100;
+                this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= Strength;
                 //this.gameObject.GetComponent<Pathfinding.AIPath>().speed *= slowStrength;
 
                 Invoke("RemoveStatusEffectSlow", duration);
             }
-        }   
+        }
+        if (status == 2 && burning == false)
+        {
+            burnstr = Strength;
+            Invoke("RemoveStatusEffectBurn", duration);
+            burning = true;
+        }
     }
+    private void Update()
+    {
+        if (burning == true)
+        {
+            DealTickDamage(burnstr);
+        }
+       
+    }
+    private void DealTickDamage(float str)
+    {
+        if (Time.time > burntickSpeed/3 + lastTick)
+        {
+            TakeDamage(str, false);
+            lastTick = Time.time;
+        }
+    }
+    private void RemoveStatusEffectBurn() { burning = false; }
     private void RemoveStatusEffectSlow()
     {
        
