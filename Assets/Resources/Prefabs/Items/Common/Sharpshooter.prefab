@@ -46,10 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 229610132416e4e49ad8f0d77e15d280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 0
+  SynergyB: 0
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
+  wDescription: 
+  descrptionTest: 
   damage: 30
+  wAtkspeed: 0
   enhancement: 0
   we: 0
   finalDamageNumber: 0
@@ -120,7 +125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8156795607864619446}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16823733, y: -0.27657104, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9212890712930210220}
