@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8457160680624895998}
   - component: {fileID: -6109132478005664435}
   m_Layer: 3
-  m_Name: Venom Flask
+  m_Name: Poison Flask
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,12 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 844c2031ab6333841b0caef94ddc88b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 0
+  SynergyB: 3
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
   wDescription: 
   descrptionTest: 
   damage: 2
+  wAtkspeed: 0
   enhancement: 0
   we: 0
   finalDamageNumber: 0
@@ -63,10 +66,7 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1
-  SynergyA: 0
-  SynergyB: 0
-  dotDamage: 2
-  name: Venom Flask
+  name: Poison Flask
   description: Throw a flask which leaves a pool of poison on the ground.
   rage: 20
   attackspeed: 1.5

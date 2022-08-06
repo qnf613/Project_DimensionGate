@@ -326,7 +326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4b6c17603483a4c92f986ead237b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SynergyA: 0
+  SynergyA: 2
   SynergyB: 0
   CritMod: 0
   CritDamageMod: 2

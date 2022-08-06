@@ -5,7 +5,7 @@ using UnityEngine;
 public class PoisonFlask : Weapon
 {
     
-    [SerializeField] protected string name = "Venom Flask";
+    [SerializeField] protected string name = "Poison Flask";
     [SerializeField] protected string description = "Throw a flask which leaves a pool of poison on the ground.";
     [SerializeField] protected int rage = 20;
     [SerializeField] protected float attackspeed = .7f;

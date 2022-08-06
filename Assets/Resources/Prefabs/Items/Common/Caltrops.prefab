@@ -46,10 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e98602d3b62030f4989c5e7165d5ec15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SynergyA: 2
+  SynergyB: 3
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 10
+  wDescription: 
+  descrptionTest: 
   damage: 4
+  wAtkspeed: 0
   enhancement: 0
   we: 0
   finalDamageNumber: 0
