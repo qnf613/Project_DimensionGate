@@ -6,7 +6,7 @@ using UnityEngine;
 public class Refine : MonoBehaviour
 {
     public int RefineLevel;
-    private float RefineDamageMultiplier = 1.5f;
+    private float RefineDamageMultiplier;
     private float RefineCritChanceMultiplier = 5f;
     private float RefineCritDamageMultiplier = .1f;
     public float finalDamage;
@@ -30,6 +30,7 @@ public class Refine : MonoBehaviour
     }
     private void UpgradeDamageBasedOnRefine(float damage) 
     {
+        RefineDamageMultiplier = damage * .2f;
         this.gameObject.GetComponent<Weapon>().damage = ChangeDamageBasedOnRefine(damage);
     }
 
@@ -80,7 +81,7 @@ public class Refine : MonoBehaviour
         }
         else if (RefineLevel > 0)
         {
-            finalDamage = dmg + (RefineLevel * RefineDamageMultiplier);
+            finalDamage = dmg + RefineDamageMultiplier;
         }
         return finalDamage;
     }    

@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
-  rocketPrefab: {fileID: 3244463395250619524}
+  projectilePrefab: {fileID: 3244463395250619524}
 --- !u!70 &8323599714477504019
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

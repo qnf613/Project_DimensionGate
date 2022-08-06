@@ -6,7 +6,7 @@ public class MagicArrow : Weapon
 {
     [SerializeField] private string name = "Magic Arrow";
     [SerializeField] private string description = "Shoot an arrow which pierces through enemies";
-    [SerializeField] private int rage = 20;
+    [SerializeField] private int range = 20;
     [SerializeField] private float attackspeed = .7f;
     
     [SerializeField] private int pierceCount;
@@ -19,7 +19,7 @@ public class MagicArrow : Weapon
         // Overriding the basic stats and info about the weapon here
         this.wName = name;
         this.wDescription = description;
-        this.wRange = rage;
+        this.wRange = range;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
     }
