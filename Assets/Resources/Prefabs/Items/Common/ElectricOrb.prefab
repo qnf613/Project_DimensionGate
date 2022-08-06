@@ -69,7 +69,7 @@ MonoBehaviour:
   name: Electric Orb
   description: Shock and Awe your enemies!
   range: 20
-  attackspeed: 1
+  attackspeed: 1.5
   pierceCount: 0
   maxPierceCount: 1
 --- !u!114 &5461437135918674094
