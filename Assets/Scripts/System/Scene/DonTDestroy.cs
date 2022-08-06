@@ -85,7 +85,7 @@ public class DonTDestroy : MonoBehaviour
             gameObject.transform.position = GameObject.FindGameObjectWithTag("Player").transform.position;
         }
 
-        if (cc.sc == stageCleared.over)
+        if (cc.sc == stageCleared.over || SceneManager.GetActiveScene().name == "Ending")
         {
             Destroy(this);
         }
