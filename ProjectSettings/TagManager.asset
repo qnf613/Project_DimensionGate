@@ -10,6 +10,7 @@ TagManager:
   - Weapon
   - Artifact
   - Slot
+  - Synergy
   layers:
   - Default
   - TransparentFX

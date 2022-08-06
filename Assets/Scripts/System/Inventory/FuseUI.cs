@@ -15,7 +15,7 @@ public class FuseUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        synergyInventory = GameObject.Find("Synergys");
+        synergyInventory = GameObject.Find("Synergies");
         fs = fs.GetComponent<FusionSystem>();
         fb = fb.GetComponent<FuseButton>();
         for (int i = 0; i < 3; i++)
@@ -66,11 +66,11 @@ public class FuseUI : MonoBehaviour
         texts[0].text = SItems[currentSyItemListOrderNum].GetComponent<Synergy>().ingredient1;
         sprites[0].sprite = SItems[currentSyItemListOrderNum].transform.Find("Ing1Icon").GetComponent<SpriteRenderer>().sprite;
         //ingredient 2's name & icon
-        texts[0].text = SItems[currentSyItemListOrderNum].GetComponent<Synergy>().ingredient2;
-        sprites[0].sprite = SItems[currentSyItemListOrderNum].transform.Find("Ing2Icon").GetComponent<SpriteRenderer>().sprite;
+        texts[1].text = SItems[currentSyItemListOrderNum].GetComponent<Synergy>().ingredient2;
+        sprites[1].sprite = SItems[currentSyItemListOrderNum].transform.Find("Ing2Icon").GetComponent<SpriteRenderer>().sprite;
         //SygergyItem's name & icon
-        texts[0].text = fb.assignedItem.name;
-        sprites[0].sprite = SItems[currentSyItemListOrderNum].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
+        texts[2].text = fb.assignedItem.name;
+        sprites[2].sprite = SItems[currentSyItemListOrderNum].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
     }
 
     public void ResetRewardList()
