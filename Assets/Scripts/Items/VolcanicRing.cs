@@ -7,6 +7,7 @@ public class VolcanicRing : Weapon
     public float burnDamage;
     public float burnDuration;
 
+
     private void Update()
     {
         base.Update();

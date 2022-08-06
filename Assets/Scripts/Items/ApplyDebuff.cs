@@ -6,12 +6,12 @@ public class ApplyDebuff : MonoBehaviour
 {
     public bool slow;
     public bool burn;
-    public float Strenght;
+    public float Strength;
     public float Duration;
      
-    public void SetDebuffStrenghtDuration(float _Strenght, float _duration, float _debuffType) 
+    public void SetDebuffStrenghtDuration(float _Strength, float _duration, float _debuffType) 
     {
-        Strenght = _Strenght;
+        Strength = _Strength;
         Duration = _duration;
         switch (_debuffType)
         {
@@ -36,7 +36,7 @@ public class ApplyDebuff : MonoBehaviour
             if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
             else if (collision.gameObject.GetComponent<DamageSystem>() != null)
             {
-                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(1, Strenght, Duration);
+                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(1, Strength, Duration);
 
             }
         }
@@ -45,7 +45,7 @@ public class ApplyDebuff : MonoBehaviour
             if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
             else if (collision.gameObject.GetComponent<DamageSystem>() != null)
             {
-                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(2, Strenght, Duration);
+                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(2, Strength, Duration);
 
             }
         }
