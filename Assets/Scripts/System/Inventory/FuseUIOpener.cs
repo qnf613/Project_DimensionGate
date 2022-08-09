@@ -5,6 +5,7 @@ using UnityEngine;
 public class FuseUIOpener : MonoBehaviour
 {
     public GameObject fuseUI;
+    public FuseUI fu;
     public GameObject fsManager;
     public FusionSystem fs;
     // Start is called before the first frame update
@@ -14,6 +15,7 @@ public class FuseUIOpener : MonoBehaviour
         {
             fuseUI = GameObject.Find("FuseUI");
         }
+        fu = fuseUI.GetComponent<FuseUI>();
         fsManager = GameObject.Find("SynergyManager");
         fs = fsManager.GetComponent<FusionSystem>();
     }
@@ -28,5 +30,6 @@ public class FuseUIOpener : MonoBehaviour
     {
         fuseUI.SetActive(true);
         fs.CheckEquiped();
+        fu.GetPossibleItemsList();
     }
 }

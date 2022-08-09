@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 8333979123861340927}
   m_Layer: 0
   m_Name: BurstBlast
-  m_TagString: Weapon
+  m_TagString: Synergy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c204f6ddebb164ab7ba83d20cc3b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SynergyID: 2
+  SynergyID: 0
   ingredient1: 
   ingredient2: 
 --- !u!1 &6833132998689199479

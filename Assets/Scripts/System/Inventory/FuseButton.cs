@@ -40,9 +40,7 @@ public class FuseButton : MonoBehaviour
         //check this items already existing or not
         if (GameObject.Find(teampNewItemName) || GameObject.Find(teampNewItemName + "(Clone)"))
         {
-            //if item is exist already, get again to upgrade that item
-            fu.AddItem(assignedItem); // PickRewrd() will take care of above description
-            bigInvetoryUI.GetAllSynergies();
+            fu.DisplayWarning();
         }
 
         else if (!GameObject.Find(teampNewItemName) || !GameObject.Find(teampNewItemName + "(Clone)"))
@@ -50,30 +48,43 @@ public class FuseButton : MonoBehaviour
             //if this item does not exists in inventory, get this item
             fu.AddItem(assignedItem);
             bigInvetoryUI.GetAllSynergies();
+            CloseFuseUI();
+            bigInvetoryUI.CloseUI();
         }
-
-        CloseFuseUI();
-        bigInvetoryUI.CloseUI();
     }
 
     public void NextOption()
     {
-        fu.currentSyItemListOrderNum += 1;
-        if (fu.currentSyItemListOrderNum >= fu.SItems.Count)
+        if (fu.SItems.Count > 1)
         {
-            fu.currentSyItemListOrderNum = 0;
+            fu.currentSyItemListOrderNum += 1;
+            if (fu.currentSyItemListOrderNum >= fu.SItems.Count)
+            {
+                fu.currentSyItemListOrderNum = 0;
+            }
+            fu.ApplyCurrentOptionToButton();
         }
-        fu.ApplyCurrentOptionToButton();
+        if (fu.warning.activeInHierarchy == true)
+        {
+            fu.warning.SetActive(false);
+        }
     }
 
     public void PreviousOption()
     {
-        fu.currentSyItemListOrderNum -= 1;
-        if (fu.currentSyItemListOrderNum < 0) 
+        if (fu.SItems.Count > 1)
         {
-            fu.currentSyItemListOrderNum = fu.SItems.Count - 1;
+            fu.currentSyItemListOrderNum -= 1;
+            if (fu.currentSyItemListOrderNum < 0)
+            {
+                fu.currentSyItemListOrderNum = fu.SItems.Count - 1;
+            }
+            fu.ApplyCurrentOptionToButton();
         }
-        fu.ApplyCurrentOptionToButton();
+        if (fu.warning.activeInHierarchy == true)
+        {
+            fu.warning.SetActive(false);
+        }
     }
 
     public void CloseFuseUI()

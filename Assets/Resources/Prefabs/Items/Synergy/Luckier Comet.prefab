@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 41d4ea53edccf774f8ffec701fba1933, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 766ff8a5f489e2d4892227993e26b37b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -155,7 +155,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 41d4ea53edccf774f8ffec701fba1933, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ef3a48280b1ddc43b163237df2d62c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -457,7 +457,7 @@ GameObject:
   - component: {fileID: -8897310373127914573}
   m_Layer: 0
   m_Name: Luckier Comet
-  m_TagString: Weapon
+  m_TagString: Synergy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -562,8 +562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SynergyID: 2
-  ingredient1: 
-  ingredient2: 
+  ingredient1: Lucky Comet
+  ingredient2: Caltrops
 --- !u!1 &8139579069908885081
 GameObject:
   m_ObjectHideFlags: 0

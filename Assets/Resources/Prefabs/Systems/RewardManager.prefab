@@ -56,7 +56,7 @@ MonoBehaviour:
   rewardsList: []
   equippedItems: {fileID: 0}
   weaponCount: 0
-  maxWeaponNums: 3
+  maxWeaponNums: 4
   artifactCount: 0
   maxArtifactNums: 5
   weaponFull: 0

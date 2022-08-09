@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 2562998922680641367}
   m_Layer: 0
   m_Name: Grenade MachineGun
-  m_TagString: Weapon
+  m_TagString: Synergy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

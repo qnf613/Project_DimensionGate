@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 5042828492636679139}
   m_Layer: 3
   m_Name: SharpPoison
-  m_TagString: Weapon
+  m_TagString: Synergy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

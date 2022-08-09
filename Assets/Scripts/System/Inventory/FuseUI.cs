@@ -12,11 +12,15 @@ public class FuseUI : MonoBehaviour
     public List<GameObject> SItems;
     public int currentSyItemListOrderNum;
     [SerializeField] private GameObject synergyInventory;
+    public GameObject warning;
     // Start is called before the first frame update
     void Start()
     {
         synergyInventory = GameObject.Find("Synergies");
-        fs = fs.GetComponent<FusionSystem>();
+        if (fs == null)
+        {
+            fs = GameObject.Find("SynergyManager").GetComponent<FusionSystem>();
+        }
         fb = fb.GetComponent<FuseButton>();
         for (int i = 0; i < 3; i++)
         {
@@ -31,29 +35,36 @@ public class FuseUI : MonoBehaviour
         {
             CloseUI();
         }
-
-        //if (this.gameObject.activeInHierarchy)
-        //{
-        //    GetPossibleItemsList();
-        //}
     }
 
     public void AddItem(GameObject item)
     {
         GameObject newItem;
-        newItem = Instantiate(item, synergyInventory.transform);
-        newItem.name = newItem.name.Replace("(Clone)", "");
-        CloseUI();
+        string itemName = item.name.ToString();
+        if (!GameObject.Find(itemName))
+        {
+            if (item.gameObject.tag == "Synergy")
+            {
+                newItem = Instantiate(item, synergyInventory.transform);
+                newItem.name = newItem.name.Replace("(Clone)", "");
+                CloseUI();
+            }
+        }
     }
 
     public void CloseUI()
     {
-        ResetRewardList();
+        ResetSynergyList();
         this.gameObject.SetActive(false);
+        if (Time.timeScale != 1)
+        {
+            Time.timeScale = 1;
+        }
     }
 
     public void GetPossibleItemsList()
     {
+        SItems = new List<GameObject>();
         SItems = fs.possibleSynergies;
         currentSyItemListOrderNum = 0;
         ApplyCurrentOptionToButton();
@@ -73,8 +84,13 @@ public class FuseUI : MonoBehaviour
         sprites[2].sprite = SItems[currentSyItemListOrderNum].transform.Find("IconStore").GetComponent<SpriteRenderer>().sprite;
     }
 
-    public void ResetRewardList()
+    public void ResetSynergyList()
     {
         SItems.Clear();
+    }
+
+    public void DisplayWarning()
+    {
+        warning.SetActive(true);
     }
 }
