@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 public class InventoryUI : MonoBehaviour
 {
-    [SerializeField] private GameObject[] Slots;
+    [SerializeField] private List<GameObject> Slots;
     [SerializeField] private List<GameObject> tempItemList;
     public bool isWeaponSlots;
     public bool isArtifactSlots;
@@ -39,9 +39,9 @@ public class InventoryUI : MonoBehaviour
 
     public void OpenUI()
     {
-        this.gameObject.SetActive(true);
         GetAllArtifacts();
         GetAllWeapons();
+        this.gameObject.SetActive(true);
     }
 
     public void CloseUI()
@@ -54,6 +54,16 @@ public class InventoryUI : MonoBehaviour
     {
         if (isWeaponSlots)
         {
+            if (Slots.Count > tempItemList.Count || tempItemList.Count == 0)
+            {
+                int gap = Slots.Count - tempItemList.Count;
+                for (int j = 0; j < gap; j++)
+                {
+                    Slots[Slots.Count - (1 + j)].transform.Find("ItemImage").GetComponent<Image>().sprite = null;
+                    Slots[Slots.Count - (1 + j)].transform.Find("ItemImage").GetComponent<Image>().color = new Color(255, 255, 255, 0);
+                    Slots[Slots.Count - (1 + j)].GetComponent<MouseOver>().itemEquiped = false;
+                }
+            }
             //reset the List that store 'previous' item list
             tempItemList = new List<GameObject>();
             //find all of items that tagged with "Weapon" and add each of them into this itemList
@@ -85,7 +95,6 @@ public class InventoryUI : MonoBehaviour
                 }
             }
         }
-
     }
 
     public void GetAllArtifacts()

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public bool itemEquiped;
     public GameObject DetailUI;
@@ -31,15 +31,11 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (itemEquiped && isPartOfBigUI)
+        if (isPartOfBigUI)
         {
             DetailUI.SetActive(false);
         }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        
-    }
 
 }

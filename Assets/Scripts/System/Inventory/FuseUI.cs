@@ -13,6 +13,8 @@ public class FuseUI : MonoBehaviour
     public int currentSyItemListOrderNum;
     [SerializeField] private GameObject synergyInventory;
     public GameObject warning;
+
+    public int synergyCount;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,7 @@ public class FuseUI : MonoBehaviour
         if (this.gameObject.activeInHierarchy && Input.GetKeyDown(KeyCode.Tab))
         {
             CloseUI();
+            synergyCount = fs.possibleSynergies.Count;
         }
     }
 
@@ -68,6 +71,7 @@ public class FuseUI : MonoBehaviour
         SItems = fs.possibleSynergies;
         currentSyItemListOrderNum = 0;
         ApplyCurrentOptionToButton();
+        
     }
 
     public void ApplyCurrentOptionToButton()

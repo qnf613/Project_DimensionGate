@@ -34,8 +34,6 @@ public class FuseButton : MonoBehaviour
 
     public void FuseThisOption()
     {
-        //TODO: add synergyweapon
-
         string teampNewItemName = assignedItem.name.ToString();
         //check this items already existing or not
         if (GameObject.Find(teampNewItemName) || GameObject.Find(teampNewItemName + "(Clone)"))
@@ -45,9 +43,8 @@ public class FuseButton : MonoBehaviour
 
         else if (!GameObject.Find(teampNewItemName) || !GameObject.Find(teampNewItemName + "(Clone)"))
         {
-            //if this item does not exists in inventory, get this item
+            removeIngredients();
             fu.AddItem(assignedItem);
-            bigInvetoryUI.GetAllSynergies();
             CloseFuseUI();
             bigInvetoryUI.CloseUI();
         }
@@ -87,8 +84,18 @@ public class FuseButton : MonoBehaviour
         }
     }
 
+    public void removeIngredients()
+    {
+        Destroy(GameObject.Find(assignedItem.GetComponent<Synergy>().ingredient1));
+        Destroy(GameObject.Find(assignedItem.GetComponent<Synergy>().ingredient2));
+    }
+
     public void CloseFuseUI()
     {
+        if (fu.warning.activeInHierarchy == true)
+        {
+            fu.warning.SetActive(false);
+        }
         fuseUI.SetActive(false);
     }
 }

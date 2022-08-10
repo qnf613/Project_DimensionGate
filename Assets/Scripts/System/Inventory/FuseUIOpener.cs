@@ -28,8 +28,11 @@ public class FuseUIOpener : MonoBehaviour
 
     public void OpenFuse()
     {
-        fuseUI.SetActive(true);
         fs.CheckEquiped();
-        fu.GetPossibleItemsList();
+        if (fs.possibleSynergies.Count != 0)
+        {
+            fu.GetPossibleItemsList();
+            fuseUI.SetActive(true);
+        }
     }
 }

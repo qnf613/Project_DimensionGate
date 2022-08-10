@@ -40,6 +40,7 @@ public class FusionSystem : MonoBehaviour
 
     public void CompareSynergyNum()
     {
+        possibleSynergies = new List<GameObject>();
         for (int i = 0; i < equippedList.Count - 1; i++)
         {
             for (int j = i + 1; j < equippedList.Count; j++)
@@ -52,7 +53,6 @@ public class FusionSystem : MonoBehaviour
                         {
                             if (equippedList[i].gameObject.GetComponent<Items>().SynergyA == synergyItem.GetComponent<Synergy>().SynergyID)
                             {
-                                Debug.Log("Add Syngergy item - " + synergyItem.name);
                                 possibleSynergies.Add(synergyItem);
                             }
                         }
@@ -68,7 +68,6 @@ public class FusionSystem : MonoBehaviour
                         {
                             if (equippedList[i].gameObject.GetComponent<Items>().SynergyA == synergyItem.GetComponent<Synergy>().SynergyID)
                             {
-                                Debug.Log("Add Syngergy item - " + synergyItem.name);
                                 possibleSynergies.Add(synergyItem);
                             }
                         }
@@ -84,7 +83,6 @@ public class FusionSystem : MonoBehaviour
                         {
                             if (equippedList[i].gameObject.GetComponent<Items>().SynergyB == synergyItem.GetComponent<Synergy>().SynergyID)
                             {
-                                Debug.Log("Add Syngergy item - " + synergyItem.name);
                                 possibleSynergies.Add(synergyItem);
                             }
                         }
@@ -99,7 +97,6 @@ public class FusionSystem : MonoBehaviour
                         {
                             if (equippedList[i].gameObject.GetComponent<Items>().SynergyB == synergyItem.GetComponent<Synergy>().SynergyID)
                             {
-                                Debug.Log("Add Syngergy item - " + synergyItem.name);
                                 possibleSynergies.Add(synergyItem);
                             }
                         }
