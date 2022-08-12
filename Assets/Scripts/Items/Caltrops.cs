@@ -28,6 +28,8 @@ public class Caltrops : Weapon
 
     }
 
+    public float slowStrength;
+    public float slowDuration;
 
     protected override void Aim()
     {
@@ -54,24 +56,18 @@ public class Caltrops : Weapon
         {
             if (Time.time > wAtkspeed + lastShot)
             {
-                //This weapon shoots a projectile forward
-                //ApplyEnhancement();
-                //CheckIfCrit();
-                //AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
-                //Instantiate(projectile, transform.position, transform.rotation);
-                //projectile.GetComponent<StraightProjectile>();
 
+                CheckIfCrit();
                 base.Shoot();
                 projectileDirection = (this.transform.position - targetPosition);
 
-                //TODO : Change this to match player Rotation and position
-                /*
-                 * Summary
-                 * When you instantiate the projectile, Im going into the projectile script to change the damage it does.
-                 * 
-                 * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
-                 * setting it as the final damage value.
-                */
+                projectile.GetComponent<StraightProjectile>();
+                projectile.GetComponentInChildren<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+
+                foreach (ApplyDebuff item in projectile.GetComponentsInChildren<ApplyDebuff>())
+                {
+                    item.SetDebuffStrenghtDuration(slowStrength, slowDuration, 1);
+                }
 
                 lastShot = Time.time;
 

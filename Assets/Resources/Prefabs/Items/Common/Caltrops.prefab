@@ -73,6 +73,8 @@ MonoBehaviour:
   cooldown: 3
   attacktime: 0
   attacktimelimit: 5
+  slowStrength: 25
+  slowDuration: 2
 --- !u!114 &2000691795
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4358856973429744894}
   - component: {fileID: 2604627832822554100}
   - component: {fileID: -1733827134234197750}
+  - component: {fileID: 3396255507081921115}
   m_Layer: 7
   m_Name: Vampire
   m_TagString: Boss
@@ -202,6 +203,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
   enemyvolume: 0.5
+  burnstr: 0
   isBoss: 1
 --- !u!114 &4358856973429744894
 MonoBehaviour:
@@ -246,6 +248,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &3396255507081921115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106998187670196523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2faeeff10f23034dbcdde5eafe73394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvManager: {fileID: 0}
+  ls: {fileID: 0}
+  exp: 0
+  newExp: 0
+  dmgsys: {fileID: 0}
+  hpChecker: 0
+  sentExp: 0
 --- !u!1 &1106998188327041450
 GameObject:
   m_ObjectHideFlags: 0

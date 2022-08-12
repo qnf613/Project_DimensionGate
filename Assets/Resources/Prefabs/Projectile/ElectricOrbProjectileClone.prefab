@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4904529849132248927}
   - component: {fileID: 4083944198203968105}
   - component: {fileID: 7144278551843791813}
-  - component: {fileID: 5351266316360872980}
   m_Layer: 0
   m_Name: ElectricOrbProjectileClone (3)
   m_TagString: Untagged
@@ -139,7 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 4
+  damage: 3
 --- !u!114 &4083944198203968105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,18 +167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pierceCount: 0
   maxPierceCount: 2
---- !u!114 &5351266316360872980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775538937301260836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806d8996300f9f4183d264768da0ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2346414908237847729
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +182,6 @@ GameObject:
   - component: {fileID: 5098327039071802944}
   - component: {fileID: 5495405584052623571}
   - component: {fileID: 8999486404874090202}
-  - component: {fileID: 6323871659651128185}
   m_Layer: 0
   m_Name: ElectricOrbProjectileClone (2)
   m_TagString: Untagged
@@ -319,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 4
+  damage: 3
 --- !u!114 &5495405584052623571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,18 +334,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pierceCount: 0
   maxPierceCount: 2
---- !u!114 &6323871659651128185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2346414908237847729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806d8996300f9f4183d264768da0ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3794618663156039641
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +349,6 @@ GameObject:
   - component: {fileID: 7170187902103951935}
   - component: {fileID: 3395438410726672604}
   - component: {fileID: 3777548551505893082}
-  - component: {fileID: 2158972954355170958}
   m_Layer: 0
   m_Name: ElectricOrbProjectileClone (1)
   m_TagString: Untagged
@@ -499,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 4
+  damage: 3
 --- !u!114 &3395438410726672604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,18 +501,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pierceCount: 0
   maxPierceCount: 2
---- !u!114 &2158972954355170958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3794618663156039641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806d8996300f9f4183d264768da0ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5972940549356256588
 GameObject:
   m_ObjectHideFlags: 0
@@ -555,7 +516,6 @@ GameObject:
   - component: {fileID: 8866774292597789347}
   - component: {fileID: 5748424795854703497}
   - component: {fileID: 196495954312521987}
-  - component: {fileID: 3219075714974236458}
   m_Layer: 0
   m_Name: ElectricOrbProjectileClone
   m_TagString: Untagged
@@ -679,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 4
+  damage: 3
 --- !u!114 &5748424795854703497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -708,18 +668,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pierceCount: 0
   maxPierceCount: 2
---- !u!114 &3219075714974236458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5972940549356256588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806d8996300f9f4183d264768da0ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8494223122405461609
 GameObject:
   m_ObjectHideFlags: 0
@@ -770,7 +718,6 @@ GameObject:
   - component: {fileID: 3242692505178371757}
   - component: {fileID: 4516824857528927374}
   - component: {fileID: 8527602723835768327}
-  - component: {fileID: 5397545400635006423}
   m_Layer: 0
   m_Name: ElectricOrbProjectileClone (4)
   m_TagString: Untagged
@@ -894,7 +841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 0
-  damage: 4
+  damage: 3
 --- !u!114 &4516824857528927374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -923,15 +870,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pierceCount: 0
   maxPierceCount: 2
---- !u!114 &5397545400635006423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9105997948904303592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806d8996300f9f4183d264768da0ab3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -38,6 +38,7 @@ public class ElectricOrb : Weapon
         //This weapon shoots a projectile forward
         if (Time.time > attackspeed + lastShot)
         {
+            CheckIfCrit();
             base.Shoot();
             projectileDirection = (this.transform.position - targetPosition);
 

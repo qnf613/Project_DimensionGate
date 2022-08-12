@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 2476896746269959956}
   - component: {fileID: 2357975943168499536}
   - component: {fileID: -4753179772348911210}
+  - component: {fileID: 7608504592747897515}
   m_Layer: 7
   m_Name: Troll_blue
   m_TagString: Boss
@@ -239,7 +240,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 10000
   currentHealth: 0
-  healthModifier: 1
   newMaxHealth: 10000
   attackDamage: 30
   atkspeed: 1
@@ -253,6 +253,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: 87252097093c72f4b8d7c09435376372, type: 3}
   enemyvolume: 0.5
+  burnstr: 0
   isBoss: 1
 --- !u!114 &1928566053016116457
 MonoBehaviour:
@@ -396,3 +397,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &7608504592747897515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928566053016116453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2faeeff10f23034dbcdde5eafe73394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvManager: {fileID: 0}
+  ls: {fileID: 0}
+  exp: 0
+  newExp: 0
+  dmgsys: {fileID: 0}
+  hpChecker: 0
+  sentExp: 0

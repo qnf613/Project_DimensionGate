@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1301479673960978755}
   - component: {fileID: 5185106867037226459}
   - component: {fileID: 5436898253974056305}
+  - component: {fileID: 8018630272025108266}
   m_Layer: 0
   m_Name: CaltropsProjectile
   m_TagString: Untagged
@@ -121,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cbf3c19e78ce26429ddc1a4a1c55d0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 12.5
   lifespan: 4
 --- !u!114 &1301479673960978755
 MonoBehaviour:
@@ -167,3 +168,19 @@ CircleCollider2D:
   m_Offset: {x: -0.15, y: 0.2}
   serializedVersion: 2
   m_Radius: 1.6
+--- !u!114 &8018630272025108266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7161195545086195297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daa94d5e12be5e14ca7083c2200a50ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slow: 1
+  burn: 0
+  Strength: 25
+  Duration: 2
