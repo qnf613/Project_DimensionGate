@@ -152,11 +152,11 @@ MonoBehaviour:
   name: Kunai
   description: Shoot out three Kunai to slow enemies down.
   rage: 20
-  attackspeed: 0.09
+  attackspeed: 1.25
   pierceCount: 0
   maxPierceCount: 0
-  slowStrength: 25
-  slowDuration: 2
+  slowStrength: 2
+  slowDuration: 3
 --- !u!114 &8223841319041952171
 MonoBehaviour:
   m_ObjectHideFlags: 0
