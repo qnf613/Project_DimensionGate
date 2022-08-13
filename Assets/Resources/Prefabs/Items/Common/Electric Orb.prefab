@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5461437135918674094}
   - component: {fileID: 5280585650983865788}
   m_Layer: 0
-  m_Name: ElectricOrb
+  m_Name: Electric Orb
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

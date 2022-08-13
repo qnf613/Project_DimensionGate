@@ -150,7 +150,7 @@ MonoBehaviour:
   RefineCritDamage: 0
   refineDamage: 1
   name: Kunai
-  description: Shoot out three Kunai to slow enemies down.
+  description: Shoot out  Kunai to slow enemies down.
   rage: 20
   attackspeed: 1.25
   pierceCount: 0
