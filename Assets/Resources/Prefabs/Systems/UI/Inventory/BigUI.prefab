@@ -717,7 +717,7 @@ GameObject:
   - component: {fileID: 2794543617966079509}
   - component: {fileID: 2337416137452196027}
   m_Layer: 5
-  m_Name: Inventory
+  m_Name: BannerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1353,8 +1353,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0fc961ed9a48f342bba62055e4bc632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slots: []
-  tempItemList: []
+  Slots:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  tempItemList:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   isWeaponSlots: 0
   isArtifactSlots: 0
   isSynergySlots: 0
