@@ -189,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 15000
   currentHealth: 0
+  newMaxHealth: 0
   attackDamage: 20
   atkspeed: 0.5
   lasthit: 0
@@ -199,8 +200,9 @@ MonoBehaviour:
   flashEffect: {fileID: 156288890183845614}
   originalFontSize: 36
   explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
-  enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
+  enemydamageSFX: {fileID: 0}
   enemyvolume: 0.5
+  burnstr: 0
   isBoss: 1
 --- !u!114 &4358856973429744894
 MonoBehaviour:

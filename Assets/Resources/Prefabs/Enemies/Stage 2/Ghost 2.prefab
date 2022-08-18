@@ -241,6 +241,7 @@ MonoBehaviour:
   lvManager: {fileID: 0}
   ls: {fileID: 0}
   exp: 20
+  newExp: 0
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -258,6 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 200
   currentHealth: 0
+  newMaxHealth: 0
   attackDamage: 8
   atkspeed: 0.5
   lasthit: 0
@@ -270,6 +272,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
   enemydamageSFX: {fileID: 0}
   enemyvolume: 0.5
+  burnstr: 0
   isBoss: 0
 --- !u!114 &8397825533961815330
 MonoBehaviour:
@@ -381,7 +384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250df9a322f9ee1418a72b18f89a1f4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ambientSFX: {fileID: 0}
+  ambientSFX: {fileID: 8300000, guid: a67556eb8d8c11844812ae5c6c40f755, type: 3}
   volume: 0.7
 --- !u!70 &5688472870085281435
 CapsuleCollider2D:

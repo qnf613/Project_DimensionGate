@@ -93,7 +93,11 @@ public class Weapon : Items
     {
         
         CheckIfCrit();
-        AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+        if (weaponSound != null)
+        {
+            AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+        }
+
         if (projectile != null)
         {
             Instantiate(projectile, transform.position, transform.rotation);

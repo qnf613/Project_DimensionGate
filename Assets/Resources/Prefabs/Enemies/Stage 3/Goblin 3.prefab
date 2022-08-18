@@ -104,7 +104,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1554989227
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 85327300418ba1e409bd6f5510a9bee4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -258,6 +258,7 @@ MonoBehaviour:
   lvManager: {fileID: 0}
   ls: {fileID: 0}
   exp: 3
+  newExp: 0
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -275,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 50
   currentHealth: 0
+  newMaxHealth: 0
   attackDamage: 10
   atkspeed: 0.5
   lasthit: 0
@@ -285,8 +287,9 @@ MonoBehaviour:
   flashEffect: {fileID: 4148772299426204636}
   originalFontSize: 36
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
-  enemydamageSFX: {fileID: 8300000, guid: 1cd46e92a5d3c6a46b8803ad4f6ae809, type: 3}
+  enemydamageSFX: {fileID: 8300000, guid: fb486ebf8095aca4ba9e6c582837cc35, type: 3}
   enemyvolume: 0.5
+  burnstr: 0
   isBoss: 0
 --- !u!114 &7353090044636916455
 MonoBehaviour:
