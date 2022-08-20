@@ -84,7 +84,7 @@ MonoBehaviour:
   GlobalCritRate: 10
   wDescription: 
   descrptionTest: 
-  damage: 65
+  damage: 35
   wAtkspeed: 0
   enhancement: 0
   we: 0
@@ -94,6 +94,9 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: 01e19e1bc46d6b240b61167fffa5460a, type: 3}
   volume: 0.5
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 1
   RefineCritDamage: 1
   refineDamage: 1

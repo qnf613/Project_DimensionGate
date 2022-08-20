@@ -104,6 +104,7 @@ GameObject:
   - component: {fileID: 7365276147406111856}
   - component: {fileID: 2938451836557137401}
   - component: {fileID: 2363606465992771811}
+  - component: {fileID: 9128350969007219950}
   m_Layer: 0
   m_Name: Grenade (4)
   m_TagString: Untagged
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
-  rocketPrefab: {fileID: 395481161691004768}
+  projectilePrefab: {fileID: 0}
 --- !u!70 &1834934914913910177
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -219,6 +220,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
+--- !u!114 &9128350969007219950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395481161691004768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d76690caa3c3f41af1aabaf95e80bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
+  projectilePrefab: {fileID: 395481161691004768}
 --- !u!1 &2598969281146852939
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,6 +415,7 @@ GameObject:
   - component: {fileID: 7149903783030132236}
   - component: {fileID: 8369485307189326797}
   - component: {fileID: 3509679573828550926}
+  - component: {fileID: 5659353973916791093}
   m_Layer: 0
   m_Name: Grenade (2)
   m_TagString: Untagged
@@ -435,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
-  rocketPrefab: {fileID: 3350502728444629855}
+  projectilePrefab: {fileID: 0}
 --- !u!70 &7532689151388690769
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -515,6 +531,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
+--- !u!114 &5659353973916791093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3350502728444629855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d76690caa3c3f41af1aabaf95e80bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
+  projectilePrefab: {fileID: 3350502728444629855}
 --- !u!1 &3689624310021307911
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +643,7 @@ GameObject:
   - component: {fileID: 1867338393408993183}
   - component: {fileID: 3413845471182208167}
   - component: {fileID: 3077145629880391395}
+  - component: {fileID: 8138434836724328232}
   m_Layer: 0
   m_Name: Grenade (5)
   m_TagString: Untagged
@@ -648,7 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
-  rocketPrefab: {fileID: 4210959976946063959}
+  projectilePrefab: {fileID: 0}
 --- !u!70 &3435020527870939330
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -728,6 +759,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
+--- !u!114 &8138434836724328232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4210959976946063959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d76690caa3c3f41af1aabaf95e80bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
+  projectilePrefab: {fileID: 4210959976946063959}
 --- !u!1 &4744468212030526381
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,6 +871,7 @@ GameObject:
   - component: {fileID: 3794584105334315734}
   - component: {fileID: 5474892789916934909}
   - component: {fileID: 5376337115908520112}
+  - component: {fileID: 4459196295725626804}
   m_Layer: 0
   m_Name: Grenade
   m_TagString: Untagged
@@ -861,7 +907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
-  rocketPrefab: {fileID: 4761080878376109473}
+  projectilePrefab: {fileID: 0}
 --- !u!70 &9074993581094505612
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -941,6 +987,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
+--- !u!114 &4459196295725626804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4761080878376109473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d76690caa3c3f41af1aabaf95e80bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
+  projectilePrefab: {fileID: 4761080878376109473}
 --- !u!1 &5715985685059607240
 GameObject:
   m_ObjectHideFlags: 0
@@ -956,6 +1016,7 @@ GameObject:
   - component: {fileID: 6578741105489017919}
   - component: {fileID: 1122691918925302383}
   - component: {fileID: 2547847875638253940}
+  - component: {fileID: 667370358824013089}
   m_Layer: 0
   m_Name: Grenade (1)
   m_TagString: Untagged
@@ -991,7 +1052,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
-  rocketPrefab: {fileID: 5715985685059607240}
+  projectilePrefab: {fileID: 0}
 --- !u!70 &8121837210408382849
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1071,6 +1132,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
+--- !u!114 &667370358824013089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5715985685059607240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d76690caa3c3f41af1aabaf95e80bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
+  projectilePrefab: {fileID: 5715985685059607240}
 --- !u!1 &7084191192968395955
 GameObject:
   m_ObjectHideFlags: 0
@@ -1086,6 +1161,7 @@ GameObject:
   - component: {fileID: 4169961103755178702}
   - component: {fileID: 1107864883830579881}
   - component: {fileID: 3974385715769728360}
+  - component: {fileID: 8616363838079098644}
   m_Layer: 0
   m_Name: Grenade (3)
   m_TagString: Untagged
@@ -1121,7 +1197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
-  rocketPrefab: {fileID: 7084191192968395955}
+  projectilePrefab: {fileID: 0}
 --- !u!70 &3795795586194523668
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1201,6 +1277,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
+--- !u!114 &8616363838079098644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7084191192968395955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d76690caa3c3f41af1aabaf95e80bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
+  projectilePrefab: {fileID: 7084191192968395955}
 --- !u!1 &8506120541263043079
 GameObject:
   m_ObjectHideFlags: 0

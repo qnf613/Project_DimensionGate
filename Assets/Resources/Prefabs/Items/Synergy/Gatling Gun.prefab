@@ -139,7 +139,7 @@ MonoBehaviour:
   GlobalCritRate: 0
   wDescription: 
   descrptionTest: 
-  damage: 15
+  damage: 10
   wAtkspeed: 0
   enhancement: 0
   we: 0
