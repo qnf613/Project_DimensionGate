@@ -259,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 200
   currentHealth: 0
-  newMaxHealth: 0
+  newMaxHealth: 200
   attackDamage: 8
   atkspeed: 0.5
   lasthit: 0
@@ -272,6 +272,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
   enemydamageSFX: {fileID: 0}
   enemyvolume: 0.5
+  dpsm: {fileID: 0}
   burnstr: 0
   isBoss: 0
 --- !u!114 &8397825533961815330

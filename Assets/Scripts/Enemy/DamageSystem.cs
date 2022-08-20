@@ -43,6 +43,7 @@ public class DamageSystem : MonoBehaviour
     
     private void Awake()
     {
+        currentHealth = newMaxHealth;
         DamageIndicator = transform.GetComponent<TextMeshPro>();
         BossManager = GetComponent<BossUIManager>();
         if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null)
@@ -170,8 +171,7 @@ public class DamageSystem : MonoBehaviour
         if (dpsm != null)
         {
             dpsm.ArrangeCalcs(d, c);
-        }
-        
+        }  
     }
     public void DamagePopUp(float dmg, bool crit)
     {
