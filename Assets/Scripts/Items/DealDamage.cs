@@ -10,7 +10,10 @@ public class DealDamage : MonoBehaviour
     public DPSMeter dps;
     private void Start()
     {
-        dps = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
+        if (dps != null)
+        {
+            dps = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
+        }
     }
     public virtual void SetDamage(float dmg, bool crit, float critDamage) 
     {

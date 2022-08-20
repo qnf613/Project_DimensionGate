@@ -99496,6 +99496,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4681160721170301399, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: rs
+      value: 
+      objectReference: {fileID: 1070540846}
     - target: {fileID: 4769380568195219814, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
       propertyPath: m_text
       value: 
@@ -99804,6 +99808,10 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 7447782883682530220, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: rs
+      value: 
+      objectReference: {fileID: 1070540846}
     - target: {fileID: 8297901012643236319, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
       propertyPath: rs
       value: 

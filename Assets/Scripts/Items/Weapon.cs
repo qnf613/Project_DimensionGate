@@ -103,8 +103,6 @@ public class Weapon : Items
 
         if (Time.time > wAtkspeed + lastShot)
         {
-
-
             CheckIfCrit();
             AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
             if (projectile != null)

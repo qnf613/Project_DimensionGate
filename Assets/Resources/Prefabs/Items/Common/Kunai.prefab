@@ -144,7 +144,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 5297450453345524548, guid: afab2794425fdfb4a99b394a127ac301, type: 3}
   crit: 0
-  weaponSound: {fileID: 8300000, guid: 01e19e1bc46d6b240b61167fffa5460a, type: 3}
+  weaponSound: {fileID: 8300000, guid: 1e471d21cef16994184609a8c389a472, type: 3}
   volume: 0.5
   dpsm: {fileID: 0}
   dps: 0

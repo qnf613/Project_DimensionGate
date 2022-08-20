@@ -861,10 +861,16 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  sprites: []
+  sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   isForWeapon: 1
   newItemToAdd: {fileID: 0}
   tempList: []
+  rs: {fileID: 0}
 --- !u!1 &5134018327038539741
 GameObject:
   m_ObjectHideFlags: 0

@@ -53,7 +53,10 @@ public class DamageSystem : MonoBehaviour
 
     void Start()
     {
-        dpsm = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
+        if (dpsm != null)
+        {
+            dpsm = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
+        }
         currentHealth = newMaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
