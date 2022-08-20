@@ -7,7 +7,7 @@ public class ConstantDamageScript : MonoBehaviour
     [SerializeField] private float attackDelay = .5f;
     [SerializeField] private float nextDamageEvent;
     [SerializeField] private float duration;
-
+    public Weapon originalweapon;// this is for the dps meter
     private float attackDamage;
     private float FinalDamage;
     private GameObject PoisonFlask;
@@ -86,5 +86,9 @@ public class ConstantDamageScript : MonoBehaviour
     {
         FinalDamage *= PoisonFlask.GetComponent<PoisonFlask>().dotDamageScale;
         
+    }
+    public void SetParentWeapon(Weapon wep)
+    {
+        originalweapon = wep;
     }
 }

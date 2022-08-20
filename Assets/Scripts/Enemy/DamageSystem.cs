@@ -29,6 +29,7 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private ParticleSystem explosionParticle;
     [SerializeField] private AudioClip enemydamageSFX;
     [SerializeField] private float enemyvolume = 0.50f;
+    public DPSMeter dpsm;
 
     bool slowed = false;
 
@@ -52,7 +53,7 @@ public class DamageSystem : MonoBehaviour
 
     void Start()
     {
-
+        dpsm = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
         currentHealth = newMaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
@@ -125,7 +126,7 @@ public class DamageSystem : MonoBehaviour
 
     public virtual void TakeDamage(float damage, bool crit)
     {
-
+        DpsMeterData(damage, crit);
         flashEffect.Flash();
         DamagePopUp(damage, crit);
         if (!isBoss)
@@ -160,6 +161,10 @@ public class DamageSystem : MonoBehaviour
             AudioSource.PlayClipAtPoint(enemydamageSFX, transform.position, enemyvolume);
         }
 
+    }
+    public void DpsMeterData(float d, bool c)
+    {
+        dpsm.ArrangeCalcs(d,c);
     }
     public void DamagePopUp(float dmg, bool crit)
     {

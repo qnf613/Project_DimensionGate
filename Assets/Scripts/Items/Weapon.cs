@@ -27,7 +27,9 @@ public class Weapon : Items
     public AudioClip weaponSound;
     public float volume = 0.50f;
 
-
+    public DPSMeter dpsm;
+    public float dps, cr;
+    bool upgrade = false;
 
     public bool RefineCritChance, RefineCritDamage, refineDamage; //these bools will be in the list above to identify which refinement type they will follow
 
@@ -44,13 +46,12 @@ public class Weapon : Items
         we = WeaponEquipped.yes;
         GlobalCritRate = 10;
         //add the refinement types to the list.
-
-
     }
+   
+
     protected void Start()
     {
         cam = Camera.main;
-        
     }
     private void Awake()
     {
@@ -60,10 +61,17 @@ public class Weapon : Items
     // Update is called once per frame
     protected virtual void Update()
     {
-        if (Input.GetKey(KeyCode.U) == true)
+        
+        if (Input.GetKeyDown(KeyCode.U) == true)
         {
-            this.Enhance();
+            if (Input.GetKeyUp(KeyCode.U) == true)
+            {
+                this.Enhance();  
+            }
+            
         }
+        
+
         switch (we)
         {
             case WeaponEquipped.yes:
@@ -76,6 +84,7 @@ public class Weapon : Items
             default:
                 break;
         }
+
     }
     void CheckCamera()
     {
@@ -91,19 +100,25 @@ public class Weapon : Items
     }
     protected virtual void Shoot()
     {
-        
-        CheckIfCrit();
         if (weaponSound != null)
         {
             AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
         }
 
-        if (projectile != null)
+        if (Time.time > wAtkspeed + lastShot)
         {
-            Instantiate(projectile, transform.position, transform.rotation);
-        }  
-        projectile.GetComponent<StraightProjectile>();
-        projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+
+
+            CheckIfCrit();
+            AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+            if (projectile != null)
+            {
+                Instantiate(projectile, transform.position, transform.rotation);
+            }
+            projectile.GetComponent<StraightProjectile>();
+            projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+            lastShot = Time.time;
+        }
     }
 
     public void Enhance()

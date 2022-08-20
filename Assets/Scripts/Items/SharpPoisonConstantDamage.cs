@@ -9,7 +9,7 @@ public class SharpPoisonConstantDamage : MonoBehaviour
     [SerializeField] public float attacktime = 2f;
     [SerializeField] public float attacktimelimit = 5;
     [SerializeField] public float cooldown = 10f;
-    
+    public Weapon originalweapon;// this is for the dps meter
     protected Vector3 projectileDirection;
 
     [SerializeField] private float attackDelay = .5f;
@@ -111,5 +111,9 @@ public class SharpPoisonConstantDamage : MonoBehaviour
 
             venomscript.Spikes.GetComponent<DealDamage>().SetDamage(venomscript.CalcCritDamageForSpikes(), venomscript.crit, venomscript.CritDamageMod);
         }
+    }
+    public void SetParentWeapon(Weapon wep)
+    {
+        originalweapon = wep;
     }
 }

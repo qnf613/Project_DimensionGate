@@ -10,7 +10,7 @@ public class LuckyCometDealDamage : MonoBehaviour
     public LuckyComet LC;
     [SerializeField] private float attackDelay = .5f;
     [SerializeField] private float nextDamageEvent;
-
+    public Weapon originalweapon;// this is for the dps meter
     List<DamageSystem> enemies;
 
     private float timer = 1f;
@@ -123,5 +123,9 @@ public class LuckyCometDealDamage : MonoBehaviour
     void CalcOnHit()
     {
         SetDamage(LC.CalcCritDamage(), LC.crit, LC.CritDamageMod);
-    }    
+    }
+    public void SetParentWeapon(Weapon wep)
+    {
+        originalweapon = wep;
+    }
 }
