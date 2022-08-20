@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6569041458754923964}
   - component: {fileID: 1227778816098027104}
   m_Layer: 0
-  m_Name: Burstshot
+  m_Name: Burst Shot
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

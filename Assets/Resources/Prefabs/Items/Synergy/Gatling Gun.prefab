@@ -205,8 +205,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SynergyID: 5
-  ingredient1: 
-  ingredient2: 
+  ingredient1: Burst Shot
+  ingredient2: Tommy Gun
 --- !u!1 &4446383701056006055
 GameObject:
   m_ObjectHideFlags: 0

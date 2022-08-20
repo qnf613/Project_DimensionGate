@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6795586667315103407}
   - component: {fileID: 8333979123861340927}
   m_Layer: 0
-  m_Name: BurstBlast
+  m_Name: Burst Blast
   m_TagString: Synergy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,8 +202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SynergyID: 4
-  ingredient1: 
-  ingredient2: 
+  ingredient1: Burst Shot
+  ingredient2: Grenade Launcher
 --- !u!1 &6833132998689199479
 GameObject:
   m_ObjectHideFlags: 0

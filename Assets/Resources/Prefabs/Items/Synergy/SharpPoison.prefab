@@ -204,8 +204,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SynergyID: 3
-  ingredient1: 
-  ingredient2: 
+  ingredient1: Poison Flask
+  ingredient2: Caltrops
 --- !u!1 &7600551986463608491
 GameObject:
   m_ObjectHideFlags: 0

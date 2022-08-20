@@ -288,8 +288,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SynergyID: 100
-  ingredient1: 
-  ingredient2: 
+  ingredient1: Burst Blast
+  ingredient2: Gatling Gun
 --- !u!1 &8525843400932386360
 GameObject:
   m_ObjectHideFlags: 0
