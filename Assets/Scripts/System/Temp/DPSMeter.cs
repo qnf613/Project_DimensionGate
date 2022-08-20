@@ -56,7 +56,7 @@ public class DPSMeter : MonoBehaviour
     {
 
         outofcombattimer = 10;
-        currentTime = currentTime - Time.deltaTime;
+        outofcombattimer = outofcombattimer - Time.deltaTime;
         if (outofcombattimer < 0)
         {
             outofcombattimer = 10;

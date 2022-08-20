@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3332713023048179889}
   m_Layer: 0
   m_Name: Kunai
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,8 +144,11 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 5297450453345524548, guid: afab2794425fdfb4a99b394a127ac301, type: 3}
   crit: 0
-  weaponSound: {fileID: 8300000, guid: 4608b9180410410429660787fabfa460, type: 3}
+  weaponSound: {fileID: 8300000, guid: 01e19e1bc46d6b240b61167fffa5460a, type: 3}
   volume: 0.5
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1

@@ -172,8 +172,11 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 4736143673115787737, guid: 0a2d6a4485b0d39428407b16d1169be6, type: 3}
   crit: 0
-  weaponSound: {fileID: 8300000, guid: 2f5e16c343051c942a1e89bc7ecb60e6, type: 3}
+  weaponSound: {fileID: 8300000, guid: 500540fbb2911a943ac91dfbe0d82ab3, type: 3}
   volume: 0.5
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1

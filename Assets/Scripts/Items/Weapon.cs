@@ -63,12 +63,8 @@ public class Weapon : Items
     {
         
         if (Input.GetKeyDown(KeyCode.U) == true)
-        {
-            if (Input.GetKeyUp(KeyCode.U) == true)
-            {
+        {   
                 this.Enhance();  
-            }
-            
         }
         
 
