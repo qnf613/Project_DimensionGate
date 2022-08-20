@@ -6,15 +6,6 @@ public class DealDamage : MonoBehaviour
 {
     public bool CRIT;
     public float damage;
-    public Weapon originalweapon;// this is for the dps meter
-    public DPSMeter dps;
-    private void Start()
-    {
-        if (dps != null)
-        {
-            dps = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
-        }
-    }
     public virtual void SetDamage(float dmg, bool crit, float critDamage) 
     {
         CRIT = crit;
