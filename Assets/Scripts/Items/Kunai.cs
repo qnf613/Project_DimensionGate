@@ -12,6 +12,8 @@ public class Kunai : Weapon
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
+    public float slowStrength;
+    public float slowDuration;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +26,7 @@ public class Kunai : Weapon
         we = WeaponEquipped.yes;
     }
 
-    public float slowStrength;
-    public float slowDuration;
+    
 
     protected override void Aim()
     {
@@ -48,6 +49,7 @@ public class Kunai : Weapon
 
             foreach (ApplyDebuff item in projectile.GetComponentsInChildren<ApplyDebuff>())
             {
+                slowStrength = damage / 3;
                 item.SetDebuffStrenghtDuration(slowStrength, slowDuration, 1);
             }
 
