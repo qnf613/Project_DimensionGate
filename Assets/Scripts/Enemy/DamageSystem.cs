@@ -167,7 +167,11 @@ public class DamageSystem : MonoBehaviour
     }
     public void DpsMeterData(float d, bool c)
     {
-        dpsm.ArrangeCalcs(d,c);
+        if (dpsm != null)
+        {
+            dpsm.ArrangeCalcs(d, c);
+        }
+        
     }
     public void DamagePopUp(float dmg, bool crit)
     {

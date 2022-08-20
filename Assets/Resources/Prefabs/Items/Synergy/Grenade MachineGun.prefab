@@ -260,6 +260,9 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: 9dae386966da8c04ba5a63f217caf947, type: 3}
   volume: 0.5
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 1
   RefineCritDamage: 1
   refineDamage: 1
@@ -284,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6c204f6ddebb164ab7ba83d20cc3b22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SynergyID: 0
+  SynergyID: 100
   ingredient1: 
   ingredient2: 
 --- !u!1 &8525843400932386360
