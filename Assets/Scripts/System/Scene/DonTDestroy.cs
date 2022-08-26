@@ -7,6 +7,7 @@ public class DonTDestroy : MonoBehaviour
 {
     [SerializeField] private bool dontDestroyAdded = false;
     [SerializeField] private bool newSceneLoading = false;
+    [SerializeField] private bool pauseUION = false;
     [SerializeField] public static bool inStage;
     [SerializeField] private ClearCondition cc;
     [SerializeField] private GameObject inventory;
@@ -14,6 +15,8 @@ public class DonTDestroy : MonoBehaviour
     [SerializeField] private int levelData;
     [SerializeField] private int currentXPData;
     [SerializeField] private int maxXPData;
+    [SerializeField] GameObject pauseMenu;
+
 
     // Update is called once per frame
     void Update()
@@ -33,7 +36,12 @@ public class DonTDestroy : MonoBehaviour
             {
                 levelSystem = GameObject.Find("LevelManager").GetComponent<LevelSystem>();
             }
-            
+
+            if (pauseMenu == null)
+            {
+                pauseMenu = GameObject.Find("puaseUI");
+            }
+
             inventory.transform.parent = gameObject.transform;
 
             levelData = levelSystem.level;
@@ -71,8 +79,31 @@ public class DonTDestroy : MonoBehaviour
             
                 dontDestroyAdded = false;
             }
-            
-            
+
+            if (pauseMenu == null)
+            {
+                pauseMenu = GameObject.Find("puaseUI");
+            }
+
+            else if (pauseMenu != null)
+            {
+                //if (Input.GetKeyDown(KeyCode.Escape))
+                //{
+                //    if (pauseUION)
+                //    {
+                //        if (Time.timeScale == 0)
+                //        {
+                //            Time.timeScale = 1;
+                //        }
+                //        pauseMenu.SetActive(false);
+                //    }
+                //    if (!pauseUION)
+                //    {
+                //        Time.timeScale = 0;
+                //        pauseMenu.SetActive(true);
+                //    }
+                //}
+            }
         }
 
         if (!inStage && cc.sc == stageCleared.yes)
