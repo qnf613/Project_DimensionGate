@@ -118,7 +118,7 @@ public class DonTDestroy : MonoBehaviour
 
         if (cc.sc == stageCleared.over || SceneManager.GetActiveScene().name == "Ending")
         {
-            Destroy(this);
+            Destroy(GameObject.Find(this.gameObject.name));
         }
     }
 
