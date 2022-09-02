@@ -8,6 +8,8 @@ public class FuseButton : MonoBehaviour
     public FuseUI fu;
     public GameObject assignedItem;
     public InventoryUI bigInvetoryUI;
+    private bool ingre1Ready = false;
+    private bool infre2Ready = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,15 +40,26 @@ public class FuseButton : MonoBehaviour
         //check this items already existing or not
         if (GameObject.Find(teampNewItemName) || GameObject.Find(teampNewItemName + "(Clone)"))
         {
+            fu.warn.text = "Error: You Already Own This Item";
             fu.DisplayWarning();
         }
 
         else if (!GameObject.Find(teampNewItemName) || !GameObject.Find(teampNewItemName + "(Clone)"))
         {
-            removeIngredients();
-            fu.AddItem(assignedItem);
-            CloseFuseUI();
-            bigInvetoryUI.CloseUI();
+            checkRequiredItemLevel();
+            if (ingre1Ready && infre2Ready)
+            {
+                removeIngredients();
+                fu.AddItem(assignedItem);
+                CloseFuseUI();
+                bigInvetoryUI.CloseUI();
+            }
+            else
+            {
+                fu.warn.text = "Error: Some materials' enhancement levels have not reached the max level";
+                fu.DisplayWarning();
+            }
+
         }
     }
 
@@ -61,6 +74,7 @@ public class FuseButton : MonoBehaviour
             }
             fu.ApplyCurrentOptionToButton();
         }
+
         if (fu.warning.activeInHierarchy == true)
         {
             fu.warning.SetActive(false);
@@ -78,6 +92,7 @@ public class FuseButton : MonoBehaviour
             }
             fu.ApplyCurrentOptionToButton();
         }
+
         if (fu.warning.activeInHierarchy == true)
         {
             fu.warning.SetActive(false);
@@ -88,6 +103,20 @@ public class FuseButton : MonoBehaviour
     {
         Destroy(GameObject.Find(assignedItem.GetComponent<Synergy>().ingredient1));
         Destroy(GameObject.Find(assignedItem.GetComponent<Synergy>().ingredient2));
+    }
+
+    public void checkRequiredItemLevel()
+    {
+        ingre1Ready = false;
+        infre2Ready = false;
+        if (GameObject.Find(assignedItem.GetComponent<Synergy>().ingredient1.ToString()).GetComponent<Items>().enhancement == GameObject.Find(assignedItem.GetComponent<Synergy>().ingredient1.ToString()).GetComponent<Items>().maxEnhance)
+        {
+            ingre1Ready = true;
+        }
+        if (GameObject.Find(assignedItem.GetComponent<Synergy>().ingredient2.ToString()).GetComponent<Items>().enhancement == GameObject.Find(assignedItem.GetComponent<Synergy>().ingredient2.ToString()).GetComponent<Items>().maxEnhance)
+        {
+            infre2Ready = true;
+        }
     }
 
     public void CloseFuseUI()

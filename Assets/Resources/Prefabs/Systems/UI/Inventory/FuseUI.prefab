@@ -216,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Error: You Already Own This Item'
+  m_text: 'Error: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 125cb55b44b24c4393181402bc6200e6, type: 2}
@@ -1004,6 +1004,8 @@ MonoBehaviour:
   currentSyItemListOrderNum: 0
   synergyInventory: {fileID: 0}
   warning: {fileID: 3602430846510673208}
+  warn: {fileID: 1668513703751110859}
+  synergyCount: 0
 --- !u!1 &7291767445943242624
 GameObject:
   m_ObjectHideFlags: 0

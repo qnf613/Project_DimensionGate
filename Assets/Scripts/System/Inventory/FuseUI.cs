@@ -13,6 +13,7 @@ public class FuseUI : MonoBehaviour
     public int currentSyItemListOrderNum;
     [SerializeField] private GameObject synergyInventory;
     public GameObject warning;
+    public TextMeshProUGUI warn;
 
     public int synergyCount;
     // Start is called before the first frame update

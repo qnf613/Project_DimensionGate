@@ -15,8 +15,8 @@ public class Weapon : Items
     public float damage;
     public float wAtkspeed;
     protected float wRange;
-    public int enhancement;
-    protected int maxEnhance = 10;
+    //public int enhancement;
+    //protected int maxEnhance = 10;
     public WeaponEquipped we;
     public float finalDamageNumber;
     protected float lastShot = 0f;
@@ -37,7 +37,6 @@ public class Weapon : Items
 
     protected Weapon()
     {
-       
         wName = "";
         wDescription = "";
         wAtkspeed = 0;
@@ -61,13 +60,6 @@ public class Weapon : Items
     // Update is called once per frame
     protected virtual void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.U) == true)
-        {   
-                this.Enhance();  
-        }
-        
-
         switch (we)
         {
             case WeaponEquipped.yes:
@@ -115,7 +107,7 @@ public class Weapon : Items
         }
     }
 
-    public void Enhance()
+    public override void Enhance()
     {
        
         if (enhancement < maxEnhance)

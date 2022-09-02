@@ -46,11 +46,11 @@ public class RewardUI : MonoBehaviour
         string itemName = item.name.ToString();
         if (GameObject.Find(itemName) || GameObject.Find(item.name.ToString() + "(Clone)"))
         {     
-            GameObject.Find(item.name.ToString()).GetComponent<Weapon>().Enhance();
+            GameObject.Find(item.name.ToString()).GetComponent<Items>().Enhance();
         }
         else if(!GameObject.Find(itemName))
         {
-            if(item.gameObject.tag == "Weapon")
+            if (item.gameObject.tag == "Weapon")
             {
                 newItem = Instantiate(item, weaponInventory.transform);
                 newItem.name = newItem.name.Replace("(Clone)", "");
