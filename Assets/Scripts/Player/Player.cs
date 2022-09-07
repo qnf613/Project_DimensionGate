@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] float _Speed = 1;
+    [SerializeField] public float _Speed = 1;
     [SerializeField] Camera _Camera;
 
     PlayerInput _Input;
