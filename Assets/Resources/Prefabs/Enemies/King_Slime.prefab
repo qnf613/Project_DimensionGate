@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 8862356434098122350}
   - component: {fileID: 576879141919106168}
   - component: {fileID: 6440420696227793698}
+  - component: {fileID: 2025472478}
   m_Layer: 7
   m_Name: King_Slime
   m_TagString: Boss
@@ -203,6 +204,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
   enemyvolume: 0.5
+  dpsm: {fileID: 0}
   burnstr: 0
   isBoss: 1
 --- !u!114 &7108316683183888228
@@ -267,6 +269,20 @@ MonoBehaviour:
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
+--- !u!114 &2025472478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874046255734088369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70db92a42e45f2a459a89ed8dca7d9be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slimeGoo: {fileID: 1412421491970781223, guid: e884d178813bc6a409a41b36facf7cd5, type: 3}
+  cooldown: 0.5
 --- !u!1 &5874046256116976176
 GameObject:
   m_ObjectHideFlags: 0
