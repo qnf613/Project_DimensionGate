@@ -66,12 +66,20 @@ public class Weapon : Items
                 CheckCamera();
                 Aim();
                 Shoot();
+               
                 break;
             case WeaponEquipped.no:
                 break;
             default:
                 break;
         }
+
+
+        //Enhance cheat for debug purposes
+            if (Input.GetKeyUp(KeyCode.G) == true)
+            {
+                this.Enhance();
+            }
 
     }
     void CheckCamera()
@@ -116,6 +124,7 @@ public class Weapon : Items
             enhancement++;
             this.gameObject.GetComponent<Refine>().SetRefine(enhancement);
             ApplyEnhancement();
+            specialRefines();
         }
         
     }
@@ -144,4 +153,9 @@ public class Weapon : Items
         }
         return finalDamageNumber;
     }
-}
+    public virtual void specialRefines()
+    { 
+    
+    }
+
+    }

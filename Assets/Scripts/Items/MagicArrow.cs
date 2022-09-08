@@ -12,7 +12,8 @@ public class MagicArrow : Weapon
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
-    
+    bool doubleshot;
+    bool tripleshot;
     
     void Start()
     {
@@ -40,14 +41,13 @@ public class MagicArrow : Weapon
         if (Time.time > attackspeed + lastShot)
         {
             base.Shoot();
-            projectileDirection = (this.transform.position - targetPosition);
             
-            //TODO : Change this to match player Rotation and position
+            projectileDirection = (this.transform.position - targetPosition);
             /*
              * Summary
              * When you instantiate the projectile, Im going into the projectile script to change the damage it does.
              * 
-             * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
+             * To calculate the damage, Im sending the base damage of the weapon over to the refine script, finding the new value and 
              * setting it as the final damage value.
             */
             
@@ -56,6 +56,15 @@ public class MagicArrow : Weapon
 
     }
     
-    
+    public override void specialRefines()
+    {
+        if (this.enhancement == 3 || this.enhancement == 6 || this.enhancement == 9)
+        {
+            //at lvl 3 6 9, you get a 20% atkspeed buff.
+            this.wAtkspeed *=.8f;
+            this.attackspeed *= .8f;
+            lastShot = Time.time;
+        }
+    }
 
 }

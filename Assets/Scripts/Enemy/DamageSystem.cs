@@ -54,7 +54,7 @@ public class DamageSystem : MonoBehaviour
 
     void Start()
     {
-        if (dpsm != null)
+        if (GameObject.Find("DPS Meter").GetComponent<DPSMeter>() != null)
         {
             dpsm = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
         }
