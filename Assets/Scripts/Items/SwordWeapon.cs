@@ -7,7 +7,7 @@ public class SwordWeapon : Weapon
     [SerializeField] private string name = "Giant F-ing Sword";
     [SerializeField] private string description = "What else do you need to know, read the name...";
     [SerializeField] private float attackspeed = 2f;
-    [SerializeField] private GameObject SwordHitBox;
+    [SerializeField] private GameObject SwordUpgradeedHitbox;
     protected Vector3 projectileDirection;
     // Start is called before the first frame update
     void Start()
@@ -39,11 +39,27 @@ public class SwordWeapon : Weapon
 
             //TODO : Change this to match player Rotation and position
             AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
-            Instantiate(SwordHitBox, transform.position + targetPosition.normalized, transform.rotation, this.transform.parent);
-            SwordHitBox.GetComponent<StraightProjectile>();
-            SwordHitBox.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+            Instantiate(projectile, transform.position + targetPosition.normalized, transform.rotation, this.transform.parent);
+            projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
 
             lastShot = Time.time;
+        }
+    }
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//10% atkspeed buff
+            this.wAtkspeed *= .9f;
+            this.attackspeed *= .9f;
+        }
+        if (enhancement == 6)
+        {//20% atkspeed buff
+            this.wAtkspeed *= .8f;
+            this.attackspeed *= .8f;
+        }
+        if (enhancement == 9)
+        {
+            projectile = SwordUpgradeedHitbox;
         }
     }
 }

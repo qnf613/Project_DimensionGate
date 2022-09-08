@@ -71,15 +71,15 @@ public class Kunai : Weapon
     public override void specialRefines()
     {
         if (this.enhancement == 3)
-        {
+        {//dot damage doubled
             bs = 1.5f;
         }
         if (this.enhancement == 6)
-        {
+        {//more projectiles
             this.projectile = UpgradedProjectile; 
         }
         if (this.enhancement == 9)
-        {
+        {//dot duration doubled
             this.bleedDuration *= 2;
         }
     }
