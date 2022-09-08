@@ -131,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 0
   SynergyB: 0
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 10
   CritDamageMod: 2
   GlobalCritRate: 10
@@ -138,7 +140,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 6
   wAtkspeed: 0
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -158,8 +159,9 @@ MonoBehaviour:
   attackspeed: 1.25
   pierceCount: 0
   maxPierceCount: 0
-  slowStrength: 2
-  slowDuration: 3
+  bleedStrength: 0
+  bleedDuration: 0
+  UpgradedProjectile: {fileID: 5297450453345524548, guid: 1fec06715fd8a324f9b24459e301ac41, type: 3}
 --- !u!114 &8223841319041952171
 MonoBehaviour:
   m_ObjectHideFlags: 0

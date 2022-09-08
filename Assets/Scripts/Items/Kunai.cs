@@ -12,9 +12,11 @@ public class Kunai : Weapon
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
-    public float slowStrength;
-    public float slowDuration;
+    public float bleedStrength;
+    public float bleedDuration;
+    private float bs; //bleedstrength modifier
 
+    public GameObject UpgradedProjectile;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +26,16 @@ public class Kunai : Weapon
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
+        bs = 3f;
+        bleedDuration = 3;
     }
 
-    
+    protected override void Update()
+    {
+        base.Update();
+
+        bleedStrength = damage/bs;
+    }
 
     protected override void Aim()
     {
@@ -45,15 +54,33 @@ public class Kunai : Weapon
                 Instantiate(projectile, transform.position, transform.rotation);
             }
             projectile.GetComponent<StraightProjectile>();
-            projectile.GetComponentInChildren<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
-
+           
+            foreach (DealDamage item in projectile.GetComponentsInChildren<DealDamage>())
+            {
+                item.SetDamage(CalcCritDamage(), crit, CritDamageMod);
+            }
             foreach (ApplyDebuff item in projectile.GetComponentsInChildren<ApplyDebuff>())
             {
-                slowStrength = damage / 3;
-                item.SetDebuffStrenghtDuration(slowStrength, slowDuration, 1);
+                
+                item.SetDebuffStrenghtDuration(bleedStrength, bleedDuration, 2);
             }
 
             lastShot = Time.time;
+        }
+    }
+    public override void specialRefines()
+    {
+        if (this.enhancement == 3)
+        {
+            bs = 1.5f;
+        }
+        if (this.enhancement == 6)
+        {
+            this.projectile = UpgradedProjectile; 
+        }
+        if (this.enhancement == 9)
+        {
+            this.bleedDuration *= 2;
         }
     }
 }
