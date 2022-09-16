@@ -11,13 +11,20 @@ public class FireBolt : Weapon
     [SerializeField] private float attackspeed = .7f;
     public float burnDamage;
     public float burnDuration;
+    private float bd;
+
 
     protected Vector3 projectileDirection;
+
+    private void Start()
+    {
+        bd = damage / 5;
+    }
 
     protected override void Update()
     {
         base.Update();
-        burnDamage = damage / 5;
+        burnDamage = bd;
     }
     protected override void Aim()
     {
@@ -46,7 +53,26 @@ public class FireBolt : Weapon
             projectileDirection = (this.transform.position - targetPosition);
             lastShot = Time.time;
         }
-
+   
     }
-
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//+20% atkspeed
+            this.attackspeed *= .8f;
+            this.wAtkspeed *= .8f;
+        }
+        if (enhancement == 6)
+        {//50% longer burn duration
+            this.burnDuration *= 1.5f;
+        }
+        if (enhancement >= 9)
+        {//double burn damage
+            bd = damage / 2.5f;
+        }
+        if (enhancement <9)
+        {
+            bd = damage / 5;
+        }
+    }
 }
