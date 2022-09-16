@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpecialKingSlime : MonoBehaviour
 {
-    public GameObject slimeGoo;
+    public GameObject[] slimeGoo;
     [SerializeField] public float cooldown;
     private float timer = 1f;
 
@@ -26,7 +26,9 @@ public class SpecialKingSlime : MonoBehaviour
         }
         else if (timer <= 0)
         {
-            Instantiate(slimeGoo, transform.position, transform.rotation);
+            int randomSpawn;
+            randomSpawn = (int)Random.Range(0, slimeGoo.Length);
+            Instantiate(slimeGoo[randomSpawn], transform.position, transform.rotation);
             timer = cooldown;
         }
     }

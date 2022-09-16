@@ -281,7 +281,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70db92a42e45f2a459a89ed8dca7d9be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slimeGoo: {fileID: 1412421491970781223, guid: e884d178813bc6a409a41b36facf7cd5, type: 3}
+  slimeGoo:
+  - {fileID: 1412421491970781223, guid: e884d178813bc6a409a41b36facf7cd5, type: 3}
+  - {fileID: 1412421491970781223, guid: ea9aad8bce55ba444b1c626dcacee86f, type: 3}
   cooldown: 0.5
 --- !u!1 &5874046256116976176
 GameObject:

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6977918407810727502}
   m_Layer: 0
-  m_Name: KingSlimeAttack
+  m_Name: KingSlimeAttack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: eee076db15c2b6c4f89bb539cde846a8, type: 3}
   m_Color: {r: 0.6035511, g: 0.9339623, b: 0.6108077, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.32, y: 0.32}
