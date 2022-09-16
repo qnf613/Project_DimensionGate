@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 2
   SynergyB: 3
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 10
@@ -55,7 +57,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 4
   wAtkspeed: 0
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -76,6 +77,7 @@ MonoBehaviour:
   cooldown: 3
   attacktime: 0
   attacktimelimit: 5
+  UPGProjectile: {fileID: 7161195545086195297, guid: 4c93c66fda4ad8c49b35b84f38def6a9, type: 3}
   slowStrength: 25
   slowDuration: 2
 --- !u!114 &2000691795

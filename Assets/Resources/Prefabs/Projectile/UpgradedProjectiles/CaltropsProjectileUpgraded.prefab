@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 5185106867037226459}
   - component: {fileID: 5436898253974056305}
   - component: {fileID: 8018630272025108266}
-  - component: {fileID: -3340676912290419663}
+  - component: {fileID: -4314300183858770770}
   m_Layer: 0
-  m_Name: CaltropsProjectile
+  m_Name: CaltropsProjectileUpgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 7161195545086195297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.9818, y: 1.0002, z: -7.816079}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.75}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -170,7 +170,7 @@ MonoBehaviour:
   burn: 0
   Strength: 50
   Duration: 3
---- !u!114 &-3340676912290419663
+--- !u!114 &-4314300183858770770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,6 +183,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CRIT: 1
-  damage: 42.99816
+  damage: 74.30082
   hittimer: 0.8
   hitcd: 0

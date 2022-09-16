@@ -16,6 +16,7 @@ public class Caltrops : Weapon
     
     protected Vector3 projectileDirection;
 
+    public GameObject UPGProjectile;
 
     void Start()
     {
@@ -58,11 +59,27 @@ public class Caltrops : Weapon
             {
 
                 CheckIfCrit();
-                base.Shoot();
+                if (weaponSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+                }
+
+                if (Time.time > wAtkspeed + lastShot)
+                {
+                    CheckIfCrit();
+                    AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+                    if (projectile != null)
+                    {
+                        Instantiate(projectile, transform.position, transform.rotation);
+                    }
+                    projectile.GetComponent<StraightProjectile>();
+                    projectile.GetComponent<DealConstantDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+                    lastShot = Time.time;
+                }
                 projectileDirection = (this.transform.position - targetPosition);
 
                 projectile.GetComponent<StraightProjectile>();
-                projectile.GetComponentInChildren<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+                projectile.GetComponentInChildren<DealConstantDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
 
                 foreach (ApplyDebuff item in projectile.GetComponentsInChildren<ApplyDebuff>())
                 {
@@ -82,12 +99,24 @@ public class Caltrops : Weapon
                 timer = cooldown;
             }
         }
-        
-
-
-
-
     }
-          
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//double 'ammo' capacity 
+            attacktimelimit *= 2;
+            
+        }
+        if (enhancement == 6)
+        {//+50% slow duration / 100% slow strength
+            slowDuration *= 1.5f;
+            slowStrength *= 2f;
+        }
+        if (enhancement == 9)
+        {//increase projectile size and decrease hit delay by 40%
+            projectile = UPGProjectile;
+            projectile.GetComponent<DealConstantDamage>().hittimer *= .6f;
+        }
+    }
 
 }
