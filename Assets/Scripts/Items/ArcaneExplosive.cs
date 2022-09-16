@@ -5,6 +5,7 @@ using UnityEngine;
 public class ArcaneExplosive : Weapon
 {
     protected Vector3 projectileDirection;
+    public GameObject UPGProjectile;
     // Start is called before the first frame update
 
     protected override void Aim()
@@ -30,6 +31,22 @@ public class ArcaneExplosive : Weapon
             projectile.GetComponent<Explode>().GetExplosionDamage(CalcCritDamage(), crit, CritDamageMod);
 
             lastShot = Time.time;
+        }
+    }
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//+30% atkspeed
+            this.wAtkspeed *= .7f;
+        }
+        if (enhancement == 6)
+        {//Bigger landmines and +30% atkspeed
+            this.wAtkspeed *= .7f;
+            this.projectile = UPGProjectile;
+        }
+        if (enhancement == 9)
+        {//+50% crit damage
+            this.CritDamageMod *= 1.5f;     
         }
     }
 }

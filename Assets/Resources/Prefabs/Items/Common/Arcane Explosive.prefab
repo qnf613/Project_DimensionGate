@@ -131,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 0
   SynergyB: 0
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 20
   CritDamageMod: 2
   GlobalCritRate: 10
@@ -138,7 +140,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 20
   wAtkspeed: 3
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -146,9 +147,13 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: dd5e4702bba231b4f83568e6d9e23087, type: 3}
   volume: 0.5
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1
+  UPGProjectile: {fileID: 5267668735406026498, guid: 8ae211daeea1d224382308607f04b0cd, type: 3}
 --- !u!114 &6556062310313814123
 MonoBehaviour:
   m_ObjectHideFlags: 0
