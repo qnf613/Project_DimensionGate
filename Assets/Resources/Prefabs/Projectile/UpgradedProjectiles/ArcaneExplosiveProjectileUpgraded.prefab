@@ -326,9 +326,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 459261759
-  m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingLayerID: 1554989227
+  m_SortingLayer: -4
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.31372374, g: 0.3988098, b: 0.8867924, a: 1}
   m_FlipX: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6d76690caa3c3f41af1aabaf95e80bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 8431170841334906097, guid: a889528a9bf1b574eb8c1be8b7f03078, type: 3}
+  explosionPrefab: {fileID: 8431170841334906097, guid: 952e1dc92a3af1e4ea56277792226519, type: 3}
   projectilePrefab: {fileID: 5267668735406026498}
 --- !u!58 &7691740486212799872
 CircleCollider2D:

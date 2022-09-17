@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1756451613179080608
 Transform:
   m_ObjectHideFlags: 0
@@ -185,7 +185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1740263397916361334
 Transform:
   m_ObjectHideFlags: 0
@@ -245,6 +245,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 200
   SynergyB: 0
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 25
   CritDamageMod: 3
   GlobalCritRate: 10
@@ -252,7 +254,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 100
   wAtkspeed: 0
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -306,7 +307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2832819281676870506
 Transform:
   m_ObjectHideFlags: 0

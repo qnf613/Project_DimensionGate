@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8ba8eed2d781b9d4695c4b18a9e617cb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6ff81fd473119584f8307f0275abc922, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -159,6 +159,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 0
   SynergyB: 0
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 10
   CritDamageMod: 2
   GlobalCritRate: 10
@@ -166,7 +168,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 1
   wAtkspeed: 1
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}

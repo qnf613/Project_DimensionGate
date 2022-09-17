@@ -6,7 +6,7 @@ public class DealConstantDamage : MonoBehaviour
 {
     public bool CRIT;
     public float damage;
-    public float hittimer = 1.6f;
+    public float hittimer = 1f;
     public float hitcd = 0;
     List<DamageSystem> enemies;
 
@@ -40,7 +40,6 @@ public class DealConstantDamage : MonoBehaviour
                 enemies.Remove(collision.GetComponent<DamageSystem>());
             }
         }
-
     }
     private void Update()
     {

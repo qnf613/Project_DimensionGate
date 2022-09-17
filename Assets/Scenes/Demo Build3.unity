@@ -9605,7 +9605,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7787234, y: 1}
+    m_SensorSize: {x: 1.7785234, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -99755,6 +99755,10 @@ PrefabInstance:
     - target: {fileID: 7180048419156759466, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
       propertyPath: m_Name
       value: UI-FollowCam
+      objectReference: {fileID: 0}
+    - target: {fileID: 7180048419156759466, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7274634857055845463, guid: a8778ecd7db88dd47b464f4ec66d8c01, type: 3}
       propertyPath: m_AnchorMax.y
