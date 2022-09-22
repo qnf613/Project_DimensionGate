@@ -51,12 +51,23 @@ public class Sharpshooter : Weapon
              * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
              * setting it as the final damage value.
             */
-           
-           
-            
-            
             lastShot = Time.time;
         }
-
+    }
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        { // 40% atkspeed buff
+            this.wAtkspeed *= .60f;
+        }
+        if (enhancement == 6)
+        { //10% crit rate buff
+            this.CritMod += 10;
+        }
+        if (enhancement == 9)
+        { //10% crit rate buff, 30% crit damage buff
+            this.CritMod += 10;
+            this.CritDamageMod += .3f;
+        }
     }
 }
