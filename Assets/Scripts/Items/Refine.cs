@@ -43,7 +43,7 @@ public class Refine : MonoBehaviour
         }
         else if (RefineLevel > 0)
         {
-            this.gameObject.GetComponent<Weapon>().CritMod = (RefineLevel+1) * RefineCritChanceMultiplier;
+            this.gameObject.GetComponent<Weapon>().CritMod += RefineCritChanceMultiplier;
         }
     }
 
@@ -56,7 +56,7 @@ public class Refine : MonoBehaviour
         }
         else if (RefineLevel > 0)
         {
-            this.gameObject.GetComponent<Weapon>().CritDamageMod = 2 + ((RefineLevel+1) * RefineCritDamageMultiplier);
+            this.gameObject.GetComponent<Weapon>().CritDamageMod += RefineCritDamageMultiplier;
         }
     }
 

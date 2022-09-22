@@ -67,7 +67,7 @@ public class Sharpshooter : Weapon
         if (enhancement == 9)
         { //10% crit rate buff, 30% crit damage buff
             this.CritMod += 10;
-            this.CritDamageMod += .3f;
+            this.CritDamageMod += .5f;
         }
     }
 }
