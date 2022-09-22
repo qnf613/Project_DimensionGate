@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 0
   SynergyB: 0
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 10
@@ -55,7 +57,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 7
   wAtkspeed: 1
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -63,15 +64,21 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: daf52502ec125bc4eb771e666d185edb, type: 3}
   volume: 0.1
-  RefineCritChance: 0
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
+  RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1
+  _Stats: {fileID: 0}
   name: Electric Orb
   description: Shock and Awe your enemies!
   range: 20
   attackspeed: 1.5
   pierceCount: 0
   maxPierceCount: 1
+  UpgradedProjectile: {fileID: 8494223122405461609, guid: 23fc38659e6804047a1563f2cf6dff5b, type: 3}
+  normalProjectile: {fileID: 8494223122405461609, guid: f898bbc669f9fe9409969386b7f1ee06, type: 3}
 --- !u!114 &5461437135918674094
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PierceCheckScript : MonoBehaviour
 {
     [SerializeField] private int pierceCount;
-    [SerializeField] private int maxPierceCount;
+    public int maxPierceCount;
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {

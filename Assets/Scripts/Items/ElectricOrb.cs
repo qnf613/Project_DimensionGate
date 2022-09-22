@@ -12,8 +12,8 @@ public class ElectricOrb : Weapon
     [SerializeField] private int pierceCount;
     [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
-
-
+    public GameObject UpgradedProjectile;
+    public GameObject normalProjectile;
     void Start()
     {
         // Overriding the basic stats and info about the weapon here
@@ -24,7 +24,14 @@ public class ElectricOrb : Weapon
         we = WeaponEquipped.yes;
     }
 
-
+    protected override void Update()
+    {
+        if (enhancement < 9)
+        {
+            projectile.GetComponent<MultiplyProjectile>().spawnNewObject = normalProjectile;
+        }
+        base.Update();
+    }
     protected override void Aim()
     {
         targetPosition = cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -44,8 +51,25 @@ public class ElectricOrb : Weapon
 
             lastShot = Time.time;
         }
-
     }
-
+    public override void specialRefines()
+    { //+20% atk speed
+        if (enhancement ==3)
+        {
+            this.wAtkspeed *= .8f;
+            this.attackspeed *= .8f;
+        }
+        if (enhancement == 6)
+        {//projectile will pierce one more target and multiply again.
+            projectile.GetComponent<PierceCheckScript>().maxPierceCount += 1;
+        }
+        if (enhancement == 9)
+        {//+20% crit chance, New projectile which multiplies into more energy balls, main projectile will now pierce more enemies
+            this.CritMod *= 1.2f;
+            projectile.GetComponent<MultiplyProjectile>().spawnNewObject = UpgradedProjectile;
+            projectile.GetComponent<PierceCheckScript>().maxPierceCount += 3;
+        }
+        
+    }
 }
 

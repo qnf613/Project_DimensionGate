@@ -34,9 +34,6 @@ public class MultiplyProjectile : MonoBehaviour
         {
             enemyCollision = gameObject.GetComponent<Transform>();
             thisObject = Instantiate(spawnNewObject, enemyCollision.transform.position, transform.rotation);
-            
-
         }
-        
     }
 }
