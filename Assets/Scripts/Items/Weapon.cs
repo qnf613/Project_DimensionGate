@@ -9,6 +9,7 @@ public class Weapon : Items
     public float CritMod;
     public float CritDamageMod = 2;
     public float GlobalCritRate;
+
     protected string wName;
     public string wDescription;
     public string descrptionTest = "";
@@ -33,8 +34,7 @@ public class Weapon : Items
 
     public bool RefineCritChance, RefineCritDamage, refineDamage; //these bools will be in the list above to identify which refinement type they will follow
 
-    
-
+    [SerializeField] private PlayerStats _Stats;
     protected Weapon()
     {
         wName = "";
@@ -60,6 +60,12 @@ public class Weapon : Items
     // Update is called once per frame
     protected virtual void Update()
     {
+        //Get Component of player character's own stats
+        if (_Stats == null)
+        {
+            _Stats = GameObject.Find("Player").GetComponent<PlayerStats>();
+        }
+
         switch (we)
         {
             case WeaponEquipped.yes:
@@ -139,17 +145,17 @@ public class Weapon : Items
     }
     public virtual void CheckIfCrit()
     {
-        crit = this.gameObject.GetComponent<CheckForCrits>().CheckCrits(GlobalCritRate, CritMod);
+        crit = this.gameObject.GetComponent<CheckForCrits>().CheckCrits(GlobalCritRate, CritMod + _Stats.BaseCritRate);
     }
     public virtual float CalcCritDamage()
     {
         if (crit == true)
         {
-            finalDamageNumber = damage * CritDamageMod; 
+            finalDamageNumber = (damage * _Stats.BaseDMG) * (CritDamageMod + _Stats.BaseCritDMG); 
         }
         else if (crit == false)
         {
-            finalDamageNumber = damage;
+            finalDamageNumber = damage * _Stats.BaseDMG;
         }
         return finalDamageNumber;
     }
@@ -157,5 +163,6 @@ public class Weapon : Items
     { 
     
     }
+
 
     }

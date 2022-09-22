@@ -71,7 +71,7 @@ public class DamageSystem : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
 
-                other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
+                other.gameObject.GetComponent<PlayerStats>().UpdateHealth(-attackDamage);
                 lasthit = Time.time;
             }
         }

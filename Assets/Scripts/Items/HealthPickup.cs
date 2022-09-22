@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthPickup : MonoBehaviour
+public class HealthPickup : PickUp
 {
     [SerializeField] private float healAmount;
     [SerializeField] private float lifespan;
@@ -11,12 +11,17 @@ public class HealthPickup : MonoBehaviour
     {
         Destroy(this.gameObject, lifespan);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerHealth>().UpdateHealth(healAmount);
-            Destroy(this.gameObject);
+            collision.gameObject.GetComponent<PlayerStats>().UpdateHealth(healAmount);
+            PickedUp();
         }
+    }
+
+    protected override void PickedUp()
+    {
+        Destroy(this.gameObject);
     }
 }

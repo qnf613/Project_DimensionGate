@@ -28,7 +28,7 @@ public class SpecialKingSlimeProjectile : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
 
-                other.gameObject.GetComponent<PlayerHealth>().UpdateHealth(-attackDamage);
+                other.gameObject.GetComponent<PlayerStats>().UpdateHealth(-attackDamage);
                 lasthit = Time.time;
             }
         }
@@ -55,19 +55,19 @@ public class SpecialKingSlimeProjectile : MonoBehaviour
     {
         if (slow == true)
         {
-            if (collision.gameObject.GetComponent<PlayerHealth>() == null) { }
-            else if (collision.gameObject.GetComponent<PlayerHealth>() != null)
+            if (collision.gameObject.GetComponent<PlayerStats>() == null) { }
+            else if (collision.gameObject.GetComponent<PlayerStats>() != null)
             {
-                collision.gameObject.GetComponent<PlayerHealth>().ApplyStatusEffect(1, Strength, Duration);
+                collision.gameObject.GetComponent<PlayerStats>().ApplyStatusEffect(1, Strength, Duration);
 
             }
         }
         if (burn == true)
         {
-            if (collision.gameObject.GetComponent<PlayerHealth>() == null) { }
-            else if (collision.gameObject.GetComponent<PlayerHealth>() != null)
+            if (collision.gameObject.GetComponent<PlayerStats>() == null) { }
+            else if (collision.gameObject.GetComponent<PlayerStats>() != null)
             {
-                collision.gameObject.GetComponent<PlayerHealth>().ApplyStatusEffect(2, Strength, Duration);
+                collision.gameObject.GetComponent<PlayerStats>().ApplyStatusEffect(2, Strength, Duration);
 
             }
         }

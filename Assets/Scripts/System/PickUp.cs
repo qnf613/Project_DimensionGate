@@ -17,7 +17,7 @@ public class PickUp : MonoBehaviour
         
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {

@@ -15,7 +15,7 @@ public class CheckForCrits : MonoBehaviour
     }
     public float GetRandomNumber() 
     { 
-    randomNumber = Random.Range(0, 100);
+        randomNumber = Random.Range(0, 100);
         return randomNumber;
     }
 

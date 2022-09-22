@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] public float _Speed = 1;
+    public float _Speed;
     [SerializeField] Camera _Camera;
 
     PlayerInput _Input;
@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     public bool characterChanged;
     public RuntimeAnimatorController chara1;
     public RuntimeAnimatorController chara2;
+    [SerializeField] private PlayerStats _Stats;
 
 
     private void Awake()
@@ -27,6 +28,11 @@ public class Player : MonoBehaviour
         _Rigidbody = GetComponent<Rigidbody2D>();
         _Animator = graphicGO.GetComponent<Animator>(); //Temp animation changer
         characterChanged = false;
+        _Stats = GetComponent<PlayerStats>();
+    }
+    private void Start()
+    {
+        _Speed = _Stats.originalSpeed;
     }
     private void OnEnable()
     {

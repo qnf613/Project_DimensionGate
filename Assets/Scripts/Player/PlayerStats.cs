@@ -4,30 +4,34 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerStats : MonoBehaviour
 {
-
-    [SerializeField] private float health = 0f;
-
-    [SerializeField] private float maxHealth = 100;
+    //HP & DMG Taken
+    public float health = 0f;
+    public float maxHealth = 100;
     [SerializeField] private Slider healthSlider;
     [SerializeField] private Text healthValue;
     [SerializeField] private SpriteFlash flashEffect;
     [SerializeField] private AudioClip playerdamageSFX;
     [SerializeField] private float playerdamagevolume = 0.50f;
-
-
-    bool slowed = false;
-    bool burning = false;
-    float burntickSpeed = 1, lastTick;
-    public float burnstr;
-    float originalspeed;
+    //Movement Speed
+    public float originalSpeed;
+    public float maxSpeed;
+    //Weapon Related Stats
+    public float BaseDMG;      // as multifly *if 10% more dmg than 1.1f
+    public float BaseCritRate; // as sum *if 10% more crit rate than 10
+    public float BaseCritDMG;  // as sums of modifiers *if 10% more crit dmg than .1f
+    //Status
+    [SerializeField] private bool slowed = false;
+    [SerializeField] private bool burning = false;
+    [SerializeField] private float burntickSpeed = 1, lastTick;
+    [SerializeField] private float burnstr;
 
     void Start()
     {
-        originalspeed = this.gameObject.GetComponent<Player>()._Speed;
         health = maxHealth;
         healthSlider.maxValue = maxHealth;
+        originalSpeed = maxSpeed;
     }
 
     public void Update()
@@ -35,6 +39,11 @@ public class PlayerHealth : MonoBehaviour
         if (burning == true)
         {
             DealTickDamage(burnstr);
+        }
+
+        if (maxSpeed < originalSpeed)
+        {
+            maxSpeed = originalSpeed;
         }
     }
     private void DealTickDamage(float str)
@@ -117,7 +126,7 @@ public class PlayerHealth : MonoBehaviour
     private void RemoveStatusEffectSlow()
     {
 
-        this.gameObject.GetComponent<Player>()._Speed = originalspeed;
+        this.gameObject.GetComponent<Player>()._Speed = maxSpeed;
 
         slowed = false;
     }

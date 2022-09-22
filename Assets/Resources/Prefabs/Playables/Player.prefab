@@ -50,13 +50,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1f813c5a3b5fb447a414d06960a12a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Speed: 7.5
+  _Speed: 0
   _Camera: {fileID: 0}
   graphicGO: {fileID: 8334967811478151339}
   _Animator: {fileID: 4007148554172746083}
   characterChanged: 1
   chara1: {fileID: 9100000, guid: ea04e05f74ffb034996864c1ec1f440c, type: 2}
   chara2: {fileID: 9100000, guid: ef27ab9bdf2d90f4ca2a29743f78a157, type: 2}
+  _Stats: {fileID: 2685302171005590267}
 --- !u!114 &2685302171005590267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +77,13 @@ MonoBehaviour:
   flashEffect: {fileID: 2501289848866665736}
   playerdamageSFX: {fileID: 8300000, guid: 77da796a8c26f4a4ca411d89d2b0b06b, type: 3}
   playerdamagevolume: 0.5
+  originalSpeed: 0
+  maxSpeed: 7.5
+  slowed: 0
+  burning: 0
+  burntickSpeed: 1
+  lastTick: 0
+  burnstr: 0
 --- !u!50 &432841743010652971
 Rigidbody2D:
   serializedVersion: 4
@@ -285,7 +293,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -804000471
-  m_SortingLayer: -2
+  m_SortingLayer: -3
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 83f1c838bc0ecb94b9b56181aa5514e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
