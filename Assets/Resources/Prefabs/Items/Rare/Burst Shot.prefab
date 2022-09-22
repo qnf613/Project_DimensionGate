@@ -48,14 +48,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 4
   SynergyB: 5
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
   wDescription: 
   descrptionTest: 
-  damage: 3
+  damage: 5
   wAtkspeed: 0
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -63,9 +64,13 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: 6e8d1b7e177370f4fb9b1dcaae355f99, type: 3}
   volume: 0.42
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1
+  _Stats: {fileID: 0}
   name: Burstshot
   description: Fires a three bullet burst!
   range: 20

@@ -166,7 +166,7 @@ MonoBehaviour:
   GlobalCritRate: 10
   wDescription: 
   descrptionTest: 
-  damage: 1
+  damage: 3
   wAtkspeed: 1
   we: 0
   finalDamageNumber: 0
@@ -181,5 +181,6 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 1
   refineDamage: 1
+  _Stats: {fileID: 0}
   slowStrength: 30
   slowDuration: 3
