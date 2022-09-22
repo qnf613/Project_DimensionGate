@@ -145,10 +145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62e986d7a3707484ead48eefdccf89d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spikeAmount: 5
+  spikeAmount: 3
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
+  originalweapon: {fileID: 0}
   attackDelay: 0.5
   nextDamageEvent: 0
   duration: 6

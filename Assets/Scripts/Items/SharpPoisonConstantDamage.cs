@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SharpPoisonConstantDamage : MonoBehaviour
 {
-    public float spikeAmount = 5;
+    public float spikeAmount = 3;
     
     [SerializeField] public float attacktime = 2f;
     [SerializeField] public float attacktimelimit = 5;
@@ -99,17 +99,17 @@ public class SharpPoisonConstantDamage : MonoBehaviour
     public void dropCaltrops()
     {
         var venomscript = SharpPoison.GetComponent<SharpPoison>();
-        for (float i = spikeAmount; i >= 0; i--)
+        for (float i = spikeAmount; i > 0; i--)
         {
-            float xOffSet = Random.Range(-3f, 3f);
-            float yOffSet = Random.Range(-3f,3f);
+            float xOffSet = Random.Range(-2f,2f);
+            float yOffSet = Random.Range(-2f,2f);
             Vector3 randomPos = new Vector3(transform.position.x + xOffSet, transform.position.y + yOffSet);
 
             venomscript.CheckIfCrit();
             AudioSource.PlayClipAtPoint(venomscript.weaponSound, transform.position, volume);
             Instantiate(venomscript.Spikes, randomPos, transform.rotation);
 
-            venomscript.Spikes.GetComponent<DealDamage>().SetDamage(venomscript.CalcCritDamageForSpikes(), venomscript.crit, venomscript.CritDamageMod);
+            venomscript.Spikes.GetComponent<DealConstantDamage>().SetDamage(venomscript.CalcCritDamageForSpikes(), venomscript.crit, venomscript.CritDamageMod);
         }
     }
     public void SetParentWeapon(Weapon wep)
