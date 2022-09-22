@@ -33,5 +33,22 @@ public class IceSpear : Weapon
             lastShot = Time.time;
         }
     }
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        { //50% damage boost
+            this.damage *= 1.5f;
+        }
+        if (enhancement == 6)
+        { //+20% slow strength
+            slowStrength *= 1.2f;
+        }
+        if (enhancement == 9)
+        {
+            //20% slow strength / +20% slow duration
+            slowStrength *= 1.2f;
+            slowDuration *= 1.2f;
+        }
+    }
 }
 
