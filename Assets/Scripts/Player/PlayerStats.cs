@@ -18,9 +18,9 @@ public class PlayerStats : MonoBehaviour
     public float originalSpeed;
     public float maxSpeed;
     //Weapon Related Stats
-    public float BaseDMG;      // as multifly *if 10% more dmg than 1.1f
-    public float BaseCritRate; // as sum *if 10% more crit rate than 10
-    public float BaseCritDMG;  // as sums of modifiers *if 10% more crit dmg than .1f
+    public float BaseDMG;      // as multifly *if 10% more dmg than weapon's dmg, 1.1f
+    public float BaseCritRate; // as sum *if 10% more crit rate than weapon's crit rate, 10
+    public float BaseCritDMG;  // as sums of modifiers *if 10% more dmg than weapon's crit dmg, .1f
     //Status
     [SerializeField] private bool slowed = false;
     [SerializeField] private bool burning = false;
