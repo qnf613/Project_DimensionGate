@@ -115,7 +115,7 @@ public class Weapon : Items
             {
                 Instantiate(projectile, transform.position, transform.rotation);
             }
-            projectile.GetComponent<StraightProjectile>();
+            projectile.GetComponentInChildren<StraightProjectile>();
             projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
             lastShot = Time.time;
         }

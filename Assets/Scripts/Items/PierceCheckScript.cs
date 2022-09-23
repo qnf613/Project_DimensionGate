@@ -15,14 +15,6 @@ public class PierceCheckScript : MonoBehaviour
         }
        
     }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (pierceCount >= maxPierceCount)
-            {
-                DestroyAfterPierce();
-            }
-        
-    }
     public void DestroyAfterPierce() {
         
         Destroy(this.gameObject);
@@ -36,5 +28,11 @@ public class PierceCheckScript : MonoBehaviour
             pierceCount++;
             //Debug.Log(pierceCount);
         }
+
+        if (pierceCount >= maxPierceCount)
+        {
+            DestroyAfterPierce();
+        }
+
     }
 }

@@ -60,7 +60,7 @@ MonoBehaviour:
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
-  projectile: {fileID: 35367555128390032, guid: 4099fbd6acd2f4044acd85dfeb239318, type: 3}
+  projectile: {fileID: 6129353343867881937, guid: 28edbd9d74ced9d4a80672b032d7a321, type: 3}
   crit: 0
   weaponSound: {fileID: 8300000, guid: 6e8d1b7e177370f4fb9b1dcaae355f99, type: 3}
   volume: 0.42

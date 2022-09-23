@@ -450,7 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slow: 1
   burn: 0
-  Strenght: 0
+  Strength: 0
   Duration: 0
 --- !u!61 &8121892941875367370
 BoxCollider2D:
@@ -608,7 +608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slow: 1
   burn: 0
-  Strenght: 0
+  Strength: 0
   Duration: 0
 --- !u!61 &3453151846955209445
 BoxCollider2D:
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slow: 1
   burn: 0
-  Strenght: 0
+  Strength: 0
   Duration: 0
 --- !u!61 &807125350689061629
 BoxCollider2D:

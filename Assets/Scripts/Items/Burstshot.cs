@@ -28,24 +28,42 @@ public class Burstshot : Weapon
         //if any changes to how weapon aims, change here
         //base.Aim();
     }
+    protected override void Update()
+    {
+        if (enhancement < 6)
+        {//projectiles now pierce one more enemy
+            this.projectile.GetComponentInChildren<PierceCheckScript>().maxPierceCount = 1;
+        }
+        base.Update();
+    }
     protected override void Shoot()
     {
         if (Time.time > wAtkspeed + lastShot)
         {
-            base.Shoot();
+            CheckIfCrit();
+            AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+            if (projectile != null)
+            {
+                Instantiate(projectile, transform.position, transform.rotation);
+            }
+            projectile.GetComponentInChildren<StraightProjectile>();
             projectile.GetComponentInChildren<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
-            
-
-            projectileDirection = (this.transform.position - targetPosition);
-            //TODO : Change this to match player Rotation and position
-            /*
-             * Summary
-             * When you instantiate the projectile, Im going into the projectile script to change the damage it does.
-             * 
-             * To calculate the damage, Im sending the baase damage of the weapon over to the refine script, finding the new value and 
-             * setting it as the final damage value.
-            */
             lastShot = Time.time;
+        }
+    }
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//+30% atkspeed buff
+            this.attackspeed *= .7f;
+        }
+        if (enhancement == 6)
+        {//projectiles now pierce one more enemy
+            this.projectile.GetComponentInChildren<PierceCheckScript>().maxPierceCount +=1;
+        }
+        if (enhancement == 9)
+        { //+60% crit damage
+            this.CritDamageMod *= 1.6f;
         }
     }
 }
