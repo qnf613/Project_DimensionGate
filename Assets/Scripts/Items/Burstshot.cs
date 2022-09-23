@@ -5,11 +5,9 @@ using UnityEngine;
 public class Burstshot : Weapon
 {
     [SerializeField] private string name = "Burstshot";
-    [SerializeField] private string description = "Fires a three bullet burst!";
+    [SerializeField] private string description = "Fires bullet bursts!";
     [SerializeField] private int range = 20;
     [SerializeField] private float attackspeed = .7f;
-    [SerializeField] private int pierceCount;
-    [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
     void Start()
     {
@@ -46,7 +44,7 @@ public class Burstshot : Weapon
             {
                 Instantiate(projectile, transform.position, transform.rotation);
             }
-            projectile.GetComponentInChildren<StraightProjectile>();
+            projectile.GetComponent<StraightProjectile>();
             projectile.GetComponentInChildren<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
             lastShot = Time.time;
         }
@@ -56,10 +54,14 @@ public class Burstshot : Weapon
         if (enhancement == 3)
         {//+30% atkspeed buff
             this.attackspeed *= .7f;
+            this.wAtkspeed *= .7f;
         }
         if (enhancement == 6)
         {//projectiles now pierce one more enemy
-            this.projectile.GetComponentInChildren<PierceCheckScript>().maxPierceCount +=1;
+            foreach (Transform i in projectile.transform)
+            {
+                i.gameObject.GetComponent<PierceCheckScript>().maxPierceCount =100;
+            }
         }
         if (enhancement == 9)
         { //+60% crit damage

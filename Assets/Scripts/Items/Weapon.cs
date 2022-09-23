@@ -102,13 +102,13 @@ public class Weapon : Items
     }
     protected virtual void Shoot()
     {
-        if (weaponSound != null)
-        {
-            AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
-        }
-
         if (Time.time > wAtkspeed + lastShot)
         {
+            if (weaponSound != null)
+            {
+                AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+            }
+
             CheckIfCrit();
             AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
             if (projectile != null)
@@ -161,8 +161,5 @@ public class Weapon : Items
     }
     public virtual void specialRefines()
     { 
-    
     }
-
-
-    }
+}

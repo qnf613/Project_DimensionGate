@@ -79,9 +79,9 @@ MonoBehaviour:
   playerdamagevolume: 0.5
   originalSpeed: 0
   maxSpeed: 7.5
-  BaseDMG: 1
-  BaseCritRate: 0
-  BaseCritDMG: 0
+  BaseDMG: 1.5
+  BaseCritRate: 1
+  BaseCritDMG: 1
   slowed: 0
   burning: 0
   burntickSpeed: 1

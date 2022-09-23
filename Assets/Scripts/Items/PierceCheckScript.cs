@@ -12,27 +12,22 @@ public class PierceCheckScript : MonoBehaviour
         if (collision.gameObject.GetComponent<DamageSystem>())
         {
             PierceCount();
-        }
-       
+        }    
     }
-    public void DestroyAfterPierce() {
-        
-        Destroy(this.gameObject);
-        
+    public void DestroyAfterPierce() 
+    { 
+        Destroy(this.gameObject);  
     }
     public void PierceCount()
     {
-
         if (pierceCount < maxPierceCount)
         {
             pierceCount++;
             //Debug.Log(pierceCount);
         }
-
         if (pierceCount >= maxPierceCount)
         {
             DestroyAfterPierce();
         }
-
     }
 }
