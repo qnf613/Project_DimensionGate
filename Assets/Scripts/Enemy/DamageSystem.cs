@@ -31,8 +31,9 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private float enemyvolume = 0.50f;
     public DPSMeter dpsm;
 
-    bool slowed = false;
+    [SerializeField]private DropHealth healthPickup;
 
+    bool slowed = false;
     bool burning = false;
     float burntickSpeed = 1, lastTick;
     public float burnstr;
@@ -61,6 +62,7 @@ public class DamageSystem : MonoBehaviour
         currentHealth = newMaxHealth;
         DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
         DamageIndicator.fontSize = originalFontSize;
+        healthPickup = GetComponent<DropHealth>();
     }
 
     private void OnTriggerStay2D(Collider2D other)
@@ -148,6 +150,7 @@ public class DamageSystem : MonoBehaviour
 
             ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
+            healthPickup.dropHealth();
             Destroy(explosion.gameObject, 2f);
             Destroy(this.gameObject, 0.15f);
         }
@@ -155,6 +158,7 @@ public class DamageSystem : MonoBehaviour
         {
             ParticleSystem explosion = (ParticleSystem)Instantiate(explosionParticle);
             explosion.transform.position = new Vector3(transform.position.x, transform.position.y + .3f, transform.position.z);
+            healthPickup.dropHealth();
             BossManager.HealthBarInactive();
             Destroy(explosion.gameObject, 2f);
             Destroy(this.gameObject, 0.15f);

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class DropHealth : MonoBehaviour
 {
+    
     [SerializeField] private GameObject healthDrop;
     [SerializeField] private float dropOdds;
-    private void OnDestroy()
-    {  
-         dropHealth();
-    }
-    private void dropHealth()
+
+    //private void OnDestroy()
+    //{
+    //  dropHealth();
+    //}
+    
+    public void dropHealth()
     {
         float random = Random.Range(1, 100);
        // Debug.Log("Rolled a " + random);
