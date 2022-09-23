@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 546006081322660553}
   - component: {fileID: 2006677401729051379}
   - component: {fileID: 3740391804881310330}
+  - component: {fileID: -111173590255875841}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Portal
@@ -106,7 +107,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -225936129
-  m_SortingLayer: -4
+  m_SortingLayer: -8
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2266cba00c86d83488ac90c577c1151e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 100
   currentHealth: 100
+  newMaxHealth: 500
   attackDamage: 0
   atkspeed: 0
   lasthit: 0
@@ -145,6 +147,9 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
   enemydamageSFX: {fileID: 0}
   enemyvolume: 0.5
+  dpsm: {fileID: 0}
+  healthPickup: {fileID: 0}
+  burnstr: 0
   isBoss: 0
 --- !u!61 &4006467716628276339
 BoxCollider2D:
@@ -227,3 +232,17 @@ MonoBehaviour:
   flashMaterial: {fileID: 2100000, guid: 4a881b7e65e2eed4b82ee202f7d42fc5, type: 2}
   duration: 0.125
   originalColor: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &-111173590255875841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5080382862207408051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 106c4b405d796e848922d76213f2f85b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
+  dropOdds: 0

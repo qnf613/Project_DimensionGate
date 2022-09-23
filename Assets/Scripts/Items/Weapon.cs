@@ -34,7 +34,7 @@ public class Weapon : Items
 
     public bool RefineCritChance, RefineCritDamage, refineDamage; //these bools will be in the list above to identify which refinement type they will follow
 
-    [SerializeField] private PlayerStats _Stats;
+    [SerializeField] protected PlayerStats _Stats;
     protected Weapon()
     {
         wName = "";

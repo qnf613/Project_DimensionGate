@@ -133,6 +133,7 @@ MonoBehaviour:
   LC: {fileID: 8139579069443953454}
   attackDelay: 5
   nextDamageEvent: 0
+  originalweapon: {fileID: 0}
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
@@ -271,6 +272,7 @@ MonoBehaviour:
   LC: {fileID: 8139579069443953454}
   attackDelay: 5
   nextDamageEvent: 0
+  originalweapon: {fileID: 0}
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
@@ -328,6 +330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 2
   SynergyB: 0
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
@@ -335,7 +339,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 10
   wAtkspeed: 0
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -343,9 +346,13 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: d668de49af1f24f409efb5b8e5b4bcea, type: 3}
   volume: 0.6
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 1
   RefineCritDamage: 1
   refineDamage: 0
+  _Stats: {fileID: 2685302171005590267, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
   name: Lucky Comet
   description: Lucky this comet decided to orbit around you
   rotationspeed: 100
@@ -513,6 +520,7 @@ MonoBehaviour:
   LC: {fileID: 8139579069443953454}
   attackDelay: 0.5
   nextDamageEvent: 0
+  originalweapon: {fileID: 0}
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
@@ -651,6 +659,7 @@ MonoBehaviour:
   LC: {fileID: 8139579069443953454}
   attackDelay: 5
   nextDamageEvent: 0
+  originalweapon: {fileID: 0}
   attacktime: 2
   attacktimelimit: 5
   cooldown: 10
