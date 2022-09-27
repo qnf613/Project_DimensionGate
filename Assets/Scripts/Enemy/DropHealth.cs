@@ -8,10 +8,6 @@ public class DropHealth : MonoBehaviour
     [SerializeField] private GameObject healthDrop;
     [SerializeField] private float dropOdds;
 
-    //private void OnDestroy()
-    //{
-    //  dropHealth();
-    //}
     
     public void dropHealth()
     {

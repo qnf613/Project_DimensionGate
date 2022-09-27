@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 6669156098071806039}
   - component: {fileID: 8223841319041952171}
   - component: {fileID: 3332713023048179889}
+  - component: {fileID: -2637026935883791083}
   m_Layer: 0
   m_Name: Kunai
   m_TagString: Weapon
@@ -153,6 +154,7 @@ MonoBehaviour:
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1
+  _Stats: {fileID: 0}
   name: Kunai
   description: Shoot out  Kunai to slow enemies down.
   rage: 20
@@ -190,3 +192,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
+--- !u!114 &-2637026935883791083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4304662588115313334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697c620b19a9d784bad122766fc8781e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerUntillDestruction: 8
