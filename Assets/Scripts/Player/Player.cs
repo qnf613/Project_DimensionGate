@@ -13,12 +13,7 @@ public class Player : MonoBehaviour
     Vector2 _Movement;
     Vector2 _MousePos;
     Rigidbody2D _Rigidbody;
-    //Temp animation changer
     public GameObject graphicGO;
-    public Animator _Animator;
-    public bool characterChanged;
-    public RuntimeAnimatorController chara1;
-    public RuntimeAnimatorController chara2;
     [SerializeField] private PlayerStats _Stats;
 
 
@@ -26,8 +21,6 @@ public class Player : MonoBehaviour
     {
         _Input = new PlayerInput();
         _Rigidbody = GetComponent<Rigidbody2D>();
-        _Animator = graphicGO.GetComponent<Animator>(); //Temp animation changer
-        characterChanged = false;
         _Stats = GetComponent<PlayerStats>();
     }
     private void Start()
@@ -81,19 +74,6 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        //Temp animation changer
-        if (Input.GetKeyUp(KeyCode.K))
-        {
-            if (!characterChanged)
-            {
-                _Animator.runtimeAnimatorController = chara2 as RuntimeAnimatorController;
-                characterChanged = true;
-            }
-            else if (characterChanged)
-            {
-                _Animator.runtimeAnimatorController = chara1 as RuntimeAnimatorController;
-                characterChanged = false;
-            }
-        }
+
     }
 }

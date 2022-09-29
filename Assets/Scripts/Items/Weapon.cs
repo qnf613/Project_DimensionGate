@@ -63,7 +63,7 @@ public class Weapon : Items
         //Get Component of player character's own stats
         if (_Stats == null)
         {
-            _Stats = GameObject.Find("Player").GetComponent<PlayerStats>();
+            _Stats = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerStats>();
         }
 
         switch (we)
