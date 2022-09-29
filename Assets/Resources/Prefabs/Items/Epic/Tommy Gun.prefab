@@ -131,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 0
   SynergyB: 5
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
@@ -138,17 +140,20 @@ MonoBehaviour:
   descrptionTest: 
   damage: 2
   wAtkspeed: 0
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
   projectile: {fileID: 5285968918826037839, guid: ff1176f7c96adab48b55b874829ffc94, type: 3}
   crit: 0
   weaponSound: {fileID: 8300000, guid: fd51743afed742f4bbf130293e06934f, type: 3}
-  volume: 0.6
+  volume: 0.4
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1
+  _Stats: {fileID: 0}
   name: Gatling
   description: Extreme rapid-fire!
   range: 20

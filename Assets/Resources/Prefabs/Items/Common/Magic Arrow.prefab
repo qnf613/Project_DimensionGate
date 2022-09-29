@@ -146,13 +146,14 @@ MonoBehaviour:
   projectile: {fileID: 4736143673115787737, guid: 96e71f63523706f45941e20b4c59bf75, type: 3}
   crit: 0
   weaponSound: {fileID: 8300000, guid: daf52502ec125bc4eb771e666d185edb, type: 3}
-  volume: 0.5
+  volume: 0.2
   dpsm: {fileID: 0}
   dps: 0
   cr: 0
   RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1
+  _Stats: {fileID: 0}
   name: Magic Arrow
   description: Shoot an arrow which pierces through enemies
   range: 20
