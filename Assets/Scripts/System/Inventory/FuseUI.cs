@@ -72,7 +72,6 @@ public class FuseUI : MonoBehaviour
         SItems = fs.possibleSynergies;
         currentSyItemListOrderNum = 0;
         ApplyCurrentOptionToButton();
-        
     }
 
     public void ApplyCurrentOptionToButton()
