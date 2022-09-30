@@ -9,7 +9,7 @@ public class GrenadeLauncher : Weapon
     [SerializeField] private int rage = 20;
     [SerializeField] private float attackspeed = 3f;
     protected Vector3 projectileDirection;
-
+    [SerializeField] private GameObject UPGProjectile;
 
     void Start()
     {
@@ -74,5 +74,20 @@ public class GrenadeLauncher : Weapon
         }
         return finalDamageNumber;
     }
-
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//+ 20% atkspeed
+            wAtkspeed *= .8f;
+        }
+        if (enhancement == 6)
+        {//crit chance +20%
+            this.CritMod += 20f;
+        }
+        if (enhancement == 9)
+        {//Explosion is double the size / Crit damage +50%
+            projectile = UPGProjectile;
+            this.CritDamageMod *= 1.5f;
+        }
+    }
 }

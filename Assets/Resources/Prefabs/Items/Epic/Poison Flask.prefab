@@ -48,6 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 0
   SynergyB: 3
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
@@ -55,7 +57,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 6
   wAtkspeed: 0
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -63,15 +64,20 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: 92360d5544bcc9248b612cc97aaa7cb7, type: 3}
   volume: 0.6
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 0
   RefineCritDamage: 0
   refineDamage: 1
+  _Stats: {fileID: 0}
   name: Poison Flask
   description: Throw a flask which leaves a pool of poison on the ground.
   rage: 20
   attackspeed: 1.5
   poisonFlaskPrefab: {fileID: 3139452587625503352, guid: d873fbcc2c61c8c44b6e54f2edaf1e7b, type: 3}
   dotDamageScale: 1.05
+  UPGProjectile: {fileID: 3139452587625503352, guid: ad7f141a0ee3ad04a9acde6a54f46bbc, type: 3}
 --- !u!114 &8457160680624895998
 MonoBehaviour:
   m_ObjectHideFlags: 0

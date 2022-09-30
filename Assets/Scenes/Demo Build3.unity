@@ -8560,43 +8560,43 @@ PrefabInstance:
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: midPhaseMobs.Array.data[0]
       value: 
-      objectReference: {fileID: 4079153972502358019, guid: 1a76e08043e3c96489764c93d7a1b8cb, type: 3}
+      objectReference: {fileID: 7425110078256503608, guid: dc14f212004dd334195e985ee9671860, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: midPhaseMobs.Array.data[1]
       value: 
-      objectReference: {fileID: 5580571326173248728, guid: 51dc8583f5958e54ba50e0df9ba5bafe, type: 3}
+      objectReference: {fileID: 7425110078256503608, guid: dc14f212004dd334195e985ee9671860, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: midPhaseMobs.Array.data[2]
       value: 
-      objectReference: {fileID: 7353090044636916459, guid: a1a38770e46054c41b2b2a65927cce22, type: 3}
+      objectReference: {fileID: 108300834980364309, guid: 09093a11a41f96a4aabf8f91720abda7, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: midPhaseMobs.Array.data[3]
       value: 
-      objectReference: {fileID: 7425110078256503608, guid: 07d6d8ba1d2caab47afd7d05b4abcc70, type: 3}
+      objectReference: {fileID: 7353090044636916459, guid: e80b37b5eeccca2468279b2c614281f0, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: midPhaseMobs.Array.data[4]
       value: 
-      objectReference: {fileID: 108300834980364309, guid: 061f73bf1ce9ed54cb316e5d13978e3d, type: 3}
+      objectReference: {fileID: 7353090044636916459, guid: e80b37b5eeccca2468279b2c614281f0, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: latePhaseMobs.Array.data[0]
       value: 
-      objectReference: {fileID: 7353090044636916459, guid: a1a38770e46054c41b2b2a65927cce22, type: 3}
+      objectReference: {fileID: 7425110078256503608, guid: dc14f212004dd334195e985ee9671860, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: latePhaseMobs.Array.data[1]
       value: 
-      objectReference: {fileID: 108300834980364309, guid: 061f73bf1ce9ed54cb316e5d13978e3d, type: 3}
+      objectReference: {fileID: 7353090044636916459, guid: e80b37b5eeccca2468279b2c614281f0, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: latePhaseMobs.Array.data[2]
       value: 
-      objectReference: {fileID: 7425110078256503608, guid: 07d6d8ba1d2caab47afd7d05b4abcc70, type: 3}
+      objectReference: {fileID: 7425110078256503608, guid: dc14f212004dd334195e985ee9671860, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: earlyPhaseMobs.Array.data[0]
       value: 
-      objectReference: {fileID: 4079153972502358019, guid: 1a76e08043e3c96489764c93d7a1b8cb, type: 3}
+      objectReference: {fileID: 7353090044636916459, guid: e80b37b5eeccca2468279b2c614281f0, type: 3}
     - target: {fileID: 725012792607642463, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: earlyPhaseMobs.Array.data[1]
       value: 
-      objectReference: {fileID: 6866585182123931758, guid: 2af56396ce038324c896c25b7682903c, type: 3}
+      objectReference: {fileID: 108300834980364309, guid: 09093a11a41f96a4aabf8f91720abda7, type: 3}
     - target: {fileID: 805056389616799734, guid: 863560d20c1dcbc428548c8d55cdd1b4, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -8905,6 +8905,14 @@ PrefabInstance:
       propertyPath: times.Array.data[2]
       value: 
       objectReference: {fileID: 1638099579}
+    - target: {fileID: 5368081795636254396, guid: 644ea6007b02a054e97d1247f7792a51, type: 3}
+      propertyPath: bossMonsters.Array.data[0]
+      value: 
+      objectReference: {fileID: 6423956227372327672, guid: 4e7445dee16a8be42ace95b1e90431de, type: 3}
+    - target: {fileID: 5368081795636254396, guid: 644ea6007b02a054e97d1247f7792a51, type: 3}
+      propertyPath: bossMonsters.Array.data[1]
+      value: 
+      objectReference: {fileID: 6423956227372327672, guid: 4e7445dee16a8be42ace95b1e90431de, type: 3}
     - target: {fileID: 5570070519908916621, guid: 644ea6007b02a054e97d1247f7792a51, type: 3}
       propertyPath: MaxHealth
       value: 6000
@@ -9605,7 +9613,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7785234, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

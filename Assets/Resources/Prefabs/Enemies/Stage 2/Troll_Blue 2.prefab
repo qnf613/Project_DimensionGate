@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 2357975943168499536}
   - component: {fileID: 6435502953418058914}
   - component: {fileID: 9140670121248626944}
+  - component: {fileID: 731557833780281720}
   m_Layer: 7
   m_Name: Troll_Blue 2
   m_TagString: Boss
@@ -254,8 +255,13 @@ MonoBehaviour:
   enemydamageSFX: {fileID: 8300000, guid: 21052f26a3dbb104380beb6d1ea87050, type: 3}
   enemyvolume: 0.5
   dpsm: {fileID: 0}
+  healthPickup: {fileID: 0}
+  burning: 0
   burnstr: 0
   isBoss: 1
+  statustype: 0
+  statusStrength: 0
+  statusDuration: 0
 --- !u!114 &1928566053016116457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,3 +417,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossName: Troll
+--- !u!114 &731557833780281720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928566053016116453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2faeeff10f23034dbcdde5eafe73394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvManager: {fileID: 0}
+  ls: {fileID: 0}
+  exp: 200
+  newExp: 200
+  dmgsys: {fileID: 0}
+  hpChecker: 0
+  sentExp: 0

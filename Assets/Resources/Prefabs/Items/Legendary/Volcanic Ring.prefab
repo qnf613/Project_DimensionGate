@@ -96,10 +96,12 @@ MonoBehaviour:
   dps: 0
   cr: 0
   RefineCritChance: 0
-  RefineCritDamage: 0
+  RefineCritDamage: 1
   refineDamage: 1
+  _Stats: {fileID: 0}
   burnDamage: 0
   burnDuration: 15
+  UPGProjectile: {fileID: 540752374891527235, guid: dabebbb6b17e74445ac77b444b8aa8cc, type: 3}
 --- !u!1 &5679646650208295392
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,12 +174,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 159cd6bb9255f8d4da4728a786d2a83a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 385e832af71b5dd4cafb222a484f4e7d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -131,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SynergyA: 4
   SynergyB: 0
+  enhancement: 0
+  maxEnhance: 10
   CritMod: 0
   CritDamageMod: 2
   GlobalCritRate: 0
@@ -138,7 +140,6 @@ MonoBehaviour:
   descrptionTest: 
   damage: 20
   wAtkspeed: 0
-  enhancement: 0
   we: 0
   finalDamageNumber: 0
   cam: {fileID: 0}
@@ -146,13 +147,18 @@ MonoBehaviour:
   crit: 0
   weaponSound: {fileID: 8300000, guid: 9dae386966da8c04ba5a63f217caf947, type: 3}
   volume: 0.6
+  dpsm: {fileID: 0}
+  dps: 0
+  cr: 0
   RefineCritChance: 0
   RefineCritDamage: 1
   refineDamage: 1
+  _Stats: {fileID: 0}
   name: Rocket
   description: Fire an exploding grenade!
   rage: 20
   attackspeed: 2
+  UPGProjectile: {fileID: 3244463395250619524, guid: 5746ff21c594ab34faa0317b7b2da868, type: 3}
 --- !u!114 &6695963654667929324
 MonoBehaviour:
   m_ObjectHideFlags: 0

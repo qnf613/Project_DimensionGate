@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7042058391626537225}
   - component: {fileID: 7159852718254793037}
   - component: {fileID: 2396298682826486941}
+  - component: {fileID: -1763024982965387648}
   m_Layer: 7
   m_Name: Troll_Yellow 3
   m_TagString: Boss
@@ -89,8 +90,14 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: 21052f26a3dbb104380beb6d1ea87050, type: 3}
   enemyvolume: 0.5
+  dpsm: {fileID: 0}
+  healthPickup: {fileID: 0}
+  burning: 0
   burnstr: 0
   isBoss: 1
+  statustype: 0
+  statusStrength: 0
+  statusDuration: 0
 --- !u!114 &6423956227372327668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +240,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &-1763024982965387648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423956227372327672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2faeeff10f23034dbcdde5eafe73394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvManager: {fileID: 0}
+  ls: {fileID: 0}
+  exp: 600
+  newExp: 600
+  dmgsys: {fileID: 0}
+  hpChecker: 0
+  sentExp: 0
 --- !u!1 &6423956227615709349
 GameObject:
   m_ObjectHideFlags: 0

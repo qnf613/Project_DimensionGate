@@ -34,14 +34,16 @@ public class DamageSystem : MonoBehaviour
     [SerializeField]private DropHealth healthPickup;
 
     bool slowed = false;
-    bool burning = false;
+    public bool burning = false;
     float burntickSpeed = 1, lastTick;
     public float burnstr;
 
     float originalspeed;
     BossUIManager BossManager;
     public bool isBoss;
-    
+
+    public float statustype, statusStrength, statusDuration;
+
     private void Awake()
     {
         currentHealth = newMaxHealth;
@@ -78,9 +80,15 @@ public class DamageSystem : MonoBehaviour
             }
         }
     }
+    public virtual void ApplyStatusEffect(float status, float Strength, float duration, bool SpreadFire)
+    {
 
+    }
     public virtual void ApplyStatusEffect(float status, float Strength, float duration)
     {
+        statustype = status;
+        statusStrength = Strength;
+        statusDuration = duration;
         if (Strength >80)
         {
             Strength = 80;

@@ -15,6 +15,7 @@ public class TommyGun : Weapon
     [SerializeField] private float reloadTime = 3f;
     protected Vector3 projectileDirection;
     int count;
+    bool infiniteAmmo = false;
     void Start()
     {
         // Overriding the basic stats and info about the weapon here
@@ -36,7 +37,7 @@ public class TommyGun : Weapon
     {
         if (Time.time > wAtkspeed + lastShot)
         {
-            if (ammo > 0)
+            if (ammo > 0 && infiniteAmmo == false)
             {
                 count++;   
                 ammo--;
@@ -46,10 +47,33 @@ public class TommyGun : Weapon
                 
                 lastShot = Time.time;
             }
+            if (infiniteAmmo == true)
+            {
+                if (Time.time > wAtkspeed + lastShot)
+                {
+                    if (weaponSound != null)
+                    {
+                       // AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+                    }
+
+                    CheckIfCrit();
+                    //AudioSource.PlayClipAtPoint(weaponSound, transform.position, volume);
+                    if (projectile != null)
+                    {
+                        Instantiate(projectile, transform.position, transform.rotation);
+                    }
+                    projectile.GetComponentInChildren<StraightProjectile>();
+                    projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
+                    lastShot = Time.time;
+                }
+                projectileDirection = (this.transform.position - targetPosition);
+
+                lastShot = Time.time;
+            }
             
             //Debug.Log("ammo is: " + ammo);
         }
-        else if (ammo == 0)
+        else if (ammo == 0 && infiniteAmmo == false)
         {
             Invoke("Reload", reloadTime);
         }
@@ -58,5 +82,39 @@ public class TommyGun : Weapon
     {      
           //Debug.Log("reloaded!");
            ammo = maxammo;
-    }    
+    }
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//double ammo / +20% crit rate
+            this.maxammo *= 2;
+            this.CritMod += 20;
+        }
+        if (enhancement == 6)
+        { // half reload speed, +3 maximum pierce
+            projectile.GetComponent<PierceCheckScript>().maxPierceCount = 3;
+            reloadTime /= 2;
+        }
+        if (enhancement < 6)
+        {
+            projectile.GetComponent<PierceCheckScript>().maxPierceCount = 1;
+        }
+        if (enhancement == 9)
+        { // +50% Atkspeed / +30% crit damage / +20% crit chance / Infinite Ammo
+            this.wAtkspeed *= .5f;
+            this.CritDamageMod *= 1.3f;
+            this.CritMod += 20f;
+        }
+        if (enhancement >= 9)
+        {
+            infiniteAmmo = true;
+        }
+        
+    }
+    protected override void Update()
+    {
+        if (enhancement < 9) { infiniteAmmo = false; }
+        if (enhancement < 6) { projectile.GetComponent<PierceCheckScript>().maxPierceCount = 1; }
+        base.Update();
+    }
 }

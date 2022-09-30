@@ -77,7 +77,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvManager: {fileID: 0}
   ls: {fileID: 0}
-  exp: 5
+  exp: 150
+  newExp: 150
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -95,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 75
   currentHealth: 0
+  newMaxHealth: 0
   attackDamage: 15
   atkspeed: 1
   lasthit: 0
@@ -107,7 +109,14 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: 87252097093c72f4b8d7c09435376372, type: 3}
   enemyvolume: 0.5
+  dpsm: {fileID: 0}
+  healthPickup: {fileID: 0}
+  burning: 0
+  burnstr: 0
   isBoss: 0
+  statustype: 0
+  statusStrength: 0
+  statusDuration: 0
 --- !u!114 &7425110078256503604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,7 +363,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1554989227
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f328bb55a3cf99d49b02745ecae6c247, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -11,9 +11,8 @@ public class PoisonFlask : Weapon
     [SerializeField] protected float attackspeed = .7f;
     [SerializeField] protected GameObject poisonFlaskPrefab;
     public float dotDamageScale = 1.1f;
-
     protected Vector3 projectileDirection;
-
+    [SerializeField] private GameObject UPGProjectile;
 
     void Start()
     {
@@ -58,5 +57,20 @@ public class PoisonFlask : Weapon
     {
         base.ApplyEnhancement();
      
+    }
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//+20% atkspeed
+            this.wAtkspeed *= .8f;
+        }
+        if (enhancement == 6)
+        {//+50 pool size
+            this.projectile = UPGProjectile;
+        }
+        if (enhancement == 9)
+        {//+50% dot damage scaling
+            this.dotDamageScale *= 1.5f;
+        }
     }
 }

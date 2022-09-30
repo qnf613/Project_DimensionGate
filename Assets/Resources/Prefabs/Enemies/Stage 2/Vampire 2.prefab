@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4358856973429744894}
   - component: {fileID: 2604627832822554100}
   - component: {fileID: 4489392510962069883}
+  - component: {fileID: -7478216428317124042}
   m_Layer: 7
   m_Name: Vampire 2
   m_TagString: Boss
@@ -37,6 +38,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 6014431744075619976}
   - {fileID: 1106998189371577001}
   - {fileID: 1106998188327041449}
   m_Father: {fileID: 0}
@@ -187,9 +189,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 15000
+  MaxHealth: 8000
   currentHealth: 0
-  newMaxHealth: 15000
+  newMaxHealth: 12884.08
   attackDamage: 20
   atkspeed: 0.5
   lasthit: 0
@@ -203,8 +205,13 @@ MonoBehaviour:
   enemydamageSFX: {fileID: 0}
   enemyvolume: 0.5
   dpsm: {fileID: 0}
+  healthPickup: {fileID: 0}
+  burning: 0
   burnstr: 0
   isBoss: 1
+  statustype: 0
+  statusStrength: 0
+  statusDuration: 0
 --- !u!114 &4358856973429744894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +255,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &-7478216428317124042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106998187670196523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2faeeff10f23034dbcdde5eafe73394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lvManager: {fileID: 0}
+  ls: {fileID: 0}
+  exp: 200
+  newExp: 0
+  dmgsys: {fileID: 0}
+  hpChecker: 0
+  sentExp: 0
 --- !u!1 &1106998188327041450
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +302,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106998187670196564}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1106998189371577002
 GameObject:
@@ -309,7 +335,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1106998187670196564}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1106998189371577000
 SpriteRenderer:
@@ -397,3 +423,65 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1001 &8158637661060732193
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1106998187670196564}
+    m_Modifications:
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7122610158311769326, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+      propertyPath: m_Name
+      value: VampireAttack
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+--- !u!4 &6014431744075619976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2472124866461158313, guid: e6719509116b8354cb0bb7cdcdbbe446, type: 3}
+  m_PrefabInstance: {fileID: 8158637661060732193}
+  m_PrefabAsset: {fileID: 0}

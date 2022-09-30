@@ -6,11 +6,9 @@ public class VolcanicRing : Weapon
 {
     public float burnDamage;
     public float burnDuration;
-
-
-    private void Update()
+    [SerializeField] GameObject UPGProjectile;
+    private void Start()
     {
-        base.Update();
         burnDamage = damage / 5;
     }
     protected override void Aim()
@@ -35,6 +33,38 @@ public class VolcanicRing : Weapon
                 projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
             }         
             lastShot = Time.time;
+        }
+    }
+    public override void specialRefines()
+    {
+        if (enhancement == 3)
+        {//+50% atkspeed buff
+            this.wAtkspeed *= .5f;
+        }
+        if (enhancement == 6)
+        {
+            this.projectile = UPGProjectile;
+            this.burnDamage *= 2;
+        }
+        if (enhancement == 9)
+        {
+            this.damage *= 2;
+        }
+    }
+    protected override void Update()
+    {
+        CheckBURNLVL();
+        base.Update();
+    }
+    void CheckBURNLVL()
+    {
+        if (enhancement >= 6 && enhancement <9)
+        {
+            burnDamage = damage / 2.5f;
+        }
+        if (enhancement >=9)
+        {
+            burnDamage = damage;
         }
     }
 }

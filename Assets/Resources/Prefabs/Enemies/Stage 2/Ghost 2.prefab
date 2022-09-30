@@ -240,8 +240,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvManager: {fileID: 0}
   ls: {fileID: 0}
-  exp: 20
-  newExp: 0
+  exp: 40
+  newExp: 40
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -273,8 +273,13 @@ MonoBehaviour:
   enemydamageSFX: {fileID: 0}
   enemyvolume: 0.5
   dpsm: {fileID: 0}
+  healthPickup: {fileID: 0}
+  burning: 0
   burnstr: 0
   isBoss: 0
+  statustype: 0
+  statusStrength: 0
+  statusDuration: 0
 --- !u!114 &8397825533961815330
 MonoBehaviour:
   m_ObjectHideFlags: 0
