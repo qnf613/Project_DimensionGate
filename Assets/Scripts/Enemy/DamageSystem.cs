@@ -34,7 +34,7 @@ public class DamageSystem : MonoBehaviour
     [SerializeField]private DropHealth healthPickup;
 
     bool slowed = false;
-    public bool burning = false;
+    public bool burning = false, spread = false;
     float burntickSpeed = 1, lastTick;
     public float burnstr;
 
@@ -82,13 +82,39 @@ public class DamageSystem : MonoBehaviour
     }
     public virtual void ApplyStatusEffect(float status, float Strength, float duration, bool SpreadFire)
     {
+        statustype = status;
+        statusStrength = Strength;
+        statusDuration = duration;
+        if (Strength > 80)
+        {
+            Strength = 80;
+        }
+        if (status == 1 && slowed == false)
+        {
+            if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null || this.gameObject.GetComponentInChildren<Pathfinding.AIPath>() != null)
+            {
+                slowed = true;
+                Strength = 1 - Strength / 100;
+                this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= Strength;
 
+                Invoke("RemoveStatusEffectSlow", duration);
+            }
+        }
+        if (status == 2 && burning == false)
+        {
+            burnstr = Strength;
+            spread = SpreadFire;
+            Invoke("RemoveStatusEffectBurn", duration);
+            burning = true;
+        }
     }
     public virtual void ApplyStatusEffect(float status, float Strength, float duration)
     {
         statustype = status;
         statusStrength = Strength;
         statusDuration = duration;
+
+
         if (Strength >80)
         {
             Strength = 80;
@@ -100,7 +126,6 @@ public class DamageSystem : MonoBehaviour
                 slowed = true;
                 Strength = 1 - Strength / 100;
                 this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= Strength;
-                //this.gameObject.GetComponent<Pathfinding.AIPath>().speed *= slowStrength;
 
                 Invoke("RemoveStatusEffectSlow", duration);
             }
@@ -118,7 +143,11 @@ public class DamageSystem : MonoBehaviour
         {
             DealTickDamage(burnstr);
         }
-       
+        if (burning == true && spread)
+        {
+            this.GetComponent<SpreadDebuff>().ShouldSpread();
+        }
+
     }
     private void DealTickDamage(float str)
     {

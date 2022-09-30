@@ -9,7 +9,7 @@ public class VolcanicRing : Weapon
     [SerializeField] GameObject UPGProjectile;
     private void Start()
     {
-        burnDamage = damage / 5;
+        burnDamage = CalcCritDamage()/5;
     }
     protected override void Aim()
     {
@@ -28,7 +28,7 @@ public class VolcanicRing : Weapon
             if (projectile != null)
             {
                 Instantiate(projectile, targetPosition, transform.rotation);
-                projectile.GetComponent<ApplyDebuff>().SetDebuffStrenghtDuration(burnDamage, burnDuration, 2);
+                projectile.GetComponent<ApplyDebuff>().SetDebuffStrenghtDuration(burnDamage, burnDuration, 2, true);
                 projectile.GetComponent<StraightProjectile>();
                 projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
             }         

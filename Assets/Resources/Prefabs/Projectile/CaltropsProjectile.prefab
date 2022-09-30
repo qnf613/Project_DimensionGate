@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slow: 1
   burn: 0
-  Strength: 50
+  Strength: 20
   Duration: 3
 --- !u!114 &-3340676912290419663
 MonoBehaviour:

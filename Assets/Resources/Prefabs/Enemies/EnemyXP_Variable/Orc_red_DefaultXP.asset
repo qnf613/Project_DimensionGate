@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c6079709127168469c61edeefc98c84, type: 3}
   m_Name: Orc_red_DefaultXP
   m_EditorClassIdentifier: 
-  defaultXP: 5
+  defaultXP: 60
