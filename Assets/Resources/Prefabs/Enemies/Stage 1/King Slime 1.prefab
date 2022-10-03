@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: -7710450430877417915}
   - component: {fileID: 3846018590752223010}
   - component: {fileID: 71540837003899127}
+  - component: {fileID: 459123917573547205}
   m_Layer: 7
   m_Name: King Slime 1
   m_TagString: Boss
@@ -207,7 +208,9 @@ MonoBehaviour:
   dpsm: {fileID: 0}
   healthPickup: {fileID: 0}
   burning: 0
+  bleeding: 0
   burnstr: 0
+  bleedstr: 0
   isBoss: 1
   statustype: 0
   statusStrength: 0
@@ -290,6 +293,20 @@ MonoBehaviour:
   - {fileID: 1412421491970781223, guid: e884d178813bc6a409a41b36facf7cd5, type: 3}
   - {fileID: 1412421491970781223, guid: ea9aad8bce55ba444b1c626dcacee86f, type: 3}
   cooldown: 0.5
+--- !u!114 &459123917573547205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5874046255734088369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a9d85157a40b943904530402480905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myds: {fileID: 0}
+  Theirds: {fileID: 0}
 --- !u!1 &5874046256116976176
 GameObject:
   m_ObjectHideFlags: 0

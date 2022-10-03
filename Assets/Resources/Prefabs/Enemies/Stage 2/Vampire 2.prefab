@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2604627832822554100}
   - component: {fileID: 4489392510962069883}
   - component: {fileID: -7478216428317124042}
+  - component: {fileID: -2168824014322080972}
   m_Layer: 7
   m_Name: Vampire 2
   m_TagString: Boss
@@ -191,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 8000
   currentHealth: 0
-  newMaxHealth: 12884.08
+  newMaxHealth: 8000
   attackDamage: 20
   atkspeed: 0.5
   lasthit: 0
@@ -207,7 +208,9 @@ MonoBehaviour:
   dpsm: {fileID: 0}
   healthPickup: {fileID: 0}
   burning: 0
+  bleeding: 0
   burnstr: 0
+  bleedstr: 0
   isBoss: 1
   statustype: 0
   statusStrength: 0
@@ -270,10 +273,24 @@ MonoBehaviour:
   lvManager: {fileID: 0}
   ls: {fileID: 0}
   exp: 200
-  newExp: 0
+  newExp: 100
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
+--- !u!114 &-2168824014322080972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106998187670196523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a9d85157a40b943904530402480905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myds: {fileID: 0}
+  Theirds: {fileID: 0}
 --- !u!1 &1106998188327041450
 GameObject:
   m_ObjectHideFlags: 0

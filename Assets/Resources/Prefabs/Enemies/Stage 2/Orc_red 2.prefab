@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 6888073843323969737}
   - component: {fileID: 6733400950791755917}
   - component: {fileID: -4428042318232771661}
+  - component: {fileID: -129626077093055629}
   m_Layer: 7
   m_Name: Orc_red 2
   m_TagString: Enemy
@@ -78,7 +79,7 @@ MonoBehaviour:
   lvManager: {fileID: 0}
   ls: {fileID: 0}
   exp: 50
-  newExp: 50
+  newExp: 60
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -94,9 +95,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 400
+  MaxHealth: 75
   currentHealth: 0
-  newMaxHealth: 400
+  newMaxHealth: 75
   attackDamage: 10
   atkspeed: 1
   lasthit: 0
@@ -112,7 +113,9 @@ MonoBehaviour:
   dpsm: {fileID: 0}
   healthPickup: {fileID: 0}
   burning: 0
+  bleeding: 0
   burnstr: 0
+  bleedstr: 0
   isBoss: 0
   statustype: 0
   statusStrength: 0
@@ -259,6 +262,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &-129626077093055629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7425110078256503608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a9d85157a40b943904530402480905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myds: {fileID: 0}
+  Theirds: {fileID: 0}
 --- !u!1 &7425110078484128101
 GameObject:
   m_ObjectHideFlags: 0

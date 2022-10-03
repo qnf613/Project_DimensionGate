@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 7159852718254793037}
   - component: {fileID: 2396298682826486941}
   - component: {fileID: -1763024982965387648}
+  - component: {fileID: 7240136176804483788}
   m_Layer: 7
   m_Name: Troll_Yellow 3
   m_TagString: Boss
@@ -77,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 10000
   currentHealth: 0
-  newMaxHealth: 0
+  newMaxHealth: 10000
   attackDamage: 30
   atkspeed: 1
   lasthit: 0
@@ -93,7 +94,9 @@ MonoBehaviour:
   dpsm: {fileID: 0}
   healthPickup: {fileID: 0}
   burning: 0
+  bleeding: 0
   burnstr: 0
+  bleedstr: 0
   isBoss: 1
   statustype: 0
   statusStrength: 0
@@ -255,10 +258,24 @@ MonoBehaviour:
   lvManager: {fileID: 0}
   ls: {fileID: 0}
   exp: 600
-  newExp: 600
+  newExp: 200
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
+--- !u!114 &7240136176804483788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6423956227372327672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a9d85157a40b943904530402480905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myds: {fileID: 0}
+  Theirds: {fileID: 0}
 --- !u!1 &6423956227615709349
 GameObject:
   m_ObjectHideFlags: 0

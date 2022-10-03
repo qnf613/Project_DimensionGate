@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 4115397143713872868}
   - component: {fileID: 4321856071891977120}
   - component: {fileID: -1401051794982040634}
+  - component: {fileID: -6893214123621691827}
   m_Layer: 7
   m_Name: Orc_green 3
   m_TagString: Enemy
@@ -112,7 +113,9 @@ MonoBehaviour:
   dpsm: {fileID: 0}
   healthPickup: {fileID: 0}
   burning: 0
+  bleeding: 0
   burnstr: 0
+  bleedstr: 0
   isBoss: 0
   statustype: 0
   statusStrength: 0
@@ -259,6 +262,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &-6893214123621691827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108300834980364309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a9d85157a40b943904530402480905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myds: {fileID: 0}
+  Theirds: {fileID: 0}
 --- !u!1 &108300836148148808
 GameObject:
   m_ObjectHideFlags: 0

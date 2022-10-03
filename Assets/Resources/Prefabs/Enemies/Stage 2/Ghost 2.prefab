@@ -182,6 +182,7 @@ GameObject:
   - component: {fileID: 5482852413996351199}
   - component: {fileID: 5688472870085281435}
   - component: {fileID: -1585732987066084030}
+  - component: {fileID: 780176654426485527}
   m_Layer: 7
   m_Name: Ghost 2
   m_TagString: Enemy
@@ -241,7 +242,7 @@ MonoBehaviour:
   lvManager: {fileID: 0}
   ls: {fileID: 0}
   exp: 40
-  newExp: 40
+  newExp: 50
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -257,9 +258,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 200
+  MaxHealth: 50
   currentHealth: 0
-  newMaxHealth: 200
+  newMaxHealth: 50
   attackDamage: 8
   atkspeed: 0.5
   lasthit: 0
@@ -275,7 +276,9 @@ MonoBehaviour:
   dpsm: {fileID: 0}
   healthPickup: {fileID: 0}
   burning: 0
+  bleeding: 0
   burnstr: 0
+  bleedstr: 0
   isBoss: 0
   statustype: 0
   statusStrength: 0
@@ -422,3 +425,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &780176654426485527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8397825533961815342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a9d85157a40b943904530402480905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myds: {fileID: 0}
+  Theirds: {fileID: 0}

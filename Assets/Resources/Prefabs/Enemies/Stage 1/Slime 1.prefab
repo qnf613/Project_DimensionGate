@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1554989227
-  m_SortingLayer: -3
+  m_SortingLayer: -4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dd3860ff92347fa40abcf550eca6481d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 2018952321}
   - component: {fileID: 3127783219624572596}
   - component: {fileID: -4007419398917327811}
+  - component: {fileID: -5793807397086365842}
   m_Layer: 7
   m_Name: Slime 1
   m_TagString: Enemy
@@ -228,6 +229,7 @@ MonoBehaviour:
   lvManager: {fileID: 0}
   ls: {fileID: 0}
   exp: 1
+  newExp: 0
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -245,6 +247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 25
   currentHealth: 0
+  newMaxHealth: 0
   attackDamage: 5
   atkspeed: 0.75
   lasthit: 0
@@ -257,7 +260,16 @@ MonoBehaviour:
   explosionParticle: {fileID: 7772722842220195041, guid: c77f135f05fee784798af7819cc9c18a, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: 8e75f2793676e7a4098a22280926a878, type: 3}
   enemyvolume: 0.5
+  dpsm: {fileID: 0}
+  healthPickup: {fileID: 0}
+  burning: 0
+  bleeding: 0
+  burnstr: 0
+  bleedstr: 0
   isBoss: 0
+  statustype: 0
+  statusStrength: 0
+  statusDuration: 0
 --- !u!114 &5580571326173248731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +412,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &-5793807397086365842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5580571326173248728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a9d85157a40b943904530402480905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myds: {fileID: 0}
+  Theirds: {fileID: 0}
 --- !u!1 &5580571326594667609
 GameObject:
   m_ObjectHideFlags: 0

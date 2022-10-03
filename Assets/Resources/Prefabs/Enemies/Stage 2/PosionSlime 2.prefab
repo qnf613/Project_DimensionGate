@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 8998323970953668}
   - component: {fileID: 3132228981335286769}
   - component: {fileID: -727393101355892855}
+  - component: {fileID: 5612422854234652140}
   m_Layer: 7
   m_Name: PosionSlime 2
   m_TagString: Enemy
@@ -124,9 +125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 200
+  MaxHealth: 25
   currentHealth: 0
-  newMaxHealth: 200
+  newMaxHealth: 25
   attackDamage: 5
   atkspeed: 0.75
   lasthit: 0
@@ -142,7 +143,9 @@ MonoBehaviour:
   dpsm: {fileID: 0}
   healthPickup: {fileID: 0}
   burning: 0
+  bleeding: 0
   burnstr: 0
+  bleedstr: 0
   isBoss: 0
   statustype: 0
   statusStrength: 0
@@ -289,6 +292,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthDrop: {fileID: 1070929668114642577, guid: 7e004eefb123fec478a26598241ba43d, type: 3}
   dropOdds: 5
+--- !u!114 &5612422854234652140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5579357269101078941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76a9d85157a40b943904530402480905, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Myds: {fileID: 0}
+  Theirds: {fileID: 0}
 --- !u!1 &5579357269988502044
 GameObject:
   m_ObjectHideFlags: 0

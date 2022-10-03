@@ -34,9 +34,9 @@ public class DamageSystem : MonoBehaviour
     [SerializeField]private DropHealth healthPickup;
 
     bool slowed = false;
-    public bool burning = false, spread = false;
+    public bool burning = false, bleeding = false;
     float burntickSpeed = 1, lastTick;
-    public float burnstr;
+    public float burnstr, bleedstr;
 
     float originalspeed;
     BossUIManager BossManager;
@@ -80,34 +80,6 @@ public class DamageSystem : MonoBehaviour
             }
         }
     }
-    public virtual void ApplyStatusEffect(float status, float Strength, float duration, bool SpreadFire)
-    {
-        statustype = status;
-        statusStrength = Strength;
-        statusDuration = duration;
-        if (Strength > 80)
-        {
-            Strength = 80;
-        }
-        if (status == 1 && slowed == false)
-        {
-            if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null || this.gameObject.GetComponentInChildren<Pathfinding.AIPath>() != null)
-            {
-                slowed = true;
-                Strength = 1 - Strength / 100;
-                this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= Strength;
-
-                Invoke("RemoveStatusEffectSlow", duration);
-            }
-        }
-        if (status == 2 && burning == false)
-        {
-            burnstr = Strength;
-            spread = SpreadFire;
-            Invoke("RemoveStatusEffectBurn", duration);
-            burning = true;
-        }
-    }
     public virtual void ApplyStatusEffect(float status, float Strength, float duration)
     {
         statustype = status;
@@ -136,6 +108,11 @@ public class DamageSystem : MonoBehaviour
             Invoke("RemoveStatusEffectBurn", duration);
             burning = true;
         }
+        if (status == 3 && bleeding == false)
+        {
+            bleedstr = Strength / 100;
+            bleeding = true;
+        }
     }
     private void Update()
     {
@@ -143,11 +120,10 @@ public class DamageSystem : MonoBehaviour
         {
             DealTickDamage(burnstr);
         }
-        if (burning == true && spread)
+        if (bleeding == true)
         {
-            this.GetComponent<SpreadDebuff>().ShouldSpread();
+            DealTickDamage(bleedstr);
         }
-
     }
     private void DealTickDamage(float str)
     {

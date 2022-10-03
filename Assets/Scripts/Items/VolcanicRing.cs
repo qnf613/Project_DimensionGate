@@ -28,7 +28,7 @@ public class VolcanicRing : Weapon
             if (projectile != null)
             {
                 Instantiate(projectile, targetPosition, transform.rotation);
-                projectile.GetComponent<ApplyDebuff>().SetDebuffStrenghtDuration(burnDamage, burnDuration, 2, true);
+                projectile.GetComponent<ApplyDebuff>().SetDebuffStrenghtDuration(burnDamage, burnDuration, 2);
                 projectile.GetComponent<StraightProjectile>();
                 projectile.GetComponent<DealDamage>().SetDamage(CalcCritDamage(), crit, CritDamageMod);
             }         

@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class ApplyDebuff : MonoBehaviour
 {
-    public bool slow;
-    public bool burn;
+    public bool slow, burn, bleed;
     public float Strength;
     public float Duration;
-    bool spread;
+    
 
-    public void SetDebuffStrenghtDuration(float _Strength, float _duration, float _debuffType) 
+    public void SetDebuffStrenghtDuration(float _Strength, float _duration, float _debuffType)
     {
         Strength = _Strength;
         Duration = _duration;
@@ -22,21 +21,8 @@ public class ApplyDebuff : MonoBehaviour
             case 2:
                 burn = true;
                 break;
-        }
-
-    }
-    public void SetDebuffStrenghtDuration(float _Strength, float _duration, float _debuffType, bool _spread)
-    {
-        Strength = _Strength;
-        Duration = _duration;
-        spread = _spread;
-        switch (_debuffType)
-        {
-            case 1:
-                slow = true;
-                break;
-            case 2:
-                burn = true;
+            case 3:
+                bleed = true;
                 break;
         }
 
@@ -66,14 +52,15 @@ public class ApplyDebuff : MonoBehaviour
 
             }
         }
-        if (burn == true && spread == true)
+        if (bleed == true)
         {
             if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
             else if (collision.gameObject.GetComponent<DamageSystem>() != null)
             {
-                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(2, Strength, Duration, true);
+                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(3, Strength, Duration);
 
             }
         }
     }
 }
+
