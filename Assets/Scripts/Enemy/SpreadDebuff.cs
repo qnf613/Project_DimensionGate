@@ -18,7 +18,7 @@ public class SpreadDebuff : MonoBehaviour
             if (Theirds.burning == false && Myds.burning == true)
             {
                 Debug.Log("Spread");
-                Theirds.ApplyStatusEffect(2, Myds.statusStrength, Myds.statusDuration);
+                Theirds.ApplyStatusEffect(2, Myds.statusStrength, Myds.statusDuration, Myds.origins);
             }
         }
     }

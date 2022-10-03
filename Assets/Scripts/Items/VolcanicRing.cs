@@ -9,7 +9,7 @@ public class VolcanicRing : Weapon
     [SerializeField] GameObject UPGProjectile;
     private void Start()
     {
-        burnDamage = CalcCritDamage()/5;
+        burnDamage = damage/5;
     }
     protected override void Aim()
     {

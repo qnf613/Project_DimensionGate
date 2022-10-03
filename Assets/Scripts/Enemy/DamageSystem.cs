@@ -44,6 +44,10 @@ public class DamageSystem : MonoBehaviour
 
     public float statustype, statusStrength, statusDuration;
 
+    [SerializeField] private PlayerStats playerSTATS_Script;
+    [SerializeField] private GameObject playerGameObject;
+    public List<string> origins = new List<string>(); // this will keep track of what has applyed debuffs
+
     private void Awake()
     {
         currentHealth = newMaxHealth;
@@ -57,6 +61,8 @@ public class DamageSystem : MonoBehaviour
 
     void Start()
     {
+        playerGameObject = GameObject.FindWithTag("Player");
+        playerSTATS_Script = playerGameObject.GetComponent<PlayerStats>();
         if (GameObject.Find("DPS Meter").GetComponent<DPSMeter>() != null)
         {
             dpsm = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
@@ -80,13 +86,58 @@ public class DamageSystem : MonoBehaviour
             }
         }
     }
-    public virtual void ApplyStatusEffect(float status, float Strength, float duration)
+    public virtual void ApplyStatusEffect(float status, float Strength, float duration, List<string> origin)
     {
         statustype = status;
         statusStrength = Strength;
         statusDuration = duration;
+        foreach (var item in origins)
+        {
+            if (!origins.Contains(item))
+            {
+            origins.Add(item);
+            }
+        }
+        if (Strength > 80)
+        {
+            Strength = 80;
+        }
+        if (status == 1 && slowed == false)
+        {
+            if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null || this.gameObject.GetComponentInChildren<Pathfinding.AIPath>() != null)
+            {
+                slowed = true;
+                Strength = 1 - Strength / 100;
+                this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= Strength;
 
-
+                Invoke("RemoveStatusEffectSlow", duration);
+            }
+        }
+        if (status == 2)
+        {
+            foreach (var item in origin)
+            {
+                if (!origins.Contains(item))
+                {
+                    origins.Add(item);
+                    burnstr += Strength;
+                }
+                Invoke("RemoveStatusEffectBurn", duration);
+                burning = true;
+            }
+        }
+        if (status == 3 && bleeding == false)
+        {
+            bleedstr = Strength / 100 + playerSTATS_Script.BaseDMG; // // TODO: Jin, whenever you add a mod to sideeffects, pls substitute the baseDMG to whatever the mod is.
+            bleeding = true;
+        }
+    }
+    public virtual void ApplyStatusEffect(float status, float Strength, float duration, string origin)
+    {
+        statustype = status;
+        statusStrength = Strength;
+        statusDuration = duration;
+        
         if (Strength >80)
         {
             Strength = 80;
@@ -102,15 +153,19 @@ public class DamageSystem : MonoBehaviour
                 Invoke("RemoveStatusEffectSlow", duration);
             }
         }
-        if (status == 2 && burning == false)
+        if (status == 2)
         {
-            burnstr = Strength;
+            if (!origins.Contains(origin))
+            {
+                origins.Add(origin);
+                burnstr += Strength;
+            }
             Invoke("RemoveStatusEffectBurn", duration);
             burning = true;
         }
         if (status == 3 && bleeding == false)
         {
-            bleedstr = Strength / 100;
+            bleedstr = Strength / 100 + playerSTATS_Script.BaseDMG; // // TODO: Jin, whenever you add a mod to sideeffects, pls substitute the baseDMG to whatever the mod is.
             bleeding = true;
         }
     }
@@ -133,7 +188,7 @@ public class DamageSystem : MonoBehaviour
             lastTick = Time.time;
         }
     }
-    private void RemoveStatusEffectBurn() { burning = false; }
+    private void RemoveStatusEffectBurn() { burning = false; origins.Clear(); burnstr = 0; }
     private void RemoveStatusEffectSlow()
     {
        

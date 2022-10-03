@@ -39,7 +39,7 @@ public class ApplyDebuff : MonoBehaviour
             if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
             else if (collision.gameObject.GetComponent<DamageSystem>() != null)
             {
-                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(1, Strength, Duration);
+                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(1, Strength, Duration, this.gameObject.name);
 
             }
         }
@@ -48,7 +48,7 @@ public class ApplyDebuff : MonoBehaviour
             if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
             else if (collision.gameObject.GetComponent<DamageSystem>() != null)
             {
-                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(2, Strength, Duration);
+                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(2, Strength, Duration, this.gameObject.name);
 
             }
         }
@@ -57,7 +57,7 @@ public class ApplyDebuff : MonoBehaviour
             if (collision.gameObject.GetComponent<DamageSystem>() == null) { }
             else if (collision.gameObject.GetComponent<DamageSystem>() != null)
             {
-                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(3, Strength, Duration);
+                collision.gameObject.GetComponent<DamageSystem>().ApplyStatusEffect(3, Strength, Duration, this.gameObject.name);
 
             }
         }
