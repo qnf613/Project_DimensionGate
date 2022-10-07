@@ -258,8 +258,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvManager: {fileID: 0}
   ls: {fileID: 0}
-  exp: 1
-  newExp: 0
+  exp: 3
+  newExp: 3
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 15
   currentHealth: 0
-  newMaxHealth: 0
+  newMaxHealth: 15
   attackDamage: 5
   atkspeed: 0.5
   lasthit: 0
@@ -300,6 +300,9 @@ MonoBehaviour:
   statustype: 0
   statusStrength: 0
   statusDuration: 0
+  playerSTATS_Script: {fileID: 0}
+  playerGameObject: {fileID: 0}
+  origins: []
 --- !u!114 &4079153972502358031
 MonoBehaviour:
   m_ObjectHideFlags: 0

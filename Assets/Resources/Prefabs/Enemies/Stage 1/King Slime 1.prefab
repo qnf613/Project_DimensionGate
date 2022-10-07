@@ -190,7 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4349293bb4cdba044bd4a14798a48df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 4000
+  MaxHealth: 2000
   currentHealth: 0
   newMaxHealth: 6442.04
   attackDamage: 15
@@ -215,6 +215,9 @@ MonoBehaviour:
   statustype: 0
   statusStrength: 0
   statusDuration: 0
+  playerSTATS_Script: {fileID: 0}
+  playerGameObject: {fileID: 0}
+  origins: []
 --- !u!114 &7108316683183888228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,8 +275,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lvManager: {fileID: 0}
   ls: {fileID: 0}
-  exp: 100
-  newExp: 100
+  exp: 30
+  newExp: 30
   dmgsys: {fileID: 0}
   hpChecker: 0
   sentExp: 0

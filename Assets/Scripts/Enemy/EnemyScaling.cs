@@ -31,10 +31,11 @@ public class EnemyScaling : MonoBehaviour
         enemyMaxHealth.newMaxHealth = defaultHP.defaultHP;
         enemyMaxHealth.MaxHealth = defaultHP.defaultHP;
 
-        if (enemyexp != null)
-        {
-            enemyexp.newExp = defaultXP.defaultXP;
-        }
+        //if (enemyexp != null)
+        //{
+        enemyexp.newExp = defaultXP.defaultXP;
+        enemyexp.exp = defaultXP.defaultXP;
+        //}
 
     }
     void Start()
@@ -42,10 +43,11 @@ public class EnemyScaling : MonoBehaviour
 
         //Get MaxHealth + base xp from prefab
         maxHealth = enemyMaxHealth.MaxHealth;
-        if (enemyexp != null)
-        {
-            baseXp = enemyexp.exp;
-        }
+        //if (enemyexp != null)
+        //{
+            baseXp = enemyexp.exp; 
+        //}
+
 
         // call healthscale + expscale every 60(change to whatever) seconds.
         InvokeRepeating("healthScale", 60f, 60f);
@@ -74,7 +76,7 @@ public class EnemyScaling : MonoBehaviour
         xpModify = baseXp * xpMultiplier;
         // change new max xp from EXP container
         enemyexp.newExp = xpModify;
-
+        Debug.Log("Change xp");
     }
 
 
