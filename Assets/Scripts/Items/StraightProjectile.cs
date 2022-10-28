@@ -15,4 +15,12 @@ public class StraightProjectile : MonoBehaviour
         //this.transform.Translate(transform.right * projectileSpeed * Time.deltaTime);
         Destroy(this.gameObject, lifespan);
     }
+    private void Update()
+    {
+        if (!gameObject.GetComponentInChildren<SpriteRenderer>().isVisible)
+        {
+            Debug.Log("I got off from scene");
+            Destroy(this.gameObject);
+        }
+    }
 }
