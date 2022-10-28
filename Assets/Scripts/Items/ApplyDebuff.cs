@@ -31,6 +31,7 @@ public class ApplyDebuff : MonoBehaviour
      * Summary : pass in a number which determins the type of status effect applied to target.
      * 1 = slow
      * 2 = burn
+     * 3 = bleed
      */
     private void OnTriggerEnter2D(Collider2D collision)
     {

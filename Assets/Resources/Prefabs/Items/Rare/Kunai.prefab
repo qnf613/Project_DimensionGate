@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 6669156098071806039}
   - component: {fileID: 8223841319041952171}
   - component: {fileID: 3332713023048179889}
-  - component: {fileID: -2637026935883791083}
   m_Layer: 0
   m_Name: Kunai
   m_TagString: Weapon
@@ -161,8 +160,7 @@ MonoBehaviour:
   attackspeed: 1.25
   pierceCount: 0
   maxPierceCount: 0
-  bleedStrength: 0
-  bleedDuration: 0
+  bleedStrength: 0.5
   UpgradedProjectile: {fileID: 5297450453345524548, guid: 1fec06715fd8a324f9b24459e301ac41, type: 3}
 --- !u!114 &8223841319041952171
 MonoBehaviour:
@@ -192,16 +190,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   randomNumber: 0
   crit: 0
---- !u!114 &-2637026935883791083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4304662588115313334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 697c620b19a9d784bad122766fc8781e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerUntillDestruction: 8

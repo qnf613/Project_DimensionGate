@@ -13,7 +13,6 @@ public class Kunai : Weapon
     [SerializeField] private int maxPierceCount;
     protected Vector3 projectileDirection;
     public float bleedStrength;
-    public float bleedDuration;
     private float bs; //bleedstrength modifier
 
     public GameObject UpgradedProjectile;
@@ -26,15 +25,14 @@ public class Kunai : Weapon
         this.wRange = rage;
         this.wAtkspeed = attackspeed;
         we = WeaponEquipped.yes;
-        bs = 3f;
-        bleedDuration = 3;
+        bs = .2f;
     }
 
     protected override void Update()
     {
         base.Update();
 
-        bleedStrength = damage/bs;
+        bleedStrength = bs;
     }
 
     protected override void Aim()
@@ -62,7 +60,7 @@ public class Kunai : Weapon
             foreach (ApplyDebuff item in projectile.GetComponentsInChildren<ApplyDebuff>())
             {
                 
-                item.SetDebuffStrenghtDuration(bleedStrength, bleedDuration, 2);
+                item.SetDebuffStrenghtDuration(bleedStrength, 100, 3); // bleed doesnt care for duration, plac any number for duration
             }
 
             lastShot = Time.time;
@@ -72,15 +70,15 @@ public class Kunai : Weapon
     {
         if (this.enhancement == 3)
         {//dot damage doubled
-            bs = 1.5f;
+            bs *= 2;
         }
         if (this.enhancement == 6)
         {//more projectiles
             this.projectile = UpgradedProjectile; 
         }
         if (this.enhancement == 9)
-        {//dot duration doubled
-            this.bleedDuration *= 2;
+        {//dot damage + 50%
+            bs *= 1.5f;
         }
     }
 }

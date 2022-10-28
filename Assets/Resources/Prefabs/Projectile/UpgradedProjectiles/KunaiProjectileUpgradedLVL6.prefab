@@ -191,7 +191,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slow: 0
-  burn: 1
+  burn: 0
+  bleed: 0
   Strength: 2
   Duration: 3
 --- !u!1 &3038293449273775590
@@ -385,7 +386,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slow: 0
-  burn: 1
+  burn: 0
+  bleed: 0
   Strength: 2
   Duration: 3
 --- !u!1 &4392276581833872004
@@ -579,7 +581,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slow: 0
-  burn: 1
+  burn: 0
+  bleed: 0
   Strength: 2
   Duration: 3
 --- !u!1 &5297450453345524548
@@ -592,6 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1784201724845622858}
   - component: {fileID: 7703330012358631862}
+  - component: {fileID: 3039064713426343675}
   m_Layer: 0
   m_Name: KunaiProjectileUpgradedLVL6
   m_TagString: Untagged
@@ -670,6 +674,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3039064713426343675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5297450453345524548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 697c620b19a9d784bad122766fc8781e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerUntillDestruction: 6
 --- !u!1 &7159575659780331566
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +878,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slow: 0
-  burn: 1
+  burn: 0
+  bleed: 0
   Strength: 2
   Duration: 3
 --- !u!1 &8139432003891951025
@@ -1055,6 +1073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slow: 0
-  burn: 1
+  burn: 0
+  bleed: 0
   Strength: 2
   Duration: 3

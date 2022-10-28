@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class DamagePopUpMovement : MonoBehaviour
+using TMPro;
+public class DamagePopUp : MonoBehaviour
 {
 
     [SerializeField] private float speed = .3f;
@@ -16,5 +16,12 @@ public class DamagePopUpMovement : MonoBehaviour
     void Update()
     {
         this.transform.position += Vector3.up * speed * Time.deltaTime;
+    }
+    public void SetNumber(float damage, Color c, float fontsize)
+    {
+        var tmp = this.gameObject.GetComponent<TextMeshPro>();
+        tmp.text = ((int)damage).ToString();
+        tmp.fontSize = fontsize;
+        tmp.color = c;
     }
 }

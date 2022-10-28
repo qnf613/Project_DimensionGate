@@ -173,7 +173,7 @@ MonoBehaviour:
   cam: {fileID: 0}
   projectile: {fileID: 4736143673115787737, guid: 0a2d6a4485b0d39428407b16d1169be6, type: 3}
   crit: 0
-  weaponSound: {fileID: 8300000, guid: 500540fbb2911a943ac91dfbe0d82ab3, type: 3}
+  weaponSound: {fileID: 8300000, guid: 62ee3fc31be51ab4a8c80ee8768a5cf0, type: 3}
   volume: 0.5
   dpsm: {fileID: 0}
   dps: 0
@@ -181,6 +181,7 @@ MonoBehaviour:
   RefineCritChance: 1
   RefineCritDamage: 0
   refineDamage: 1
+  _Stats: {fileID: 0}
   name: Fire Bolt
   description: Shoot a fire bolt which burns enemies
   range: 20

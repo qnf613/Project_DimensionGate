@@ -19,7 +19,6 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] private float atkspeed = 0.5f;
     [SerializeField] private float lasthit;
 
-    [SerializeField] private TextMeshPro DamageIndicator;
     [SerializeField] private GameObject pfDamagePopup;
 
     [SerializeField] private GameObject OffSet;
@@ -35,9 +34,9 @@ public class DamageSystem : MonoBehaviour
 
     bool slowed = false;
     public bool burning = false, bleeding = false;
-    float burntickSpeed = 1, lastTick;
+    float tickSpeed = 1, lastTick;
     public float burnstr, bleedstr;
-
+    public float burnDuration,slowDuration;
     float originalspeed;
     BossUIManager BossManager;
     public bool isBoss;
@@ -51,7 +50,6 @@ public class DamageSystem : MonoBehaviour
     private void Awake()
     {
         currentHealth = newMaxHealth;
-        DamageIndicator = transform.GetComponent<TextMeshPro>();
         BossManager = GetComponent<BossUIManager>();
         if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null)
         {
@@ -68,8 +66,6 @@ public class DamageSystem : MonoBehaviour
             dpsm = GameObject.Find("DPS Meter").GetComponent<DPSMeter>();
         }
         currentHealth = newMaxHealth;
-        DamageIndicator = pfDamagePopup.GetComponent<TextMeshPro>();
-        DamageIndicator.fontSize = originalFontSize;
         healthPickup = GetComponent<DropHealth>();
     }
 
@@ -98,19 +94,17 @@ public class DamageSystem : MonoBehaviour
             origins.Add(item);
             }
         }
-        if (Strength > 80)
-        {
-            Strength = 80;
-        }
-        if (status == 1 && slowed == false)
+        if (status == 1)
         {
             if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null || this.gameObject.GetComponentInChildren<Pathfinding.AIPath>() != null)
             {
                 slowed = true;
                 Strength = 1 - Strength / 100;
+                if (Strength > 80)
+                {
+                    Strength = 80;
+                }
                 this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= Strength;
-
-                Invoke("RemoveStatusEffectSlow", duration);
             }
         }
         if (status == 2)
@@ -119,16 +113,16 @@ public class DamageSystem : MonoBehaviour
             {
                 if (!origins.Contains(item))
                 {
+                    burnDuration += duration;
                     origins.Add(item);
                     burnstr += Strength;
                 }
-                Invoke("RemoveStatusEffectBurn", duration);
                 burning = true;
             }
         }
-        if (status == 3 && bleeding == false)
+        if (status == 3)
         {
-            bleedstr = Strength / 100 + playerSTATS_Script.BaseDMG; // // TODO: Jin, whenever you add a mod to sideeffects, pls substitute the baseDMG to whatever the mod is.
+            bleedstr = Strength * playerSTATS_Script.BaseDMG; // // TODO: Jin, whenever you add a mod to sideeffects, pls substitute the baseDMG to whatever the mod is.
             bleeding = true;
         }
     }
@@ -138,34 +132,38 @@ public class DamageSystem : MonoBehaviour
         statusStrength = Strength;
         statusDuration = duration;
         
-        if (Strength >80)
-        {
-            Strength = 80;
-        }
-        if (status == 1 && slowed == false)
+       
+        if (status == 1)
         {
             if (this.gameObject.GetComponent<Pathfinding.AIPath>() != null || this.gameObject.GetComponentInChildren<Pathfinding.AIPath>() != null)
             {
                 slowed = true;
                 Strength = 1 - Strength / 100;
+                if (Strength > 80)
+                {
+                    Strength = 80;
+                }
                 this.gameObject.GetComponent<Pathfinding.AIPath>().maxSpeed *= Strength;
-
-                Invoke("RemoveStatusEffectSlow", duration);
             }
         }
         if (status == 2)
         {
+           
             if (!origins.Contains(origin))
             {
+                burnDuration += duration;
+                burning = true;
                 origins.Add(origin);
                 burnstr += Strength;
             }
-            Invoke("RemoveStatusEffectBurn", duration);
-            burning = true;
+            if (origins.Contains(origin))
+            {
+                burnDuration += duration / 3;
+            }
         }
-        if (status == 3 && bleeding == false)
+        if (status == 3)
         {
-            bleedstr = Strength / 100 + playerSTATS_Script.BaseDMG; // // TODO: Jin, whenever you add a mod to sideeffects, pls substitute the baseDMG to whatever the mod is.
+            bleedstr = Strength * playerSTATS_Script.BaseDMG; // // TODO: Jin, whenever you add a mod to sideeffects, pls substitute the baseDMG to whatever the mod is.
             bleeding = true;
         }
     }
@@ -173,16 +171,44 @@ public class DamageSystem : MonoBehaviour
     {
         if (burning == true)
         {
-            DealTickDamage(burnstr);
+            BurnDealTickDamage(burnstr);
+            burnDuration -= Time.deltaTime;
+            if (burnDuration <0)
+            {
+                RemoveStatusEffectBurn();
+            }
+            Debug.Log("Dealing :" + burnstr);
+        }
+        if (slowed == true)
+        {
+            slowDuration -= Time.deltaTime;
+            if ( slowDuration< 0)
+            {
+                RemoveStatusEffectSlow();
+            }
         }
         if (bleeding == true)
         {
-            DealTickDamage(bleedstr);
+            var dmg = ((bleedstr / 100) * MaxHealth);
+            if (dmg <1)
+            {
+                dmg = 1;
+            }
+            BleedDealTickDamage(dmg);
+            Debug.Log("Dealing :"+ (bleedstr / 100) * MaxHealth);
         }
     }
-    private void DealTickDamage(float str)
+    private void BurnDealTickDamage(float str)
     {
-        if (Time.time > burntickSpeed/3 + lastTick)
+        if (Time.time > tickSpeed / 3 + lastTick)
+        {
+            TakeDamage(str, false);
+            lastTick = Time.time;
+        }
+    }
+    private void BleedDealTickDamage(float str)
+    {
+        if (Time.time > tickSpeed /5+ lastTick)
         {
             TakeDamage(str, false);
             lastTick = Time.time;
@@ -249,53 +275,38 @@ public class DamageSystem : MonoBehaviour
     {
         float randomAngle;
         float randomOffset;
-        randomOffset = UnityEngine.Random.Range(-1f, 1.5f);
+        randomOffset = UnityEngine.Random.Range(-3f, 3f);
         Vector3 TempOffset = new Vector3(OffSet.transform.position.x + randomOffset, OffSet.transform.position.y, 0);
-        SetFont(dmg);
-        ShowDamageUI(dmg, crit);
         Instantiate(pfDamagePopup, TempOffset, Quaternion.identity);
-        ResetFontSize();
-
+        pfDamagePopup.GetComponent<DamagePopUp>().SetNumber(dmg, DamageColor(crit), SetFont(dmg));
     }
-    void SetFont(float dmg)
+    float SetFont(float dmg)
     {
-        DamageIndicator.fontSize += dmg * .5f;
-        if (DamageIndicator.fontSize > 100)
+        float fontsize = 32;
+        fontsize += dmg * .5f;
+        if (fontsize > 60)
         {
-            DamageIndicator.fontSize = 100;
+            fontsize = 60;
         }
+        return fontsize;
         //Debug.Log(DamageIndicator.fontSize);
     }
 
-    private void ShowDamageUI(float dmg, bool crit)
+    Color DamageColor(bool crit)
     {
-        if (dmg == 0) { }
-        else
-        {
+        Color color = Color.white;
             if (crit == true)
             {
-                DamageIndicator.color = Color.red;
+                color = Color.red;
             }
             else if (crit == false)
             {
-                DamageIndicator.color = Color.white;
+                color = Color.white;
             }
-
-            DamageIndicator.text = ((int)dmg).ToString();
-            Invoke("ClearDamageUI", .5f);
-        }
-
-    }
-    void ResetFontSize()
-    {
-        DamageIndicator.fontSize = originalFontSize;
-    }
-    private void ClearDamageUI()
-    {
-        DamageIndicator.text = "";
-    }
-
-    
+            return color;
+           
+            //Invoke("ClearDamageUI", .5f);
+    }  
 }
 
    
