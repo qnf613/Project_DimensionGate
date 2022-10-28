@@ -289,7 +289,7 @@ MonoBehaviour:
   originalFontSize: 36
   explosionParticle: {fileID: 7772722842220195041, guid: 86bd11d370dd402439be0a7347b46302, type: 3}
   enemydamageSFX: {fileID: 8300000, guid: c303d2537e24f9f468bc071c70457f48, type: 3}
-  enemyvolume: 0.5
+  enemyvolume: 0.25
   dpsm: {fileID: 0}
   healthPickup: {fileID: 0}
   burning: 0
