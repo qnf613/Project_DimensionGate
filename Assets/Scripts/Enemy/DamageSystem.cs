@@ -34,7 +34,7 @@ public class DamageSystem : MonoBehaviour
 
     bool slowed = false;
     public bool burning = false, bleeding = false;
-    float tickSpeed = 1, lastTick;
+    float tickSpeed = 1, lastTickBurn, lastTickBleed;
     public float burnstr, bleedstr;
     public float burnDuration,slowDuration;
     float originalspeed;
@@ -200,18 +200,18 @@ public class DamageSystem : MonoBehaviour
     }
     private void BurnDealTickDamage(float str)
     {
-        if (Time.time > tickSpeed / 3 + lastTick)
+        if (Time.time > tickSpeed / 3 + lastTickBurn)
         {
             TakeDamage(str, false);
-            lastTick = Time.time;
+            lastTickBurn = Time.time;
         }
     }
     private void BleedDealTickDamage(float str)
     {
-        if (Time.time > tickSpeed /5+ lastTick)
+        if (Time.time > tickSpeed /3+ lastTickBleed)
         {
             TakeDamage(str, false);
-            lastTick = Time.time;
+            lastTickBleed = Time.time;
         }
     }
     private void RemoveStatusEffectBurn() { burning = false; origins.Clear(); burnstr = 0; }
@@ -224,11 +224,24 @@ public class DamageSystem : MonoBehaviour
         slowed = false;
     }
 
+    public void DPOPup(float dmg, bool crit)
+    {
+        float randomAngle;
+        float randomOffsetx;
+        float randomOffsety;
+        randomOffsetx = UnityEngine.Random.Range(-.5f, .5f);
+        randomOffsety = UnityEngine.Random.Range(-.5f, 0.5f);
+
+        Vector3 TempOffset = new Vector3(OffSet.transform.position.x + randomOffsetx, OffSet.transform.position.y + randomOffsety, 0);
+        GameObject go = Instantiate(pfDamagePopup, TempOffset, Quaternion.identity);
+        go.GetComponent<DamagePopUp>().SetValues(dmg,crit,OffSet);
+        Destroy(go, .5f);
+    }
     public virtual void TakeDamage(float damage, bool crit)
     {
         DpsMeterData(damage, crit);
         flashEffect.Flash();
-        DamagePopUp(damage, crit);
+        DPOPup(damage, crit);
         if (!isBoss)
         {
             currentHealth -= damage;
@@ -271,42 +284,7 @@ public class DamageSystem : MonoBehaviour
             dpsm.ArrangeCalcs(d, c);
         }  
     }
-    public void DamagePopUp(float dmg, bool crit)
-    {
-        float randomAngle;
-        float randomOffset;
-        randomOffset = UnityEngine.Random.Range(-3f, 3f);
-        Vector3 TempOffset = new Vector3(OffSet.transform.position.x + randomOffset, OffSet.transform.position.y, 0);
-        Instantiate(pfDamagePopup, TempOffset, Quaternion.identity);
-        pfDamagePopup.GetComponent<DamagePopUp>().SetNumber(dmg, DamageColor(crit), SetFont(dmg));
-    }
-    float SetFont(float dmg)
-    {
-        float fontsize = 32;
-        fontsize += dmg * .5f;
-        if (fontsize > 60)
-        {
-            fontsize = 60;
-        }
-        return fontsize;
-        //Debug.Log(DamageIndicator.fontSize);
-    }
-
-    Color DamageColor(bool crit)
-    {
-        Color color = Color.white;
-            if (crit == true)
-            {
-                color = Color.red;
-            }
-            else if (crit == false)
-            {
-                color = Color.white;
-            }
-            return color;
-           
-            //Invoke("ClearDamageUI", .5f);
-    }  
+   
 }
 
    
